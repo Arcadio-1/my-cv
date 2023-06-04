@@ -1,0 +1,6 @@
+@forward "./mixin&variable";
+@forward "./base";
+@forward "./ui";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
