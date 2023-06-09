@@ -9,10 +9,7 @@ import useSWR from "swr";
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const Hero = () => {
-  const { data, error } = useSWR(
-    "http://localhost:3000/api/myCv/static",
-    fetcher
-  );
+  const { data, error } = useSWR("/api/myCv/static", fetcher);
   //   useEffect(() => {
   //     const getDataer = async () => {
   //     const request = await fetch()
