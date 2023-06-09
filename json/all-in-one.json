@@ -185,7 +185,7 @@
       "to": "2019"
     }
   ],
-  "Fluent-languages": [
+  "fluent-languages": [
     { "tittle": "انگلیسی", "level": 80 },
     { "tittle": "کوردی", "level": 100 }
   ]

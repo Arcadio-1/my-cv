@@ -1,13 +1,17 @@
+// "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Hero from "./components/main/hero/Hero";
+import Hero from "../components/Hero";
 import About from "./components/main/about/About";
 import Skills from "./components/main/skills/Skills";
 import Resume from "./components/main/resume/Resume";
 import Portfolio from "./components/main/portfolio/Portfolio";
 import Contact from "./components/main/contact/Contact";
 
-export default function Home() {
+export default async function Home() {
+  // const request = await fetch("http://localhost:3000/api/myCv");
+  // const data = await request.json();
+  // console.log(data);
   return (
     <div className="flex">
       <aside className="border-2 h-screen">
