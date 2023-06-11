@@ -6,7 +6,7 @@ interface Props {
 }
 const List = (props: Props) => {
   return (
-    <ul className="social-nav flex w-full">
+    <ul className="aside-header-socialmedias-list">
       {props.items.map((item) => {
         return (
           <Item

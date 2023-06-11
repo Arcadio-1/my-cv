@@ -8,7 +8,7 @@ interface Props {
 }
 const Item = (props: Props) => {
   return (
-    <li>
+    <li className="aside-nav-list-item">
       <Link href={props.tag} className="flex">
         <Image src={props.icon} width={20} height={20} alt={props.tittle} />
         <span>{props.tittle}</span>

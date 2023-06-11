@@ -7,8 +7,8 @@ interface Props {
 
 const Fullname = (props: Props) => {
   return (
-    <div>
-      <h2>{`${props.name} ${props.lastname} `}</h2>
+    <div className="aside-header-fullname">
+      <h1>{`${props.name} ${props.lastname} `}</h1>
     </div>
   );
 };

@@ -10,18 +10,14 @@ interface Props {
 }
 const Hero = (props: Props) => {
   return (
-    <div className="bg-[url('/images/hero/hero.jpg')] h-screen w-full bg-cover border-2 border-red-500 flex">
-      <div className="border-2 border-red-500 h-full w-full flex flex-col">
-        <div className="border-2 flex items-center justify-center border-red-500 h-full w-full">
-          <h1 className="text-gray-100 text-[10rem]">{`${props.name} ${props.lastname}`}</h1>
+    <div className=" main-hero">
+      <div className=" main-hero-content ">
+        <div className="main-hero-content-tittle">
+          <h1>{`${props.name} ${props.lastname}`}</h1>
         </div>
-        <div className="flex flex-col">
-          {props.expertise?.map((item) => {
-            return (
-              <span className="text-gray-100 text-[2rem]" key={item.id}>
-                {item.message}
-              </span>
-            );
+        <div className="main-hero-content-expertise">
+          {props.expertise.map((item) => {
+            return <span key={item.id}>{`من یک ${item.message} هستم`}</span>;
           })}
         </div>
       </div>

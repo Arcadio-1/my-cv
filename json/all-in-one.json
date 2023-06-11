@@ -14,7 +14,7 @@
   "personal_info_2": {
     "expertise": [
       { "id": 1, "tittle": "developer", "message": "طراح فرانت اند" },
-      { "id": 2, "tittle": "developer", "message": "توسدهنده فرانت اند" },
+      { "id": 2, "tittle": "developer", "message": "توسعه دهنده فرانت اند" },
       { "id": 3, "tittle": "developer", "message": "فریلنسر فرانت اند" }
     ],
     "degree": "کارشناسی",

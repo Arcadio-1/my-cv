@@ -1,0 +1,73 @@
+@use "./styles/clips.scss" as *;
+.cv {
+  .aside {
+    &-header {
+      &-image {
+      }
+      &-fullname {
+        h1 {
+        }
+      }
+      &-socialmedias {
+        &-list {
+          &-item {
+            a {
+              img {
+              }
+            }
+          }
+        }
+      }
+    }
+    &-nav {
+      &-list {
+        &-item {
+          a {
+            img {
+            }
+            span {
+            }
+          }
+        }
+      }
+    }
+    &-footer {
+      &-copyright {
+      }
+      &-designed {
+      }
+    }
+  }
+  .main {
+    &-hero {
+      @include dflex;
+      height: 100vh;
+      width: 100%;
+      background-size: cover;
+      background-image: url("/images/hero/hero.jpg");
+      &-content {
+        @include dflex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        &-tittle {
+          h1 {
+            color: color(light-2);
+            font-size: 3rem;
+          }
+        }
+        &-expertise {
+          background-color: rgba(color(dark-2), 0.7);
+          padding: 1rem;
+          border-radius: 10px;
+          @include dflex(flex-start, flex-start);
+          flex-direction: column;
+          span {
+            font-size: 2rem;
+            color: color(light-2);
+          }
+        }
+      }
+    }
+  }
+}

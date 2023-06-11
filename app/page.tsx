@@ -25,7 +25,7 @@ export default async function Home() {
 
   if (server_cv_status && server_cv_status.status == Status.success) {
     return (
-      <div className="flex">
+      <div className="flex cv">
         <ASide />
         <Main />
       </div>

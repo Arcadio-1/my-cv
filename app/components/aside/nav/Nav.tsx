@@ -41,7 +41,7 @@ const Nav = () => {
     },
   ];
   return (
-    <nav className="main-nav">
+    <nav className="aside-nav">
       <List list={nav_items} />
     </nav>
   );

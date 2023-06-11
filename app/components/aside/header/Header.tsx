@@ -10,7 +10,7 @@ const Header = () => {
     (state: any) => state.getData.my_cv_server
   );
   return (
-    <header>
+    <header className="aside-header">
       <ProfileImage profile_image={server_cv.personal_info.profile_iamge} />
       <Fullname
         name={server_cv.personal_info.name}

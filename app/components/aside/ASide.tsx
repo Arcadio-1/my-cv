@@ -5,7 +5,7 @@ import Footer from "./footer/Footer";
 
 const ASide = () => {
   return (
-    <aside className="border-2 h-screen">
+    <aside className="aside">
       <Header />
       <Nav />
       <Footer />

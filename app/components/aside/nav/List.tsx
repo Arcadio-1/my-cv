@@ -6,7 +6,7 @@ interface Props {
 }
 const List = (props: Props) => {
   return (
-    <ul>
+    <ul className="aside-nav-list">
       {props.list.map((item) => {
         return (
           <Item

@@ -12,7 +12,7 @@ const Main = () => {
   const server_cv: CV = useSelector((state: any) => state.getData.my_cv_server);
 
   return (
-    <main>
+    <main className="main">
       <Hero
         name={server_cv.personal_info.name}
         lastname={server_cv.personal_info.lastName}

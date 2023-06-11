@@ -8,7 +8,7 @@ interface Props {
 
 const SocialLinks = (props: Props) => {
   return (
-    <div>
+    <div className="aside-header-socialmedias">
       <List items={props.social_medias} />
     </div>
   );
