@@ -2,7 +2,7 @@ import React from "react";
 import Item from "./Item";
 import { Social_media } from "@/app/util/types";
 interface Props {
-  items: [Social_media];
+  items: Social_media[];
 }
 const List = (props: Props) => {
   return (
