@@ -14,9 +14,9 @@ const Main = () => {
   return (
     <main>
       <Hero
-        name={server_cv.personal_info?.name}
-        lastname={server_cv.personal_info?.lastName}
-        expertise={server_cv.personal_info_2?.expertise}
+        name={server_cv.personal_info.name}
+        lastname={server_cv.personal_info.lastName}
+        expertise={server_cv.personal_info_2.expertise}
         hero_image={server_cv.hero_image}
       />
       <About />

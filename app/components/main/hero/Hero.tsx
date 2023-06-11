@@ -3,10 +3,10 @@ import { Expertise } from "@/app/util/types";
 import React from "react";
 
 interface Props {
-  name: string | undefined;
-  lastname: string | undefined;
-  expertise: [Expertise] | undefined;
-  hero_image: string | undefined;
+  name: string;
+  lastname: string;
+  expertise: Expertise[];
+  hero_image: string;
 }
 const Hero = (props: Props) => {
   return (
