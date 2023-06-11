@@ -1,7 +1,24 @@
 import React from "react";
-
-const List = () => {
-  return <div>List</div>;
+import Item from "./Item";
+import { Nav_item } from "./Nav";
+interface Props {
+  list: Nav_item[];
+}
+const List = (props: Props) => {
+  return (
+    <ul>
+      {props.list.map((item) => {
+        return (
+          <Item
+            key={item.id}
+            icon={item.icon}
+            tag={item.tag}
+            tittle={item.tittle}
+          />
+        );
+      })}
+    </ul>
+  );
 };
 
 export default List;

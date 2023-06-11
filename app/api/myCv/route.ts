@@ -9,7 +9,7 @@ export async function GET() {
     throw new Error("field at get client");
   }
   const db = client.db();
-  const request = await db.collection("my-cv").find().toArray();
+  const request = await db.collection("my_cv").find().toArray();
   // console.log(request);
   if (!request) {
     throw new Error("insert faild");

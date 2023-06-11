@@ -1,167 +1,39 @@
-// "use client";
-import Image from "next/image";
-import Link from "next/link";
-import Hero from "../components/Hero";
+"use client";
+import Hero from "./components/main/hero/Hero";
 import About from "./components/main/about/About";
 import Skills from "./components/main/skills/Skills";
 import Resume from "./components/main/resume/Resume";
 import Portfolio from "./components/main/portfolio/Portfolio";
 import Contact from "./components/main/contact/Contact";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { CV, Full_status, Status } from "./util/types";
+import ASide from "./components/aside/ASide";
+import { useAppDispatch } from "@/redux/hook";
+import { get_cv_server } from "@/redux/features/getData/getDataAction";
+import Main from "./components/main/Main";
 
 export default async function Home() {
-  // const request = await fetch("http://localhost:3000/api/myCv");
-  // const data = await request.json();
-  // console.log(data);
+  const server_cv_status: Full_status = useSelector(
+    (state: any) => state.ui.get_server_cv_status
+  );
+
+  const dispatch_server_cv = useAppDispatch();
+  useEffect(() => {
+    dispatch_server_cv(get_cv_server());
+  }, [dispatch_server_cv]);
+
+  if (server_cv_status && server_cv_status.status == Status.success) {
+    return (
+      <div className="flex">
+        <ASide />
+        <Main />
+      </div>
+    );
+  }
   return (
-    <div className="flex">
-      <aside className="border-2 h-screen">
-        <header>
-          <Image
-            src={"/images/profile.png"}
-            width={40}
-            height={40}
-            alt="skandari"
-          />
-          <h2>arcadio Alexander</h2>
-          <ul className="social-nav flex w-full">
-            <li className="2px solid bg-red-500">
-              <Image
-                src={"/images/social/email.svg"}
-                alt="email"
-                width={20}
-                height={20}
-              />
-            </li>
-            <li className="2px solid bg-red-500">
-              <Image
-                src={"/images/social/email.svg"}
-                alt="email"
-                width={20}
-                height={20}
-              />
-            </li>
-            <li className="2px solid bg-red-500">
-              <Image
-                src={"/images/social/email.svg"}
-                alt="email"
-                width={20}
-                height={20}
-              />
-            </li>
-            <li className="2px solid bg-red-500">
-              <Image
-                src={"/images/social/email.svg"}
-                alt="email"
-                width={20}
-                height={20}
-              />
-            </li>
-            <li className="2px solid bg-red-500">
-              <Image
-                src={"/images/social/email.svg"}
-                alt="email"
-                width={20}
-                height={20}
-              />
-            </li>
-            <li className="2px solid bg-red-500">
-              <Image
-                src={"/images/social/email.svg"}
-                alt="email"
-                width={20}
-                height={20}
-              />
-            </li>
-            <li className="2px solid bg-red-500">
-              <Image
-                src={"/images/social/email.svg"}
-                alt="email"
-                width={20}
-                height={20}
-              />
-            </li>
-          </ul>
-        </header>
-        <nav className="main-nav">
-          <ul>
-            <li>
-              <Link href={"#hero"}>
-                <Image
-                  src={"/images/nav/home.svg"}
-                  width={20}
-                  height={20}
-                  alt="home"
-                />
-                <span>آغاز</span>
-              </Link>
-            </li>
-            <li>
-              <Link href={"#hero"}>
-                <Image
-                  src={"/images/nav/home.svg"}
-                  width={20}
-                  height={20}
-                  alt="home"
-                />
-                <span>آغاز</span>
-              </Link>
-            </li>
-            <li>
-              <Link href={"#hero"}>
-                <Image
-                  src={"/images/nav/home.svg"}
-                  width={20}
-                  height={20}
-                  alt="home"
-                />
-                <span>آغاز</span>
-              </Link>
-            </li>
-            <li>
-              <Link href={"#hero"}>
-                <Image
-                  src={"/images/nav/home.svg"}
-                  width={20}
-                  height={20}
-                  alt="home"
-                />
-                <span>آغاز</span>
-              </Link>
-            </li>
-            <li>
-              <Link href={"#hero"}>
-                <Image
-                  src={"/images/nav/home.svg"}
-                  width={20}
-                  height={20}
-                  alt="home"
-                />
-                <span>آغاز</span>
-              </Link>
-            </li>
-            <li>
-              <Link href={"#hero"}>
-                <Image
-                  src={"/images/nav/home.svg"}
-                  width={20}
-                  height={20}
-                  alt="home"
-                />
-                <span>آغاز</span>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <footer>کپی آزاد</footer>
-      </aside>
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Resume />
-        <Portfolio />
-        <Contact />
-      </main>
+    <div>
+      <p>loading</p>
     </div>
   );
 }

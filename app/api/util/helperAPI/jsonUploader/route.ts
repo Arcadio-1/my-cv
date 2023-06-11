@@ -2,11 +2,11 @@ import { NextRequest } from "next/server";
 import { getClient } from "../../functions/getClient";
 
 export async function POST(req: NextRequest) {
-  console.log("test");
   const body = await req.json();
   const { items, serverName, collectionName } = body;
 
   const client = await getClient(serverName);
+  console.log(client);
   if (!client) {
     throw new Error("field at get client");
   }

@@ -4,14 +4,12 @@ import getFromJson from "./jsonReader";
 
 const uploadHandler = async () => {
   const data = await getFromJson("all-in-one.json");
-  // handler
-  // console.log(data);
   const request = await fetch("/api/util/helperAPI/jsonUploader", {
     method: "POST",
     body: JSON.stringify({
       items: data,
       serverName: "main",
-      collectionName: "my-cv",
+      collectionName: "my_cv",
     }),
     headers: { "Content-Type": "application/json" },
   });

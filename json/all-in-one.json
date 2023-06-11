@@ -1,31 +1,87 @@
 {
-  "name": "آرکادیو",
-  "lastName": "الکساندر",
-  "dateOfBirth": "1996",
-  "email": "rcdo-alxndr@gmail.com",
-  "mobile": "09120001122",
-  "gender": "مرد",
-  "military-service": "معافیت",
-  "residence": "تهران",
-  "Expertise": "Frontend Developer",
-  "Motivation-Quote": "“The programmers of tomorrow are the wizards of the future.”",
-  "profile-iamge": "images/profile.png",
-  "marital-status": "مجرد",
-  "degree": "کارشناسی",
-  "contracts": [
-    { "id": 1, "tittle": "تمام وقت" },
-    { "id": 2, "tittle": "دورکاری" }
-  ],
-  "about-me": "من از دوره کودکی به تکنولوژی علاقه داشتم و همون حرفایی که بقیه میزنن... بعد از فیلتر شدن سایتمون که چندین سال براش زحمت کشیده بودیم و تازه به درآمد رسیده بود از بخش طراحی سایت فاصله گرفتم و بعد از فارغ تحصیلی حدود دو سال به عنوان حسابدار مدیر فروش ی شرکت کار کردم متوجه شدم هیچی برام نمیتونه جایگزین کد زدن و طراحی بشه, از کارم استفا دادم و الان چند سالیه دارم رو خود آموزشی کار میکنم و فکر میکنم دیگه آماده وارد شدن تو بازار کار باشم و میدونم که فرانت اند پایان تخصص من نیست...",
-  "Portfolios ": [
+  "personal_info": {
+    "profile_iamge": "/images/profile.png",
+    "name": "آرکادیو",
+    "lastName": "الکساندر",
+    "marital_status": "مجرد",
+    "dateOfBirth": "1996",
+    "email": "rcdo-alxndr@gmail.com",
+    "mobile": "09120001122",
+    "gender": "مرد",
+    "military_service": "معافیت",
+    "residence": "تهران"
+  },
+  "personal_info_2": {
+    "expertise": [
+      { "id": 1, "tittle": "developer", "message": "طراح فرانت اند" },
+      { "id": 2, "tittle": "developer", "message": "توسدهنده فرانت اند" },
+      { "id": 3, "tittle": "developer", "message": "فریلنسر فرانت اند" }
+    ],
+    "degree": "کارشناسی",
+    "educations": [
+      {
+        "tittle": "مهندسی تکنولوژی نرم افزار",
+        "university": "آزاد اسلامی",
+        "since": "2015",
+        "to": "2019"
+      }
+    ],
+    "social_medias": [
+      {
+        "id": "0",
+        "tittle": "github",
+        "url": "https://github.com/Arcadio-1",
+        "icon": "/images/social/github.svg"
+      },
+      {
+        "id": "1",
+        "tittle": "twitter",
+        "url": "https://twitter.com/elonmusk",
+        "icon": "/images/social/twitter.svg"
+      },
+      {
+        "id": "2",
+        "tittle": "linkedin",
+        "url": "https://twitter.com/elonmusk",
+        "icon": "/images/social/linkedin.svg"
+      },
+      {
+        "id": "3",
+        "tittle": "telegram",
+        "url": "https://twitter.com/elonmusk",
+        "icon": "/images/social/telegram.svg"
+      },
+      {
+        "id": "5",
+        "tittle": "skype",
+        "url": "https://twitter.com/elonmusk",
+        "icon": "/images/social/skype.svg"
+      },
+      {
+        "id": "6",
+        "tittle": "phone",
+        "url": "+989180000000",
+        "icon": "/images/social/phone.svg"
+      }
+    ]
+  },
+  "job_info": {
+    "contracts": [
+      { "id": 1, "tittle": "تمام وقت" },
+      { "id": 2, "tittle": "دورکاری" }
+    ]
+  },
+  "motivation_quote": "“The programmers of tomorrow are the wizards of the future.”",
+  "about_me": "من از دوره کودکی به تکنولوژی علاقه داشتم و همون حرفایی که بقیه میزنن... بعد از فیلتر شدن سایتمون که چندین سال براش زحمت کشیده بودیم و تازه به درآمد رسیده بود از بخش طراحی سایت فاصله گرفتم و بعد از فارغ تحصیلی حدود دو سال به عنوان حسابدار مدیر فروش ی شرکت کار کردم متوجه شدم هیچی برام نمیتونه جایگزین کد زدن و طراحی بشه, از کارم استفا دادم و الان چند سالیه دارم رو خود آموزشی کار میکنم و فکر میکنم دیگه آماده وارد شدن تو بازار کار باشم و میدونم که فرانت اند پایان تخصص من نیست...",
+  "portfolios ": [
     {
       "tittle": "کافه ترانه",
       "link": "https://cafe-taraneh-with-nextjs.vercel.app",
-      "id": "-"
+      "id": "1"
     }
   ],
-  "github-link": "https://github.com/Arcadio-1",
-  "work-experience": [
+  "github_link": "https://github.com/Arcadio-1",
+  "work_experience": [
     {
       "tittle": "پشیتبانی فنی",
       "compony": "دی چت(مهردیزاین)",
@@ -46,147 +102,140 @@
       "id": "1-1",
       "title": "html",
       "level": 100,
-      "icon-img": "images/skills/img/html.png",
-      "icon-icon": "images/skills/icon/html.svg"
+      "icon_img": "images/skills/img/html.png",
+      "icon_icon": "images/skills/icon/html.svg"
     },
     {
       "id": "1-2",
       "title": "css",
       "level": 90,
-      "icon-img": "images/skills/img/css.png",
-      "icon-icon": "images/skills/icon/css.svg"
+      "icon_img": "images/skills/img/css.png",
+      "icon_icon": "images/skills/icon/css.svg"
     },
     {
       "id": "1-3",
       "title": "javascript",
       "level": 90,
-      "icon-img": "images/skills/img/javascript.png",
-      "icon-icon": "images/skills/icon/javascript.svg"
+      "icon_img": "images/skills/img/javascript.png",
+      "icon_icon": "images/skills/icon/javascript.svg"
     },
     {
       "id": "2-1",
       "title": "typescript",
       "level": 70,
-      "icon-img": "images/skills/img/typescript.svg",
-      "icon-icon": "images/skills/icon/typescript.svg"
+      "icon_img": "images/skills/img/typescript.svg",
+      "icon_icon": "images/skills/icon/typescript.svg"
     },
     {
       "id": "2-2",
       "title": "sass",
       "level": 80,
-      "icon-img": "images/skills/img/scss.png",
-      "icon-icon": "images/skills/icon/scss.svg"
+      "icon_img": "images/skills/img/scss.png",
+      "icon_icon": "images/skills/icon/scss.svg"
     },
     {
       "id": "3-1",
       "title": "react",
       "level": 90,
-      "icon-img": "images/skills/img/react.png",
-      "icon-icon": "images/skills/icon/react.svg"
+      "icon_img": "images/skills/img/react.png",
+      "icon_icon": "images/skills/icon/react.svg"
     },
     {
       "id": "3-2",
       "title": "next.js",
       "level": 90,
-      "icon-img": "images/skills/img/nextjs.png",
-      "icon-icon": "images/skills/icon/"
+      "icon_img": "images/skills/img/nextjs.png",
+      "icon_icon": "images/skills/icon/"
     },
     {
       "id": "4-1",
       "title": "tailwind",
       "level": 80,
-      "icon-img": "images/skills/img/tailwind.png",
-      "icon-icon": "images/skills/icon/tailwind.svg"
+      "icon_img": "images/skills/img/tailwind.png",
+      "icon_icon": "images/skills/icon/tailwind.svg"
     },
     {
       "id": "4-2",
       "title": "matrial ui",
       "level": 70,
-      "icon-img": "images/skills/img/matrialui.png",
-      "icon-icon": "images/skills/icon/matrialui.svg"
+      "icon_img": "images/skills/img/matrialui.png",
+      "icon_icon": "images/skills/icon/matrialui.svg"
     },
     {
       "id": "4-3",
       "title": "bootstrap",
       "level": 50,
-      "icon-img": "images/skills/img/bootstrap.png",
-      "icon-icon": "images/skills/icon/bootstrap.svg"
+      "icon_img": "images/skills/img/bootstrap.png",
+      "icon_icon": "images/skills/icon/bootstrap.svg"
     },
 
     {
       "id": "5-1",
       "title": "adobe xd",
       "level": 60,
-      "icon-img": "images/skills/img/adobexd.png",
-      "icon-icon": "images/skills/icon/adobexd.svg"
+      "icon_img": "images/skills/img/adobexd.png",
+      "icon_icon": "images/skills/icon/adobexd.svg"
     },
     {
       "id": "5-2",
       "title": "figma",
       "level": 40,
-      "icon-img": "images/skills/img/figma.png",
-      "icon-icon": "images/skills/icon/figma.svg"
+      "icon_img": "images/skills/img/figma.png",
+      "icon_icon": "images/skills/icon/figma.svg"
     },
     {
       "id": "6-1",
       "title": "webpack",
       "level": 50,
-      "icon-img": "images/skills/img/webpack.svg",
-      "icon-icon": "images/skills/icon/webpack.svg"
+      "icon_img": "images/skills/img/webpack.svg",
+      "icon_icon": "images/skills/icon/webpack.svg"
     },
     {
       "id": "6-2",
       "title": "redux",
       "level": 100,
-      "icon-img": "images/skills/img/redux.png",
-      "icon-icon": "images/skills/icon/redux.svg"
+      "icon_img": "images/skills/img/redux.png",
+      "icon_icon": "images/skills/icon/redux.svg"
     },
     {
       "id": "6-3",
       "title": "pwa",
       "level": 80,
-      "icon-img": "images/skills/img/pwa.png",
-      "icon-icon": "images/skills/icon/pwa.svg"
+      "icon_img": "images/skills/img/pwa.png",
+      "icon_icon": "images/skills/icon/pwa.svg"
     },
     {
       "id": "6-4",
       "title": "github",
       "level": 80,
-      "icon-img": "images/skills/img/git.png",
-      "icon-icon": "images/skills/icon/git.svg"
+      "icon_img": "images/skills/img/git.png",
+      "icon_icon": "images/skills/icon/git.svg"
     },
     {
       "id": "7-1",
       "title": "node.js",
       "level": 80,
-      "icon-img": "images/skills/img/nodejs.png",
-      "icon-icon": "images/skills/icon/nodejs.svg"
+      "icon_img": "images/skills/img/nodejs.png",
+      "icon_icon": "images/skills/icon/nodejs.svg"
     },
     {
       "id": "7-2",
       "title": "mongoDB",
       "level": 80,
-      "icon-img": "images/skills/img/mongodb.png",
-      "icon-icon": "images/skills/icon/mongodb.svg"
+      "icon_img": "images/skills/img/mongodb.png",
+      "icon_icon": "images/skills/icon/mongodb.svg"
     },
     {
       "id": "7-3",
       "title": "firebase",
       "level": 80,
-      "icon-img": "images/skills/img/firebase.png",
-      "icon-icon": "images/skills/icon/firebase.svg"
+      "icon_img": "images/skills/img/firebase.png",
+      "icon_icon": "images/skills/icon/firebase.svg"
     }
   ],
-  "education": [
-    {
-      "tittle": "مهندسی تکنولوژی نرم افزار",
-      "university": "آزاد اسلامی",
-      "since": "2015",
-      "to": "2019"
-    }
-  ],
-  "fluent-languages": [
+  "fluent_languages": [
     { "tittle": "انگلیسی", "level": 80 },
     { "tittle": "کوردی", "level": 100 }
-  ]
+  ],
+  "hero_image": "/images/hero/hero.jpg"
 }
