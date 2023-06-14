@@ -192,10 +192,12 @@
             border-left: 3px solid orange;
             white-space: nowrap;
             margin-left: auto;
-            animation: blink-caret 0.75s step-end;
+            padding-left: 0.5rem;
+            animation: blink-caret 0.75s step-end infinite;
           }
           .text1 {
-            animation: typing1 2s steps(30, end) forwards;
+            animation: typing1 2s steps(30, end) forwards,
+              blink-caret 0.75s step-end infinite;
           }
           @keyframes typing1 {
             from {
@@ -206,7 +208,8 @@
             }
           }
           .text2 {
-            animation: typing2 2s steps(30, end) forwards;
+            animation: typing2 2s steps(30, end) forwards,
+              forwardsblink-caret 0.75s step-end infinite;
           }
           @keyframes typing2 {
             from {
@@ -217,7 +220,8 @@
             }
           }
           .text3 {
-            animation: typing3 2s steps(30, end) forwards;
+            animation: typing3 2s steps(30, end) forwards,
+              blink-caret 0.75s step-end infinite;
           }
           @keyframes typing3 {
             from {
