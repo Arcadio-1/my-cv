@@ -115,137 +115,137 @@
   "skills": [
     {
       "id": "1-1",
-      "title": "html",
+      "tittle": "html",
       "level": 100,
-      "icon_img": "images/skills/img/html.png",
-      "icon_icon": "images/skills/icon/html.svg"
+      "icon_img": "/images/skills/img/html.png",
+      "icon_icon": "/images/skills/icon/html.svg"
     },
     {
       "id": "1-2",
-      "title": "css",
+      "tittle": "css",
       "level": 90,
-      "icon_img": "images/skills/img/css.png",
-      "icon_icon": "images/skills/icon/css.svg"
+      "icon_img": "/images/skills/img/css.png",
+      "icon_icon": "/images/skills/icon/css.svg"
     },
     {
       "id": "1-3",
-      "title": "javascript",
+      "tittle": "javascript",
       "level": 90,
-      "icon_img": "images/skills/img/javascript.png",
-      "icon_icon": "images/skills/icon/javascript.svg"
+      "icon_img": "/images/skills/img/javascript.png",
+      "icon_icon": "/images/skills/icon/javascript.svg"
     },
     {
       "id": "2-1",
-      "title": "typescript",
+      "tittle": "typescript",
       "level": 70,
-      "icon_img": "images/skills/img/typescript.svg",
-      "icon_icon": "images/skills/icon/typescript.svg"
+      "icon_img": "/images/skills/img/typescript.svg",
+      "icon_icon": "/images/skills/icon/typescript.svg"
     },
     {
       "id": "2-2",
-      "title": "sass",
+      "tittle": "sass",
       "level": 80,
-      "icon_img": "images/skills/img/scss.png",
-      "icon_icon": "images/skills/icon/scss.svg"
+      "icon_img": "/images/skills/img/scss.png",
+      "icon_icon": "/images/skills/icon/scss.svg"
     },
     {
       "id": "3-1",
-      "title": "react",
+      "tittle": "react",
       "level": 90,
-      "icon_img": "images/skills/img/react.png",
-      "icon_icon": "images/skills/icon/react.svg"
+      "icon_img": "/images/skills/img/react.png",
+      "icon_icon": "/images/skills/icon/react.svg"
     },
     {
       "id": "3-2",
-      "title": "next.js",
+      "tittle": "next.js",
       "level": 90,
-      "icon_img": "images/skills/img/nextjs.png",
-      "icon_icon": "images/skills/icon/"
+      "icon_img": "/images/skills/img/nextjs.png",
+      "icon_icon": "/images/skills/icon/"
     },
     {
       "id": "4-1",
-      "title": "tailwind",
+      "tittle": "tailwind",
       "level": 80,
-      "icon_img": "images/skills/img/tailwind.png",
-      "icon_icon": "images/skills/icon/tailwind.svg"
+      "icon_img": "/images/skills/img/tailwind.png",
+      "icon_icon": "/images/skills/icon/tailwind.svg"
     },
     {
       "id": "4-2",
-      "title": "matrial ui",
+      "tittle": "material ui",
       "level": 70,
-      "icon_img": "images/skills/img/matrialui.png",
-      "icon_icon": "images/skills/icon/matrialui.svg"
+      "icon_img": "/images/skills/img/materialui.png",
+      "icon_icon": "/images/skills/icon/materialui.svg"
     },
     {
       "id": "4-3",
-      "title": "bootstrap",
+      "tittle": "bootstrap",
       "level": 50,
-      "icon_img": "images/skills/img/bootstrap.png",
-      "icon_icon": "images/skills/icon/bootstrap.svg"
+      "icon_img": "/images/skills/img/bootstrap.png",
+      "icon_icon": "/images/skills/icon/bootstrap.svg"
     },
 
     {
       "id": "5-1",
-      "title": "adobe xd",
+      "tittle": "adobe xd",
       "level": 60,
-      "icon_img": "images/skills/img/adobexd.png",
-      "icon_icon": "images/skills/icon/adobexd.svg"
+      "icon_img": "/images/skills/img/adobexd.svg",
+      "icon_icon": "/images/skills/icon/adobexd.svg"
     },
     {
       "id": "5-2",
-      "title": "figma",
+      "tittle": "figma",
       "level": 40,
-      "icon_img": "images/skills/img/figma.png",
-      "icon_icon": "images/skills/icon/figma.svg"
+      "icon_img": "/images/skills/img/figma.png",
+      "icon_icon": "/images/skills/icon/figma.svg"
     },
     {
       "id": "6-1",
-      "title": "webpack",
+      "tittle": "webpack",
       "level": 50,
-      "icon_img": "images/skills/img/webpack.svg",
-      "icon_icon": "images/skills/icon/webpack.svg"
+      "icon_img": "/images/skills/img/webpack.svg",
+      "icon_icon": "/images/skills/icon/webpack.svg"
     },
     {
       "id": "6-2",
-      "title": "redux",
+      "tittle": "redux",
       "level": 100,
-      "icon_img": "images/skills/img/redux.png",
-      "icon_icon": "images/skills/icon/redux.svg"
+      "icon_img": "/images/skills/img/redux.png",
+      "icon_icon": "/images/skills/icon/redux.svg"
     },
     {
       "id": "6-3",
-      "title": "pwa",
+      "tittle": "pwa",
       "level": 80,
-      "icon_img": "images/skills/img/pwa.png",
-      "icon_icon": "images/skills/icon/pwa.svg"
+      "icon_img": "/images/skills/img/pwa.png",
+      "icon_icon": "/images/skills/icon/pwa.svg"
     },
     {
       "id": "6-4",
-      "title": "github",
+      "tittle": "github",
       "level": 80,
-      "icon_img": "images/skills/img/git.png",
-      "icon_icon": "images/skills/icon/git.svg"
+      "icon_img": "/images/skills/img/github.png",
+      "icon_icon": "/images/skills/icon/github.svg"
     },
     {
       "id": "7-1",
-      "title": "node.js",
+      "tittle": "node.js",
       "level": 80,
-      "icon_img": "images/skills/img/nodejs.png",
-      "icon_icon": "images/skills/icon/nodejs.svg"
+      "icon_img": "/images/skills/img/nodejs.png",
+      "icon_icon": "/images/skills/icon/nodejs.svg"
     },
     {
       "id": "7-2",
-      "title": "mongoDB",
+      "tittle": "mongoDB",
       "level": 80,
-      "icon_img": "images/skills/img/mongodb.png",
-      "icon_icon": "images/skills/icon/mongodb.svg"
+      "icon_img": "/images/skills/img/mongodb.png",
+      "icon_icon": "/images/skills/icon/mongodb.svg"
     },
     {
       "id": "7-3",
-      "title": "firebase",
+      "tittle": "firebase",
       "level": 80,
-      "icon_img": "images/skills/img/firebase.png",
-      "icon_icon": "images/skills/icon/firebase.svg"
+      "icon_img": "/images/skills/img/firebase.png",
+      "icon_icon": "/images/skills/icon/firebase.svg"
     }
   ],
   "fluent_languages": [

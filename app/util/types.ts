@@ -103,6 +103,9 @@ export type Work_experiences = Work_experience[];
 export interface Skill {
   tittle: string;
   level: number;
+  id: string;
+  icon_img: string;
+  icon_icon: string;
 }
 
 export type Skills = Skill[];

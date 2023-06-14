@@ -20,7 +20,7 @@ const Main = () => {
         hero_image={server_cv.hero_image}
       />
       <About cv={server_cv} />
-      <Skills />
+      <Skills cv={server_cv} />
       <Resume />
       <Portfolio />
       <Contact />
