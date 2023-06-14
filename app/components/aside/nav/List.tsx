@@ -14,6 +14,8 @@ const List = (props: Props) => {
             icon={item.icon}
             tag={item.tag}
             tittle={item.tittle}
+            id={item.id}
+            component={item.component}
           />
         );
       })}

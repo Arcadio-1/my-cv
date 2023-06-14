@@ -8,11 +8,13 @@ interface Props {
 const SectionHeader = (props: Props) => {
   const { tittle, description } = props;
   return (
-    <div>
-      <div>
+    <div className="sectionHeader">
+      <div className="sectionHeader-tittle">
         <h2>{tittle}</h2>
       </div>
-      <div>{description}</div>
+      <div className="sectionHeader-description">
+        <p>{description}</p>
+      </div>
     </div>
   );
 };

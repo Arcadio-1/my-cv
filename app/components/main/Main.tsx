@@ -19,7 +19,7 @@ const Main = () => {
         expertise={server_cv.personal_info_2.expertise}
         hero_image={server_cv.hero_image}
       />
-      <About />
+      <About cv={server_cv} />
       <Skills />
       <Resume />
       <Portfolio />

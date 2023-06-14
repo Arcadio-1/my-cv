@@ -1,13 +1,29 @@
+import { CV } from "@/app/util/types";
 import SectionHeader from "@/app/util/ui/SectionHeader";
 import React from "react";
+import MyImage from "./components/myImage/MyImage";
+import Content from "./components/content/Content/Content";
+import Footer from "./components/content/Footer";
 
-const About = () => {
+interface Props {
+  cv: CV;
+}
+
+const About = (props: Props) => {
+  const { about_me } = props.cv;
   return (
-    <div>
-      <SectionHeader
-        tittle="درباره من"
-        description="صادق بودن: صادق بودن در این بخش بسیار مهم است. باید بتوانید برای هرگونه ادعایی که درمورد خود مطرح می‌کنید، مثال‌های مشخص و واضحی ارائه دهید. اگر تجربه‌ی کاری مرتبطی ندارید، درباره‌ی مهارت‌ها و نقاط قوت مرتبطی که در طول انجام کارهای داوطلبانه یا تحصیل به دست آورده‌اید، بنویسید"
-      />
+    <div className="main-about">
+      <SectionHeader tittle="درباره من" description={about_me} />
+      <div className="main-about-container">
+        <MyImage
+          imageUrl={props.cv.personal_info.profile_iamge}
+          alt={props.cv.personal_info.name}
+        />
+        <div className="main-about-main">
+          <Content personal_info={props.cv.personal_info} />
+          {/* <Footer quote={props.cv.motivation_quotes} /> */}
+        </div>
+      </div>
     </div>
   );
 };

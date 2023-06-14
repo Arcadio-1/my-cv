@@ -1,7 +1,15 @@
+import Image from "next/image";
 import React from "react";
-
-const MyImage = () => {
-  return <div>MyImage</div>;
+interface Props {
+  imageUrl: string;
+  alt: string;
+}
+const MyImage = (props: Props) => {
+  return (
+    <div className="main-about-image">
+      <Image src={props.imageUrl} width={500} height={500} alt={props.alt} />
+    </div>
+  );
 };
 
 export default MyImage;

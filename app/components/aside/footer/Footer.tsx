@@ -9,9 +9,9 @@ const Footer = () => {
         <span>Arcadio</span>
       </div>
       <div className="aside-footer-designed">
-        <span className="">Designed by</span>
+        <span className="">Designed by </span>
         <Link target="_blank" href={"https://github.com/Arcadio-1"}>
-          <span>Arcadio</span>
+          <span className="text-gray-100">Arcadio</span>
         </Link>
       </div>
     </footer>

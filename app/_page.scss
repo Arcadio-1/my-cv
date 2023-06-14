@@ -1,15 +1,72 @@
 @use "./styles/clips.scss" as *;
 .cv {
+  background: hsla(185, 64%, 51%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(185, 64%, 51%, 1) 0%,
+    hsla(277, 74%, 24%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(185, 64%, 51%, 1) 0%,
+    hsla(277, 74%, 24%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(185, 64%, 51%, 1) 0%,
+    hsla(277, 74%, 24%, 1) 100%
+  );
+
   .aside {
+    padding: 1rem;
+    height: 100vh;
+    z-index: 10;
+    min-width: 20rem;
+    max-width: 25rem;
+    width: 100%;
+    backdrop-filter: blur(1px);
+    background: linear-gradient(
+      90deg,
+      rgba(75, 116, 160, 0.261) 0%,
+      rgba(36, 55, 71, 0.885) 100%
+    );
+    @include dflex(flex-start, flex-start);
+    flex-direction: column;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    &-container {
+      z-index: 10;
+      width: 100%;
+      border: 2px solid red;
+    }
     &-header {
+      width: 100%;
+      @include dflex;
+      flex-direction: column;
       &-image {
+        img {
+          border: 5px solid color(dark-2);
+          border-radius: 100%;
+        }
       }
       &-fullname {
+        padding: 1rem;
         h1 {
+          font-size: 1.7rem;
+          color: color(light-2);
         }
       }
       &-socialmedias {
         &-list {
+          background-color: rgba(color(dark-2), 0.8);
+          border-radius: 1000px;
+          padding: 2px 1rem;
+          @include dflex;
+          gap: 0.5rem;
           &-item {
             a {
               img {
@@ -20,21 +77,62 @@
       }
     }
     &-nav {
+      width: calc(100% - 1rem);
+      margin-top: 2rem;
+      &-icon {
+        width: 2.3rem;
+        height: 2.3rem;
+      }
       &-list {
+        // width: 100%;
+        @include dflex(flex-start, flex-start);
+        flex-direction: column;
         &-item {
+          transition: all 200ms linear;
+          padding: 0.5rem 2rem 0.5rem 0rem;
+          width: 100%;
           a {
-            img {
+            @include dflex(flex-start);
+            gap: 0.5rem;
+            svg {
+              path {
+                stroke-width: 1px;
+                // filter: drop-shadow(3px 1px 2px rgba(color(g3-2), 0.5));
+                fill: color(light-4);
+              }
             }
             span {
+              font-size: 1.4rem;
+              color: color(light-4);
+            }
+          }
+          &:hover {
+            background-color: rgba(color(dark-2), 0.5);
+            a {
+              svg {
+                path {
+                  filter: drop-shadow(1px 1px 2px rgba(color(g3-2), 0.5));
+                  fill: color(g3-2);
+                }
+              }
+              span {
+                color: color(light-2);
+              }
             }
           }
         }
       }
     }
     &-footer {
+      margin-top: auto;
+      width: 100%;
+      @include dflex;
+      flex-direction: column;
       &-copyright {
+        color: rgba(color(g3-3), 1);
       }
       &-designed {
+        color: rgba(color(g3-3), 1);
       }
     }
   }
@@ -42,32 +140,167 @@
     &-hero {
       @include dflex;
       height: 100vh;
-      width: 100%;
-      background-size: cover;
-      background-image: url("/images/hero/hero.jpg");
-      &-content {
-        @include dflex;
-        flex-direction: column;
+      // position: relative;
+      &-background {
+        z-index: 0;
+        position: absolute;
+        left: 0px;
+        top: 0px;
         height: 100%;
         width: 100%;
+        background-size: cover;
+        background-image: url("/images/hero/hero.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        filter: drop-shadow(0px 0px 0px rgb(255, 255, 255)) brightness(60%);
+      }
+      &-content {
+        @include dflex(flex-start);
+        position: absolute;
+        top: 10%;
+        right: 25%;
+        z-index: 5;
+        flex-direction: column;
         &-tittle {
+          margin-left: auto;
           h1 {
             color: color(light-2);
             font-size: 3rem;
           }
         }
         &-expertise {
-          background-color: rgba(color(dark-2), 0.7);
-          padding: 1rem;
-          border-radius: 10px;
-          @include dflex(flex-start, flex-start);
-          flex-direction: column;
+          margin-left: auto;
+          &-item {
+            @include dflex;
+          }
           span {
+            background-color: rgba(color(dark-2), 0.7);
             font-size: 2rem;
+          }
+          .label {
+            border-radius: 0px 10px 10px 0px;
             color: color(light-2);
+            padding-left: 0.5rem;
+          }
+          .text {
+            display: block;
+            color: color(light-2);
+            overflow: hidden;
+            width: 0px;
+            border-left: 3px solid orange;
+            white-space: nowrap;
+            margin-left: auto;
+            animation: blink-caret 0.75s step-end;
+          }
+          .text1 {
+            animation: typing1 2s steps(30, end) forwards;
+          }
+          @keyframes typing1 {
+            from {
+              width: 0px;
+            }
+            to {
+              width: 100%;
+            }
+          }
+          .text2 {
+            animation: typing2 2s steps(30, end) forwards;
+          }
+          @keyframes typing2 {
+            from {
+              width: 0px;
+            }
+            to {
+              width: 100%;
+            }
+          }
+          .text3 {
+            animation: typing3 2s steps(30, end) forwards;
+          }
+          @keyframes typing3 {
+            from {
+              width: 0px;
+            }
+            to {
+              width: 100%;
+            }
+          }
+
+          /* The typewriter cursor effect */
+          @keyframes blink-caret {
+            from,
+            to {
+              border-color: transparent;
+            }
+            50% {
+              border-color: orange;
+            }
           }
         }
       }
+    }
+    &-about {
+      overflow: visible;
+      color: color(light-2);
+      padding-bottom: 1rem;
+      background-color: rgba(color(dark-2), 0.5);
+      padding-right: 1rem;
+      &-container {
+        margin-top: 1rem;
+        @include dflex(flex-start, flex-start);
+        gap: 1rem;
+      }
+      &-image {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+        img {
+          border-radius: 5px;
+        }
+      }
+      &-main {
+        flex: 0 0 auto;
+        width: calc(64.66666667% - 1rem);
+      }
+      &-content {
+        &-tittle {
+          font-family: iranyekan;
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+        &-list {
+          @include dflex(space-between);
+          &-col {
+            flex: 0 0 auto;
+            width: 50%;
+            gap: 2rem;
+            @include dflex(flex-start, flex-start);
+            flex-direction: column;
+          }
+          &-item {
+            .label {
+              font-size: 1.3rem;
+            }
+            .text {
+              background-color: rgba(color(g3-3), 0.3);
+              padding: 0.1rem 0.5rem;
+              border-radius: 5px;
+              font-family: iransansnum;
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+      // &-footer {
+      //   margin-top: 2rem;
+      //   margin-right: auto;
+      //   color: color(light-2);
+      //   &-qoute {
+      //   }
+      //   &-qouteBy {
+      //   }
+      // }
     }
   }
 }

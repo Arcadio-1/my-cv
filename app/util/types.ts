@@ -29,17 +29,24 @@ export enum Contracts {
   full_time,
   part_time,
 }
+export enum Get_project {
+  Active,
+  Deactive,
+}
 export interface Personal_info {
   profile_iamge: string;
   name: string;
   lastName: string;
   marital_status: Marital_status;
-  dateOfBirth: Date;
+  dateOfBirth: string;
   email: string;
   mobile: number;
   gender: Gender;
   military_service: Military_service;
   residence: string;
+  age: number;
+  degree: string;
+  get_project: Get_project;
 }
 export interface Education {
   tittle: string;
@@ -60,7 +67,6 @@ export interface Social_media {
 }
 export interface Personal_info_2 {
   expertise: Expertise[];
-  degree: string;
   educations: Education[];
   social_medias: Social_media[];
 }
@@ -72,7 +78,10 @@ export interface Jobs_info {
   contracts: Contract[];
 }
 
-export type Motivation_quote = string;
+export interface Motivation_quote {
+  quote: string;
+  by: string;
+}
 
 export type About_me = string;
 
@@ -108,7 +117,7 @@ export interface CV {
   personal_info: Personal_info;
   personal_info_2: Personal_info_2;
   job_info: Jobs_info;
-  motivation_quote: Motivation_quote;
+  motivation_quotes: Motivation_quote;
   about_me: About_me;
   portfolios: Portfolios;
   github_link: Github_link;

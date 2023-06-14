@@ -10,8 +10,8 @@ const ProfileImage = (props: Props) => {
     <div className="aside-header-image">
       <Image
         src={props.profile_image}
-        width={100}
-        height={100}
+        width={140}
+        height={140}
         alt="skandari"
       />
     </div>
