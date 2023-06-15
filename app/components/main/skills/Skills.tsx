@@ -1,16 +1,16 @@
-import { CV } from "@/app/util/types";
+import { CV, Skill } from "@/app/util/types";
 import SectionHeader from "@/app/util/ui/SectionHeader";
 import React from "react";
 import List from "./components/List";
 interface Props {
-  cv: CV;
+  skills: Skill[];
 }
 
 const Skills = (props: Props) => {
   return (
     <div className="main-skills">
       <SectionHeader tittle="مهارت ها" description="" />
-      <List skills={props.cv.skills} />
+      <List skills={props.skills} />
     </div>
   );
 };

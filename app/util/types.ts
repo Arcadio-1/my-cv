@@ -33,21 +33,6 @@ export enum Get_project {
   Active,
   Deactive,
 }
-export interface Personal_info {
-  profile_iamge: string;
-  name: string;
-  lastName: string;
-  marital_status: Marital_status;
-  dateOfBirth: string;
-  email: string;
-  mobile: number;
-  gender: Gender;
-  military_service: Military_service;
-  residence: string;
-  age: number;
-  degree: string;
-  get_project: Get_project;
-}
 export interface Education {
   tittle: string;
   university: string;
@@ -65,11 +50,16 @@ export interface Social_media {
   url: string;
   icon: string;
 }
-export interface Personal_info_2 {
-  expertise: Expertise[];
-  educations: Education[];
-  social_medias: Social_media[];
+
+export interface Work_experience {
+  id: string;
+  tittle: string;
+  compony: string;
+  since: string;
+  to: string;
+  position: string;
 }
+
 export interface Contract {
   id: number;
   tittle: Contracts;
@@ -90,16 +80,8 @@ export interface Portfolio {
   link: string;
   id: number;
 }
-export type Portfolios = Portfolio[];
 export type Github_link = string;
-export interface Work_experience {
-  tittle: string;
-  compony: string;
-  since: Date;
-  to: Date;
-  position: string;
-}
-export type Work_experiences = Work_experience[];
+
 export interface Skill {
   tittle: string;
   level: number;
@@ -107,25 +89,46 @@ export interface Skill {
   icon_img: string;
   icon_icon: string;
 }
-
 export type Skills = Skill[];
 
 export interface Language {
+  id: string;
   tittle: string;
   level: number;
 }
 export type Hero_image = string;
 export type Fluent_languages = Language[];
+
+export interface Personal_info {
+  profile_iamge: string;
+  hero_image: Hero_image;
+  name: string;
+  lastName: string;
+  marital_status: Marital_status;
+  dateOfBirth: string;
+  email: string;
+  mobile: number;
+  gender: Gender;
+  military_service: Military_service;
+  residence: string;
+  age: number;
+  degree: string;
+  job_info: Jobs_info;
+  get_project: Get_project;
+  social_medias: Social_media[];
+  about_me: About_me;
+}
+export interface Resume {
+  educations: Education[];
+  Work_experiences: Work_experience[];
+  portfolios: Portfolio[];
+  expertise: Expertise[];
+  github_link: Github_link;
+  skills: Skills;
+  motivation_quotes: Motivation_quote;
+  fluent_languages: Fluent_languages;
+}
 export interface CV {
   personal_info: Personal_info;
-  personal_info_2: Personal_info_2;
-  job_info: Jobs_info;
-  motivation_quotes: Motivation_quote;
-  about_me: About_me;
-  portfolios: Portfolios;
-  github_link: Github_link;
-  work_experience: Work_experiences;
-  skills: Skills;
-  fluent_languages: Fluent_languages;
-  hero_image: Hero_image;
+  resume: Resume;
 }

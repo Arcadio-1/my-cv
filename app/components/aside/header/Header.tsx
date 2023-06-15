@@ -16,7 +16,7 @@ const Header = () => {
         name={server_cv.personal_info.name}
         lastname={server_cv.personal_info.lastName}
       />
-      <SocialLinks social_medias={server_cv.personal_info_2.social_medias} />
+      <SocialLinks social_medias={server_cv.personal_info.social_medias} />
     </header>
   );
 };

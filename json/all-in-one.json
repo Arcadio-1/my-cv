@@ -1,6 +1,7 @@
 {
   "personal_info": {
     "profile_iamge": "/images/profile.jpg",
+    "hero_image": "/images/hero/hero.jpg",
     "name": "حسین",
     "lastName": "اسکندری",
     "marital_status": "مجرد",
@@ -12,26 +13,8 @@
     "residence": "تهران",
     "age": 26,
     "degree": "کارشناسی مهندسی تکنولوژی نرم افزار",
-    "get_project": "فعال"
-  },
-  "personal_info_2": {
-    "expertise": [
-      { "id": 1, "tittle": "developer", "message": " طراح فرانت اند هستم" },
-      {
-        "id": 2,
-        "tittle": "developer",
-        "message": "توسعه دهنده فرانت اند هستم"
-      },
-      { "id": 3, "tittle": "developer", "message": "فریلنسر فرانت اند هستم" }
-    ],
-    "educations": [
-      {
-        "tittle": "مهندسی تکنولوژی نرم افزار (کارشناسی)",
-        "university": "آزاد اسلامی",
-        "since": "2015",
-        "to": "2019"
-      }
-    ],
+    "get_project": "فعال",
+    "github_link": "https://github.com/Arcadio-1",
     "social_medias": [
       {
         "id": "0",
@@ -75,182 +58,210 @@
         "url": "skndri-hosyn@outlook.com",
         "icon": "/images/social/email.svg"
       }
-    ]
+    ],
+    "job_info": {
+      "contracts": [
+        { "id": 1, "tittle": "تمام وقت" },
+        { "id": 2, "tittle": "دورکاری" }
+      ]
+    },
+    "about_me": " از دوره کودکی به تکنولوژی علاقه داشتم و همیشه برای درک عمیق تر کارکرد تکنولوژی کنجکاو بودم خیلی اتفاقی با ی سری آدم شبیه خودم تو ی چت روم یاهو  آشنا شدم که البته سطح دانش فنی اونا بالاتر بود ولی خب منو تو تیمشون پذیرفتن با اینکه حتی سنمم خیلی ازونا پایینتر بود کارا خورده ریز براشون انجام میدادم ثل طراحی بنر و هدر این چیزا تا اینکه ی سایت طراحی و پشتیبانی چت روم راه اندازی کردیم و کلی براش زحمت کشیدیم  بعد از فیلتر شدن سایتمون که چندین حدود دو سال براش زحمت کشیده بودیم و تازه به درآمد رسیده بود از این مدل کار ها زده شدم  و بعد از فارغ تحصیلی حدود دو سال به عنوان حسابدار و مسئول فروش شرکت کریستال پارس کار کردم متوجه شدم هیچی برام نمیتونه جایگزین کد زدن و طراحی بشه کاری که بتونم غرقش بشم و به چیزی دیگه فکر نکنم, از کارم استعفا دادم و الان حدود دو ساله به صورت خود آموز به صورت تخصصی روی فراننت اند کار میکنم و فکر میکنم دیگه آماده وارد شدن تو بازار کار باشم و میدونم که فرانت اند برای من تازه شروع کار و فقط راهی برای وارد شدن به بازار کاره و به این قرار نیس ختم بشه 😃"
   },
-  "job_info": {
-    "contracts": [
-      { "id": 1, "tittle": "تمام وقت" },
-      { "id": 2, "tittle": "دورکاری" }
-    ]
-  },
-  "motivation_quotes": {
-    "quote": "😀 “The programmers of tomorrow are the wizards of the future” ",
-    "by": "Gabe Newell"
-  },
-  "about_me": " از دوره کودکی به تکنولوژی علاقه داشتم و همیشه برای درک عمیق تر کارکرد تکنولوژی کنجکاو بودم خیلی اتفاقی با ی سری آدم شبیه خودم تو ی چت روم یاهو  آشنا شدم که البته سطح دانش فنی اونا بالاتر بود ولی خب منو تو تیمشون پذیرفتن با اینکه حتی سنمم خیلی ازونا پایینتر بود کارا خورده ریز براشون انجام میدادم ثل طراحی بنر و هدر این چیزا تا اینکه ی سایت طراحی و پشتیبانی چت روم راه اندازی کردیم و کلی براش زحمت کشیدیم  بعد از فیلتر شدن سایتمون که چندین حدود دو سال براش زحمت کشیده بودیم و تازه به درآمد رسیده بود از این مدل کار ها زده شدم  و بعد از فارغ تحصیلی حدود دو سال به عنوان حسابدار و مسئول فروش شرکت کریستال پارس کار کردم متوجه شدم هیچی برام نمیتونه جایگزین کد زدن و طراحی بشه کاری که بتونم غرقش بشم و به چیزی دیگه فکر نکنم, از کارم استعفا دادم و الان حدود دو ساله به صورت خود آموز به صورت تخصصی روی فراننت اند کار میکنم و فکر میکنم دیگه آماده وارد شدن تو بازار کار باشم و میدونم که فرانت اند برای من تازه شروع کار و فقط راهی برای وارد شدن به بازار کاره و به این قرار نیس ختم بشه 😃",
-  "portfolios ": [
-    {
-      "tittle": "کافه ترانه",
-      "link": "https://cafe-taraneh-with-nextjs.vercel.app",
-      "id": "1"
-    }
-  ],
-  "github_link": "https://github.com/Arcadio-1",
-  "work_experience": [
-    {
-      "tittle": "پشیتبانی فنی",
-      "compony": "دی چت(مهردیزاین)",
-      "since": "2011/05/05",
-      "to": "2014/05/5",
-      "position": "پشتیبان فنی و گرافیکی"
-    },
-    {
-      "tittle": "مدیریت فروش و حسابداری",
-      "compony": "کارخانه کریستال پارس",
-      "since": "2019/05/05",
-      "to": "2021/05/5",
-      "position": "مدیریت فروش و حسابداری کارخانه"
-    }
-  ],
-  "skills": [
-    {
-      "id": "1-1",
-      "tittle": "html",
-      "level": 100,
-      "icon_img": "/images/skills/img/html.png",
-      "icon_icon": "/images/skills/icon/html.svg"
-    },
-    {
-      "id": "1-2",
-      "tittle": "css",
-      "level": 90,
-      "icon_img": "/images/skills/img/css.png",
-      "icon_icon": "/images/skills/icon/css.svg"
-    },
-    {
-      "id": "1-3",
-      "tittle": "javascript",
-      "level": 90,
-      "icon_img": "/images/skills/img/javascript.png",
-      "icon_icon": "/images/skills/icon/javascript.svg"
-    },
-    {
-      "id": "2-1",
-      "tittle": "typescript",
-      "level": 70,
-      "icon_img": "/images/skills/img/typescript.svg",
-      "icon_icon": "/images/skills/icon/typescript.svg"
-    },
-    {
-      "id": "2-2",
-      "tittle": "sass",
-      "level": 80,
-      "icon_img": "/images/skills/img/scss.png",
-      "icon_icon": "/images/skills/icon/scss.svg"
-    },
-    {
-      "id": "3-1",
-      "tittle": "react",
-      "level": 90,
-      "icon_img": "/images/skills/img/react.png",
-      "icon_icon": "/images/skills/icon/react.svg"
-    },
-    {
-      "id": "3-2",
-      "tittle": "next.js",
-      "level": 90,
-      "icon_img": "/images/skills/img/nextjs.png",
-      "icon_icon": "/images/skills/icon/"
-    },
-    {
-      "id": "4-1",
-      "tittle": "tailwind",
-      "level": 80,
-      "icon_img": "/images/skills/img/tailwind.png",
-      "icon_icon": "/images/skills/icon/tailwind.svg"
-    },
-    {
-      "id": "4-2",
-      "tittle": "material ui",
-      "level": 70,
-      "icon_img": "/images/skills/img/materialui.png",
-      "icon_icon": "/images/skills/icon/materialui.svg"
-    },
-    {
-      "id": "4-3",
-      "tittle": "bootstrap",
-      "level": 50,
-      "icon_img": "/images/skills/img/bootstrap.png",
-      "icon_icon": "/images/skills/icon/bootstrap.svg"
-    },
 
-    {
-      "id": "5-1",
-      "tittle": "adobe xd",
-      "level": 60,
-      "icon_img": "/images/skills/img/adobexd.svg",
-      "icon_icon": "/images/skills/icon/adobexd.svg"
+  "resume": {
+    "educations": [
+      {
+        "id": "0",
+        "tittle": "مهندسی تکنولوژی نرم افزار (کاردانی)",
+        "university": "آزاد اسلامی",
+        "since": "1394",
+        "to": "1396"
+      },
+      {
+        "id": "1",
+        "tittle": "مهندسی تکنولوژی نرم افزار (کارشناسی)",
+        "university": "آزاد اسلامی",
+        "since": "1396",
+        "to": "1398"
+      }
+    ],
+    "portfolios ": [
+      {
+        "tittle": "کافه ترانه",
+        "link": "https://cafe-taraneh-with-nextjs.vercel.app",
+        "id": "1"
+      }
+    ],
+    "expertise": [
+      { "id": 1, "tittle": "developer", "message": " طراح فرانت اند هستم" },
+      {
+        "id": 2,
+        "tittle": "developer",
+        "message": "توسعه دهنده فرانت اند هستم"
+      },
+      { "id": 3, "tittle": "developer", "message": "فریلنسر فرانت اند هستم" }
+    ],
+    "motivation_quotes": {
+      "quote": "😀 “The programmers of tomorrow are the wizards of the future” ",
+      "by": "Gabe Newell"
     },
-    {
-      "id": "5-2",
-      "tittle": "figma",
-      "level": 40,
-      "icon_img": "/images/skills/img/figma.png",
-      "icon_icon": "/images/skills/icon/figma.svg"
-    },
-    {
-      "id": "6-1",
-      "tittle": "webpack",
-      "level": 50,
-      "icon_img": "/images/skills/img/webpack.svg",
-      "icon_icon": "/images/skills/icon/webpack.svg"
-    },
-    {
-      "id": "6-2",
-      "tittle": "redux",
-      "level": 100,
-      "icon_img": "/images/skills/img/redux.png",
-      "icon_icon": "/images/skills/icon/redux.svg"
-    },
-    {
-      "id": "6-3",
-      "tittle": "pwa",
-      "level": 80,
-      "icon_img": "/images/skills/img/pwa.png",
-      "icon_icon": "/images/skills/icon/pwa.svg"
-    },
-    {
-      "id": "6-4",
-      "tittle": "github",
-      "level": 80,
-      "icon_img": "/images/skills/img/github.png",
-      "icon_icon": "/images/skills/icon/github.svg"
-    },
-    {
-      "id": "7-1",
-      "tittle": "node.js",
-      "level": 80,
-      "icon_img": "/images/skills/img/nodejs.png",
-      "icon_icon": "/images/skills/icon/nodejs.svg"
-    },
-    {
-      "id": "7-2",
-      "tittle": "mongoDB",
-      "level": 80,
-      "icon_img": "/images/skills/img/mongodb.png",
-      "icon_icon": "/images/skills/icon/mongodb.svg"
-    },
-    {
-      "id": "7-3",
-      "tittle": "firebase",
-      "level": 80,
-      "icon_img": "/images/skills/img/firebase.png",
-      "icon_icon": "/images/skills/icon/firebase.svg"
-    }
-  ],
-  "fluent_languages": [
-    { "tittle": "انگلیسی", "level": 80 },
-    { "tittle": "کوردی", "level": 100 }
-  ],
-  "hero_image": "/images/hero/hero.jpg"
+    "work_experience": [
+      {
+        "id": "1",
+        "tittle": "پشیتبانی فنی",
+        "compony": "دی چت(مهردیزاین)",
+        "since": "2011/05/05",
+        "to": "2014/05/5",
+        "position": "پشتیبان فنی و گرافیکی"
+      },
+      {
+        "id": "2",
+        "tittle": "مدیریت فروش و حسابداری",
+        "compony": "کارخانه کریستال پارس",
+        "since": "2019/05/05",
+        "to": "2021/05/5",
+        "position": "مسئول فروش و حسابداری کارخانه"
+      }
+    ],
+    "skills": [
+      {
+        "id": "1-1",
+        "tittle": "html",
+        "level": 100,
+        "icon_img": "/images/skills/img/html.png",
+        "icon_icon": "/images/skills/icon/html.svg"
+      },
+      {
+        "id": "1-2",
+        "tittle": "css",
+        "level": 90,
+        "icon_img": "/images/skills/img/css.png",
+        "icon_icon": "/images/skills/icon/css.svg"
+      },
+      {
+        "id": "1-3",
+        "tittle": "javascript",
+        "level": 90,
+        "icon_img": "/images/skills/img/javascript.png",
+        "icon_icon": "/images/skills/icon/javascript.svg"
+      },
+      {
+        "id": "2-1",
+        "tittle": "typescript",
+        "level": 70,
+        "icon_img": "/images/skills/img/typescript.svg",
+        "icon_icon": "/images/skills/icon/typescript.svg"
+      },
+      {
+        "id": "2-2",
+        "tittle": "sass",
+        "level": 80,
+        "icon_img": "/images/skills/img/scss.png",
+        "icon_icon": "/images/skills/icon/scss.svg"
+      },
+      {
+        "id": "3-1",
+        "tittle": "react",
+        "level": 90,
+        "icon_img": "/images/skills/img/react.png",
+        "icon_icon": "/images/skills/icon/react.svg"
+      },
+      {
+        "id": "3-2",
+        "tittle": "next.js",
+        "level": 90,
+        "icon_img": "/images/skills/img/nextjs.png",
+        "icon_icon": "/images/skills/icon/"
+      },
+      {
+        "id": "4-1",
+        "tittle": "tailwind",
+        "level": 80,
+        "icon_img": "/images/skills/img/tailwind.png",
+        "icon_icon": "/images/skills/icon/tailwind.svg"
+      },
+      {
+        "id": "4-2",
+        "tittle": "material ui",
+        "level": 70,
+        "icon_img": "/images/skills/img/materialui.png",
+        "icon_icon": "/images/skills/icon/materialui.svg"
+      },
+      {
+        "id": "4-3",
+        "tittle": "bootstrap",
+        "level": 50,
+        "icon_img": "/images/skills/img/bootstrap.png",
+        "icon_icon": "/images/skills/icon/bootstrap.svg"
+      },
+
+      {
+        "id": "5-1",
+        "tittle": "adobe xd",
+        "level": 60,
+        "icon_img": "/images/skills/img/adobexd.svg",
+        "icon_icon": "/images/skills/icon/adobexd.svg"
+      },
+      {
+        "id": "5-2",
+        "tittle": "figma",
+        "level": 40,
+        "icon_img": "/images/skills/img/figma.png",
+        "icon_icon": "/images/skills/icon/figma.svg"
+      },
+      {
+        "id": "6-1",
+        "tittle": "webpack",
+        "level": 50,
+        "icon_img": "/images/skills/img/webpack.svg",
+        "icon_icon": "/images/skills/icon/webpack.svg"
+      },
+      {
+        "id": "6-2",
+        "tittle": "redux",
+        "level": 100,
+        "icon_img": "/images/skills/img/redux.png",
+        "icon_icon": "/images/skills/icon/redux.svg"
+      },
+      {
+        "id": "6-3",
+        "tittle": "pwa",
+        "level": 80,
+        "icon_img": "/images/skills/img/pwa.png",
+        "icon_icon": "/images/skills/icon/pwa.svg"
+      },
+      {
+        "id": "6-4",
+        "tittle": "github",
+        "level": 80,
+        "icon_img": "/images/skills/img/github.png",
+        "icon_icon": "/images/skills/icon/github.svg"
+      },
+      {
+        "id": "7-1",
+        "tittle": "node.js",
+        "level": 80,
+        "icon_img": "/images/skills/img/nodejs.png",
+        "icon_icon": "/images/skills/icon/nodejs.svg"
+      },
+      {
+        "id": "7-2",
+        "tittle": "mongoDB",
+        "level": 80,
+        "icon_img": "/images/skills/img/mongodb.png",
+        "icon_icon": "/images/skills/icon/mongodb.svg"
+      },
+      {
+        "id": "7-3",
+        "tittle": "firebase",
+        "level": 80,
+        "icon_img": "/images/skills/img/firebase.png",
+        "icon_icon": "/images/skills/icon/firebase.svg"
+      }
+    ],
+    "fluent_languages": [
+      { "id": "0", "tittle": "انگلیسی", "level": 80 },
+      { "id": "1", "tittle": "کوردی", "level": 100 }
+    ]
+  }
 }

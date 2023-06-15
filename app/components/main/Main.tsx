@@ -10,17 +10,17 @@ import { CV } from "@/app/util/types";
 
 const Main = () => {
   const server_cv: CV = useSelector((state: any) => state.getData.my_cv_server);
-
+  const { personal_info, resume } = server_cv;
   return (
     <main className="main">
       <Hero
-        name={server_cv.personal_info.name}
-        lastname={server_cv.personal_info.lastName}
-        expertise={server_cv.personal_info_2.expertise}
-        hero_image={server_cv.hero_image}
+        name={personal_info.name}
+        lastname={personal_info.lastName}
+        hero_image={personal_info.hero_image}
+        expertise={resume.expertise}
       />
-      <About cv={server_cv} />
-      <Skills cv={server_cv} />
+      <About personal_info={personal_info} />
+      <Skills skills={resume.skills} />
       <Resume />
       <Portfolio />
       <Contact />
