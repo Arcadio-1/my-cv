@@ -420,27 +420,21 @@
       &-language {
         margin-top: 2rem;
         .tittle {
-          // border: 2px solid snow;
-
           margin-bottom: 1rem;
           font-size: 1.4rem;
         }
         .list {
-          // border: 2px solid snow;
           list-style: none;
-          @include dflex(flex-start);
+          display: grid;
+          grid-template-columns: 1fr 1fr;
           gap: 2rem;
-          width: 100%;
           padding: 0.5rem 2rem;
           &-item {
-            // border: 2px solid snow;
-            width: 50%;
+            width: 100%;
             padding: 1rem;
             border-radius: 5px;
             background-color: rgba(color(g3-2), 0.05);
-            flex: 1 0 auto;
             .data {
-              // max-width: 30rem;
               @include dflex(space-between);
               margin-bottom: 0.3rem;
               font-size: 1.1rem;
