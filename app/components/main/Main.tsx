@@ -21,7 +21,11 @@ const Main = () => {
       />
       <About personal_info={personal_info} />
       <Skills skills={resume.skills} />
-      <Resume />
+      <Resume
+        educations={resume.educations}
+        work_experiences={resume.work_experiences}
+        fluent_languages={resume.fluent_languages}
+      />
       <Portfolio />
       <Contact />
     </main>

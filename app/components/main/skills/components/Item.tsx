@@ -7,16 +7,15 @@ interface Props {
 const Item = (props: Props) => {
   const { skill } = props;
   const { tittle, id, level, icon_img, icon_icon } = skill;
-  console.log(props);
   return (
     <div className="main-skills-list-item">
       <div className="main-skills-list-item-content">
         <div className="main-skills-list-item-content-data">
-          <span className="persent">{level}%</span>
+          <span className="percent">{level}%</span>
           <h2 className="tittle">{tittle}</h2>
         </div>
         <div className="main-skills-list-item-content-progressBar">
-          <div className="persent" style={{ width: `${level}%` }}></div>
+          <div className="percent" style={{ width: `${level}%` }}></div>
         </div>
       </div>
       <div className="main-skills-list-item-image">

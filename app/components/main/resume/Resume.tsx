@@ -1,12 +1,31 @@
 import SectionHeader from "@/app/util/ui/SectionHeader";
 import React from "react";
-
-const Resume = () => {
-  const text =
-    "به دنبال تغییر شغل و یافتن موقعیتی در زمینه‌ی «کپی رایتینگ» در یک شرکت بازاریابی متوسط یا بزرگ هستم. باانگیزه هستم و مهارت یادگیری بسیار بالایی دارم. پیش از این داوطلب شده‌ام تا به معلم‌های دیگر در نوشتن برنامه درسی و تدریس خصوصی کمک کنم.";
+import { Experience, Language } from "@/app/util/types";
+import Experience_component from "./components/Experience";
+import Language_component from "./components/Language";
+interface Props {
+  educations: Experience[];
+  work_experiences: Experience[];
+  fluent_languages: Language[];
+}
+const Resume = (props: Props) => {
   return (
-    <div>
-      <SectionHeader tittle="رزومه" description={text} />
+    <div className="main-resume">
+      <SectionHeader tittle="رزومه" description="" />
+      <div className="main-resume-container">
+        <div className="main-resume-experiences">
+          <Experience_component
+            experience={props.educations}
+            header="سوابق تحصیلی"
+          />
+          <Experience_component
+            experience={props.work_experiences}
+            header="سوابق شغلی"
+          />
+        </div>
+
+        <Language_component languages={props.fluent_languages} />
+      </div>
     </div>
   );
 };

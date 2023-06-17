@@ -33,11 +33,12 @@ export enum Get_project {
   Active,
   Deactive,
 }
-export interface Education {
+export interface Experience {
+  id: string;
   tittle: string;
-  university: string;
-  since: number;
-  to: number;
+  place: string;
+  since: string;
+  to: string;
 }
 export interface Expertise {
   id: number;
@@ -49,15 +50,6 @@ export interface Social_media {
   tittle: string;
   url: string;
   icon: string;
-}
-
-export interface Work_experience {
-  id: string;
-  tittle: string;
-  compony: string;
-  since: string;
-  to: string;
-  position: string;
 }
 
 export interface Contract {
@@ -89,7 +81,6 @@ export interface Skill {
   icon_img: string;
   icon_icon: string;
 }
-export type Skills = Skill[];
 
 export interface Language {
   id: string;
@@ -97,7 +88,6 @@ export interface Language {
   level: number;
 }
 export type Hero_image = string;
-export type Fluent_languages = Language[];
 
 export interface Personal_info {
   profile_iamge: string;
@@ -119,14 +109,14 @@ export interface Personal_info {
   about_me: About_me;
 }
 export interface Resume {
-  educations: Education[];
-  Work_experiences: Work_experience[];
-  portfolios: Portfolio[];
+  educations: Experience[];
+  work_experiences: Experience[];
   expertise: Expertise[];
+  portfolios: Portfolio[];
   github_link: Github_link;
-  skills: Skills;
+  skills: Skill[];
   motivation_quotes: Motivation_quote;
-  fluent_languages: Fluent_languages;
+  fluent_languages: Language[];
 }
 export interface CV {
   personal_info: Personal_info;

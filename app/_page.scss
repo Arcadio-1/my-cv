@@ -246,28 +246,26 @@
       }
     }
     &-about {
-      overflow: visible;
       color: color(light-2);
       padding-bottom: 1rem;
       background-color: rgba(color(dark-2), 0.5);
       padding-right: 1rem;
       &-container {
         margin-top: 1rem;
-        @include dflex(flex-start, flex-start);
-        gap: 1rem;
       }
       &-image {
-        flex: 0 0 auto;
-        width: 33.33333333%;
+        padding: 2rem;
+        float: right;
         img {
-          border-radius: 5px;
+          border-radius: 2px;
+          width: 100%;
+          max-width: 35rem;
         }
       }
-      &-main {
-        flex: 0 0 auto;
-        width: calc(64.66666667% - 1rem);
-      }
       &-content {
+        margin-bottom: 2rem;
+        width: 100%;
+        // border: 2px solid red;
         &-tittle {
           font-family: iranyekan;
           font-size: 2rem;
@@ -296,15 +294,14 @@
           }
         }
       }
-      // &-footer {
-      //   margin-top: 2rem;
-      //   margin-right: auto;
-      //   color: color(light-2);
-      //   &-qoute {
-      //   }
-      //   &-qouteBy {
-      //   }
-      // }
+      &-footer {
+        color: color(light-2);
+        &-content {
+          padding: 2rem;
+          line-height: 2.5rem;
+          font-size: 1.35rem;
+        }
+      }
     }
     &-skills {
       color: color(light-2);
@@ -338,7 +335,7 @@
                 font-size: 1.5rem;
                 text-transform: capitalize;
               }
-              .persent {
+              .percent {
                 font-size: 1.5rem;
               }
             }
@@ -350,7 +347,118 @@
               border: 2px solid rgba(color(g3-3), 0.4);
               @include dflex(flex-end);
               transition: all 0.3s linear;
-              .persent {
+              .percent {
+                height: 100%;
+                width: 0px;
+                background-color: rgba(color(g3-3), 0.5);
+              }
+            }
+          }
+        }
+      }
+    }
+    &-resume {
+      margin-top: 1rem;
+      color: color(light-2);
+      background-color: rgba(color(dark-2), 0.5);
+      padding: 1rem;
+      &-container {
+      }
+      &-experiences {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        &-experience {
+          border-radius: 10px;
+          padding: 0.5rem 1rem;
+          background-color: rgba(color(dark-2), 0.2);
+          .header {
+            font-size: 1.5rem;
+            padding-bottom: 0.3rem;
+            &::after {
+              content: "";
+              height: 2px;
+              width: 60px;
+              display: block;
+              border-radius: 2px;
+              border-bottom: 2px solid rgba(color(light-2), 0.08);
+              padding-top: 0.5rem;
+            }
+          }
+          .list {
+            list-style: none;
+            &-item {
+              @include dflex(flex-start, flex-start);
+              flex-direction: column;
+              padding: 0.5rem 1rem;
+              background-color: rgba(color(g3-4), 0.05);
+              border-radius: 5px;
+              margin: 1rem;
+              .tittle {
+                font-size: 1.4rem;
+                margin-bottom: 0.4rem;
+              }
+              .date {
+                font-size: 1.2rem;
+                font-family: iransansnum;
+                @include dflex;
+                gap: 0.5rem;
+                &-since {
+                }
+                &-dash {
+                }
+                &-to {
+                }
+              }
+              .place {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+      &-language {
+        margin-top: 2rem;
+        .tittle {
+          // border: 2px solid snow;
+
+          margin-bottom: 1rem;
+          font-size: 1.4rem;
+        }
+        .list {
+          // border: 2px solid snow;
+          list-style: none;
+          @include dflex(flex-start);
+          gap: 2rem;
+          width: 100%;
+          padding: 0.5rem 2rem;
+          &-item {
+            // border: 2px solid snow;
+            width: 50%;
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: rgba(color(g3-2), 0.05);
+            flex: 1 0 auto;
+            .data {
+              // max-width: 30rem;
+              @include dflex(space-between);
+              margin-bottom: 0.3rem;
+              font-size: 1.1rem;
+              &-tittle {
+              }
+              &-percent {
+              }
+            }
+            .progressBar {
+              // max-width: 30rem;
+              margin-top: 0.1rem;
+              height: 1.5rem;
+              width: 100%;
+              border-radius: 2px;
+              border: 2px solid rgba(color(g3-3), 0.4);
+              @include dflex(flex-end);
+              transition: all 0.3s linear;
+              &-percent {
                 height: 100%;
                 width: 0px;
                 background-color: rgba(color(g3-3), 0.5);

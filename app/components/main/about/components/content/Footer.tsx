@@ -1,13 +1,16 @@
-import { Motivation_quote } from "@/app/util/types";
+import { About_me, Motivation_quote } from "@/app/util/types";
 import React from "react";
 interface Props {
-  quote: Motivation_quote;
+  children: any;
 }
 const Footer = (props: Props) => {
+  console.log(props.children);
   return (
     <footer className="main-about-footer">
-      <span className="main-about-footer-quote">{props.quote.quote}</span>
-      <p className="main-about-footer-quoteBy">{props.quote.by}</p>
+      <div
+        className="main-about-footer-content"
+        dangerouslySetInnerHTML={{ __html: props.children }}
+      />
     </footer>
   );
 };

@@ -1,8 +1,8 @@
-import { Skills } from "@/app/util/types";
+import { Skill } from "@/app/util/types";
 import React from "react";
 import Item from "./Item";
 interface Props {
-  skills: Skills;
+  skills: Skill[];
 }
 const List = (props: Props) => {
   return (
