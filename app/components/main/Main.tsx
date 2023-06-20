@@ -26,7 +26,7 @@ const Main = () => {
         work_experiences={resume.work_experiences}
         fluent_languages={resume.fluent_languages}
       />
-      <Portfolio />
+      <Portfolio portfolios={resume.portfolios} />
       <Contact />
     </main>
   );

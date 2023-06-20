@@ -24,9 +24,9 @@ const About = async (props: Props) => {
     getAbout();
   }, []);
 
-  useEffect(() => {
-    console.log(about);
-  }, [about]);
+  // useEffect(() => {
+  //   console.log(about);
+  // }, [about]);
   const { about_me } = props.personal_info;
   return (
     <div className="main-about">

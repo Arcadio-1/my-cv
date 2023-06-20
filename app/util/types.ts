@@ -3,6 +3,11 @@ export enum Status {
   error,
   success,
 }
+export enum Group {
+  all,
+  develop,
+  design,
+}
 export interface Full_status {
   status: Status;
   tittle: string;
@@ -68,9 +73,15 @@ export interface Motivation_quote {
 export type About_me = string;
 
 export interface Portfolio {
+  id: string;
   tittle: string;
-  link: string;
-  id: number;
+  group: Group;
+  tags: string[];
+  prev_image: string;
+  images: string[];
+  deployed_link?: string;
+  repo_link?: string;
+  download_link?: string;
 }
 export type Github_link = string;
 

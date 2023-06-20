@@ -462,5 +462,173 @@
         }
       }
     }
+    &-portfolio {
+      margin-top: 1rem;
+      color: color(light-2);
+      background-color: rgba(color(dark-2), 0.5);
+      padding: 1rem;
+      &-container {
+      }
+      &-filter {
+        @include dflex;
+        margin-bottom: 1rem;
+        .nav {
+          padding: 0.7rem 3rem;
+          // border-radius: 7px;
+          // border: 2px solid rgba(color(g3-1), 0.5);
+          background-color: rgba(color(g3-5), 0.3);
+          @include dflex();
+          gap: 1rem;
+          .item {
+            transition: all 0.15s linear;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 0.3rem 1rem;
+            background-color: rgba(color(g3-4), 0.4);
+            border: 2px solid transparent;
+            &:hover {
+              border: 2px solid rgba(color(light-2), 0.8);
+            }
+          }
+          .selecteFilter {
+            font-weight: 700;
+            color: color(dark-2);
+            background-color: rgba(color(light-2), 0.8);
+          }
+        }
+      }
+      &-list {
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+        gap: 2rem;
+        &-item {
+          .slider {
+            border: 2px solid red;
+            height: 100%;
+            // border: 2px solid red;
+          }
+          position: relative;
+          background-color: rgba(color(dark-2), 0.2);
+          .prevImage {
+            overflow: hidden;
+            max-height: 35rem;
+            &:hover {
+            }
+            .swiper {
+              position: static;
+              &-pagination {
+                background-color: rgba(color(light-2), 0.2);
+                backdrop-filter: blur(3px);
+                border-radius: 5px;
+                bottom: 5rem;
+              }
+              &-button-next,
+              &-button-prev {
+                background-color: rgba(color(dark-2), 0.1);
+                backdrop-filter: blur(3px);
+                border-radius: 10px;
+                &::after {
+                  color: rgba(color(g3-2), 1);
+                  font-size: 2rem;
+                }
+              }
+              &-slide {
+                .link {
+                  .slide {
+                    &-tittle {
+                      font-family: iranyekan;
+                      color: color(light-2);
+                      padding: 1rem 1rem;
+                      background-color: rgba(color(g3-5), 0.5);
+                      font-size: 1.4rem;
+                      border-bottom: 2px solid rgba(color(light-2), 1);
+                    }
+                    &-imageContainer {
+                      img {
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .actions {
+            background-color: rgba(color(dark-2), 0.5);
+            z-index: 10;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            backdrop-filter: blur(3px);
+            padding: 0.5rem 1rem;
+            @include dflex(space-between);
+            &-btn {
+              max-width: 3rem;
+              width: 100%;
+              .actionIcon {
+                svg {
+                  transition: all 0.15s linear;
+                }
+                &:hover {
+                  svg {
+                    transform: scale(1.1);
+                  }
+                }
+              }
+            }
+            &-deploy {
+              svg {
+                path {
+                  transition: all 0.15s linear;
+                  fill: rgba(color(light-2), 1);
+                }
+                &:hover {
+                  path {
+                    fill: color(g3-2);
+                  }
+                }
+              }
+            }
+            &-repo {
+              svg {
+                path {
+                  transition: all 0.15s linear;
+                  fill: rgba(color(light-2), 1);
+                }
+                &:hover {
+                  path {
+                    fill: color(g3-2);
+                  }
+                }
+              }
+            }
+            &-pdf {
+              svg {
+                path {
+                  transition: all 0.15s linear;
+                  stroke: rgba(color(light-2), 1);
+                }
+                &:hover {
+                  path {
+                    stroke: color(g3-2);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.pswp {
+  img {
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
   }
 }

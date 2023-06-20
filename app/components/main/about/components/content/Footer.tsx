@@ -4,7 +4,6 @@ interface Props {
   children: any;
 }
 const Footer = (props: Props) => {
-  console.log(props.children);
   return (
     <footer className="main-about-footer">
       <div
