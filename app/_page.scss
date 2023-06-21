@@ -1,7 +1,7 @@
 @use "./styles/clips.scss" as *;
 .cv {
   background: hsla(185, 64%, 51%, 1);
-
+  display: flex;
   background: linear-gradient(
     90deg,
     hsla(185, 64%, 51%, 1) 0%,
@@ -502,12 +502,9 @@
         justify-content: space-evenly;
         grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
         gap: 2rem;
+        transition: all 0.3 linear;
         &-item {
-          .slider {
-            border: 2px solid red;
-            height: 100%;
-            // border: 2px solid red;
-          }
+          transition: all 0.3 linear;
           position: relative;
           background-color: rgba(color(dark-2), 0.2);
           .prevImage {
@@ -617,6 +614,43 @@
                 }
               }
             }
+          }
+        }
+        .notSelected {
+          animation: hider 0.2s forwards;
+          overflow: hidden;
+          width: 0;
+          height: 0;
+        }
+        .selectedItem {
+          animation: shower 0.2s forwards;
+        }
+        @keyframes hider {
+          from {
+            height: 100%;
+            width: 100%;
+            opacity: 1;
+          }
+          to {
+            height: 0px;
+            width: 0px;
+            opacity: 0;
+            overflow: hidden;
+            display: none;
+            position: absolute;
+            top: 1000px;
+          }
+        }
+        @keyframes shower {
+          from {
+            height: 0%;
+            width: 0%;
+            opacity: 0;
+          }
+          to {
+            height: 100%;
+            width: 100%;
+            opacity: 1;
           }
         }
       }

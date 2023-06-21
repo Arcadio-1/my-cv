@@ -10,9 +10,16 @@ const List = (props: Props) => {
     <ul className="main-portfolio-list">
       {props.portfolios.map((item) => {
         return (
-          (props.filter === Group.all || props.filter === item.group) && (
-            <Item key={item.id} portfolio={item} />
-          )
+          <li
+            key={item.id}
+            className={`main-portfolio-list-item ${
+              props.filter === Group.all || props.filter === item.group
+                ? "selectedItem"
+                : "notSelected"
+            }`}
+          >
+            <Item portfolio={item} />
+          </li>
         );
       })}
     </ul>

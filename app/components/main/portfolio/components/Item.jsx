@@ -1,6 +1,6 @@
 import { Portfolio } from "@/app/util/types";
 import Image from "next/image";
-import React from "react";
+import React, { Fragment } from "react";
 import Monitor from "./icons/Monitor";
 import Github from "./icons/Github";
 import Download from "./icons/Download";
@@ -63,7 +63,7 @@ const Item = (props) => {
   // }, [images]);
 
   return (
-    <li className="main-portfolio-list-item">
+    <Fragment>
       <div className="prevImage">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -129,7 +129,7 @@ const Item = (props) => {
           </div>
         )}
       </div>
-    </li>
+    </Fragment>
   );
 };
 

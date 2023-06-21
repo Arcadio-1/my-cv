@@ -19,15 +19,17 @@ const Main = () => {
         hero_image={personal_info.hero_image}
         expertise={resume.expertise}
       />
-      <About personal_info={personal_info} />
-      <Skills skills={resume.skills} />
-      <Resume
-        educations={resume.educations}
-        work_experiences={resume.work_experiences}
-        fluent_languages={resume.fluent_languages}
-      />
-      <Portfolio portfolios={resume.portfolios} />
-      <Contact />
+      <div className="max-w-[1678px] w-full">
+        <About personal_info={personal_info} />
+        <Skills skills={resume.skills} />
+        <Resume
+          educations={resume.educations}
+          work_experiences={resume.work_experiences}
+          fluent_languages={resume.fluent_languages}
+        />
+        <Portfolio portfolios={resume.portfolios} />
+        <Contact />
+      </div>
     </main>
   );
 };
