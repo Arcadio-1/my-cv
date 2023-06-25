@@ -15,6 +15,7 @@ const Header = () => {
       <Fullname
         name={server_cv.personal_info.name}
         lastname={server_cv.personal_info.lastName}
+        nickname={server_cv.personal_info.nickname}
       />
       <SocialLinks social_medias={server_cv.personal_info.social_medias} />
     </header>

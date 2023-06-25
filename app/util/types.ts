@@ -102,13 +102,16 @@ export type Hero_image = string;
 
 export interface Personal_info {
   profile_iamge: string;
+  profile_iamge_2: string;
+  nickname: string;
   hero_image: Hero_image;
   name: string;
   lastName: string;
   marital_status: Marital_status;
   dateOfBirth: string;
   email: string;
-  mobile: number;
+  mobile: string;
+  telegram: string;
   gender: Gender;
   military_service: Military_service;
   residence: string;

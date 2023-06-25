@@ -19,7 +19,7 @@ const Main = () => {
         hero_image={personal_info.hero_image}
         expertise={resume.expertise}
       />
-      <div className="max-w-[1678px] w-full">
+      <div className="max-w-[1678px] w-full mb-10">
         <About personal_info={personal_info} />
         <Skills skills={resume.skills} />
         <Resume
@@ -28,7 +28,11 @@ const Main = () => {
           fluent_languages={resume.fluent_languages}
         />
         <Portfolio portfolios={resume.portfolios} />
-        <Contact />
+        <Contact
+          mobile={personal_info.mobile}
+          email={personal_info.email}
+          telegram={personal_info.telegram}
+        />
       </div>
     </main>
   );

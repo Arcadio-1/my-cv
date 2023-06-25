@@ -4,8 +4,6 @@ import React, { useEffect, useState } from "react";
 import MyImage from "./components/myImage/MyImage";
 import Content from "./components/content/Content/Content";
 import Footer from "./components/content/Footer";
-import path from "path";
-import fs from "fs";
 
 interface Props {
   personal_info: Personal_info;

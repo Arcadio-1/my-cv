@@ -7,7 +7,6 @@ export async function GET(req: NextRequest) {
   //Find the absolute path of the json directory
   const slug = req.url.split("/");
   const me = slug[slug.length - 1];
-  console.log(me);
   const directory = path.join(process.cwd(), "markdown");
   const fullPath = join(directory, `${me}.md`);
 

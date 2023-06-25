@@ -1,13 +1,16 @@
 {
   "personal_info": {
-    "profile_iamge": "/images/profile.jpg",
+    "profile_iamge": "/images/profile_2.jpg",
+    "profile_iamge_2": "/images/profile_2_2.jpg",
     "hero_image": "/images/hero/hero.jpg",
     "name": "حسین",
     "lastName": "اسکندری",
+    "nickName": "Rkdo",
     "marital_status": "مجرد",
-    "dateOfBirth": "16 مهر 1375",
-    "email": "rcdo-alxndr@gmail.com",
-    "mobile": "09120001122",
+    "dateOfBirth": "1375",
+    "email": "skndri-hosyn@outlook.com",
+    "mobile": "09183704735",
+    "telegram": "@Rkdo_a",
     "gender": "مرد",
     "military_service": "معافیت",
     "residence": "تهران",
@@ -31,31 +34,31 @@
       {
         "id": "2",
         "tittle": "linkedin",
-        "url": "https://twitter.com/elonmusk",
+        "url": "https://www.linkedin.com/in/hossein-skandari-4620b727a/",
         "icon": "/images/social/linkedin.svg"
       },
       {
         "id": "3",
         "tittle": "telegram",
-        "url": "https://twitter.com/elonmusk",
+        "url": "https://t.me/Rkdo_a",
         "icon": "/images/social/telegram.svg"
       },
       {
         "id": "5",
         "tittle": "skype",
-        "url": "https://twitter.com/elonmusk",
+        "url": "https://join.skype.com/invite/fSZUjlwHu0M4",
         "icon": "/images/social/skype.svg"
       },
       {
         "id": "6",
         "tittle": "phone",
-        "url": "+989180000000",
+        "url": "#contact",
         "icon": "/images/social/phone.svg"
       },
       {
         "id": "7",
         "tittle": "email",
-        "url": "skndri-hosyn@outlook.com",
+        "url": "#contact",
         "icon": "/images/social/email.svg"
       }
     ],
@@ -96,7 +99,7 @@
       {
         "id": "2",
         "tittle": "مدیریت فروش و حسابداری",
-        "place": "کارخانه کریستال پارس",
+        "place": "شرکت کریستال پارس",
         "since": "1398",
         "to": "1400"
       }
@@ -328,7 +331,7 @@
         "id": "4-1",
         "tittle": "tailwind",
         "level": 80,
-        "icon_img": "/images/skills/img/tailwind.png",
+        "icon_img": "/images/skills/img/tailwind_1.png",
         "icon_icon": "/images/skills/icon/tailwind.svg"
       },
       {

@@ -48,21 +48,36 @@
       @include dflex;
       flex-direction: column;
       &-image {
+        width: 100%;
+        height: 100%;
+
+        max-width: 14rem;
+        max-height: 14rem;
+        object-fit: cover;
+        overflow: hidden;
         img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
           border: 5px solid color(dark-2);
           border-radius: 100%;
         }
       }
       &-fullname {
         padding: 1rem;
+        @include dflex;
+        flex-direction: column;
         h1 {
           font-size: 1.7rem;
           color: color(light-2);
         }
+        .nickName {
+          color: rgba(color(g3-1), 1);
+        }
       }
       &-socialmedias {
         &-list {
-          background-color: rgba(color(dark-2), 0.8);
+          background-color: rgba(color(g3-2), 0.2);
           border-radius: 1000px;
           padding: 2px 1rem;
           @include dflex;
@@ -88,7 +103,7 @@
         @include dflex(flex-start, flex-start);
         flex-direction: column;
         &-item {
-          transition: all 200ms linear;
+          transition: all 150ms linear;
           padding: 0.5rem 2rem 0.5rem 0rem;
           width: 100%;
           a {
@@ -103,7 +118,7 @@
             }
             span {
               font-size: 1.4rem;
-              color: color(light-4);
+              color: color(light-2);
             }
           }
           &:hover {
@@ -128,11 +143,12 @@
       width: 100%;
       @include dflex;
       flex-direction: column;
+      background-color: rgba(color(dark-2), 0.1);
       &-copyright {
-        color: rgba(color(g3-3), 1);
+        color: rgba(color(g3-2), 1);
       }
       &-designed {
-        color: rgba(color(g3-3), 1);
+        color: rgba(color(g3-2), 1);
       }
     }
   }
@@ -250,6 +266,8 @@
       padding-bottom: 1rem;
       background-color: rgba(color(dark-2), 0.5);
       padding-right: 1rem;
+      padding-bottom: 6rem;
+
       &-container {
         margin-top: 1rem;
       }
@@ -257,9 +275,13 @@
         padding: 2rem;
         float: right;
         img {
-          border-radius: 2px;
+          filter: drop-shadow(0px 0px 0px rgb(255, 255, 255)) grayscale(60%);
+          // filter: grayscale();
+          // filter: sepia()
+          opacity: 0.6;
+          border-radius: 5px;
           width: 100%;
-          max-width: 35rem;
+          max-width: 30rem;
         }
       }
       &-content {
@@ -308,6 +330,8 @@
       background-color: rgba(color(dark-2), 0.5);
       margin-top: 1rem;
       padding-right: 1rem;
+      padding-bottom: 6rem;
+
       &-list {
         padding: 2rem;
         display: grid;
@@ -362,6 +386,8 @@
       color: color(light-2);
       background-color: rgba(color(dark-2), 0.5);
       padding: 1rem;
+      padding-bottom: 6rem;
+
       &-container {
       }
       &-experiences {
@@ -467,6 +493,8 @@
       color: color(light-2);
       background-color: rgba(color(dark-2), 0.5);
       padding: 1rem;
+      padding-bottom: 6rem;
+
       &-container {
       }
       &-filter {
@@ -655,6 +683,203 @@
         }
       }
     }
+    &-contact {
+      margin-top: 1rem;
+      color: color(light-2);
+      background-color: rgba(color(dark-2), 0.5);
+      padding: 1rem;
+      padding-bottom: 6rem;
+      &-container {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 2rem;
+      }
+      &-contactLines {
+        @include dflex(flex-start, flex-start);
+        height: 100%;
+        background-color: rgba(color(g3-2), 0.1);
+        flex: 1;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 1rem;
+        &-item {
+          @include dflex(flex-start);
+          gap: 0.5rem;
+          width: 100%;
+          background-color: rgba(color(g3-2), 0.1);
+          padding: 1rem;
+          transition: all 0.15s linear;
+          &-icon {
+            flex: 1 0 auto;
+            width: 100%;
+            height: 100%;
+            max-width: 4rem;
+            padding: 0.5rem;
+            border-radius: 100%;
+            background-color: rgba(color(light-2), 0.5);
+            svg {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              fill: rgba(color(g3-3), 0.7);
+              stroke: rgba(color(g3-3), 0.7);
+            }
+          }
+          &:hover {
+            background-color: rgba(color(dark-2), 0.1);
+            .main-contact-contactLines-item-icon {
+              transition: all 0.15s linear;
+              background-color: rgba(color(g3-3), 0.7);
+              svg {
+                fill: rgba(color(light-2), 0.9);
+                stroke: rgba(color(light-2), 0.9);
+              }
+            }
+          }
+
+          .content {
+            &-label {
+              font-size: 1.3rem;
+            }
+            &-value {
+              direction: ltr;
+              font-family: iransansnum;
+              margin-top: 0.5rem;
+              font-size: 1.2rem;
+              letter-spacing: 0.8px;
+            }
+          }
+        }
+      }
+      &-form {
+        height: 100%;
+        flex: 1 0 auto;
+        padding: 2rem 1rem;
+        background-color: rgba(color(g3-2), 0.1);
+        .formContainer {
+          width: 100%;
+        }
+        &-item {
+          width: 100%;
+          margin-bottom: 2em;
+          &-container {
+            @include dflex;
+            position: relative;
+          }
+          &-icon {
+            position: absolute;
+            top: 2px;
+            left: 5px;
+            width: 2.5rem;
+            height: 2.5rem;
+            .userIcon {
+              fill: rgba(color(light-2), 0.4);
+            }
+            .mailIcon {
+              stroke: rgba(color(light-2), 0.4);
+              stroke-width: 2px;
+              opacity: 0.8;
+            }
+          }
+          &-label {
+            color: rgba(color(light-2), 1);
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            font-size: 1.3em;
+            top: 4.5px;
+            right: 2px;
+            opacity: 0.6;
+          }
+          &-input {
+            line-height: 3rem;
+            width: 100%;
+            background-color: rgba(color(dark-2), 0.2);
+            border-radius: 2px;
+            margin-bottom: 0.5rem;
+            &:focus {
+              outline: 2px solid rgba(color(light-2), 0.2);
+              border: transparent;
+            }
+          }
+          &-textArea {
+            font-size: 1.3em;
+            background-color: rgba(color(dark-2), 0.2);
+            border-radius: 2px;
+            width: 100%;
+            padding: 0.7rem;
+            &:focus {
+              outline: 2px solid rgba(color(light-2), 0.2);
+            }
+          }
+          &-select {
+            color: color(dark-4);
+            background-color: rgba(color(light-1), 0.5);
+            border: transparent;
+            padding-right: 0.5em;
+            width: 100%;
+            height: 2em;
+            cursor: pointer;
+            padding-left: 5em;
+          }
+          .labelUper {
+            backdrop-filter: blur(5px);
+            padding: 0.1rem 0.5rem;
+            border: 3px;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease-in-out;
+            color: rgba(color(light-2), 1);
+            top: -20px;
+            opacity: 0.8;
+          }
+          &-errorMsg {
+            padding: 0.5rem;
+            white-space: nowrap;
+            overflow: visible;
+            color: rgba(color(light-2), 0.8);
+          }
+          .unvalidItem {
+            .main-contact-form-item {
+              &-icon {
+                .userIcon {
+                  fill: color(error);
+                  opacity: 0.8;
+                }
+                .mailIcon {
+                  stroke: color(error);
+                  opacity: 0.8;
+                }
+              }
+            }
+          }
+          .validItem {
+            .main-contact-form-item {
+              &-icon {
+                .userIcon {
+                  fill: #16dc16;
+                  opacity: 0.7;
+                }
+                .mailIcon {
+                  stroke: #16dc16;
+                  opacity: 0.7;
+                }
+              }
+            }
+          }
+        }
+        .actions {
+          padding: 1rem 2rem;
+          @include dflex(flex-end, flex-end);
+          &-submit {
+            // margin-left: auto;
+            // display: block;
+            font-size: 1.3rem;
+            border-radius: 3px;
+            padding: 0.3rem 3rem;
+            background-color: rgba(color(g1-2), 1);
+          }
+        }
+      }
+    }
   }
 }
 .pswp {
@@ -666,3 +891,4 @@
     object-fit: contain;
   }
 }
+// background: conic-gradient(from 0.03turn at 30% 60%, #00b4d8, 60deg, rgba(5, 170, 203, 0.5) 250deg, rgba(5, 170, 203, 0.1));

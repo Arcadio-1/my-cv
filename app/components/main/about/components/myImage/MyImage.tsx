@@ -7,7 +7,13 @@ interface Props {
 const MyImage = (props: Props) => {
   return (
     <div className="main-about-image">
-      <Image src={props.imageUrl} width={500} height={500} alt={props.alt} />
+      <Image
+        className="object-cover"
+        src={props.imageUrl}
+        width={500}
+        height={500}
+        alt={props.alt}
+      />
     </div>
   );
 };

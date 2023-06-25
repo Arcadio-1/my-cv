@@ -6,11 +6,9 @@ import Footer from "./footer/Footer";
 const ASide = () => {
   return (
     <aside className="aside">
-      {/* <div className="aside-container"> */}
       <Header />
       <Nav />
       <Footer />
-      {/* </div> */}
     </aside>
   );
 };
