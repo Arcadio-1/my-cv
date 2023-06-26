@@ -3,6 +3,7 @@ import MobileIcon from "./components/MobileIcon";
 import EmailIcon from "./components/EmailIcon";
 import TelegramIcon from "./components/TelegramIcon";
 import Item from "./components/Item";
+import Image from "next/image";
 interface Props {
   mobile: string;
   email: string;

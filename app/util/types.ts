@@ -1,3 +1,8 @@
+export enum OpenToggle {
+  open,
+  close,
+}
+
 export enum Status {
   loading,
   error,

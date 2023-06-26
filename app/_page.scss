@@ -1,4 +1,5 @@
 @use "./styles/clips.scss" as *;
+
 .cv {
   background: hsla(185, 64%, 51%, 1);
   display: flex;
@@ -19,30 +20,37 @@
     hsla(185, 64%, 51%, 1) 0%,
     hsla(277, 74%, 24%, 1) 100%
   );
-
-  .aside {
-    padding: 1rem;
+  .asideContainer {
+    position: sticky;
+    top: 0px;
     height: 100vh;
-    z-index: 10;
     min-width: 20rem;
     max-width: 25rem;
-    width: 100%;
     backdrop-filter: blur(1px);
+    padding: 1rem;
     background: linear-gradient(
       90deg,
       rgba(75, 116, 160, 0.261) 0%,
       rgba(36, 55, 71, 0.885) 100%
     );
+    z-index: 10;
+    // transition: all 3s linear;
+    @include responsive(md) {
+      transition: all 0.5s ease-in-out;
+      position: fixed;
+      right: -400px;
+    }
+  }
+  .aside {
     @include dflex(flex-start, flex-start);
     flex-direction: column;
-    position: sticky;
-    top: 0px;
-    left: 0px;
-    &-container {
-      z-index: 10;
-      width: 100%;
-      border: 2px solid red;
-    }
+    width: 100%;
+    height: 100%;
+    // &-container {
+    //   z-index: 10;
+    //   width: 100%;
+    //   border: 2px solid red;
+    // }
     &-header {
       width: 100%;
       @include dflex;
@@ -153,6 +161,54 @@
     }
   }
   .main {
+    &-menu {
+      display: none;
+      z-index: 100;
+      @include responsive(lg) {
+        display: block;
+      }
+      .closeIcon {
+        position: fixed;
+        top: 1rem;
+        left: 2rem;
+        cursor: pointer;
+        border-radius: 100%;
+        padding: 0.2rem;
+        background-color: rgba(color(g3-5), 0.2);
+        backdrop-filter: blur(2px);
+        height: 4rem;
+        width: 4rem;
+        transition: all 0.15s linear;
+        &:hover {
+          transform: scale(1.05);
+        }
+        svg {
+          path {
+            fill: rgba(color(light-2), 0.7);
+          }
+        }
+      }
+      .menuIcon {
+        position: fixed;
+        top: 1rem;
+        right: 2rem;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: rgba(color(dark-2), 0.2);
+        backdrop-filter: blur(3px);
+        height: 4rem;
+        width: 4rem;
+        transition: all 0.15s linear;
+        &:hover {
+          transform: scale(1.05);
+        }
+        svg {
+          path {
+            fill: rgba(color(light-2), 0.9);
+          }
+        }
+      }
+    }
     &-hero {
       @include dflex;
       height: 100vh;
@@ -267,56 +323,92 @@
       background-color: rgba(color(dark-2), 0.5);
       padding-right: 1rem;
       padding-bottom: 6rem;
-
       &-container {
         margin-top: 1rem;
+        @include responsive(lg) {
+          display: grid;
+          // border: 2px solid blue;
+          grid-template-areas:
+            "abouttittle abouttittle"
+            "aboutboulshit aboutboulshit"
+            "aboutimage aboutlist";
+        }
+        @include responsive(sm) {
+          grid-template-areas:
+            "abouttittle abouttittle"
+            "aboutboulshit aboutboulshit"
+            "aboutimage aboutimage"
+            "aboutlist aboutlist";
+        }
+      }
+      &-tittle {
+        @include dflex(flex-start, flex-start);
+        grid-area: abouttittle;
+        font-family: iranyekan;
+        font-size: 2rem;
+        margin-bottom: 2rem;
       }
       &-image {
-        padding: 2rem;
+        grid-area: aboutimage;
+        padding: 0 2rem 2rem 2rem;
         float: right;
+        max-width: 30rem;
+        min-width: 20rem;
+        width: 100%;
         img {
           filter: drop-shadow(0px 0px 0px rgb(255, 255, 255)) grayscale(60%);
-          // filter: grayscale();
-          // filter: sepia()
-          opacity: 0.6;
+          opacity: 0.7;
           border-radius: 5px;
           width: 100%;
-          max-width: 30rem;
+        }
+        @include responsive(md) {
+          padding: 0;
+        }
+        @include responsive(sm) {
+          margin: 0 auto;
         }
       }
-      &-content {
-        margin-bottom: 2rem;
-        width: 100%;
-        // border: 2px solid red;
-        &-tittle {
-          font-family: iranyekan;
-          font-size: 2rem;
-          margin-bottom: 2rem;
+      &-list {
+        grid-area: aboutlist;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include responsive(lg) {
+          @include dflex(flex-start, flex-start);
+          flex-direction: column;
+          padding-right: 2rem;
+          grid-template-columns: 1fr;
+          gap: 2rem;
         }
-        &-list {
-          @include dflex(space-between);
-          &-col {
-            flex: 0 0 auto;
-            width: 50%;
-            gap: 2rem;
+        @include responsive(sm) {
+          margin-top: 2rem;
+        }
+        &-col {
+          height: auto;
+          @include dflex(flex-start, flex-start);
+          gap: 2rem;
+          flex-direction: column;
+        }
+        &-item {
+          .label {
+            font-size: 1.3rem;
+            white-space: nowrap;
+          }
+          .text {
+            white-space: nowrap;
+            background-color: rgba(color(g3-3), 0.3);
+            padding: 0.1rem 0.5rem;
+            border-radius: 5px;
+            font-family: iransansnum;
+            font-size: 1.3rem;
+          }
+          @include responsive(sm) {
             @include dflex(flex-start, flex-start);
-            flex-direction: column;
-          }
-          &-item {
-            .label {
-              font-size: 1.3rem;
-            }
-            .text {
-              background-color: rgba(color(g3-3), 0.3);
-              padding: 0.1rem 0.5rem;
-              border-radius: 5px;
-              font-family: iransansnum;
-              font-size: 1.3rem;
-            }
+            flex-wrap: wrap;
           }
         }
       }
-      &-footer {
+      &-boulshit {
+        grid-area: aboutboulshit;
         color: color(light-2);
         &-content {
           padding: 2rem;
@@ -326,6 +418,7 @@
       }
     }
     &-skills {
+      position: relative;
       color: color(light-2);
       background-color: rgba(color(dark-2), 0.5);
       margin-top: 1rem;
@@ -336,6 +429,9 @@
         padding: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        @include responsive(sm) {
+          grid-template-columns: 1fr;
+        }
         &-item {
           padding: 1rem;
           @include dflex(flex-start);
@@ -380,6 +476,26 @@
           }
         }
       }
+      &-imageContainer {
+        position: absolute;
+        top: 0;
+        border: 2px solid gray;
+        width: 100%;
+        height: 100%;
+        img {
+          opacity: 0.3;
+        }
+        .img-1 {
+          position: absolute;
+          top: 10%;
+          left: 20%;
+        }
+        .img-2 {
+          position: absolute;
+          bottom: 10%;
+          right: 10%;
+        }
+      }
     }
     &-resume {
       margin-top: 1rem;
@@ -394,6 +510,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
+        @include responsive(md) {
+          grid-template-columns: 1fr;
+        }
         &-experience {
           border-radius: 10px;
           padding: 0.5rem 1rem;
@@ -455,6 +574,9 @@
           grid-template-columns: 1fr 1fr;
           gap: 2rem;
           padding: 0.5rem 2rem;
+          @include responsive(sm) {
+            grid-template-columns: 1fr;
+          }
           &-item {
             width: 100%;
             padding: 1rem;
@@ -693,8 +815,12 @@
         display: grid;
         grid-template-columns: 2fr 3fr;
         gap: 2rem;
+        @include responsive(lg) {
+          grid-template-columns: 1fr;
+        }
       }
       &-contactLines {
+        position: relative;
         @include dflex(flex-start, flex-start);
         height: 100%;
         background-color: rgba(color(g3-2), 0.1);
@@ -749,6 +875,13 @@
               letter-spacing: 0.8px;
             }
           }
+        }
+        &-imageContainer {
+          bottom: 0;
+          right: 20%;
+          position: absolute;
+          margin-right: auto;
+          opacity: 0.2;
         }
       }
       &-form {
@@ -882,6 +1015,7 @@
     }
   }
 }
+//photoSwipe
 .pswp {
   img {
     width: auto;
@@ -892,3 +1026,10 @@
   }
 }
 // background: conic-gradient(from 0.03turn at 30% 60%, #00b4d8, 60deg, rgba(5, 170, 203, 0.5) 250deg, rgba(5, 170, 203, 0.1));
+.opener {
+  transition: all 0.5s ease-in-out;
+  position: fixed;
+  backdrop-filter: blur(5px) !important;
+  background-color: rgba(color(dark-2), 0.5) !important;
+  right: 0 !important;
+}

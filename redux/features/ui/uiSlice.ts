@@ -1,12 +1,14 @@
-import { Full_status, Status } from "@/app/util/types";
+import { Full_status, OpenToggle, Status } from "@/app/util/types";
 import { createSlice } from "@reduxjs/toolkit";
 
 interface uiState {
   get_database_cv_status: Full_status;
   get_server_cv_status: Full_status;
+  isMenuOpen: OpenToggle;
 }
 
 const initialState = {
+  isMenuOpen: OpenToggle.close,
   get_database_cv_status: {
     status: Status.loading,
     tittle: "loading",
@@ -35,6 +37,12 @@ const uiSlice = createSlice({
         tittle: action.payload.title,
         message: action.payload.message,
       };
+    },
+    closeMenu(state) {
+      state.isMenuOpen = OpenToggle.close;
+    },
+    openMenu(state) {
+      state.isMenuOpen = OpenToggle.open;
     },
   },
 });

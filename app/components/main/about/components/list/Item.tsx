@@ -5,7 +5,7 @@ interface Props {
 }
 const Item = (props: Props) => {
   return (
-    <li className="main-about-content-list-item">
+    <li className="main-about-list-item">
       <label className="label">{props.label} :</label>
       <span className="text">{props.data}</span>
     </li>

@@ -7,14 +7,14 @@ interface Props {
 const List = (props: Props) => {
   const { personal_info } = props;
   return (
-    <ul className="main-about-content-list">
-      <div className="main-about-content-list-col">
+    <ul className="main-about-list">
+      <div className="main-about-list-col">
         <Item label="شماره تماس" data={personal_info.mobile} />
         <Item label="وضعیت خدمت" data={personal_info.military_service} />
         <Item label="وضعیت تاهل" data={personal_info.marital_status} />
         <Item label="سن" data={personal_info.age} />
       </div>
-      <div className="main-about-content-list-col">
+      <div className="main-about-list-col">
         <Item label="محل سکونت" data={personal_info.residence} />
         <Item label="مدرک تحصیلی" data={personal_info.degree} />
         <Item label="پست الکترونیک" data={personal_info.email} />

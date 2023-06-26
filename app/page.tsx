@@ -6,6 +6,7 @@ import ASide from "./components/aside/ASide";
 import { useAppDispatch } from "@/redux/hook";
 import { get_cv_server } from "@/redux/features/getData/getDataAction";
 import Main from "./components/main/Main";
+import Menu from "./components/menu/Menu";
 
 export default async function Home() {
   const server_cv_status: Full_status = useSelector(
@@ -20,6 +21,7 @@ export default async function Home() {
   if (server_cv_status && server_cv_status.status == Status.success) {
     return (
       <div className="cv">
+        <Menu />
         <ASide />
         <div className="mr-auto ml-auto">
           <Main />

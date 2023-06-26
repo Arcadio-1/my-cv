@@ -1,15 +1,16 @@
 import { CV, Personal_info } from "@/app/util/types";
 import SectionHeader from "@/app/util/ui/SectionHeader";
 import React, { useEffect, useState } from "react";
-import MyImage from "./components/myImage/MyImage";
-import Content from "./components/content/Content/Content";
-import Footer from "./components/content/Footer";
+import MyImage from "./components/MyImage";
+import Footer from "./components/Boulshit";
+import List from "./components/list/List";
+import Tittle from "./components/Tittle";
 
 interface Props {
   personal_info: Personal_info;
 }
 const About = async (props: Props) => {
-  const [about, setAbout] = useState<HTMLElement>();
+  const [boulshit, setBoulshit] = useState<HTMLElement>();
   useEffect(() => {
     const getAbout = async () => {
       const request = await fetch("/api/myCv/get_md/about", {
@@ -17,28 +18,25 @@ const About = async (props: Props) => {
         headers: { "Content-Type": "application/md" },
       });
       const data = await request.json();
-      setAbout(data.data);
+      setBoulshit(data.data);
     };
     getAbout();
   }, []);
 
-  // useEffect(() => {
-  //   console.log(about);
-  // }, [about]);
-  const { about_me } = props.personal_info;
   return (
     <div className="main-about">
       <SectionHeader tittle="درباره من" description={""} />
       <div className="main-about-container">
+        {/* <div className="main-about-tyu"> */}
+        <Tittle />
         <MyImage
           imageUrl={props.personal_info.profile_iamge}
           alt={props.personal_info.name}
         />
-        {/* <div className="main-about-main"> */}
-        <Content personal_info={props.personal_info} />
         {/* </div> */}
+        <List personal_info={props.personal_info} />
+        {boulshit && <Footer>{boulshit}</Footer>}
       </div>
-      {about && <Footer>{about}</Footer>}
     </div>
   );
 };

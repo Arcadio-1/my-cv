@@ -159,7 +159,7 @@ $font-sizes: (
     }
   }
   @if ($brekPoint==sm) {
-    @media (max-width: 450px) {
+    @media (max-width: 470px) {
       @content;
     }
   }
