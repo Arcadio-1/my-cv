@@ -47,7 +47,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
         message: "خطا در برقراری ارتباط",
       });
     }
-    // console.log(request);
     return NextResponse.json({
       status: 200,
       message: "پیغام شما با موفقیت ارسال شد",
