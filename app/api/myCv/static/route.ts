@@ -11,9 +11,6 @@ export async function GET() {
     "utf8"
   );
   //Return the content of the data file in json format
-  return NextResponse.json(
-    { status: 200, data: fileContents },
-    { status: 404 }
-  );
+  return NextResponse.json({ status: 200, data: fileContents });
   // res.status(200).json(fileContents);
 }

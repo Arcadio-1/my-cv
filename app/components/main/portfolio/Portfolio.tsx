@@ -21,10 +21,6 @@ const Portfolio = (props: Props) => {
   };
 
   useEffect(() => {
-    console.log(filter);
-  }, [filter]);
-
-  useEffect(() => {
     const tempArry: Group[] = [];
     portfolios.map((item) => {
       tempArry.push(item.group);

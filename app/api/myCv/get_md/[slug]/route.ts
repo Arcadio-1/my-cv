@@ -14,6 +14,6 @@ export async function GET(req: NextRequest) {
   const { data, content } = matter(fileContents);
 
   //Return the content of the data file in json format
-  return NextResponse.json({ status: 200, data: content }, { status: 404 });
+  return NextResponse.json({ status: 200, data: content });
   // res.status(200).json(fileContents);
 }

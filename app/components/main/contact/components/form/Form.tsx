@@ -1,11 +1,23 @@
 import useInputValidation from "@/app/util/Hooks/UseInputValidation";
-import React from "react";
+import React, { FormEvent, useEffect } from "react";
 import Item from "./components/Item";
 import EmailIcon from "../contactLines/components/EmailIcon";
 import MailIcon from "./components/MailIcon";
 import UserIcon from "./components/UserIcon";
+import { useDispatch, useSelector } from "react-redux";
+import { uiAction } from "@/redux/features/ui/uiSlice";
+import { Status } from "@/app/util/types";
 
 const Form = () => {
+  const dispatchSendMessageStatus = useDispatch();
+  const sendMessageStatus = useSelector(
+    (state: any) => state.ui.send_message_status
+  );
+
+  useEffect(() => {
+    console.log(sendMessageStatus);
+  }, [sendMessageStatus]);
+
   const {
     value: nameValue,
     isValid: isNameValid,
@@ -13,9 +25,10 @@ const Form = () => {
     inputBlurHandler: nameBlurHandler,
     inputChangeHandler: nameChangeHandler,
     reset: nameResetHandler,
+    inputRef: nameRef,
   } = useInputValidation((value) => {
     const nameString = String(value);
-    const regex = RegExp(/^[a-zA-Z\-0-9]+$/);
+    const regex = RegExp(/^\s*\S/);
     const isValid = regex.test(nameString);
     return isValid;
   });
@@ -27,6 +40,7 @@ const Form = () => {
     inputBlurHandler: emailBlurHandler,
     inputChangeHandler: emailChangeHandler,
     reset: emailResetHandler,
+    inputRef: emailRef,
   } = useInputValidation((value) => {
     const emailString = String(value).toLowerCase();
     const regex = RegExp(
@@ -37,18 +51,83 @@ const Form = () => {
   });
 
   const {
-    value: addressValue,
-    isValid: isAddressValid,
-    errorStatus: addressError,
-    inputBlurHandler: addressBlurHandler,
-    inputChangeHandler: addressChangeHandler,
-    reset: addressResetHandler,
+    value: messageValue,
+    isValid: isMessageValid,
+    errorStatus: messageError,
+    inputBlurHandler: messageBlurHandler,
+    inputChangeHandler: messageChangeHandler,
+    reset: messageResetHandler,
+    textareaRef: messageRef,
   } = useInputValidation((value) => {
-    const addressString = String(value);
-    const regex = RegExp(/^\s*\S+(?:\s+\S+){2}/);
-    const isValid = regex.test(addressString);
+    const messageString = String(value);
+    const regex = RegExp(/^\s*\S+(?:\s+\S+){1}/);
+    const isValid = regex.test(messageString);
     return isValid;
   });
+
+  const submitMessageHandler = async (e: FormEvent): Promise<void> => {
+    e.preventDefault();
+    if (!isNameValid) {
+      nameRef.current?.focus();
+      nameBlurHandler();
+      return;
+    }
+    if (!isEmailValid) {
+      emailRef.current?.focus();
+      emailBlurHandler();
+      return;
+    }
+    if (!isMessageValid) {
+      messageRef.current?.focus();
+      messageBlurHandler();
+      return;
+    }
+    dispatchSendMessageStatus(
+      uiAction.set_send_message_status({
+        status: Status.loading,
+        tittle: "در حال ارسال",
+        message: "در حال ارسال پیغام شما",
+      })
+    );
+    try {
+      const postMessage = await fetch("/api/sendMessage", {
+        method: "POST",
+        body: JSON.stringify({
+          name: nameValue,
+          email: emailValue,
+          message: messageValue,
+        }),
+      });
+      const response = await postMessage.json();
+      console.log(response);
+      if (response.status === 200) {
+        dispatchSendMessageStatus(
+          uiAction.set_send_message_status({
+            status: Status.success,
+            tittle: "با موفقیت ارسال شد",
+            message: "ارسال پیام با موفقیت انجام شد",
+          })
+        );
+      }
+      if (response.status === 500) {
+        dispatchSendMessageStatus(
+          uiAction.set_send_message_status({
+            status: Status.error,
+            tittle: "خطا در ارسال",
+            message: "خطا در ارسال پیام لطفا با فیلترشکن امتحان کنید",
+          })
+        );
+      }
+    } catch (error) {
+      dispatchSendMessageStatus(
+        uiAction.set_send_message_status({
+          status: Status.error,
+          tittle: "خطا در ارسال",
+          message: "خطا در ارسال پیام لطفا با فیلترشکن امتحان کنید",
+        })
+      );
+    }
+  };
 
   return (
     <div className="main-contact-form">
@@ -59,10 +138,11 @@ const Form = () => {
           value={nameValue}
           isValid={isNameValid}
           error={nameError}
-          errorMsg={"نام خود را به زبان فارسی وارد کنید"}
+          errorMsg={"لطفا نام خود را وارد کنید"}
           label="نام"
           htmlId="name"
           inputType="text"
+          itemRef={nameRef}
         >
           <UserIcon />
         </Item>
@@ -75,40 +155,51 @@ const Form = () => {
           label="ایمیل"
           htmlId="email"
           inputType="email"
+          itemRef={emailRef}
           errorMsg={" ایمیل وارد شده صحیح نمیباشد"}
         >
           <MailIcon />
         </Item>
         <div
           className={`main-contact-form-item ${
-            isAddressValid ? "focus:outline-g1_2" : ""
+            isMessageValid ? "focus:outline-g1_2" : ""
           }`}
         >
           <div
             className={`main-contact-form-item-container ${
-              addressError ? "unvalidItem" : ""
-            } ${isAddressValid ? "validItem" : ""}`}
+              messageError ? "unvalidItem" : ""
+            } ${isMessageValid ? "validItem" : ""}`}
           >
             <textarea
-              onChange={addressChangeHandler}
-              onBlur={addressBlurHandler}
-              value={addressValue}
+              onChange={messageChangeHandler}
+              onBlur={messageBlurHandler}
+              value={messageValue}
               required
               rows={10}
+              ref={messageRef}
               placeholder="پیام شما"
               className={`main-contact-form-item-textArea ${
-                isAddressValid ? "focus:outline-g1_2" : ""
+                isMessageValid ? "focus:outline-g1_2" : ""
               }`}
             />
           </div>
-          {addressError && (
+          {messageError && (
             <p className="main-contact-form-item-errorMsg">
               لطفا پیام خود را وارد کنید
             </p>
           )}
         </div>
         <div className="actions">
-          <button className="actions-submit">ارسال</button>
+          {sendMessageStatus.status !== Status.loading && (
+            <button onClick={submitMessageHandler} className="actions-submit">
+              ارسال
+            </button>
+          )}
+          {sendMessageStatus.status === Status.loading && (
+            <p className="actions-submit opacity-70 cursor-default">
+              در حال ارسال
+            </p>
+          )}
         </div>
       </form>
     </div>

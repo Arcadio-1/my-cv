@@ -7,6 +7,7 @@ export enum Status {
   loading,
   error,
   success,
+  null,
 }
 export enum Group {
   all,

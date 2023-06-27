@@ -1,4 +1,5 @@
 import { MongoClient } from "mongodb";
+import { json } from "stream/consumers";
 
 export const getClient = async (databaseName: string) => {
   try {
@@ -7,6 +8,12 @@ export const getClient = async (databaseName: string) => {
     );
     return client;
   } catch (error) {
-    throw new Error("خطا در برقراری ارتباط");
+    throw new Error(
+      JSON.stringify({
+        status: "504",
+        tittle: "خطا",
+        message: "خطا در برقراری ارتباط",
+      })
+    );
   }
 };

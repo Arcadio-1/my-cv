@@ -14,8 +14,5 @@ export async function GET() {
   if (!request) {
     throw new Error("insert faild");
   }
-  return NextResponse.json(
-    { status: "success", data: request },
-    { status: 404 }
-  );
+  return NextResponse.json({ status: "success", data: request });
 }

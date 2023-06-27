@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, useRef } from "react";
 
 interface InitialState {
   inputValue?: string | number;
@@ -36,7 +36,8 @@ const useInputValidation = (
   validation: (value?: string | number | null) => boolean
 ) => {
   const [inputState, dispatchInputState] = useReducer(reducer, initialstate);
-
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const isValid = validation(inputState.inputValue);
   const errorStatus = !isValid && inputState.isTuched;
 
@@ -65,6 +66,8 @@ const useInputValidation = (
     inputChangeHandler,
     inputBlurHandler,
     reset,
+    textareaRef,
+    inputRef,
   };
 };
 

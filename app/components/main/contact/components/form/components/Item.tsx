@@ -13,6 +13,7 @@ interface Props {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   errorMsg?: string;
   error: boolean;
+  itemRef: any;
 }
 
 const Item = (props: Props) => {
@@ -29,6 +30,7 @@ const Item = (props: Props) => {
     onChange,
     errorMsg,
     error,
+    itemRef,
   } = props;
   return (
     <div
@@ -51,6 +53,7 @@ const Item = (props: Props) => {
           {label}
         </label>
         <input
+          ref={itemRef}
           required
           value={value}
           onBlur={onBlur}

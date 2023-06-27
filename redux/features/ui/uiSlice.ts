@@ -1,9 +1,10 @@
 import { Full_status, OpenToggle, Status } from "@/app/util/types";
 import { createSlice } from "@reduxjs/toolkit";
 
-interface uiState {
+interface UiState {
   get_database_cv_status: Full_status;
   get_server_cv_status: Full_status;
+  send_message_status: Full_status;
   isMenuOpen: OpenToggle;
 }
 
@@ -14,27 +15,39 @@ const initialState = {
     tittle: "loading",
     message: "loading",
   },
+  send_message_status: {
+    status: Status.null,
+    tittle: "",
+    message: "",
+  },
   get_server_cv_status: {
     status: Status.loading,
     tittle: "loading",
     message: "loading",
   },
-} as uiState;
+} as UiState;
 const uiSlice = createSlice({
   name: "uiSlice",
   initialState,
   reducers: {
+    set_send_message_status(state, action) {
+      state.send_message_status = {
+        status: action.payload.status,
+        tittle: action.payload.tittle,
+        message: action.payload.message,
+      };
+    },
     set_get_database_cv_status(state, action) {
       state.get_database_cv_status = {
         status: action.payload.status,
-        tittle: action.payload.title,
+        tittle: action.payload.tittle,
         message: action.payload.message,
       };
     },
     set_get_server_cv_status(state, action) {
       state.get_server_cv_status = {
         status: action.payload.status,
-        tittle: action.payload.title,
+        tittle: action.payload.tittle,
         message: action.payload.message,
       };
     },
