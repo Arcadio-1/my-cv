@@ -5,21 +5,26 @@ import MyImage from "./components/MyImage";
 import Footer from "./components/Boulshit";
 import List from "./components/list/List";
 import Tittle from "./components/Tittle";
+import matter from "gray-matter";
+import { promises as fs } from "fs";
+import path, { join } from "path";
+import { json } from "stream/consumers";
 
 interface Props {
   personal_info: Personal_info;
 }
 
 async function getData() {
-  const request = await fetch("http://localhost:3000/api/myCv/get_md/about");
-  const data = await request.json();
-
-  return data.data;
+  const directory = path.join(process.cwd(), "markdown");
+  const fullPath = join(directory, `about.md`);
+  const fileContents = await fs.readFile(fullPath, "utf8");
+  const { data, content } = matter(fileContents);
+  const response = { status: 200, data: content };
+  return response;
 }
 
 const About = async (props: Props) => {
-  const data = await getData();
-
+  const request = await getData();
   return (
     <div className="main-about">
       <SectionHeader tittle="درباره من" description={""} />
@@ -30,7 +35,7 @@ const About = async (props: Props) => {
           alt={props.personal_info.name}
         />
         <List personal_info={props.personal_info} />
-        {data && <Footer>{data}</Footer>}
+        {request.status && <Footer>{request.data}</Footer>}
       </div>
     </div>
   );
