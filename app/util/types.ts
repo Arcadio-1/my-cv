@@ -4,10 +4,12 @@ export enum OpenToggle {
 }
 
 export enum Status {
-  loading,
-  error,
-  success,
-  null,
+  loading = "loading",
+  error = "error",
+  success = "success",
+  warning = "warning",
+  info = "info",
+  null = "null",
 }
 export enum Group {
   all,
@@ -54,7 +56,6 @@ export interface Experience {
 export interface Expertise {
   id: number;
   tittle: string;
-  message: string;
 }
 export interface Social_media {
   id: string;
@@ -123,6 +124,7 @@ export interface Personal_info {
   residence: string;
   age: number;
   degree: string;
+  expertise: Expertise[];
   job_info: Jobs_info;
   get_project: Get_project;
   social_medias: Social_media[];
@@ -131,7 +133,6 @@ export interface Personal_info {
 export interface Resume {
   educations: Experience[];
   work_experiences: Experience[];
-  expertise: Expertise[];
   portfolios: Portfolio[];
   github_link: Github_link;
   skills: Skill[];

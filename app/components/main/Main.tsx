@@ -5,19 +5,21 @@ import Skills from "./skills/Skills";
 import Resume from "./resume/Resume";
 import Portfolio from "./portfolio/Portfolio";
 import Contact from "./contact/Contact";
-import { useSelector } from "react-redux";
 import { CV } from "@/app/util/types";
 
-const Main = () => {
-  const server_cv: CV = useSelector((state: any) => state.getData.my_cv_server);
-  const { personal_info, resume } = server_cv;
+interface Props {
+  cv: CV;
+}
+
+const Main = (props: Props) => {
+  const { personal_info, resume } = props.cv;
   return (
     <main className="main">
       <Hero
         name={personal_info.name}
         lastname={personal_info.lastName}
         hero_image={personal_info.hero_image}
-        expertise={resume.expertise}
+        expertise={personal_info.expertise}
       />
       <div className="max-w-[1678px] w-full mb-10">
         <About personal_info={personal_info} />

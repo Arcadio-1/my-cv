@@ -1,3 +1,4 @@
+"use client";
 import { configureStore } from "@reduxjs/toolkit";
 import uiSlice from "./features/ui/uiSlice";
 import getDataSlice from "./features/getData/getDataSlice";

@@ -1033,3 +1033,49 @@
   background-color: rgba(color(dark-2), 0.5) !important;
   right: 0 !important;
 }
+.sideNotif {
+  position: fixed;
+  z-index: 100;
+  top: 10px;
+  left: 10px;
+  // padding: 0.5em 2em;
+  border-radius: 5px;
+  color: color(light-1);
+  &-header {
+    @include dflex(space-between);
+    height: 3em;
+    padding: 0 0.5em;
+    border-bottom: 2px solid rgba(color(light-1), 0.5);
+    svg {
+      opacity: 0.7;
+      width: 2em;
+      height: 2em;
+      path {
+        fill: color(light-1);
+      }
+    }
+  }
+  &-message {
+    padding: 1em 3em;
+    font-size: 1.5em;
+  }
+  &-success {
+    animation: openModal 0.4s ease-out forwards;
+    background-color: color(success);
+  }
+  &-loading {
+    animation: openModal 0.4s ease-out forwards;
+    background-color: color(info);
+  }
+  &-error {
+    animation: openModal 0.4s ease-out forwards;
+    background-color: color(error);
+  }
+  &-warning {
+    animation: openModal 0.4s ease-out forwards;
+    background-color: color(warning);
+  }
+  &-null {
+    animation: closeModal 1s ease-out forwards;
+  }
+}

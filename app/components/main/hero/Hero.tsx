@@ -42,19 +42,25 @@ const Hero = (props: Props) => {
           {expertise === 1 && (
             <div className="main-hero-content-expertise-item">
               <span className="label">من </span>
-              <span className="text text1">{props.expertise[0].message}</span>
+              <span className="text text1">
+                {props.expertise[0].tittle} هستم
+              </span>
             </div>
           )}
           {expertise === 2 && (
             <div className="main-hero-content-expertise-item">
               <span className="label">من </span>
-              <span className="text  text2">{props.expertise[1].message}</span>
+              <span className="text  text2">
+                {props.expertise[1].tittle} هستم
+              </span>
             </div>
           )}
           {expertise === 3 && (
             <div className="main-hero-content-expertise-item">
               <span className="label">من </span>
-              <span className="text text3">{props.expertise[2].message}</span>
+              <span className="text text3">
+                {props.expertise[2].tittle} هستم
+              </span>
             </div>
           )}
         </div>

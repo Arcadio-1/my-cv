@@ -1,22 +1,29 @@
+"use client";
 import useInputValidation from "@/app/util/Hooks/UseInputValidation";
-import React, { FormEvent, useEffect } from "react";
+import React, { FormEvent } from "react";
 import Item from "./components/Item";
-import EmailIcon from "../contactLines/components/EmailIcon";
+// import EmailIcon from "../contactLines/components/EmailIcon";
 import MailIcon from "./components/MailIcon";
 import UserIcon from "./components/UserIcon";
 import { useDispatch, useSelector } from "react-redux";
 import { uiAction } from "@/redux/features/ui/uiSlice";
 import { Status } from "@/app/util/types";
+import NotifCard from "@/app/components/util-ui/notifCard/NotifCard";
 
 const Form = () => {
   const dispatchSendMessageStatus = useDispatch();
+  const dispatchNotifCardStatus = useDispatch();
   const sendMessageStatus = useSelector(
     (state: any) => state.ui.send_message_status
   );
+  const notifCardStatus = useSelector(
+    (state: any) => state.ui.notif_card_status
+  );
 
-  useEffect(() => {
-    console.log(sendMessageStatus);
-  }, [sendMessageStatus]);
+  // useEffect(() => {
+  //   console.log(sendMessageStatus);
+  //   console.log(notifCardStatus);
+  // }, [sendMessageStatus, notifCardStatus]);
 
   const {
     value: nameValue,
@@ -89,6 +96,13 @@ const Form = () => {
         message: "در حال ارسال پیغام شما",
       })
     );
+    dispatchNotifCardStatus(
+      uiAction.set_notif_card_status({
+        status: Status.loading,
+        tittle: "در حال ارسال",
+        message: "در حال ارسال پیغام شما",
+      })
+    );
     try {
       const postMessage = await fetch("/api/sendMessage", {
         method: "POST",
@@ -101,6 +115,13 @@ const Form = () => {
       const response = await postMessage.json();
       console.log(response);
       if (response.status === 200) {
+        dispatchNotifCardStatus(
+          uiAction.set_notif_card_status({
+            status: Status.success,
+            tittle: "با موفقیت ارسال شد",
+            message: "ارسال پیام با موفقیت انجام شد",
+          })
+        );
         dispatchSendMessageStatus(
           uiAction.set_send_message_status({
             status: Status.success,
@@ -117,10 +138,24 @@ const Form = () => {
             message: "خطا در ارسال پیام لطفا با فیلترشکن امتحان کنید",
           })
         );
+        dispatchNotifCardStatus(
+          uiAction.set_notif_card_status({
+            status: Status.error,
+            tittle: "خطا در ارسال",
+            message: "خطا در ارسال پیام لطفا با فیلترشکن امتحان کنید",
+          })
+        );
       }
     } catch (error) {
       dispatchSendMessageStatus(
         uiAction.set_send_message_status({
+          status: Status.error,
+          tittle: "خطا در ارسال",
+          message: "خطا در ارسال پیام لطفا با فیلترشکن امتحان کنید",
+        })
+      );
+      dispatchNotifCardStatus(
+        uiAction.set_notif_card_status({
           status: Status.error,
           tittle: "خطا در ارسال",
           message: "خطا در ارسال پیام لطفا با فیلترشکن امتحان کنید",
@@ -131,6 +166,8 @@ const Form = () => {
 
   return (
     <div className="main-contact-form">
+      <NotifCard />
+
       <form className="formContainer">
         <Item
           onBlur={nameBlurHandler}

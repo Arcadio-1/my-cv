@@ -16,6 +16,11 @@
     "residence": "تهران",
     "age": 26,
     "degree": "کارشناسی مهندسی تکنولوژی نرم افزار",
+    "expertise": [
+      { "id": 1, "tittle": "طراح فرانت اند" },
+      { "id": 2, "tittle": "توسعه دهنده فرانت اند" },
+      { "id": 3, "tittle": "فریلنسر" }
+    ],
     "get_project": "فعال",
     "github_link": "https://github.com/Arcadio-1",
     "social_medias": [
@@ -263,15 +268,6 @@
         "repo_link": "",
         "download_link": "/portfolio/gui_design/mealOrder-React/ui-xd.pdf"
       }
-    ],
-    "expertise": [
-      { "id": 1, "tittle": "developer", "message": " طراح فرانت اند هستم" },
-      {
-        "id": 2,
-        "tittle": "developer",
-        "message": "توسعه دهنده فرانت اند هستم"
-      },
-      { "id": 3, "tittle": "developer", "message": "فریلنسر فرانت اند هستم" }
     ],
     "motivation_quotes": {
       "quote": "😀 “The programmers of tomorrow are the wizards of the future” ",

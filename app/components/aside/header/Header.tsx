@@ -2,22 +2,27 @@ import React from "react";
 import ProfileImage from "./components/profileImage/ProfileImage";
 import Fullname from "./components/fullname/Fullname";
 import SocialLinks from "./components/socialLink/SocialLinks";
-import { CV } from "@/app/util/types";
+import { CV, Personal_info } from "@/app/util/types";
 import { useAppSelector } from "@/redux/hook";
 
-const Header = () => {
-  const server_cv = useAppSelector<CV>(
-    (state: any) => state.getData.my_cv_server
-  );
+interface Props {
+  personalInfo: Personal_info;
+}
+
+const Header = (props: Props) => {
+  const { personalInfo } = props;
+  // const server_cv = useAppSelector<CV>(
+  //   (state: any) => state.getData.my_cv_server
+  // );
   return (
     <header className="aside-header">
-      <ProfileImage profile_image={server_cv.personal_info.profile_iamge} />
+      <ProfileImage profile_image={personalInfo.profile_iamge} />
       <Fullname
-        name={server_cv.personal_info.name}
-        lastname={server_cv.personal_info.lastName}
-        nickname={server_cv.personal_info.nickname}
+        name={personalInfo.name}
+        lastname={personalInfo.lastName}
+        nickname={personalInfo.nickname}
       />
-      <SocialLinks social_medias={server_cv.personal_info.social_medias} />
+      <SocialLinks social_medias={personalInfo.social_medias} />
     </header>
   );
 };

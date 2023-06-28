@@ -1,3 +1,4 @@
+"use client";
 import { Full_status, OpenToggle, Status } from "@/app/util/types";
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -5,6 +6,7 @@ interface UiState {
   get_database_cv_status: Full_status;
   get_server_cv_status: Full_status;
   send_message_status: Full_status;
+  notif_card_status: Full_status;
   isMenuOpen: OpenToggle;
 }
 
@@ -16,6 +18,11 @@ const initialState = {
     message: "loading",
   },
   send_message_status: {
+    status: Status.null,
+    tittle: "",
+    message: "",
+  },
+  notif_card_status: {
     status: Status.null,
     tittle: "",
     message: "",
@@ -32,6 +39,13 @@ const uiSlice = createSlice({
   reducers: {
     set_send_message_status(state, action) {
       state.send_message_status = {
+        status: action.payload.status,
+        tittle: action.payload.tittle,
+        message: action.payload.message,
+      };
+    },
+    set_notif_card_status(state, action) {
+      state.notif_card_status = {
         status: action.payload.status,
         tittle: action.payload.tittle,
         message: action.payload.message,

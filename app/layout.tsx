@@ -29,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <div id="overLay" className="" />
         <Providers>{children}</Providers>
       </body>
     </html>

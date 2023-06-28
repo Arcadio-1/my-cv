@@ -1,37 +1,28 @@
-"use client";
-import { useEffect, Fragment } from "react";
-import { useSelector } from "react-redux";
-import { Full_status, Status } from "./util/types";
+import { CV } from "./util/types";
 import ASide from "./components/aside/ASide";
-import { useAppDispatch } from "@/redux/hook";
-import { get_cv_server } from "@/redux/features/getData/getDataAction";
 import Main from "./components/main/Main";
 import Menu from "./components/menu/Menu";
 
-export default async function Home() {
-  const server_cv_status: Full_status = useSelector(
-    (state: any) => state.ui.get_server_cv_status
-  );
+async function getData() {
+  const res = await fetch("http://localhost:3000/api/myCv/static");
+  const data = await res.json();
 
-  const dispatch_server_cv = useAppDispatch();
-  useEffect(() => {
-    dispatch_server_cv(get_cv_server());
-  }, [dispatch_server_cv]);
+  return data.data;
+  // return JSON.parse(data.data);
+}
 
-  if (server_cv_status && server_cv_status.status == Status.success) {
-    return (
-      <div className="cv">
-        <Menu />
-        <ASide />
-        <div className="mr-auto ml-auto">
-          <Main />
-        </div>
-      </div>
-    );
-  }
+export default async function Page() {
+  const data = await getData();
+  const dataaaa: CV = JSON.parse(data);
+  // console.log(dataaaa);
+
   return (
-    <div>
-      <p>loading</p>
+    <div className="cv">
+      <Menu />
+      <ASide personalInfo={dataaaa.personal_info} />
+      <div className="mr-auto ml-auto">
+        <Main cv={dataaaa} />
+      </div>
     </div>
   );
 }

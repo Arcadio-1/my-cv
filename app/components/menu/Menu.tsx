@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import MenuIcon from "./components/MenuIcon";
 import CloseIcon from "./components/CloseIcon";

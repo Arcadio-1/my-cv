@@ -1,3 +1,4 @@
+"use client";
 import { CV } from "@/app/util/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
