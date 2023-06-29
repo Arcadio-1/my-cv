@@ -34,7 +34,7 @@ const Hero = (props: Props) => {
   return (
     <div className=" main-hero">
       <div className="main-hero-background"></div>
-      <div className=" main-hero-content ">
+      <div className=" main-hero-content animatiner-hero">
         <div className="main-hero-content-tittle">
           <h1>{`${props.name} ${props.lastname}`}</h1>
         </div>

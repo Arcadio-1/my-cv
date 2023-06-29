@@ -19,7 +19,6 @@ async function getData() {
 export default async function Page() {
   const request = await getData();
   const cv: CV = JSON.parse(request.cv);
-  // console.log(request);
   return (
     <div className="cv">
       <Menu />

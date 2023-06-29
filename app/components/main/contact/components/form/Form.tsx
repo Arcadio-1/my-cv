@@ -115,6 +115,9 @@ const Form = () => {
       const response = await postMessage.json();
       console.log(response);
       if (response.status === 200) {
+        nameResetHandler();
+        emailResetHandler();
+        messageResetHandler();
         dispatchNotifCardStatus(
           uiAction.set_notif_card_status({
             status: Status.success,

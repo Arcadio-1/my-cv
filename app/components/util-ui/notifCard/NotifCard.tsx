@@ -18,6 +18,7 @@ const NotifCard = () => {
     if (
       notifState.status === Status.success ||
       notifState.status === Status.error ||
+      notifState.status === Status.loading ||
       notifState.status === Status.warning
     ) {
       console.log(notifState.status);
@@ -29,7 +30,7 @@ const NotifCard = () => {
             message: "",
           })
         );
-      }, 4000);
+      }, 5000);
       return () => {
         clearTimeout(clearnotif);
       };

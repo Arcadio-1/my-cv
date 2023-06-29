@@ -46,11 +46,6 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    // &-container {
-    //   z-index: 10;
-    //   width: 100%;
-    //   border: 2px solid red;
-    // }
     &-header {
       width: 100%;
       @include dflex;
@@ -164,7 +159,7 @@
     &-menu {
       display: none;
       z-index: 100;
-      @include responsive(lg) {
+      @include responsive(md) {
         display: block;
       }
       .closeIcon {
@@ -281,7 +276,7 @@
           }
           .text2 {
             animation: typing2 2s steps(30, end) forwards,
-              forwardsblink-caret 0.75s step-end infinite;
+              blink-caret 0.75s step-end infinite;
           }
           @keyframes typing2 {
             from {
@@ -342,11 +337,14 @@
         }
       }
       &-tittle {
+        position: static;
         @include dflex(flex-start, flex-start);
         grid-area: abouttittle;
         font-family: iranyekan;
         font-size: 2rem;
         margin-bottom: 2rem;
+        padding-right: 2rem;
+        margin-bottom: 3rem;
       }
       &-image {
         grid-area: aboutimage;
@@ -429,10 +427,24 @@
         padding: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        overflow: hidden;
         @include responsive(sm) {
           grid-template-columns: 1fr;
         }
         &-item {
+          &-animator {
+            animation: skillanime 0.2s alternate;
+          }
+          @keyframes skillanime {
+            0% {
+              transform: translateX(-200px);
+              opacity: 0.5;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
           padding: 1rem;
           @include dflex(flex-start);
           gap: 0.5rem;
@@ -1038,9 +1050,9 @@
   z-index: 100;
   top: 10px;
   left: 10px;
-  // padding: 0.5em 2em;
   border-radius: 5px;
   color: color(light-1);
+  backdrop-filter: blur(3px);
   &-header {
     @include dflex(space-between);
     height: 3em;
@@ -1055,27 +1067,93 @@
       }
     }
   }
+  &-container {
+    padding: 1rem;
+    padding-left: 5rem;
+    p {
+      display: inline;
+      text-align: left;
+    }
+  }
   &-message {
-    padding: 1em 3em;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   &-success {
     animation: openModal 0.4s ease-out forwards;
-    background-color: color(success);
+    background-color: rgba(color(success), 0.7);
   }
   &-loading {
     animation: openModal 0.4s ease-out forwards;
-    background-color: color(info);
+    background-color: rgba(color(g3-4), 0.7);
   }
   &-error {
     animation: openModal 0.4s ease-out forwards;
-    background-color: color(error);
+    background-color: rgba(color(error), 0.7);
   }
   &-warning {
     animation: openModal 0.4s ease-out forwards;
-    background-color: color(warning);
+    background-color: rgba(color(warning), 0.7);
   }
   &-null {
-    animation: closeModal 1s ease-out forwards;
+    opacity: 0;
+    animation: closeModal 1s ease-out alternate;
+  }
+}
+@keyframes openModal {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(90%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes closeModal {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateY(60%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+.animatiner-hero {
+  position: absolute;
+  opacity: 1;
+  // background-color: gray;
+  animation: heroer-hero 0.75s ease-in alternate;
+}
+@keyframes heroer-hero {
+  from {
+    opacity: 0;
+    // top: -10px;
+  }
+  to {
+    opacity: 1;
+    // top: 10%;
+  }
+}
+
+.animatiner-about-title {
+  // opacity: 0;
+  animation: heroer-about-title 2s ease-in alternate;
+}
+@keyframes heroer-about-title {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

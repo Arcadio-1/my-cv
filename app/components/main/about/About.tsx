@@ -2,7 +2,7 @@ import { Personal_info } from "@/app/util/types";
 import SectionHeader from "@/app/util/ui/SectionHeader";
 import React from "react";
 import MyImage from "./components/MyImage";
-import Footer from "./components/Boulshit";
+import Boulshit from "./components/Boulshit";
 import List from "./components/list/List";
 import Tittle from "./components/Tittle";
 import matter from "gray-matter";
@@ -35,7 +35,7 @@ const About = async (props: Props) => {
           alt={props.personal_info.name}
         />
         <List personal_info={props.personal_info} />
-        {request.status && <Footer>{request.data}</Footer>}
+        {request.status && <Boulshit>{request.data}</Boulshit>}
       </div>
     </div>
   );
