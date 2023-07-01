@@ -1,6 +1,6 @@
 "use client";
 import useInputValidation from "@/app/util/Hooks/UseInputValidation";
-import React, { FormEvent } from "react";
+import React, { FormEvent, useEffect } from "react";
 import Item from "./components/Item";
 // import EmailIcon from "../contactLines/components/EmailIcon";
 import MailIcon from "./components/MailIcon";
@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { uiAction } from "@/redux/features/ui/uiSlice";
 import { Status } from "@/app/util/types";
 import NotifCard from "@/app/components/util-ui/notifCard/NotifCard";
+import { useInView } from "react-intersection-observer";
 
 const Form = () => {
   const dispatchSendMessageStatus = useDispatch();
@@ -20,10 +21,14 @@ const Form = () => {
     (state: any) => state.ui.notif_card_status
   );
 
+  const { ref, inView, entry } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  });
+
   // useEffect(() => {
-  //   console.log(sendMessageStatus);
-  //   console.log(notifCardStatus);
-  // }, [sendMessageStatus, notifCardStatus]);
+  //   console.log("form: ", inView);
+  // }, [inView]);
 
   const {
     value: nameValue,
@@ -168,10 +173,14 @@ const Form = () => {
   };
 
   return (
-    <div className="main-contact-form">
+    <div
+      className={`main-contact-form ${
+        inView ? "main-contact-form-animator" : ""
+      }`}
+    >
       <NotifCard />
 
-      <form className="formContainer">
+      <form ref={ref} className="formContainer">
         <Item
           onBlur={nameBlurHandler}
           onChange={nameChangeHandler}

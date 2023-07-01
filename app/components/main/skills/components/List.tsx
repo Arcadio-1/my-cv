@@ -9,7 +9,7 @@ interface Props {
 const List = (props: Props) => {
   const [skills, setSkills] = useState<Skill[]>([]);
   const { ref, inView, entry } = useInView({
-    threshold: 0.1,
+    threshold: 0.5,
     triggerOnce: true,
   });
   useEffect(() => {
@@ -20,16 +20,18 @@ const List = (props: Props) => {
             setSkills((prevState) => {
               return (prevState = [...prevState, props.skills[i]]);
             }),
-          300 * i
+          100 * i
         );
       }
     }
   }, [props.skills, inView]);
-  useEffect(() => {
-    console.log(skills);
-  }, [skills]);
+
+  // useEffect(() => {
+  //   console.log(inView);
+  // }, [inView]);
+
   return (
-    <div ref={ref} className="main-skills-list">
+    <div ref={ref} className={`main-skills-list`}>
       {skills.map((skill) => {
         return (
           <div

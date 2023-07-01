@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 interface Props {
   label: string;
   content: string;
@@ -7,13 +7,13 @@ interface Props {
 
 const Item = (props: Props) => {
   return (
-    <div className="main-contact-contactLines-item">
+    <Fragment>
       {props.children}
       <div className="content">
         <p className="content-label">{props.label}</p>
         <p className="content-value">{props.content}</p>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

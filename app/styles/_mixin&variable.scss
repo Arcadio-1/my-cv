@@ -144,7 +144,7 @@ $font-sizes: (
 }
 @mixin responsive($brekPoint) {
   @if ($brekPoint==xl) {
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
       @content;
     }
   }

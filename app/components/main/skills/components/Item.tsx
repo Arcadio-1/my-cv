@@ -6,7 +6,7 @@ interface Props {
 }
 const Item = (props: Props) => {
   const { skill } = props;
-  const { tittle, id, level, icon_img, icon_icon } = skill;
+  const { tittle, level, icon_img } = skill;
 
   const [levState, setLevState] = useState<number>(0);
 
@@ -17,7 +17,7 @@ const Item = (props: Props) => {
           setLevState((prevState) => {
             return (prevState = prevState + 1);
           }),
-        20 * i
+        50 * i
       );
     }
   }, [level]);

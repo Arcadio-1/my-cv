@@ -1,12 +1,12 @@
 import SectionHeader from "@/app/util/ui/SectionHeader";
 import React from "react";
-import { Experience, Language } from "@/app/util/types";
-import Experience_component from "./components/Experience";
-import Language_component from "./components/Language";
+import { Experience, Language as Language_type } from "@/app/util/types";
+import List_container from "./components/experiences_educations/List_container";
+import Languages from "./components/language/Languages";
 interface Props {
   educations: Experience[];
   work_experiences: Experience[];
-  fluent_languages: Language[];
+  fluent_languages: Language_type[];
 }
 const Resume = (props: Props) => {
   return (
@@ -14,17 +14,14 @@ const Resume = (props: Props) => {
       <SectionHeader tittle="رزومه" description="" />
       <div className="main-resume-container">
         <div className="main-resume-experiences">
-          <Experience_component
-            experience={props.educations}
-            header="سوابق تحصیلی"
-          />
-          <Experience_component
+          <List_container experience={props.educations} header="سوابق تحصیلی" />
+          <List_container
             experience={props.work_experiences}
             header="سوابق شغلی"
           />
         </div>
 
-        <Language_component languages={props.fluent_languages} />
+        <Languages languages={props.fluent_languages} />
       </div>
     </div>
   );

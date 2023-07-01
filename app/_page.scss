@@ -319,6 +319,7 @@
       padding-right: 1rem;
       padding-bottom: 6rem;
       &-container {
+        overflow: hidden;
         margin-top: 1rem;
         @include responsive(lg) {
           display: grid;
@@ -337,6 +338,7 @@
         }
       }
       &-tittle {
+        opacity: 0;
         position: static;
         @include dflex(flex-start, flex-start);
         grid-area: abouttittle;
@@ -345,6 +347,20 @@
         margin-bottom: 2rem;
         padding-right: 2rem;
         margin-bottom: 3rem;
+        &-animator {
+          opacity: 1;
+          animation: aboutTittleAnime 0.5s ease-in alternate;
+        }
+        @keyframes aboutTittleAnime {
+          0% {
+            opacity: 0;
+            transform: translateY(-5px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0px);
+          }
+        }
       }
       &-image {
         grid-area: aboutimage;
@@ -353,8 +369,23 @@
         max-width: 30rem;
         min-width: 20rem;
         width: 100%;
+        opacity: 0;
+        &-animator {
+          opacity: 1;
+          animation: aboutImageAnime 0.5s ease-in alternate;
+        }
+        @keyframes aboutImageAnime {
+          0% {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0px);
+          }
+        }
         img {
-          filter: drop-shadow(0px 0px 0px rgb(255, 255, 255)) grayscale(60%);
+          // filter: drop-shadow(0px 0px 0px rgb(255, 255, 255)) grayscale(60%);
           opacity: 0.7;
           border-radius: 5px;
           width: 100%;
@@ -370,6 +401,21 @@
         grid-area: aboutlist;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        opacity: 0;
+        &-animator {
+          opacity: 1;
+          animation: aboutListAnime 0.5s ease-in alternate;
+        }
+        @keyframes aboutListAnime {
+          0% {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0px);
+          }
+        }
         @include responsive(lg) {
           @include dflex(flex-start, flex-start);
           flex-direction: column;
@@ -408,6 +454,21 @@
       &-boulshit {
         grid-area: aboutboulshit;
         color: color(light-2);
+        opacity: 0;
+        &-animator {
+          opacity: 1;
+          animation: aboutBoulshitAnime 0.5s ease-in alternate;
+        }
+        @keyframes aboutBoulshitAnime {
+          0% {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0px);
+          }
+        }
         &-content {
           padding: 2rem;
           line-height: 2.5rem;
@@ -422,20 +483,37 @@
       margin-top: 1rem;
       padding-right: 1rem;
       padding-bottom: 6rem;
+      overflow: hidden;
 
       &-list {
         padding: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         overflow: hidden;
+        // opacity: 0;
+        &-animator {
+          opacity: 1;
+          animation: skillItemAnime 1s alternate;
+        }
+        @keyframes skillItemAnime {
+          0% {
+            transform: translateX(-200px);
+            opacity: 0.5;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
         @include responsive(sm) {
           grid-template-columns: 1fr;
         }
         &-item {
+          overflow: hidden;
           &-animator {
-            animation: skillanime 0.2s alternate;
+            animation: skillItemAnime 1s alternate;
           }
-          @keyframes skillanime {
+          @keyframes skillItemAnime {
             0% {
               transform: translateX(-200px);
               opacity: 0.5;
@@ -517,6 +595,7 @@
       padding-bottom: 6rem;
 
       &-container {
+        overflow: hidden;
       }
       &-experiences {
         display: grid;
@@ -551,6 +630,19 @@
               background-color: rgba(color(g3-4), 0.05);
               border-radius: 5px;
               margin: 1rem;
+              &-animator {
+                animation: resumeExperiencesAnime 0.2s alternate;
+              }
+              @keyframes resumeExperiencesAnime {
+                0% {
+                  transform: translateX(-200px);
+                  opacity: 0.5;
+                }
+                100% {
+                  transform: translateX(0);
+                  opacity: 1;
+                }
+              }
               .tittle {
                 font-size: 1.4rem;
                 margin-bottom: 0.4rem;
@@ -665,10 +757,36 @@
         grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
         gap: 2rem;
         transition: all 0.3 linear;
+        @include responsive(xl) {
+          // border: 3px solid red;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+        @include responsive(lg) {
+          // border: 3px solid blue;
+          grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        }
+        @include responsive(md) {
+          // border: 3px solid #16dc16;
+          grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        }
+        @include responsive(sm) {
+          // border: 3px solid yellow;
+          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        }
+        @include responsive(xm) {
+          // border: 3px solid orange;
+          grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        }
         &-item {
           transition: all 0.3 linear;
           position: relative;
-          background-color: rgba(color(dark-2), 0.2);
+          border: 2px solid rgba(color(dark-2), 0.2);
+          border-radius: 5px;
+          background-color: rgba(color(dark-2), 0.3);
+          // transform: scale(0.1);
+          // display: none;
+
+          // opacity: 0;
           .prevImage {
             overflow: hidden;
             max-height: 35rem;
@@ -699,7 +817,7 @@
                       font-family: iranyekan;
                       color: color(light-2);
                       padding: 1rem 1rem;
-                      background-color: rgba(color(g3-5), 0.5);
+                      background-color: rgba(color(dark-2), 0.1);
                       font-size: 1.4rem;
                       border-bottom: 2px solid rgba(color(light-2), 1);
                     }
@@ -778,6 +896,10 @@
             }
           }
         }
+        &-animator {
+          transform: scale(1);
+          animation: shower 10s alternate;
+        }
         .notSelected {
           animation: hider 0.2s forwards;
           overflow: hidden;
@@ -785,7 +907,7 @@
           height: 0;
         }
         .selectedItem {
-          animation: shower 0.2s forwards;
+          animation: shower 0.5s ease-in forwards;
         }
         @keyframes hider {
           from {
@@ -805,19 +927,16 @@
         }
         @keyframes shower {
           from {
-            height: 0%;
-            width: 0%;
-            opacity: 0;
+            transform: scale(0);
           }
           to {
-            height: 100%;
-            width: 100%;
-            opacity: 1;
+            transform: scale(1);
           }
         }
       }
     }
     &-contact {
+      overflow: hidden;
       margin-top: 1rem;
       color: color(light-2);
       background-color: rgba(color(dark-2), 0.5);
@@ -841,6 +960,7 @@
         gap: 1rem;
         padding: 2rem 1rem;
         &-item {
+          opacity: 0;
           @include dflex(flex-start);
           gap: 0.5rem;
           width: 100%;
@@ -888,6 +1008,19 @@
             }
           }
         }
+        &-animator {
+          background-color: rgba(color(dark-2), 0.2);
+          opacity: 1;
+          animation: contactLinesItemAnime 1s alternate;
+        }
+        @keyframes contactLinesItemAnime {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
         &-imageContainer {
           bottom: 0;
           right: 20%;
@@ -897,12 +1030,30 @@
         }
       }
       &-form {
+        // overflow: hidden;
         height: 100%;
         flex: 1 0 auto;
         padding: 2rem 1rem;
         background-color: rgba(color(g3-2), 0.1);
+        // opacity: 0;
         .formContainer {
+          // overflow: hidden;
           width: 100%;
+        }
+        &-animator {
+          background-color: rgba(color(dark-2), 0.2);
+          // opacity: 1;
+          animation: contactFormItemAnime 1s ease-in alternate;
+        }
+        @keyframes contactFormItemAnime {
+          0% {
+            transform: translateX(-400px);
+            // opacity: 0;
+          }
+          100% {
+            transform: translateX(1);
+            // opacity: 1;
+          }
         }
         &-item {
           width: 100%;
