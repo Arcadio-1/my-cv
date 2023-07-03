@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "حسین اسکندری | Frontend Developer",
     images: [
       {
-        url: "/images/profile.jpg",
+        url: "/images/pwa_icons/android-icon-192x192.png",
       },
     ],
   },
