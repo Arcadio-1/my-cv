@@ -390,21 +390,21 @@
       {
         "id": "7-1",
         "tittle": "node.js",
-        "level": 80,
+        "level": 50,
         "icon_img": "/images/skills/img/nodejs.png",
         "icon_icon": "/images/skills/icon/nodejs.svg"
       },
       {
         "id": "7-2",
         "tittle": "mongoDB",
-        "level": 80,
+        "level": 50,
         "icon_img": "/images/skills/img/mongodb.png",
         "icon_icon": "/images/skills/icon/mongodb.svg"
       },
       {
         "id": "7-3",
         "tittle": "firebase",
-        "level": 80,
+        "level": 20,
         "icon_img": "/images/skills/img/firebase.png",
         "icon_icon": "/images/skills/icon/firebase.svg"
       }

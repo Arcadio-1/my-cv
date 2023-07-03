@@ -488,9 +488,13 @@
       &-list {
         padding: 2rem;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        // gap: 0.5rem;
         overflow: hidden;
-        // opacity: 0;
+        gap: 2rem;
+        @include responsive(sm) {
+          grid-template-columns: 1fr;
+        }
         &-animator {
           opacity: 1;
           animation: skillItemAnime 1s alternate;
@@ -505,11 +509,16 @@
             opacity: 1;
           }
         }
-        @include responsive(sm) {
-          grid-template-columns: 1fr;
-        }
+
         &-item {
           overflow: hidden;
+          @include dflex;
+          padding: 1rem;
+          @include dflex();
+          flex-direction: column;
+          gap: 0.5rem;
+          background-color: rgba(color(g3-2), 0.1);
+          border-radius: 20px;
           &-animator {
             animation: skillItemAnime 1s alternate;
           }
@@ -523,67 +532,38 @@
               opacity: 1;
             }
           }
-          padding: 1rem;
-          @include dflex(flex-start);
-          gap: 0.5rem;
-          &-image {
-            border-radius: 5px;
-            padding: 0.5rem;
-            background-color: rgba(color(g3-1), 0.2);
-            img {
-              max-width: 4rem;
-            }
-          }
-          &-content {
-            width: 100%;
-            @include dflex;
-            flex-direction: column;
-            &-data {
+          &-contentBase {
+            @include dflex();
+            border-radius: 50%;
+            height: 15rem;
+            width: 15rem;
+            padding: 0.8rem;
+            &-container {
+              position: relative;
+              @include dflex(flex-start);
+              height: 100%;
               width: 100%;
-              @include dflex(space-between);
-              .tittle {
-                font-size: 1.5rem;
-                text-transform: capitalize;
+              background-color: #602fd345;
+              border-radius: 50%;
+              padding: 4rem;
+              &-percent {
+                position: absolute;
+                bottom: 3px;
+                left: 50%;
+                font-size: 1.3rem;
+                font-family: iransansnum;
+                transform: translateX(-50%);
               }
-              .percent {
-                font-size: 1.5rem;
-              }
-            }
-            &-progressBar {
-              margin-top: 0.1rem;
-              height: 1rem;
-              width: 100%;
-              border-radius: 2px;
-              border: 2px solid rgba(color(g3-3), 0.4);
-              @include dflex(flex-end);
-              transition: all 0.3s linear;
-              .percent {
-                height: 100%;
-                width: 0px;
-                background-color: rgba(color(g3-3), 0.5);
+              img {
+                width: 100%;
               }
             }
           }
-        }
-      }
-      &-imageContainer {
-        position: absolute;
-        top: 0;
-        border: 2px solid gray;
-        width: 100%;
-        height: 100%;
-        img {
-          opacity: 0.3;
-        }
-        .img-1 {
-          position: absolute;
-          top: 10%;
-          left: 20%;
-        }
-        .img-2 {
-          position: absolute;
-          bottom: 10%;
-          right: 10%;
+          &-tittle {
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            margin-top: 0.5rem;
+          }
         }
       }
     }
@@ -753,7 +733,6 @@
       }
       &-list {
         display: grid;
-        justify-content: space-evenly;
         grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
         gap: 2rem;
         transition: all 0.3 linear;

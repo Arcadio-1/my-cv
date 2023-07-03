@@ -9,7 +9,6 @@ const Item = (props: Props) => {
   const { tittle, level, icon_img } = skill;
 
   const [levState, setLevState] = useState<number>(0);
-
   useEffect(() => {
     for (let i = 0; i < level; i++) {
       setTimeout(
@@ -23,18 +22,22 @@ const Item = (props: Props) => {
   }, [level]);
   return (
     <div className="main-skills-list-item">
-      <div className="main-skills-list-item-content">
-        <div className="main-skills-list-item-content-data">
-          <span className="percent">{levState}%</span>
-          <h2 className="tittle">{tittle}</h2>
-        </div>
-        <div className="main-skills-list-item-content-progressBar">
-          <div className="percent" style={{ width: `${levState}%` }}></div>
+      <div
+        className="main-skills-list-item-contentBase"
+        style={{
+          background: `conic-gradient(from 0deg at 50% 50%,#2079c5 ${levState}%,#adcdc910 ${
+            100 - levState
+          }% )`,
+        }}
+      >
+        <div className="main-skills-list-item-contentBase-container">
+          <Image src={icon_img} width={200} height={200} alt={tittle} />
+          <span className="main-skills-list-item-contentBase-container-percent">
+            %{levState}
+          </span>
         </div>
       </div>
-      <div className="main-skills-list-item-image">
-        <Image src={icon_img} width={200} height={200} alt={tittle} />
-      </div>
+      <h2 className="main-skills-list-item-tittle">{tittle}</h2>
     </div>
   );
 };
