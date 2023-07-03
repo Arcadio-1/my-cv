@@ -5,10 +5,8 @@
       margin-top: 1rem;
       color: color(light-2);
       background-color: rgba(color(dark-2), 0.5);
-
       padding: 1rem;
       padding-bottom: 6rem;
-
       &-container {
         overflow: hidden;
       }
@@ -22,7 +20,6 @@
         &-experience {
           border-radius: 10px;
           padding: 0.5rem 1rem;
-          background-color: rgba(color(dark-2), 0.2);
           background-color: rgba(color(g3-2), 0.1);
 
           .header {
@@ -84,7 +81,12 @@
         }
       }
       &-language {
+        border-radius: 10px;
+
         margin-top: 2rem;
+        background-color: rgba(color(g3-2), 0.1);
+        padding: 0.5rem 1rem;
+
         .tittle {
           margin-bottom: 1rem;
           font-size: 1.4rem;
@@ -102,7 +104,7 @@
             width: 100%;
             padding: 1rem;
             border-radius: 5px;
-            background-color: rgba(color(dark-2), 0.1);
+            background-color: rgba(color(dark-2), 0.2);
             .data {
               @include dflex(space-between);
               margin-bottom: 0.3rem;
