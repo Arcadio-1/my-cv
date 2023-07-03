@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, ReactNode } from "react";
 import Modal from "../modal/Modal";
 import CloseIcon from "./components/CloseIcon";
 import WarningIcon from "./components/WarningIcon";
@@ -20,13 +20,12 @@ const NotifCard = () => {
       notifState.status === Status.error ||
       notifState.status === Status.warning
     ) {
-      console.log(notifState.status);
       const clearnotif = setTimeout(() => {
         dispatchNotif(
           uiAction.set_notif_card_status({
             status: Status.null,
             title: "",
-            message: "",
+            message: "  ",
           })
         );
       }, 5000);
@@ -36,27 +35,47 @@ const NotifCard = () => {
     }
   }, [notifState, dispatchNotif]);
 
+  const statusIcon = (): ReactNode => {
+    switch (notifState.status) {
+      case Status.success:
+        return <SuccessIcon />;
+      case Status.warning:
+        return <WarningIcon />;
+      case Status.error:
+        return <ErrorIcon />;
+      case Status.loading:
+        return <InfoIcon />;
+    }
+  };
+
+  const closeHandler = () => {
+    dispatchNotif(
+      uiAction.set_notif_card_status({
+        status: Status.null,
+        title: "",
+        message: "  ",
+      })
+    );
+  };
+
   return (
     <Fragment>
       <Modal>
-        <div className={`sideNotif sideNotif-${notifState.status}`}>
-          <div className="sideNotif-header">
-            {notifState.message !== "null" && (
-              <Fragment>
+        {notifState.message && (
+          <div className={`notifCard notifCard-${notifState.status}`}>
+            <div className="notifCard-header">
+              <div className="notifCard-header-control" onClick={closeHandler}>
                 <CloseIcon />
-                {notifState.status === Status.success && <SuccessIcon />}
-                {notifState.status === Status.warning && <WarningIcon />}
-                {notifState.status === Status.error && <ErrorIcon />}
-                {notifState.status === Status.loading && <InfoIcon />}
-              </Fragment>
-            )}
+              </div>
+              <div className="notifCard-header-status">{statusIcon()}</div>
+            </div>
+            <div className="notifCard-container">
+              {notifState.message !== "null" && (
+                <p className="notifCard-message">{notifState.message}</p>
+              )}
+            </div>
           </div>
-          <div className="sideNotif-container">
-            {notifState.message !== "null" && (
-              <p className="sideNotif-message">{notifState.message}</p>
-            )}
-          </div>
-        </div>
+        )}
       </Modal>
     </Fragment>
   );

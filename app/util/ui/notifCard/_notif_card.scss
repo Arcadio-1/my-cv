@@ -1,6 +1,6 @@
 @use "../../../../styles/clips.scss" as *;
 
-.sideNotif {
+.notifCard {
   position: fixed;
   z-index: 100;
   top: 10px;
@@ -13,12 +13,30 @@
     height: 3em;
     padding: 0 0.5em;
     border-bottom: 2px solid rgba(color(light-1), 0.5);
-    svg {
-      opacity: 0.7;
-      width: 2em;
-      height: 2em;
-      path {
-        fill: color(light-1);
+    &-control {
+      cursor: pointer;
+      svg {
+        opacity: 0.7;
+        width: 2em;
+        height: 2em;
+        path {
+          fill: color(light-1);
+        }
+        transition: all 0.15s linear;
+        &:hover {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+      }
+    }
+    &-status {
+      svg {
+        opacity: 0.9;
+        width: 1.5em;
+        height: 1.5em;
+        path {
+          fill: color(light-1);
+        }
       }
     }
   }
@@ -53,33 +71,33 @@
     opacity: 0;
     animation: closeModal 1s ease-out alternate;
   }
-}
-@keyframes openModal {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
+  @keyframes openModal {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(90%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  50% {
-    opacity: 1;
-    transform: translateY(90%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes closeModal {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 0.4;
-    transform: translateY(60%);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100%);
+  @keyframes closeModal {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 0.4;
+      transform: translateY(60%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
   }
 }
