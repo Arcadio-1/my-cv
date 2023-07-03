@@ -1,0 +1,135 @@
+@use "../../../styles/clips.scss" as *;
+.cv {
+  .main {
+    &-resume {
+      margin-top: 1rem;
+      color: color(light-2);
+      background-color: rgba(color(dark-2), 0.5);
+
+      padding: 1rem;
+      padding-bottom: 6rem;
+
+      &-container {
+        overflow: hidden;
+      }
+      &-experiences {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        @include responsive(md) {
+          grid-template-columns: 1fr;
+        }
+        &-experience {
+          border-radius: 10px;
+          padding: 0.5rem 1rem;
+          background-color: rgba(color(dark-2), 0.2);
+          background-color: rgba(color(g3-2), 0.1);
+
+          .header {
+            font-size: 1.5rem;
+            padding-bottom: 0.3rem;
+            &::after {
+              content: "";
+              height: 2px;
+              width: 60px;
+              display: block;
+              border-radius: 2px;
+              border-bottom: 2px solid rgba(color(light-2), 0.08);
+              padding-top: 0.5rem;
+            }
+          }
+          .list {
+            list-style: none;
+            &-item {
+              @include dflex(flex-start, flex-start);
+              flex-direction: column;
+              padding: 0.5rem 1rem;
+              background-color: rgba(color(dark-2), 0.2);
+              border-radius: 5px;
+              margin: 1rem;
+              &-animator {
+                animation: resumeExperiencesAnime 0.2s alternate;
+              }
+              @keyframes resumeExperiencesAnime {
+                0% {
+                  transform: translateX(-200px);
+                  opacity: 0.5;
+                }
+                100% {
+                  transform: translateX(0);
+                  opacity: 1;
+                }
+              }
+              .tittle {
+                font-size: 1.4rem;
+                margin-bottom: 0.4rem;
+              }
+              .date {
+                font-size: 1.2rem;
+                font-family: iransansnum;
+                @include dflex;
+                gap: 0.5rem;
+                &-since {
+                }
+                &-dash {
+                }
+                &-to {
+                }
+              }
+              .place {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+      &-language {
+        margin-top: 2rem;
+        .tittle {
+          margin-bottom: 1rem;
+          font-size: 1.4rem;
+        }
+        .list {
+          list-style: none;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+          padding: 0.5rem 2rem;
+          @include responsive(sm) {
+            grid-template-columns: 1fr;
+          }
+          &-item {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: rgba(color(dark-2), 0.1);
+            .data {
+              @include dflex(space-between);
+              margin-bottom: 0.3rem;
+              font-size: 1.1rem;
+              &-tittle {
+              }
+              &-percent {
+              }
+            }
+            .progressBar {
+              // max-width: 30rem;
+              margin-top: 0.1rem;
+              height: 1.5rem;
+              width: 100%;
+              border-radius: 2px;
+              border: 2px solid rgba(color(g3-3), 0.4);
+              @include dflex(flex-end);
+              transition: all 0.3s linear;
+              &-percent {
+                height: 100%;
+                width: 0px;
+                background-color: rgba(color(g3-3), 0.5);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

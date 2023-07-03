@@ -1,6 +1,5 @@
 import { Providers } from "@/redux/provider";
-import "./styles/main.scss";
-import Head from "next/head";
+import "../styles/main.scss";
 
 import { Metadata } from "next";
 

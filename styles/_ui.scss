@@ -1,0 +1,22 @@
+@use "./mixin&variable" as *;
+
+.dflex {
+  @include dflex;
+}
+.fnNum {
+  font-family: iransansnum;
+}
+.fnYekan {
+  font-family: iranyekan;
+}
+
+//photoSwipe
+.pswp {
+  img {
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+  }
+}

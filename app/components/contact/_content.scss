@@ -1,0 +1,244 @@
+@use "../../../styles/clips.scss" as *;
+.cv {
+  .main {
+    &-contact {
+      overflow: hidden;
+      margin-top: 1rem;
+      color: color(light-2);
+      background-color: rgba(color(dark-2), 0.5);
+      padding: 1rem;
+      padding-bottom: 6rem;
+      &-container {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 2rem;
+        @include responsive(lg) {
+          grid-template-columns: 1fr;
+        }
+      }
+      &-contactLines {
+        position: relative;
+        @include dflex(flex-start, flex-start);
+        height: 100%;
+        background-color: rgba(color(g3-2), 0.1);
+        flex: 1;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 1rem;
+        &-item {
+          opacity: 0;
+          @include dflex(flex-start);
+          gap: 0.5rem;
+          width: 100%;
+          background-color: rgba(color(g3-2), 0.1);
+          padding: 1rem;
+          transition: all 0.15s linear;
+          &-icon {
+            flex: 1 0 auto;
+            width: 100%;
+            height: 100%;
+            max-width: 4rem;
+            padding: 0.5rem;
+            border-radius: 100%;
+            background-color: rgba(color(light-2), 0.5);
+            svg {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              fill: rgba(color(g3-3), 0.7);
+              stroke: rgba(color(g3-3), 0.7);
+            }
+          }
+          &:hover {
+            background-color: rgba(color(dark-2), 0.1);
+            .main-contact-contactLines-item-icon {
+              transition: all 0.15s linear;
+              background-color: rgba(color(g3-3), 0.7);
+              svg {
+                fill: rgba(color(light-2), 0.9);
+                stroke: rgba(color(light-2), 0.9);
+              }
+            }
+          }
+
+          .content {
+            &-label {
+              font-size: 1.3rem;
+            }
+            &-value {
+              direction: ltr;
+              font-family: iransansnum;
+              margin-top: 0.5rem;
+              font-size: 1.2rem;
+              letter-spacing: 0.8px;
+            }
+          }
+        }
+        &-animator {
+          background-color: rgba(color(dark-2), 0.2);
+          opacity: 1;
+          animation: contactLinesItemAnime 1s alternate;
+        }
+        @keyframes contactLinesItemAnime {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        &-imageContainer {
+          bottom: 0;
+          right: 20%;
+          position: absolute;
+          margin-right: auto;
+          opacity: 0.2;
+        }
+      }
+      &-form {
+        height: 100%;
+        flex: 1 0 auto;
+        padding: 2rem 1rem;
+        background-color: rgba(color(g3-2), 0.1);
+        opacity: 0;
+        .formContainer {
+          width: 100%;
+        }
+        &-animator {
+          opacity: 1;
+          animation: contactFormItemAnime 1s ease-in alternate;
+        }
+        @keyframes contactFormItemAnime {
+          0% {
+            transform: translateX(-400px);
+            // opacity: 0;
+          }
+          100% {
+            transform: translateX(1);
+            // opacity: 1;
+          }
+        }
+        &-item {
+          width: 100%;
+          margin-bottom: 2em;
+          &-container {
+            @include dflex;
+            position: relative;
+          }
+          &-icon {
+            position: absolute;
+            top: 2px;
+            left: 5px;
+            width: 2.5rem;
+            height: 2.5rem;
+            .userIcon {
+              fill: rgba(color(light-2), 0.4);
+            }
+            .mailIcon {
+              stroke: rgba(color(light-2), 0.4);
+              stroke-width: 2px;
+              opacity: 0.8;
+            }
+          }
+          &-label {
+            color: rgba(color(light-2), 1);
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            font-size: 1.3em;
+            top: 4.5px;
+            right: 8px;
+            opacity: 0.6;
+          }
+          &-input {
+            line-height: 3rem;
+            width: 100%;
+            background-color: rgba(color(dark-2), 0.2);
+            border-radius: 2px;
+            margin-bottom: 0.5rem;
+            &:focus {
+              outline: 2px solid rgba(color(light-2), 0.2);
+              border: transparent;
+            }
+          }
+          &-textArea {
+            font-size: 1.3em;
+            background-color: rgba(color(dark-2), 0.2);
+            border-radius: 2px;
+            width: 100%;
+            padding: 0.7rem;
+            &:focus {
+              outline: 2px solid rgba(color(light-2), 0.2);
+            }
+          }
+          &-select {
+            color: color(dark-4);
+            background-color: rgba(color(light-1), 0.5);
+            border: transparent;
+            padding-right: 0.5em;
+            width: 100%;
+            height: 2em;
+            cursor: pointer;
+            padding-left: 5em;
+          }
+          .labelUper {
+            backdrop-filter: blur(5px);
+            padding: 0.1rem 0.5rem;
+            border: 3px;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease-in-out;
+            color: rgba(color(light-2), 1);
+            top: -20px;
+            right: 0px;
+            opacity: 0.8;
+          }
+          &-errorMsg {
+            padding: 0.5rem;
+            white-space: nowrap;
+            overflow: visible;
+            color: rgba(color(light-2), 0.8);
+          }
+          .unvalidItem {
+            .main-contact-form-item {
+              &-icon {
+                .userIcon {
+                  fill: color(error);
+                  opacity: 0.8;
+                }
+                .mailIcon {
+                  stroke: color(error);
+                  opacity: 0.8;
+                }
+              }
+            }
+          }
+          .validItem {
+            .main-contact-form-item {
+              &-icon {
+                .userIcon {
+                  fill: #16dc16;
+                  opacity: 0.7;
+                }
+                .mailIcon {
+                  stroke: #16dc16;
+                  opacity: 0.7;
+                }
+              }
+            }
+          }
+        }
+        .actions {
+          padding: 1rem 2rem;
+          @include dflex(flex-end, flex-end);
+          &-submit {
+            // margin-left: auto;
+            // display: block;
+            font-size: 1.3rem;
+            border-radius: 3px;
+            padding: 0.3rem 3rem;
+            background-color: rgba(color(g1-2), 1);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@use "../../../../styles/clips.scss" as *;
+.menu {
+  display: none;
+  z-index: 100;
+  @include responsive(md) {
+    display: block;
+  }
+  .closeIcon {
+    position: fixed;
+    top: 1rem;
+    left: 2rem;
+    cursor: pointer;
+    border-radius: 100%;
+    padding: 0.2rem;
+    background-color: rgba(color(g3-5), 0.2);
+    backdrop-filter: blur(2px);
+    height: 4rem;
+    width: 4rem;
+    transition: all 0.15s linear;
+    &:hover {
+      transform: scale(1.05);
+    }
+    svg {
+      path {
+        fill: rgba(color(light-2), 0.7);
+      }
+    }
+  }
+  .menuIcon {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(color(dark-2), 0.2);
+    backdrop-filter: blur(3px);
+    height: 4rem;
+    width: 4rem;
+    transition: all 0.15s linear;
+    &:hover {
+      transform: scale(1.05);
+    }
+    svg {
+      path {
+        fill: rgba(color(light-2), 0.9);
+      }
+    }
+  }
+}

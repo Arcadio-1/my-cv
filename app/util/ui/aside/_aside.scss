@@ -1,0 +1,145 @@
+@use "../../../../styles/clips.scss" as *;
+.cv {
+  .aside {
+    position: sticky;
+    top: 0px;
+    height: 100vh;
+    min-width: 20rem;
+    max-width: 25rem;
+    backdrop-filter: blur(1px);
+    padding: 1rem;
+    background: linear-gradient(
+      90deg,
+      rgba(75, 116, 160, 0.261) 0%,
+      rgba(36, 55, 71, 0.885) 100%
+    );
+    z-index: 16;
+    // transition: all 3s linear;
+    @include responsive(md) {
+      transition: all 0.5s ease-in-out;
+      position: fixed;
+      right: -400px;
+    }
+    &-container {
+      @include dflex(flex-start, flex-start);
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+    &-opener {
+      transition: all 0.5s ease-in-out;
+      position: fixed;
+      backdrop-filter: blur(5px) !important;
+      background-color: rgba(color(dark-2), 0.5) !important;
+      right: 0 !important;
+    }
+    &-header {
+      width: 100%;
+      @include dflex;
+      flex-direction: column;
+      &-image {
+        width: 100%;
+        height: 100%;
+
+        max-width: 14rem;
+        max-height: 14rem;
+        object-fit: cover;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border: 5px solid color(dark-2);
+          border-radius: 100%;
+        }
+      }
+      &-fullname {
+        padding: 1rem;
+        @include dflex;
+        flex-direction: column;
+        h1 {
+          font-size: 1.7rem;
+          color: color(light-2);
+        }
+        .nickName {
+          color: rgba(color(g3-1), 1);
+        }
+      }
+      &-socialmedias {
+        &-list {
+          background-color: rgba(color(g3-2), 0.2);
+          border-radius: 1000px;
+          padding: 2px 1rem;
+          @include dflex;
+          gap: 0.5rem;
+          &-item {
+            a {
+              img {
+              }
+            }
+          }
+        }
+      }
+    }
+    &-nav {
+      width: calc(100% - 1rem);
+      margin-top: 2rem;
+      &-icon {
+        width: 2.3rem;
+        height: 2.3rem;
+      }
+      &-list {
+        // width: 100%;
+        @include dflex(flex-start, flex-start);
+        flex-direction: column;
+        &-item {
+          transition: all 150ms linear;
+          padding: 0.5rem 2rem 0.5rem 0rem;
+          width: 100%;
+          a {
+            @include dflex(flex-start);
+            gap: 0.5rem;
+            svg {
+              path {
+                stroke-width: 1px;
+                // filter: drop-shadow(3px 1px 2px rgba(color(g3-2), 0.5));
+                fill: color(light-4);
+              }
+            }
+            span {
+              font-size: 1.4rem;
+              color: color(light-2);
+            }
+          }
+          &:hover {
+            background-color: rgba(color(dark-2), 0.5);
+            a {
+              svg {
+                path {
+                  filter: drop-shadow(1px 1px 2px rgba(color(g3-2), 0.5));
+                  fill: color(g3-2);
+                }
+              }
+              span {
+                color: color(light-2);
+              }
+            }
+          }
+        }
+      }
+    }
+    &-footer {
+      margin-top: auto;
+      width: 100%;
+      @include dflex;
+      flex-direction: column;
+      background-color: rgba(color(dark-2), 0.1);
+      &-copyright {
+        color: rgba(color(g3-2), 1);
+      }
+      &-designed {
+        color: rgba(color(g3-2), 1);
+      }
+    }
+  }
+}

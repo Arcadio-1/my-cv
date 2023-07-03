@@ -1,0 +1,108 @@
+@use "../../../styles/clips.scss" as *;
+.cv {
+  .main {
+    &-skills {
+      position: relative;
+      color: color(light-2);
+      background-color: rgba(color(dark-2), 0.5);
+      margin-top: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 6rem;
+      overflow: hidden;
+
+      &-list {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        // gap: 0.5rem;
+        overflow: hidden;
+        gap: 2rem;
+        @include responsive(xl) {
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+        @include responsive(lg) {
+          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        }
+        @include responsive(md) {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+        @include responsive(sm) {
+          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        }
+        @include responsive(xm) {
+          grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        }
+        &-animator {
+          opacity: 1;
+          animation: skillItemAnime 1s alternate;
+        }
+        @keyframes skillItemAnime {
+          0% {
+            transform: translateX(-200px);
+            opacity: 0.5;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        &-item {
+          overflow: hidden;
+          @include dflex;
+          padding: 1rem;
+          @include dflex();
+          flex-direction: column;
+          gap: 0.5rem;
+          background-color: rgba(color(dark-2), 0.1);
+          border-radius: 20px;
+          &-animator {
+            animation: skillItemAnime 1s alternate;
+          }
+          @keyframes skillItemAnime {
+            0% {
+              transform: translateX(-200px);
+              opacity: 0.5;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+          &-contentBase {
+            @include dflex();
+            border-radius: 50%;
+            height: 15rem;
+            width: 15rem;
+            padding: 0.8rem;
+            &-container {
+              position: relative;
+              @include dflex(flex-start);
+              height: 100%;
+              width: 100%;
+              background-color: #602fd345;
+              border-radius: 50%;
+              padding: 4rem;
+              &-percent {
+                position: absolute;
+                bottom: 3px;
+                left: 50%;
+                font-size: 1.3rem;
+                font-family: iransansnum;
+                transform: translateX(-50%);
+              }
+              img {
+                width: 100%;
+              }
+            }
+          }
+          &-tittle {
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+@use "../../../styles/clips.scss" as *;
+.cv {
+  .main {
+    &-hero {
+      @include dflex;
+      height: 100vh;
+      // position: relative;
+      &-background {
+        z-index: 0;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url("/images/hero/hero.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        filter: drop-shadow(0px 0px 0px rgb(255, 255, 255)) brightness(60%);
+      }
+      &-content {
+        @include dflex(flex-start);
+        position: absolute;
+        top: 10%;
+        right: 25%;
+        z-index: 5;
+        flex-direction: column;
+        &-animatiner {
+          position: absolute;
+          opacity: 1;
+          animation: heroerContent 0.75s ease-in alternate;
+        }
+        @keyframes heroerContent {
+          from {
+            opacity: 0;
+            // top: -10px;
+          }
+          to {
+            opacity: 1;
+            // top: 10%;
+          }
+        }
+        &-tittle {
+          margin-left: auto;
+          h1 {
+            color: color(light-2);
+            font-size: 3rem;
+          }
+        }
+        &-expertise {
+          margin-left: auto;
+          &-item {
+            @include dflex;
+          }
+          span {
+            background-color: rgba(color(dark-2), 0.7);
+            font-size: 2rem;
+          }
+          .label {
+            border-radius: 0px 10px 10px 0px;
+            color: color(light-2);
+            padding-left: 0.5rem;
+          }
+          .text {
+            display: block;
+            color: color(light-2);
+            overflow: hidden;
+            width: 0px;
+            border-left: 3px solid orange;
+            white-space: nowrap;
+            margin-left: auto;
+            padding-left: 0.5rem;
+            animation: blink-caret 0.75s step-end infinite;
+          }
+          .text1 {
+            animation: typing1 2s steps(30, end) forwards,
+              blink-caret 0.75s step-end infinite;
+          }
+          @keyframes typing1 {
+            from {
+              width: 0px;
+            }
+            to {
+              width: 100%;
+            }
+          }
+          .text2 {
+            animation: typing2 2s steps(30, end) forwards,
+              blink-caret 0.75s step-end infinite;
+          }
+          @keyframes typing2 {
+            from {
+              width: 0px;
+            }
+            to {
+              width: 100%;
+            }
+          }
+          .text3 {
+            animation: typing3 2s steps(30, end) forwards,
+              blink-caret 0.75s step-end infinite;
+          }
+          @keyframes typing3 {
+            from {
+              width: 0px;
+            }
+            to {
+              width: 100%;
+            }
+          }
+
+          /* The typewriter cursor effect */
+          @keyframes blink-caret {
+            from,
+            to {
+              border-color: transparent;
+            }
+            50% {
+              border-color: orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}
