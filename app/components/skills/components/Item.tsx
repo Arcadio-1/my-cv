@@ -23,16 +23,14 @@ const Item = (props: Props) => {
   return (
     <div className="main-skills-list-item">
       <div
-        className="main-skills-list-item-contentBase"
+        className="main-skills-list-item-progressBar"
         style={{
-          background: `conic-gradient(from 0deg at 50% 50%,#2079c5 ${levState}%,#adcdc910 ${
-            100 - levState
-          }% )`,
+          background: `conic-gradient(from 0deg at 50% 50%,#3875aa ${levState}%,#00000010 0% )`,
         }}
       >
-        <div className="main-skills-list-item-contentBase-container">
+        <div className="main-skills-list-item-main">
           <Image src={icon_img} width={200} height={200} alt={tittle} />
-          <span className="main-skills-list-item-contentBase-container-percent">
+          <span className="main-skills-list-item-main-percent">
             %{levState}
           </span>
         </div>

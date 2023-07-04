@@ -13,25 +13,25 @@
       &-list {
         padding: 2rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         // gap: 0.5rem;
         overflow: hidden;
         gap: 2rem;
-        @include responsive(xl) {
-          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        }
-        @include responsive(lg) {
-          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        }
-        @include responsive(md) {
-          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        }
-        @include responsive(sm) {
-          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        }
-        @include responsive(xm) {
-          grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-        }
+        // @include responsive(xl) {
+        //   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        // }
+        // @include responsive(lg) {
+        //   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        // }
+        // @include responsive(md) {
+        //   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        // }
+        // @include responsive(sm) {
+        //   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        // }
+        // @include responsive(xm) {
+        //   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        // }
         &-animator {
           opacity: 1;
           animation: skillItemAnime 1s alternate;
@@ -69,35 +69,39 @@
               opacity: 1;
             }
           }
-          &-contentBase {
+          &-progressBar {
             @include dflex();
             border-radius: 50%;
-            height: 15rem;
-            width: 15rem;
+            height: 11rem;
+            width: 11rem;
             padding: 0.8rem;
-            &-container {
-              position: relative;
-              @include dflex(flex-start);
-              height: 100%;
+          }
+          &-main {
+            position: relative;
+            @include dflex();
+            height: 100%;
+            width: 100%;
+            background-color: #413f3f39;
+            border-radius: 50%;
+            padding: 2.8rem;
+            &-percent {
+              position: absolute;
+              bottom: 3px;
+              left: 50%;
+              font-size: 1.4rem;
+              font-family: iransansnum;
+              transform: translateX(-50%);
+            }
+            img {
               width: 100%;
-              background-color: #602fd345;
-              border-radius: 50%;
-              padding: 4rem;
-              &-percent {
-                position: absolute;
-                bottom: 3px;
-                left: 50%;
-                font-size: 1.3rem;
-                font-family: iransansnum;
-                transform: translateX(-50%);
-              }
-              img {
-                width: 100%;
-              }
             }
           }
           &-tittle {
-            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(color(g3-4), 0.2);
+            font-size: 1.6rem;
             text-transform: capitalize;
             margin-top: 0.5rem;
           }

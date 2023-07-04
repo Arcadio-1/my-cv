@@ -305,7 +305,7 @@
       {
         "id": "2-2",
         "tittle": "sass",
-        "level": 80,
+        "level": 100,
         "icon_img": "/images/skills/img/scss.png",
         "icon_icon": "/images/skills/icon/scss.svg"
       },
@@ -348,7 +348,7 @@
       {
         "id": "5-1",
         "tittle": "adobe xd",
-        "level": 60,
+        "level": 70,
         "icon_img": "/images/skills/img/adobexd.svg",
         "icon_icon": "/images/skills/icon/adobexd.svg"
       },
@@ -362,7 +362,7 @@
       {
         "id": "6-1",
         "tittle": "webpack",
-        "level": 50,
+        "level": 80,
         "icon_img": "/images/skills/img/webpack.svg",
         "icon_icon": "/images/skills/icon/webpack.svg"
       },
@@ -383,28 +383,28 @@
       {
         "id": "6-4",
         "tittle": "github",
-        "level": 80,
+        "level": 30,
         "icon_img": "/images/skills/img/github.png",
         "icon_icon": "/images/skills/icon/github.svg"
       },
       {
         "id": "7-1",
         "tittle": "node.js",
-        "level": 50,
+        "level": 40,
         "icon_img": "/images/skills/img/nodejs.png",
         "icon_icon": "/images/skills/icon/nodejs.svg"
       },
       {
         "id": "7-2",
         "tittle": "mongoDB",
-        "level": 50,
+        "level": 40,
         "icon_img": "/images/skills/img/mongodb.png",
         "icon_icon": "/images/skills/icon/mongodb.svg"
       },
       {
         "id": "7-3",
         "tittle": "firebase",
-        "level": 20,
+        "level": 40,
         "icon_img": "/images/skills/img/firebase.png",
         "icon_icon": "/images/skills/icon/firebase.svg"
       }
