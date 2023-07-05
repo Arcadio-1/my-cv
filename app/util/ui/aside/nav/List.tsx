@@ -1,8 +1,9 @@
 import React from "react";
 import Item from "./Item";
-import { Nav_item } from "./Nav";
+import { Nav_link } from "@/app/util/Types/types";
+
 interface Props {
-  list: Nav_item[];
+  list: Nav_link[];
 }
 const List = (props: Props) => {
   return (
