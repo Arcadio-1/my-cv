@@ -1,5 +1,5 @@
-[
-  {
+{
+  "cv": {
     "personal_info": {
       "profile_iamge": "/images/profile_2.jpg",
       "profile_iamge_2": "/images/profile_2_2.jpg",
@@ -76,7 +76,6 @@
       },
       "about_me": "/markdown/about.md"
     },
-
     "resume": {
       "educations": [
         {
@@ -299,14 +298,14 @@
         {
           "id": "2-1",
           "tittle": "typescript",
-          "level": 70,
+          "level": 85,
           "icon_img": "/images/skills/img/typescript.svg",
           "icon_icon": "/images/skills/icon/typescript.svg"
         },
         {
           "id": "2-2",
           "tittle": "sass",
-          "level": 80,
+          "level": 100,
           "icon_img": "/images/skills/img/scss.png",
           "icon_icon": "/images/skills/icon/scss.svg"
         },
@@ -349,7 +348,7 @@
         {
           "id": "5-1",
           "tittle": "adobe xd",
-          "level": 60,
+          "level": 70,
           "icon_img": "/images/skills/img/adobexd.svg",
           "icon_icon": "/images/skills/icon/adobexd.svg"
         },
@@ -363,7 +362,7 @@
         {
           "id": "6-1",
           "tittle": "webpack",
-          "level": 50,
+          "level": 80,
           "icon_img": "/images/skills/img/webpack.svg",
           "icon_icon": "/images/skills/icon/webpack.svg"
         },
@@ -384,28 +383,28 @@
         {
           "id": "6-4",
           "tittle": "github",
-          "level": 80,
+          "level": 30,
           "icon_img": "/images/skills/img/github.png",
           "icon_icon": "/images/skills/icon/github.svg"
         },
         {
           "id": "7-1",
           "tittle": "node.js",
-          "level": 50,
+          "level": 40,
           "icon_img": "/images/skills/img/nodejs.png",
           "icon_icon": "/images/skills/icon/nodejs.svg"
         },
         {
           "id": "7-2",
           "tittle": "mongoDB",
-          "level": 50,
+          "level": 40,
           "icon_img": "/images/skills/img/mongodb.png",
           "icon_icon": "/images/skills/icon/mongodb.svg"
         },
         {
           "id": "7-3",
           "tittle": "firebase",
-          "level": 20,
+          "level": 40,
           "icon_img": "/images/skills/img/firebase.png",
           "icon_icon": "/images/skills/icon/firebase.svg"
         }
@@ -415,5 +414,129 @@
         { "id": "1", "tittle": "کوردی", "level": 100 }
       ]
     }
+  },
+  "base": {
+    "nav_links": [
+      {
+        "id": "1",
+        "tittle": "صفحه نخست",
+        "tag": "#home",
+        "icon": "/images/nav/home.svg",
+        "component": "home_icon",
+        "headline": "Home_icon"
+      },
+      {
+        "id": "2",
+        "tittle": "درباره من",
+        "tag": "#about",
+        "icon": "/images/nav/about.svg",
+        "component": "about_icon",
+        "headline": "About_icon"
+      },
+      {
+        "id": "2-1",
+        "tittle": "مهارت ها",
+        "tag": "#skills",
+        "icon": "/images/nav/skills.svg",
+        "component": "skills_icon",
+        "headline": "Skillsicon"
+      },
+      {
+        "id": "3",
+        "tittle": "رزومه",
+        "tag": "#resume",
+        "icon": "/images/nav/resume.svg",
+        "component": "resume_icon",
+        "headline": "Resume_icon"
+      },
+      {
+        "id": "4",
+        "tittle": "نمونه کارها",
+        "tag": "#portfolio",
+        "icon": "/images/nav/portfolio.svg",
+        "component": "portofolio_icon",
+        "headline": "Portofolio_icon"
+      },
+      {
+        "id": "5",
+        "tittle": "تماس",
+        "tag": "#contact",
+        "icon": "/images/nav/contact.svg",
+        "component": "contact_icon",
+        "headline": "Contact_icon"
+      }
+    ],
+    "about_base": {
+      "section_tittle": "درباره من",
+      "tittle": "توسعه دهنده و طراح فرانت اند",
+      "labels": {
+        "mobile": "شماره تماس",
+        "residence": "محل سکونت",
+        "marital_status": "وضعیت تاهل",
+        "age": "سن",
+        "email": "پست الکترونیک",
+        "degree": "مدرک تحصیلی",
+        "military_service": "وضعیت خدمت",
+        "get_project": "پذیرش سفارش"
+      }
+    },
+    "skills_base": {
+      "section_tittle": "مهارت ها"
+    },
+    "resume_base": {
+      "section_tittle": "رزومه",
+      "labels": {
+        "educations": "سوابق تحصیلی",
+        "work_experiences": "سوابق شغلی",
+        "language": "زبان های مسلط"
+      }
+    },
+    "portfolio_base": {
+      "section_tittle": "نمونه کار ها",
+      "labels": {
+        "all": "همه"
+      }
+    },
+    "contact_base": {
+      "section_tittle": "تماس با من",
+      "labels": {
+        "email": "پست الکترونیک",
+        "mobile": "موبایل",
+        "telegram": "تلگرام"
+      },
+      "form": {
+        "place_holders": {
+          "name": "نام",
+          "email": "ایمیل",
+          "message": "پیام شما"
+        },
+        "error_messages": {
+          "name": "لطفا نام خود را وارد کنید",
+          "email": "ایمیل وارد شده صحیح نمیباشد",
+          "message": "لطفا پیام خود را وارد کنید"
+        },
+        "buttons": {
+          "send": "ارسال",
+          "sending": "در حال ارسال"
+        },
+        "notif_card": {
+          "success": {
+            "status": "success",
+            "tittle": "با موفقیت ارسال شد",
+            "message": "با موفقیت ارسال شد"
+          },
+          "loading": {
+            "status": "loading",
+            "tittle": "در حال ارسال",
+            "message": "در حال ارسال پیغام شما"
+          },
+          "error": {
+            "status": "error",
+            "tittle": "خطا در ارسال",
+            "message": "خطا در ارسال پیام لطفا با فیلترشکن امتحان کنید"
+          }
+        }
+      }
+    }
   }
-]
+}
