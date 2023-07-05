@@ -1,4 +1,4 @@
-import { CV } from "./util/Types/types";
+import { All_Data } from "./util/Types/types";
 import ASide from "./util/ui/aside/ASide";
 import Menu from "./util/ui/menu/Menu";
 import { promises as fs } from "fs";
@@ -13,7 +13,7 @@ import Contact from "./components/contact/Contact";
 async function getData() {
   const jsonDirectory = path.join(process.cwd(), "json");
   const fileContents = await fs.readFile(
-    jsonDirectory + "/all-in-one.json",
+    jsonDirectory + "/DATA_fr.json",
     "utf8"
   );
   const response = { status: 200, cv: fileContents };
@@ -22,32 +22,46 @@ async function getData() {
 
 export default async function Page() {
   const request = await getData();
-  const cv: CV = JSON.parse(request.cv);
+  const Data: All_Data = JSON.parse(request.cv);
   return (
     <div className="cv">
       <Menu />
-      <ASide personalInfo={cv.personal_info} />
+      <ASide
+        personalInfo={Data.cv.personal_info}
+        navLinks={Data.base.nav_links}
+      />
       <div className="mr-auto ml-auto">
         <main className="main">
           <Hero
-            name={cv.personal_info.name}
-            lastname={cv.personal_info.lastName}
-            hero_image={cv.personal_info.hero_image}
-            expertise={cv.personal_info.expertise}
+            name={Data.cv.personal_info.name}
+            lastname={Data.cv.personal_info.lastName}
+            hero_image={Data.cv.personal_info.hero_image}
+            expertise={Data.cv.personal_info.expertise}
           />
-          <div className="max-w-[1678px] w-full mb-10">
-            <About personal_info={cv.personal_info} />
-            <Skills skills={cv.resume.skills} />
-            <Resume
-              educations={cv.resume.educations}
-              work_experiences={cv.resume.work_experiences}
-              fluent_languages={cv.resume.fluent_languages}
+          <div className="max-w-[1280px] w-full mb-10">
+            <About
+              base={Data.base.about_base}
+              personal_info={Data.cv.personal_info}
             />
-            <Portfolio portfolios={cv.resume.portfolios} />
+            <Skills
+              base={Data.base.skills_base}
+              skills={Data.cv.resume.skills}
+            />
+            <Resume
+              base={Data.base.resume_base}
+              educations={Data.cv.resume.educations}
+              work_experiences={Data.cv.resume.work_experiences}
+              fluent_languages={Data.cv.resume.fluent_languages}
+            />
+            <Portfolio
+              base={Data.base.portfolio_base}
+              portfolios={Data.cv.resume.portfolios}
+            />
             <Contact
-              mobile={cv.personal_info.mobile}
-              email={cv.personal_info.email}
-              telegram={cv.personal_info.telegram}
+              base={Data.base.contact_base}
+              mobile={Data.cv.personal_info.mobile}
+              email={Data.cv.personal_info.email}
+              telegram={Data.cv.personal_info.telegram}
             />
           </div>
         </main>

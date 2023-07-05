@@ -4,6 +4,7 @@ interface Props {
   filters: Group[];
   onFilter: (group: Group) => void;
   filter: Group;
+  label: string;
 }
 const Filter = (props: Props) => {
   return (
@@ -16,7 +17,7 @@ const Filter = (props: Props) => {
           className={`item ${props.filter === Group.all && "selecteFilter"}`}
           key={Math.random() * 10}
         >
-          <span>همه</span>
+          <span>{props.label}</span>
         </li>
         {props.filters.map((item, index) => {
           return (

@@ -4,6 +4,7 @@ import About_icon from "./icon/About_icon";
 import Resume_icon from "./icon/Resume_icon";
 import Contact_icon from "./icon/Contact_icon";
 import Portofolio_icon from "./icon/Portofolio_icon";
+import Skills_icon from "./icon/Skills_icon";
 
 const Components: any = {
   home_icon: Home_icon,
@@ -11,6 +12,7 @@ const Components: any = {
   resume_icon: Resume_icon,
   contact_icon: Contact_icon,
   portofolio_icon: Portofolio_icon,
+  skills_icon: Skills_icon,
 };
 interface Props {
   component: string;

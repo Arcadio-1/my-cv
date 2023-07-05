@@ -1,34 +1,38 @@
 "use client";
 import useInputValidation from "@/app/util/Hooks/UseInputValidation";
-import React, { FormEvent, useEffect } from "react";
+import React, { FormEvent } from "react";
 import Item from "./components/Item";
-// import EmailIcon from "../contactLines/components/EmailIcon";
 import MailIcon from "./components/MailIcon";
 import UserIcon from "./components/UserIcon";
 import { useDispatch, useSelector } from "react-redux";
 import { uiAction } from "@/redux/features/ui/uiSlice";
-import { Status } from "@/app/util/Types/types";
+import {
+  Form_base_buttons,
+  Form_base_error_messages,
+  Form_base_notifs_card,
+  Form_base_place_holders,
+  Status,
+} from "@/app/util/Types/types";
 import NotifCard from "@/app/util/ui/notifCard/NotifCard";
 import { useInView } from "react-intersection-observer";
 
-const Form = () => {
+interface Props {
+  placeHolders: Form_base_place_holders;
+  errorMessages: Form_base_error_messages;
+  buttons: Form_base_buttons;
+  notifCard: Form_base_notifs_card;
+}
+
+const Form = (props: Props) => {
   const dispatchSendMessageStatus = useDispatch();
   const dispatchNotifCardStatus = useDispatch();
   const sendMessageStatus = useSelector(
     (state: any) => state.ui.send_message_status
   );
-  const notifCardStatus = useSelector(
-    (state: any) => state.ui.notif_card_status
-  );
-
   const { ref, inView, entry } = useInView({
     threshold: 1,
     triggerOnce: true,
   });
-
-  // useEffect(() => {
-  //   console.log("form: ", inView);
-  // }, [inView]);
 
   const {
     value: nameValue,
@@ -97,15 +101,15 @@ const Form = () => {
     dispatchSendMessageStatus(
       uiAction.set_send_message_status({
         status: Status.loading,
-        tittle: "در حال ارسال",
-        message: "در حال ارسال پیغام شما",
+        tittle: `${props.notifCard.loading.tittle}`,
+        message: `${props.notifCard.loading.message}`,
       })
     );
     dispatchNotifCardStatus(
       uiAction.set_notif_card_status({
         status: Status.loading,
-        tittle: "در حال ارسال",
-        message: "در حال ارسال پیغام شما",
+        tittle: `${props.notifCard.loading.tittle}`,
+        message: `${props.notifCard.loading.message}`,
       })
     );
     try {
@@ -118,7 +122,6 @@ const Form = () => {
         }),
       });
       const response = await postMessage.json();
-      console.log(response);
       if (response.status === 200) {
         nameResetHandler();
         emailResetHandler();
@@ -126,15 +129,15 @@ const Form = () => {
         dispatchNotifCardStatus(
           uiAction.set_notif_card_status({
             status: Status.success,
-            tittle: "با موفقیت ارسال شد",
-            message: "ارسال پیام با موفقیت انجام شد",
+            tittle: `${props.notifCard.success.tittle}`,
+            message: `${props.notifCard.success.message}`,
           })
         );
         dispatchSendMessageStatus(
           uiAction.set_send_message_status({
             status: Status.success,
-            tittle: "با موفقیت ارسال شد",
-            message: "ارسال پیام با موفقیت انجام شد",
+            tittle: `${props.notifCard.success.tittle}`,
+            message: `${props.notifCard.success.message}`,
           })
         );
       }
@@ -142,15 +145,15 @@ const Form = () => {
         dispatchSendMessageStatus(
           uiAction.set_send_message_status({
             status: Status.error,
-            tittle: "خطا در ارسال",
-            message: "خطا در ارسال پیام لطفا با فیلترشکن امتحان کنید",
+            tittle: `${props.notifCard.error.tittle}`,
+            message: `${props.notifCard.error.message}`,
           })
         );
         dispatchNotifCardStatus(
           uiAction.set_notif_card_status({
             status: Status.error,
-            tittle: "خطا در ارسال",
-            message: "خطا در ارسال پیام لطفا با فیلترشکن امتحان کنید",
+            tittle: `${props.notifCard.error.tittle}`,
+            message: `${props.notifCard.error.message}`,
           })
         );
       }
@@ -158,15 +161,15 @@ const Form = () => {
       dispatchSendMessageStatus(
         uiAction.set_send_message_status({
           status: Status.error,
-          tittle: "خطا در ارسال",
-          message: "خطا در ارسال پیام لطفا با فیلترشکن امتحان کنید",
+          tittle: `${props.notifCard.error.tittle}`,
+          message: `${props.notifCard.error.message}`,
         })
       );
       dispatchNotifCardStatus(
         uiAction.set_notif_card_status({
           status: Status.error,
-          tittle: "خطا در ارسال",
-          message: "خطا در ارسال پیام لطفا با فیلترشکن امتحان کنید",
+          tittle: `${props.notifCard.error.tittle}`,
+          message: `${props.notifCard.error.message}`,
         })
       );
     }
@@ -187,8 +190,8 @@ const Form = () => {
           value={nameValue}
           isValid={isNameValid}
           error={nameError}
-          errorMsg={"لطفا نام خود را وارد کنید"}
-          label="نام"
+          errorMsg={props.errorMessages.name}
+          label={props.placeHolders.name}
           htmlId="name"
           inputType="text"
           itemRef={nameRef}
@@ -201,11 +204,11 @@ const Form = () => {
           value={emailValue}
           isValid={isEmailValid}
           error={emailError}
-          label="ایمیل"
+          label={props.placeHolders.email}
           htmlId="email"
           inputType="email"
           itemRef={emailRef}
-          errorMsg={" ایمیل وارد شده صحیح نمیباشد"}
+          errorMsg={props.errorMessages.email}
         >
           <MailIcon />
         </Item>
@@ -226,7 +229,7 @@ const Form = () => {
               required
               rows={10}
               ref={messageRef}
-              placeholder="پیام شما"
+              placeholder={props.placeHolders.message}
               className={`main-contact-form-item-textArea ${
                 isMessageValid ? "focus:outline-g1_2" : ""
               }`}
@@ -234,19 +237,19 @@ const Form = () => {
           </div>
           {messageError && (
             <p className="main-contact-form-item-errorMsg">
-              لطفا پیام خود را وارد کنید
+              {props.errorMessages.message}
             </p>
           )}
         </div>
         <div className="actions">
           {sendMessageStatus.status !== Status.loading && (
             <button onClick={submitMessageHandler} className="actions-submit">
-              ارسال
+              {props.buttons.send}
             </button>
           )}
           {sendMessageStatus.status === Status.loading && (
             <p className="actions-submit opacity-70 cursor-default">
-              در حال ارسال
+              {props.buttons.sending}
             </p>
           )}
         </div>

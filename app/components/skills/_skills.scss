@@ -7,7 +7,7 @@
       background-color: rgba(color(dark-2), 0.5);
       margin-top: 1rem;
       padding-right: 1rem;
-      padding-bottom: 6rem;
+      padding-bottom: 1rem;
       overflow: hidden;
 
       &-list {
@@ -17,6 +17,8 @@
         // gap: 0.5rem;
         overflow: hidden;
         gap: 2rem;
+        background-color: rgba(color(g3-2), 0.1);
+
         // @include responsive(xl) {
         //   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
         // }
@@ -54,7 +56,7 @@
           @include dflex();
           flex-direction: column;
           gap: 0.5rem;
-          background-color: rgba(color(dark-2), 0.1);
+          background-color: rgba(color(dark-2), 0.2);
           border-radius: 20px;
           &-animator {
             animation: skillItemAnime 1s alternate;
@@ -83,15 +85,7 @@
             width: 100%;
             background-color: #413f3f39;
             border-radius: 50%;
-            padding: 2.8rem;
-            &-percent {
-              position: absolute;
-              bottom: 3px;
-              left: 50%;
-              font-size: 1.4rem;
-              font-family: iransansnum;
-              transform: translateX(-50%);
-            }
+            padding: 1.5rem;
             img {
               width: 100%;
             }

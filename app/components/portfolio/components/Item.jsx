@@ -64,7 +64,7 @@ const Item = (props) => {
 
   return (
     <Fragment>
-      <div className="prevImage">
+      <div className="content">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={10}

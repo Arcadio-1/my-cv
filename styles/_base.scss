@@ -55,23 +55,12 @@ a {
   text-decoration: none;
 }
 .cv {
-  background: hsla(185, 64%, 51%, 1);
+  text-transform: capitalize;
+  background: #0c5e65;
   display: flex;
-  background: linear-gradient(
-    90deg,
-    hsla(185, 64%, 51%, 1) 0%,
-    hsla(277, 74%, 24%, 1) 100%
-  );
+  background: linear-gradient(90deg, #0c5e65 0%, #2d0744 100%);
 
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(185, 64%, 51%, 1) 0%,
-    hsla(277, 74%, 24%, 1) 100%
-  );
+  background: -moz-linear-gradient(90deg, #0c5e65 0%, #2d0744 100%);
 
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(185, 64%, 51%, 1) 0%,
-    hsla(277, 74%, 24%, 1) 100%
-  );
+  background: -webkit-linear-gradient(90deg, #0c5e65 0%, #2d0744 100%);
 }

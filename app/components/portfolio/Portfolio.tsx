@@ -3,9 +3,10 @@ import SectionHeader from "@/app/util/ui/SectionHeader/SectionHeader";
 import React, { useEffect, useState } from "react";
 import Filter from "./components/Filter";
 import List from "./components/List";
-import { Group, Portfolio } from "@/app/util/Types/types";
+import { Group, Portfolio, Portfolio_base } from "@/app/util/Types/types";
 interface Props {
   portfolios: Portfolio[];
+  base: Portfolio_base;
 }
 
 const Portfolio = (props: Props) => {
@@ -32,10 +33,19 @@ const Portfolio = (props: Props) => {
 
   return (
     <div className="main-portfolio">
-      <SectionHeader tag="portfolio" tittle="نمونه کار ها" description="" />
+      <SectionHeader
+        tag="portfolio"
+        tittle={props.base.section_tittle}
+        description=""
+      />
       <div className="main-portfolio-container">
         {filters && (
-          <Filter filters={filters} onFilter={filterHandler} filter={filter} />
+          <Filter
+            label={props.base.labels.all}
+            filters={filters}
+            onFilter={filterHandler}
+            filter={filter}
+          />
         )}
         <List portfolios={props.portfolios} filter={filter} />
       </div>

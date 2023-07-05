@@ -5,10 +5,12 @@ import EmailIcon from "./components/EmailIcon";
 import TelegramIcon from "./components/TelegramIcon";
 import Item from "./components/Item";
 import { useInView } from "react-intersection-observer";
+import { Contact_base_labels } from "@/app/util/Types/types";
 interface Props {
   mobile: string;
   email: string;
   telegram: string;
+  labels: Contact_base_labels;
 }
 
 const ContactLines = (props: Props) => {
@@ -23,13 +25,13 @@ const ContactLines = (props: Props) => {
 
   useEffect(() => {
     const contactLines_arry: React.ReactElement[] = [
-      <Item key={1} content={props.email} label="پست الکترونیک:">
+      <Item key={1} content={props.email} label={props.labels.email}>
         <EmailIcon />
       </Item>,
-      <Item key={2} content={props.mobile} label=" موبایل:">
+      <Item key={2} content={props.mobile} label={props.labels.mobile}>
         <MobileIcon />
       </Item>,
-      <Item key={3} content={props.telegram} label="تلگرام:">
+      <Item key={3} content={props.telegram} label={props.labels.telegram}>
         <TelegramIcon />
       </Item>,
     ];
@@ -46,10 +48,6 @@ const ContactLines = (props: Props) => {
       }
     }
   }, [inView, props]);
-
-  // useEffect(() => {
-  //   console.log("contact Lines: ", inView);
-  // }, [inView]);
 
   return (
     <div ref={ref} className="main-contact-contactLines">

@@ -30,9 +30,6 @@ const Item = (props: Props) => {
       >
         <div className="main-skills-list-item-main">
           <Image src={icon_img} width={200} height={200} alt={tittle} />
-          <span className="main-skills-list-item-main-percent">
-            %{levState}
-          </span>
         </div>
       </div>
       <h2 className="main-skills-list-item-tittle">{tittle}</h2>
