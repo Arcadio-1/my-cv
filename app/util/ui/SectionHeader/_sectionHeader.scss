@@ -26,3 +26,22 @@
     }
   }
 }
+.cv {
+  &-lighter {
+    .sectionHeader {
+      &-tittle {
+        h2 {
+          color: color(dark-3);
+        }
+        &::after {
+          border-bottom: 2px solid color(g4-1);
+        }
+      }
+      &-description {
+        p {
+          color: color(light-3);
+        }
+      }
+    }
+  }
+}

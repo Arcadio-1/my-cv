@@ -39,10 +39,23 @@ $colors: (
   g3-5: #233a95,
   g3-6: #091548,
 
+  g4-0: #78b9fe,
+  g4-1: #82befe,
+  g4-2: #8cc3fe,
+  g4-3: #97c9fe,
+  g4-4: #a8d1fc,
+  g4-5: #b8d9fc,
+  g4-6: #c7e2ff,
+
   g0-a1: #404258,
   g0-a2: #474e68,
   g0-a3: #50577a,
   g0-a4: #6b728e,
+
+  dark-grid-1: #0c5e65,
+  dark-grid-2: #2d0744,
+  light-grid-1: #9ecfd4,
+  light-grid-2: #86bdd6,
 );
 
 @function color($color-name) {

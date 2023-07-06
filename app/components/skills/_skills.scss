@@ -14,26 +14,9 @@
         padding: 2rem;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        // gap: 0.5rem;
         overflow: hidden;
         gap: 2rem;
         background-color: rgba(color(g3-2), 0.1);
-
-        // @include responsive(xl) {
-        //   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-        // }
-        // @include responsive(lg) {
-        //   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        // }
-        // @include responsive(md) {
-        //   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        // }
-        // @include responsive(sm) {
-        //   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        // }
-        // @include responsive(xm) {
-        //   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-        // }
         &-animator {
           opacity: 1;
           animation: skillItemAnime 1s alternate;
@@ -98,6 +81,26 @@
             font-size: 1.6rem;
             text-transform: capitalize;
             margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  &-lighter {
+    .main {
+      &-skills {
+        color: color(dark-2);
+        background-color: rgba(color(light-2), 0.5);
+        &-list {
+          background-color: rgba(color(g3-2), 0.1);
+          &-item {
+            background-color: rgba(color(light-2), 0.3);
+            &-main {
+              background-color: rgba(color(g4-1), 1);
+            }
+            &-tittle {
+              background-color: rgba(color(g4-4), 0.6);
+            }
           }
         }
       }

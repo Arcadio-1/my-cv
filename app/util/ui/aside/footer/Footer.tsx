@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="aside-footer-designed">
         <span className="">Designed by </span>
         <Link target="_blank" href={"https://github.com/Arcadio-1"}>
-          <span className="text-gray-100">Arcadio</span>
+          <span className="aside-footer-designed-name">Arcadio</span>
         </Link>
       </div>
     </footer>

@@ -204,9 +204,9 @@ export interface BASE {
 }
 export interface Personal_info {
   profile_iamge: string;
-  profile_iamge_2: string;
   nickname: string;
-  hero_image: Hero_image;
+  hero_image_dark: Hero_image;
+  hero_image_light: Hero_image;
   name: string;
   lastName: string;
   marital_status: Marital_status;

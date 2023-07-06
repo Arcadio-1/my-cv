@@ -45,12 +45,12 @@
         max-height: 14rem;
         object-fit: cover;
         overflow: hidden;
+        border: 5px solid color(dark-2);
+        border-radius: 100%;
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          border: 5px solid color(dark-2);
-          border-radius: 100%;
         }
       }
       &-fullname {
@@ -107,7 +107,7 @@
               }
             }
             span {
-              font-size: 1.3rem;
+              font-size: 1.4rem;
               color: color(light-2);
             }
           }
@@ -139,6 +139,86 @@
       }
       &-designed {
         color: rgba(color(g3-2), 1);
+        &-name {
+          color: color(light-2);
+        }
+      }
+    }
+  }
+  &-lighter {
+    .aside {
+      background: linear-gradient(
+        90deg,
+        rgba(color(g4-2), 0.3) 0%,
+        rgba(color(g4-3), 0.7) 100%
+      );
+      &-opener {
+        background: linear-gradient(
+          90deg,
+          rgba(color(g4-6), 0.6) 0%,
+          rgba(color(g4-3), 0.7) 100%
+        ) !important;
+      }
+      &-header {
+        &-image {
+          border: 2px solid color(light-2);
+        }
+        &-fullname {
+          h1 {
+            color: rgba(color(dark-2), 0.9);
+            text-shadow: 0px 0px 4px rgba(color(light-2), 0.3);
+          }
+          .nickName {
+            color: rgba(color(g3-6), 0.8);
+          }
+        }
+        &-socialmedias {
+          &-list {
+            background-color: rgba(color(light-2), 0.2);
+          }
+        }
+      }
+      &-nav {
+        &-list {
+          &-item {
+            a {
+              svg {
+                path {
+                  fill: rgba(color(dark-2), 0.8);
+                }
+              }
+              span {
+                color: rgba(color(dark-2), 0.9);
+              }
+            }
+            &:hover {
+              background-color: rgba(color(light-2), 0.5);
+              a {
+                svg {
+                  path {
+                    filter: drop-shadow(1px 1px 2px rgba(color(light-2), 0.5));
+                    fill: color(dark-2);
+                  }
+                }
+                span {
+                  color: color(dark-1);
+                }
+              }
+            }
+          }
+        }
+      }
+      &-footer {
+        background-color: rgba(color(light-2), 0.1);
+        &-copyright {
+          color: rgba(color(g3-6), 1);
+        }
+        &-designed {
+          color: rgba(color(g3-6), 1);
+          &-name {
+            color: rgba(color(g3-5), 1);
+          }
+        }
       }
     }
   }

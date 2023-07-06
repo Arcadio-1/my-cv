@@ -74,6 +74,8 @@
           border: 2px solid rgba(color(dark-2), 0.2);
           border-radius: 5px;
           background-color: rgba(color(dark-2), 0.3);
+          display: flex;
+          flex-direction: column;
           .content {
             overflow: hidden;
             height: 100%;
@@ -170,9 +172,7 @@
                   stroke: rgba(color(light-2), 1);
                 }
                 &:hover {
-                  path {
-                    stroke: color(g3-2);
-                  }
+                  stroke: color(g3-2);
                 }
               }
             }
@@ -213,6 +213,105 @@
           }
           to {
             transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+  &-lighter {
+    .main {
+      &-portfolio {
+        color: color(dark-2);
+        background-color: rgba(color(light-2), 0.5);
+        &-container {
+          background-color: rgba(color(g3-2), 0.1);
+        }
+        &-filter {
+          background-color: rgba(color(g3-2), 0.1);
+          .nav {
+            border-bottom: 2px solid rgba(color(g3-5), 0.3);
+            .item {
+              background-color: rgba(color(g4-6), 1);
+              box-shadow: 0px 0px 4px rgba(color(g3-6), 0.1);
+              &:hover {
+                border: 2px solid rgba(color(g3-2), 0.3);
+              }
+            }
+            .selecteFilter {
+              color: color(dark-3);
+              background-color: rgba(color(light-2), 0.8);
+              &:hover {
+                border: transparent;
+              }
+            }
+          }
+        }
+        &-list {
+          &-item {
+            border: 2px solid rgba(color(light-2), 0.2);
+            background-color: rgba(color(light-2), 0.3);
+            .content {
+              .swiper {
+                &-pagination {
+                  background-color: rgba(color(light-2), 0.5);
+                }
+                &-button-next,
+                &-button-prev {
+                  background-color: rgba(color(light-2), 0.7);
+                  &::after {
+                    color: rgba(color(g3-6), 1);
+                  }
+                }
+                &-slide {
+                  .link {
+                    .slide {
+                      &-tittle {
+                        color: color(dark-2);
+                        background-color: rgba(color(light-2), 0.2);
+                        border-bottom: 2px solid rgba(color(light-2), 1);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .actions {
+              background-color: rgba(color(light-2), 0.2);
+              &-deploy {
+                svg {
+                  path {
+                    fill: rgba(color(dark-3), 0.8);
+                  }
+                  &:hover {
+                    path {
+                      fill: color(g3-4);
+                    }
+                  }
+                }
+              }
+              &-repo {
+                svg {
+                  path {
+                    fill: rgba(color(dark-3), 0.8);
+                  }
+                  &:hover {
+                    path {
+                      fill: color(g3-4);
+                    }
+                  }
+                }
+              }
+              &-pdf {
+                svg {
+                  path {
+                    stroke: rgba(color(dark-3), 0.8);
+                  }
+                  &:hover {
+                    stroke: color(g3-4);
+                  }
+                }
+              }
+            }
           }
         }
       }

@@ -179,14 +179,26 @@
             &:last-child {
               margin-bottom: 0px;
             }
-            // &:nth-child(even) {
-            //   background-color: rgba(color(g3-2), 0.15);
-            //   // background-color: rgba(color(light-2), 0.1);
-            // }
-            // &:nth-child(odd) {
-            //   background-color: rgba(color(g3-2), 0.05);
-            // }
           }
+        }
+      }
+    }
+  }
+  &-lighter {
+    .main {
+      &-about {
+        color: color(dark-2);
+        background-color: rgba(color(light-2), 0.5);
+        &-container {
+          background-color: rgba(color(g3-2), 0.1);
+        }
+        &-list {
+          &-item {
+            background-color: rgba(color(light-2), 0.3);
+          }
+        }
+        &-boulshit {
+          color: color(dark-2);
         }
       }
     }

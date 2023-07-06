@@ -4,7 +4,6 @@
     &-hero {
       @include dflex;
       height: 100vh;
-      // position: relative;
       &-background {
         z-index: 0;
         position: absolute;
@@ -13,7 +12,6 @@
         height: 100%;
         width: 100%;
         background-size: cover;
-        background-image: url("/images/hero/hero.jpg");
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -50,18 +48,19 @@
           }
         }
         &-expertise {
-          margin-left: auto;
+          margin-right: 1rem;
           &-item {
             @include dflex;
           }
           span {
             background-color: rgba(color(dark-2), 0.7);
+            padding: 0.2rem 1rem;
             font-size: 2rem;
           }
           .label {
             border-radius: 0px 10px 10px 0px;
             color: color(light-2);
-            padding-left: 0.5rem;
+            padding-left: 0.1rem;
           }
           .text {
             display: block;
@@ -71,7 +70,7 @@
             border-left: 3px solid orange;
             white-space: nowrap;
             margin-left: auto;
-            padding-left: 0.5rem;
+            padding-left: 0.1rem;
             animation: blink-caret 0.75s step-end infinite;
           }
           .text1 {
@@ -119,6 +118,43 @@
             }
             50% {
               border-color: orange;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-lighter {
+    .main {
+      &-hero {
+        &-background {
+          filter: drop-shadow(0px 0px 0px rgb(255, 255, 255)) brightness(90%);
+        }
+        &-content {
+          &-tittle {
+            h1 {
+              color: color(dark-3);
+            }
+          }
+          &-expertise {
+            span {
+              background-color: rgba(color(light-2), 0.15);
+              backdrop-filter: blur(2px);
+            }
+            .label {
+              color: color(dark-3);
+            }
+            .text {
+              color: color(dark-3);
+            }
+            @keyframes blink-caret {
+              from,
+              to {
+                border-color: transparent;
+              }
+              50% {
+                border-color: rgba(color(dark-2), 0.7);
+              }
             }
           }
         }

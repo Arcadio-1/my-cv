@@ -150,18 +150,21 @@
             opacity: 0.6;
           }
           &-input {
+            font-size: 1.4em;
+
             line-height: 3rem;
             width: 100%;
             background-color: rgba(color(dark-2), 0.2);
             border-radius: 2px;
             margin-bottom: 0.5rem;
+            padding-right: 1rem;
             &:focus {
               outline: 2px solid rgba(color(light-2), 0.2);
               border: transparent;
             }
           }
           &-textArea {
-            font-size: 1.3em;
+            font-size: 1.4em;
             background-color: rgba(color(dark-2), 0.2);
             border-radius: 2px;
             width: 100%;
@@ -236,6 +239,110 @@
             border-radius: 3px;
             padding: 0.3rem 3rem;
             background-color: rgba(color(g1-2), 1);
+          }
+        }
+      }
+    }
+  }
+  &-lighter {
+    .main {
+      &-contact {
+        color: color(dark-2);
+        background-color: rgba(color(light-2), 0.5);
+        &-contactLines {
+          background-color: rgba(color(g3-2), 0.1);
+          &-item {
+            background-color: rgba(color(light-2), 0.2);
+            &-icon {
+              background-color: rgba(color(g3-3), 0.3);
+              svg {
+                fill: rgba(color(light-2), 0.9);
+                stroke: rgba(color(light-2), 0.9);
+              }
+            }
+            &:hover {
+              background-color: rgba(color(light-2), 0.5);
+              .main-contact-contactLines-item-icon {
+                background-color: rgba(color(g3-3), 0.7);
+                svg {
+                  fill: rgba(color(light-2), 0.9);
+                  stroke: rgba(color(light-2), 0.9);
+                }
+              }
+            }
+          }
+          &-animator {
+            background-color: rgba(color(light-2), 0.2);
+          }
+        }
+        &-form {
+          background-color: rgba(color(g3-2), 0.1);
+          &-item {
+            color: rgba(color(dark-2), 1);
+            &-icon {
+              .userIcon {
+                fill: rgba(color(light-2), 0.8);
+              }
+              .mailIcon {
+                stroke: rgba(color(light-2), 0.8);
+              }
+            }
+            &-label {
+              color: rgba(color(dark-2), 1);
+            }
+            &-input {
+              background-color: rgba(color(light-2), 0.3);
+              &:focus {
+                background-color: rgba(color(light-2), 0.5);
+                outline: 2px solid rgba(color(g3-6), 0.1);
+              }
+            }
+            &-textArea {
+              background-color: rgba(color(light-2), 0.3);
+              &:focus {
+                background-color: rgba(color(light-2), 0.5);
+                outline: 2px solid rgba(color(g3-6), 0.1);
+              }
+            }
+            &-select {
+              color: color(dark-4);
+              background-color: rgba(color(light-1), 0.8);
+            }
+            .labelUper {
+              color: rgba(color(dark-2), 1);
+            }
+            &-errorMsg {
+              color: rgba(color(dark-2), 0.8);
+            }
+            .unvalidItem {
+              .main-contact-form-item {
+                &-icon {
+                  .userIcon {
+                    fill: color(error);
+                  }
+                  .mailIcon {
+                    stroke: color(error);
+                  }
+                }
+              }
+            }
+            .validItem {
+              .main-contact-form-item {
+                &-icon {
+                  .userIcon {
+                    fill: rgba(color(success), 0.8);
+                  }
+                  .mailIcon {
+                    stroke: rgba(color(success), 0.8);
+                  }
+                }
+              }
+            }
+          }
+          .actions {
+            &-submit {
+              background-color: rgba(color(g1-2), 1);
+            }
           }
         }
       }

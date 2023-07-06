@@ -2,8 +2,8 @@
   "cv": {
     "personal_info": {
       "profile_iamge": "/images/profile_2.jpg",
-      "profile_iamge_2": "/images/profile_2_2.jpg",
-      "hero_image": "/images/hero/hero.jpg",
+      "hero_image_dark": "/images/hero/hero_dark.jpg",
+      "hero_image_light": "/images/hero/hero_light.jpg",
       "name": "حسین",
       "lastName": "اسکندری",
       "nickName": "Rkdo",

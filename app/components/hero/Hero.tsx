@@ -6,12 +6,12 @@ interface Props {
   name: string;
   lastname: string;
   expertise: Expertise[];
-  hero_image: string;
+  hero_image_dark: string;
+  hero_image_light: string;
 }
 const Hero = (props: Props) => {
   const [expertise, setExpertise] = useState<number>(1);
   const length = props.expertise.length;
-
   useEffect(() => {
     const interval = setInterval(
       () =>
@@ -33,7 +33,10 @@ const Hero = (props: Props) => {
 
   return (
     <div className=" main-hero" id="hero">
-      <div className="main-hero-background"></div>
+      <div
+        className="main-hero-background"
+        style={{ backgroundImage: `url(${props.hero_image_light})` }}
+      ></div>
       <div className=" main-hero-content main-hero-content-animatiner">
         <div className="main-hero-content-tittle">
           <h1>{`${props.name} ${props.lastname}`}</h1>

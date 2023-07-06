@@ -24,7 +24,7 @@ export default async function Page() {
   const request = await getData();
   const Data: All_Data = JSON.parse(request.cv);
   return (
-    <div className="cv">
+    <div className="cv cv-lighter cv_lang">
       <Menu />
       <ASide
         personalInfo={Data.cv.personal_info}
@@ -35,7 +35,8 @@ export default async function Page() {
           <Hero
             name={Data.cv.personal_info.name}
             lastname={Data.cv.personal_info.lastName}
-            hero_image={Data.cv.personal_info.hero_image}
+            hero_image_dark={Data.cv.personal_info.hero_image_dark}
+            hero_image_light={Data.cv.personal_info.hero_image_light}
             expertise={Data.cv.personal_info.expertise}
           />
           <div className="max-w-[1280px] w-full mb-10">
