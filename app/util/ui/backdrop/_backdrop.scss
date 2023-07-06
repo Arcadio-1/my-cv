@@ -1,3 +1,4 @@
+@use "../../../../styles/clips.scss" as *;
 .backdrop {
   position: fixed;
   background-color: rgba(51, 51, 51, 0.519);
@@ -6,4 +7,11 @@
   width: 100%;
   height: 100%;
   z-index: 15;
+}
+.cv {
+  &-lighter {
+    .backdrop {
+      background-color: rgba(color(light-2), 1);
+    }
+  }
 }

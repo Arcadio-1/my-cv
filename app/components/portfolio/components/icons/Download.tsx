@@ -5,7 +5,6 @@ const Download = () => {
     <div className="actionIcon">
       <svg
         fill="none"
-        stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

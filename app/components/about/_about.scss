@@ -99,7 +99,7 @@
           margin-top: 2rem;
         }
         &-animator {
-          transform: translateX(0px);
+          transform: translateX(0px) !important ;
           animation: aboutListAnime 0.5s ease-in alternate;
         }
         @keyframes aboutListAnime {

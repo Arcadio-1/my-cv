@@ -15,7 +15,7 @@ const Item = (props: Props) => {
     inView,
     entry,
   } = useInView({
-    threshold: 0.7,
+    threshold: 0.5,
     triggerOnce: true,
   });
   useEffect(() => {

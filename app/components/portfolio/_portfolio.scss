@@ -167,12 +167,16 @@
             }
             &-pdf {
               svg {
+                stroke: rgba(color(light-2), 1);
                 path {
                   transition: all 0.15s linear;
                   stroke: rgba(color(light-2), 1);
                 }
                 &:hover {
                   stroke: color(g3-2);
+                  path {
+                    stroke: color(g3-2);
+                  }
                 }
               }
             }
@@ -303,11 +307,15 @@
               }
               &-pdf {
                 svg {
+                  stroke: rgba(color(dark-3), 0.8);
                   path {
                     stroke: rgba(color(dark-3), 0.8);
                   }
                   &:hover {
                     stroke: color(g3-4);
+                    path {
+                      stroke: rgba(color(g3-4), 0.8);
+                    }
                   }
                 }
               }

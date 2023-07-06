@@ -10,7 +10,7 @@ interface Props {
 const List_container = (props: Props) => {
   const [experiences, setExperience] = useState<Experience[]>([]);
   const { ref, inView, entry } = useInView({
-    threshold: 1,
+    threshold: 0.5,
     triggerOnce: true,
   });
   useEffect(() => {

@@ -30,7 +30,7 @@ const Form = (props: Props) => {
     (state: any) => state.ui.send_message_status
   );
   const { ref, inView, entry } = useInView({
-    threshold: 1,
+    threshold: 0.5,
     triggerOnce: true,
   });
 

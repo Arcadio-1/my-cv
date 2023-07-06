@@ -123,7 +123,7 @@ const Item = (props) => {
         )}
         {portfolio.download_link && (
           <div className="actions-btn actions-pdf" title="دانلود">
-            <Link target="_self" href={portfolio.download_link}>
+            <Link target="_blank" href={portfolio.download_link}>
               <Download />
             </Link>
           </div>
