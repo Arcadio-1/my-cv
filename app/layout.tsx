@@ -1,10 +1,7 @@
-// "use client";
 import { Providers } from "@/redux/provider";
 import "../styles/main.scss";
 import React from "react";
 import { Metadata } from "next";
-import { headers } from "next/headers";
-// import middleware from "./util/functions/getPath";
 
 export const metadata: Metadata = {
   title: "حسین اسکندری | فرانت اند",
@@ -115,33 +112,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // const route = usePathname();
-  // const lang = route.split("/");
-  // const route = window.location.protocol;
-
-  const headersList = headers();
-  const domain = headersList.get("host") || "";
-  const fullUrl = headersList.get("referer") || "";
-  const lang = fullUrl.split("/");
-
-  function checkLang(age: string) {
-    return age === "en";
-  }
-  const pathname = lang.find(checkLang);
-  console.log(pathname);
-  // console.log(lang);
-  // console.log(fullUrl);
-  // console.log(headersList);
-
-  return (
-    <html
-      lang={pathname && pathname === "en" ? "en" : "fa"}
-      dir={pathname && pathname === "en" ? "ltr" : "rtl"}
-    >
-      <body>
-        <div id="overLay" className="" />
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  );
+  return <Providers>{children}</Providers>;
 }

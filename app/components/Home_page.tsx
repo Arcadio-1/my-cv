@@ -31,9 +31,9 @@ const Home_page = (props: Props) => {
   const dispatchTheme = useDispatch();
   const theme: Theme = useSelector((state: any) => state.ui.theme);
 
-  useEffect(() => {
-    console.log(theme);
-  }, [theme]);
+  // useEffect(() => {
+  //   console.log(theme);
+  // }, [theme]);
 
   const changeThemeHandler = () => {
     if (theme === Theme.Dark) {
