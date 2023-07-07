@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import {
   BASE,
   Lang,
@@ -15,8 +15,6 @@ import Skills from "./skills/Skills";
 import Resume from "./resume/Resume";
 import Portfolio from "./portfolio/Portfolio";
 import Contact from "./contact/Contact";
-import { useDispatch, useSelector } from "react-redux";
-import { uiAction } from "@/redux/features/ui/uiSlice";
 import ControlerBox from "../util/ui/controler/ControlerBox";
 interface Props {
   personal_info: Personal_info;
@@ -28,18 +26,17 @@ interface Props {
 
 const Home_page = (props: Props) => {
   const { personal_info, resume, base, about, lang } = props;
-  const dispatchTheme = useDispatch();
-  const theme: Theme = useSelector((state: any) => state.ui.theme);
-
-  // useEffect(() => {
-  //   console.log(theme);
-  // }, [theme]);
+  const [theme, setTheme] = useState<Theme>(Theme.Dark);
 
   const changeThemeHandler = () => {
     if (theme === Theme.Dark) {
-      return dispatchTheme(uiAction.setLight());
+      return setTheme((prev) => {
+        return (prev = Theme.Light);
+      });
     }
-    return dispatchTheme(uiAction.setDark());
+    return setTheme((prev) => {
+      return (prev = Theme.Dark);
+    });
   };
 
   return (

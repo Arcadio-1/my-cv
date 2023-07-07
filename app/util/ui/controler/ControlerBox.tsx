@@ -44,7 +44,7 @@ const ControlerBox = (props: Props) => {
           </div>
         )}
         <div className="controler-list-item">
-          <Link href={"https://github.com/Arcadio-1/my-cv.git"}>
+          <Link target="_blank" href={"https://github.com/Arcadio-1/my-cv.git"}>
             <GithubIcon />
           </Link>
         </div>
