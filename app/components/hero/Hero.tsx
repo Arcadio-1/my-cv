@@ -1,5 +1,5 @@
 "use client";
-import { Expertise } from "@/app/util/Types/types";
+import { Expertise, Lang, Theme } from "@/app/util/Types/types";
 import React, { useEffect, useState } from "react";
 
 interface Props {
@@ -8,6 +8,8 @@ interface Props {
   expertise: Expertise[];
   hero_image_dark: string;
   hero_image_light: string;
+  lang: Lang;
+  theme: Theme;
 }
 const Hero = (props: Props) => {
   const [expertise, setExpertise] = useState<number>(1);
@@ -35,7 +37,13 @@ const Hero = (props: Props) => {
     <div className=" main-hero" id="hero">
       <div
         className="main-hero-background"
-        style={{ backgroundImage: `url(${props.hero_image_light})` }}
+        style={{
+          backgroundImage: `url(${
+            props.theme === Theme.Dark
+              ? props.hero_image_dark
+              : props.hero_image_light
+          })`,
+        }}
       ></div>
       <div className=" main-hero-content main-hero-content-animatiner">
         <div className="main-hero-content-tittle">
@@ -44,26 +52,32 @@ const Hero = (props: Props) => {
         <div className="main-hero-content-expertise">
           {expertise === 1 && (
             <div className="main-hero-content-expertise-item">
-              <span className="label">من </span>
+              {props.lang === Lang.fa && <span className="label"> من </span>}
               <span className="text text1">
-                {props.expertise[0].tittle} هستم
+                {props.expertise[0].tittle}
+                {props.lang !== Lang.en && " هستم "}
               </span>
+              {props.lang === Lang.en && <span className="label"> I`m </span>}
             </div>
           )}
           {expertise === 2 && (
             <div className="main-hero-content-expertise-item">
-              <span className="label">من </span>
+              {props.lang === Lang.fa && <span className="label"> من </span>}
               <span className="text  text2">
-                {props.expertise[1].tittle} هستم
+                {props.expertise[1].tittle}
+                {props.lang !== Lang.en && " هستم "}
               </span>
+              {props.lang === Lang.en && <span className="label"> I`m </span>}
             </div>
           )}
           {expertise === 3 && (
             <div className="main-hero-content-expertise-item">
-              <span className="label">من </span>
+              {props.lang === Lang.fa && <span className="label"> من </span>}
               <span className="text text3">
-                {props.expertise[2].tittle} هستم
+                {props.expertise[2].tittle}
+                {props.lang !== Lang.en && " هستم "}
               </span>
+              {props.lang === Lang.en && <span className="label"> I`m </span>}
             </div>
           )}
         </div>

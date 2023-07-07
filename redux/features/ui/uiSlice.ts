@@ -1,5 +1,5 @@
 "use client";
-import { Full_status, OpenToggle, Status } from "@/app/util/Types/types";
+import { Full_status, OpenToggle, Status, Theme } from "@/app/util/Types/types";
 import { createSlice } from "@reduxjs/toolkit";
 
 interface UiState {
@@ -9,11 +9,13 @@ interface UiState {
   notif_card_status: Full_status;
   isMenuOpen: OpenToggle;
   isShowBackdrop: OpenToggle;
+  theme: Theme;
 }
 
 const initialState = {
   isMenuOpen: OpenToggle.close,
   isShowBackdrop: OpenToggle.close,
+  theme: Theme.Dark,
   get_database_cv_status: {
     status: Status.loading,
     tittle: "loading",
@@ -82,6 +84,12 @@ const uiSlice = createSlice({
     openBackdrop(state) {
       state.isMenuOpen = OpenToggle.open;
       state.isShowBackdrop = OpenToggle.open;
+    },
+    setDark(state) {
+      state.theme = Theme.Dark;
+    },
+    setLight(state) {
+      state.theme = Theme.Light;
     },
   },
 });

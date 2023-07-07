@@ -17,7 +17,7 @@
       "military_service": "exemption",
       "residence": "iran - tehran",
       "age": 26,
-      "degree": "bachelor of technology (software engineering)",
+      "degree": "bachelor of software engineering",
       "expertise": [
         { "id": 1, "tittle": "frontend designer" },
         { "id": 2, "tittle": "frontend developer" },
@@ -477,7 +477,7 @@
         "marital_status": "marital status",
         "age": "age",
         "email": "email",
-        "degree": "education degree",
+        "degree": "education",
         "military_service": "military service",
         "get_project": "geting project"
       }
@@ -495,6 +495,11 @@
     },
     "portfolio_base": {
       "section_tittle": "portfolio",
+      "buttons_titles": {
+        "show_demo": "show demo",
+        "show_codes": "show codes",
+        "download_pdf": "download pdf"
+      },
       "labels": {
         "all": "all"
       }

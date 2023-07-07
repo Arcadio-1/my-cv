@@ -35,7 +35,7 @@ import Link from "next/link";
 //   portfolio: Portfolio;
 // }
 const Item = (props) => {
-  const { portfolio } = props;
+  const { portfolio, buttons_titles } = props;
 
   useEffect(() => {
     let lightbox = new PhotoSwipeLightbox({
@@ -108,21 +108,30 @@ const Item = (props) => {
       </div>
       <div className="actions">
         {portfolio.deployed_link && (
-          <div className="actions-btn actions-deploy" title="مشاهده دمو">
+          <div
+            className="actions-btn actions-deploy"
+            title={buttons_titles.show_demo}
+          >
             <Link target="_blank" href={portfolio.deployed_link}>
               <Monitor />
             </Link>
           </div>
         )}
         {portfolio.repo_link && (
-          <div className="actions-btn actions-repo" title="مشاهده کد">
+          <div
+            className="actions-btn actions-repo"
+            title={buttons_titles.show_codes}
+          >
             <Link target="_blank" href={portfolio.repo_link}>
               <Github />
             </Link>
           </div>
         )}
         {portfolio.download_link && (
-          <div className="actions-btn actions-pdf" title="دانلود">
+          <div
+            className="actions-btn actions-pdf"
+            title={buttons_titles.download_pdf}
+          >
             <Link target="_blank" href={portfolio.download_link}>
               <Download />
             </Link>

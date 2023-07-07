@@ -1,0 +1,37 @@
+@use "../../../../styles/clips.scss" as *;
+.enIcon {
+  width: 4rem;
+  height: 4rem;
+  svg {
+    shape-rendering: geometricPrecision;
+    text-rendering: geometricPrecision;
+    image-rendering: optimizeQuality;
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    path {
+      fill: rgba(color(dark-1), 1);
+    }
+  }
+}
+.lightIcon {
+  width: 3rem;
+  height: 3rem;
+  path,
+  circle {
+    fill: rgba(color(light-3), 1);
+  }
+}
+.darkIcon {
+  width: 3rem;
+  height: 3rem;
+  path {
+    fill: rgba(color(g3-6), 0.7);
+  }
+}
+.githubIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  path {
+    fill: rgba(color(g3-6), 0.7);
+  }
+}

@@ -1,14 +1,13 @@
-"use client";
-import { Providers } from "@/redux/provider";
-import "../styles/main.scss";
-import React from "react";
+// import { Providers } from "@/redux/provider";
+// import "../styles/main.scss";
+
 import { Metadata } from "next";
-import { usePathname } from "next/navigation";
+import { Fragment } from "react";
 
 export const metadata: Metadata = {
-  title: "حسین اسکندری | فرانت اند",
-  description: "سایت شخصی حسین اسکندری",
-  manifest: `/manifest.json`,
+  title: "Hossein Skandari | Frontend",
+  description: "Hossein Skandari Personal Website",
+  manifest: `/manifest_en.json`,
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -21,9 +20,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://rkdo.ir",
-    title: "حسین اسکندری | فرانت اند",
-    description: "وب سایت شخصی حسین اسکندری",
-    siteName: "حسین اسکندری | Frontend Developer",
+    title: "Hossein Skandari | Frontend",
+    description: "Hossein Skandari Personal Website",
+    siteName: "Hossein Skandari | Frontend Developer",
     images: [
       {
         url: "/images/pwa_icons/android-icon-192x192.png",
@@ -109,22 +108,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const route = usePathname();
-  const lang = route.split("/");
-  return (
-    <html
-      lang={lang && lang[1] === "en" ? "en" : "fa"}
-      dir={lang && lang[1] === "en" ? "ltr" : "rtl"}
-    >
-      <body>
-        <div id="overLay" className="" />
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  );
+  return <Fragment>{children}</Fragment>;
 }

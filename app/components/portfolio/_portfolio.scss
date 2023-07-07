@@ -126,7 +126,7 @@
             background-color: rgba(color(dark-2), 0.2);
             padding: 0.5rem 1rem;
             &-btn {
-              max-width: 3rem;
+              max-width: 2.5rem;
               width: 100%;
               .actionIcon {
                 svg {
@@ -141,12 +141,20 @@
             }
             &-deploy {
               svg {
+                width: 2.8rem;
                 path {
+                  transition: all 0.15s linear;
+                  fill: rgba(color(light-2), 1);
+                }
+                circle {
                   transition: all 0.15s linear;
                   fill: rgba(color(light-2), 1);
                 }
                 &:hover {
                   path {
+                    fill: color(g3-2);
+                  }
+                  circle {
                     fill: color(g3-2);
                   }
                 }
@@ -233,17 +241,23 @@
         &-filter {
           background-color: rgba(color(g3-2), 0.1);
           .nav {
-            border-bottom: 2px solid rgba(color(g3-5), 0.3);
+            border-bottom: 2px solid rgba(color(light-2), 0.7);
             .item {
-              background-color: rgba(color(g4-6), 1);
-              box-shadow: 0px 0px 4px rgba(color(g3-6), 0.1);
+              background-color: rgba(color(light-2), 0.8);
+              // box-shadow: 0px 0px 4px rgba(color(light-2), 1);
+              // border: transparent;
               &:hover {
-                border: 2px solid rgba(color(g3-2), 0.3);
+                // box-shadow: none;
+                background-color: rgba(color(g4-6), 1);
+                // transform: scale(1.1);
               }
             }
             .selecteFilter {
-              color: color(dark-3);
-              background-color: rgba(color(light-2), 0.8);
+              // color: color(dark-3);
+              // box-shadow: none;
+              background-color: rgba(color(g4-6), 1);
+              // border: 1px solid rgba(color(g4-1), 1);
+              transform: scale(1.1);
               &:hover {
                 border: transparent;
               }
@@ -284,10 +298,16 @@
               &-deploy {
                 svg {
                   path {
-                    fill: rgba(color(dark-3), 0.8);
+                    fill: rgba(color(g3-4), 0.6);
+                  }
+                  circle {
+                    fill: rgba(color(g3-4), 0.8);
                   }
                   &:hover {
                     path {
+                      fill: color(g3-4);
+                    }
+                    circle {
                       fill: color(g3-4);
                     }
                   }
@@ -296,7 +316,7 @@
               &-repo {
                 svg {
                   path {
-                    fill: rgba(color(dark-3), 0.8);
+                    fill: rgba(color(g3-4), 0.6);
                   }
                   &:hover {
                     path {
@@ -307,14 +327,14 @@
               }
               &-pdf {
                 svg {
-                  stroke: rgba(color(dark-3), 0.8);
+                  stroke: rgba(color(g3-4), 0.6);
                   path {
-                    stroke: rgba(color(dark-3), 0.8);
+                    stroke: rgba(color(g3-4), 0.6);
                   }
                   &:hover {
                     stroke: color(g3-4);
                     path {
-                      stroke: rgba(color(g3-4), 0.8);
+                      stroke: color(g3-4);
                     }
                   }
                 }

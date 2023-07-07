@@ -47,7 +47,11 @@ const Portfolio = (props: Props) => {
             filter={filter}
           />
         )}
-        <List portfolios={props.portfolios} filter={filter} />
+        <List
+          portfolios={props.portfolios}
+          filter={filter}
+          itemsTitle={props.base.buttons_titles}
+        />
       </div>
     </div>
   );

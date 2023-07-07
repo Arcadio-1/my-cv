@@ -1,10 +1,15 @@
-import { Group, Portfolio } from "@/app/util/Types/types";
+import {
+  Group,
+  Portfolio,
+  Portfolio_base_buttons_titles,
+} from "@/app/util/Types/types";
 import React, { useEffect } from "react";
 import Item from "./Item";
 import { useInView } from "react-intersection-observer";
 interface Props {
   portfolios: Portfolio[];
   filter: Group;
+  itemsTitle: Portfolio_base_buttons_titles;
 }
 const List = (props: Props) => {
   const { ref, inView, entry } = useInView({
@@ -25,7 +30,7 @@ const List = (props: Props) => {
                 : "notSelected"
             }`}
           >
-            <Item portfolio={item} />
+            <Item portfolio={item} buttons_titles={props.itemsTitle} />
           </li>
         );
       })}

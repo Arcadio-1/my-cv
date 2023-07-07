@@ -26,11 +26,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  direction: rtl;
+  // direction: rtl;
 }
 html {
   scroll-behavior: smooth !important;
-
   font-size: 62.5%;
   @include responsive(lg) {
     font-size: 58%;
@@ -94,7 +93,9 @@ a {
       color(light-grid-2) 100%
     );
   }
-  &-lang {
+  direction: rtl;
+  &-en {
+    direction: ltr;
     text-transform: capitalize;
   }
 }

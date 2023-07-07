@@ -33,11 +33,9 @@
         @keyframes heroerContent {
           from {
             opacity: 0;
-            // top: -10px;
           }
           to {
             opacity: 1;
-            // top: 10%;
           }
         }
         &-tittle {
@@ -53,11 +51,12 @@
             @include dflex;
           }
           span {
+            font-size: 2rem;
             background-color: rgba(color(dark-2), 0.7);
             padding: 0.2rem 1rem;
-            font-size: 2rem;
           }
           .label {
+            text-transform: none;
             border-radius: 0px 10px 10px 0px;
             color: color(light-2);
             padding-left: 0.1rem;
@@ -138,22 +137,38 @@
           }
           &-expertise {
             span {
-              background-color: rgba(color(light-2), 0.15);
-              backdrop-filter: blur(2px);
+              backdrop-filter: blur(3px);
+              background-color: rgba(color(light-2), 0.2);
             }
             .label {
-              color: color(dark-3);
+              color: color(dark-2);
             }
             .text {
-              color: color(dark-3);
+              color: color(dark-2);
+              // color: color(light-2);
+              border-left: 3px solid orange;
+              animation: blink-caret-l 0.75s step-end infinite;
             }
-            @keyframes blink-caret {
+            .text1 {
+              animation: typing1 2s steps(30, end) forwards,
+                blink-caret-l 0.75s step-end infinite;
+            }
+            .text2 {
+              animation: typing2 2s steps(30, end) forwards,
+                blink-caret-l 0.75s step-end infinite;
+            }
+            .text3 {
+              animation: typing3 2s steps(30, end) forwards,
+                blink-caret-l 0.75s step-end infinite;
+            }
+
+            @keyframes blink-caret-l {
               from,
               to {
                 border-color: transparent;
               }
               50% {
-                border-color: rgba(color(dark-2), 0.7);
+                border-color: color(dark-5);
               }
             }
           }

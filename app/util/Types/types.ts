@@ -2,6 +2,14 @@ export enum OpenToggle {
   open,
   close,
 }
+export enum Theme {
+  Dark = "Dark",
+  Light = "Light",
+}
+export enum Lang {
+  fa = "farsi",
+  en = "english",
+}
 
 export enum Status {
   loading = "loading",
@@ -149,8 +157,15 @@ export interface Resume_base {
 export interface Portfolio_base_labels {
   all: string;
 }
+
+export interface Portfolio_base_buttons_titles {
+  show_demo: string;
+  show_codes: string;
+  download_pdf: string;
+}
 export interface Portfolio_base {
   section_tittle: string;
+  buttons_titles: Portfolio_base_buttons_titles;
   labels: Portfolio_base_labels;
 }
 export interface Form_base_place_holders {

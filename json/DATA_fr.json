@@ -493,6 +493,12 @@
     },
     "portfolio_base": {
       "section_tittle": "نمونه کار ها",
+      "buttons_titles": {
+        "show_demo": "نمایش دمو",
+        "show_codes": "مشاهده کد",
+        "download_pdf": "دانلود pdf"
+      },
+
       "labels": {
         "all": "همه"
       }
