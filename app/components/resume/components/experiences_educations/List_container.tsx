@@ -8,27 +8,27 @@ interface Props {
   experience: Experience[];
 }
 const List_container = (props: Props) => {
-  const [experiences, setExperience] = useState<Experience[]>([]);
+  // const [experiences, setExperience] = useState<Experience[]>([]);
   const { ref, inView, entry } = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
-  useEffect(() => {
-    setExperience((prev) => {
-      return (prev = []);
-    });
-    if (inView) {
-      for (let i = 0; i < props.experience.length; i++) {
-        setTimeout(
-          () =>
-            setExperience((prevState) => {
-              return (prevState = [...prevState, props.experience[i]]);
-            }),
-          1000 * i
-        );
-      }
-    }
-  }, [props.experience, inView]);
+  // useEffect(() => {
+  //   setExperience((prev) => {
+  //     return (prev = []);
+  //   });
+  //   if (inView) {
+  //     for (let i = 0; i < props.experience.length; i++) {
+  //       setTimeout(
+  //         () =>
+  //           setExperience((prevState) => {
+  //             return (prevState = [...prevState, props.experience[i]]);
+  //           }),
+  //         1000 * i
+  //       );
+  //     }
+  //   }
+  // }, [props.experience, inView]);
 
   return (
     <div className="main-resume-experiences-experience">
@@ -36,7 +36,7 @@ const List_container = (props: Props) => {
         {props.header}
       </h2>
       <div className="list">
-        {experiences.map((item) => {
+        {props.experience.map((item) => {
           return (
             <div
               className={`list-item ${inView ? "list-item-animator" : ""}`}

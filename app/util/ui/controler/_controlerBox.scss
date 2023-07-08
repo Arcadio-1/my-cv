@@ -101,8 +101,16 @@
   }
   &-en {
     .controler {
-      right: 5px;
-      display: flex;
+      &-container {
+        position: fixed;
+        top: 5px;
+        left: auto;
+        right: 5px;
+        z-index: 14;
+        @include responsive(md) {
+          display: none;
+        }
+      }
       &-list {
         margin-left: auto;
       }

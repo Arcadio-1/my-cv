@@ -1,5 +1,6 @@
 "use client";
-import { Expertise, Lang, Theme } from "@/app/util/Types/types";
+import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
+import { Expertise, InView, Lang, Theme } from "@/app/util/Types/types";
 import React, { useEffect, useState } from "react";
 
 interface Props {
@@ -33,8 +34,10 @@ const Hero = (props: Props) => {
     };
   }, [props.expertise, length]);
 
+  const { ref } = useScrollSpy(InView.home);
+
   return (
-    <div className=" main-hero" id="hero">
+    <div className=" main-hero" ref={ref} id="hero">
       <div
         className="main-hero-background"
         style={{

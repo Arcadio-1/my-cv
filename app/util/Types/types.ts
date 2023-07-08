@@ -10,7 +10,15 @@ export enum Lang {
   fa = "fa",
   en = "en",
 }
-
+export enum InView {
+  null = "",
+  home = "home",
+  about = "about",
+  skills = "skills",
+  resume = "resume",
+  portfolio = "portfolio",
+  contact = "contact",
+}
 export enum Status {
   loading = "loading",
   error = "error",
@@ -118,7 +126,7 @@ export type Hero_image = string;
 export interface Nav_link {
   id: string;
   tittle: string;
-  tag: string;
+  link: string;
   icon: string;
   component: string;
   headline: string;

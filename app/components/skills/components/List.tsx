@@ -7,27 +7,27 @@ interface Props {
   skills: Skill[];
 }
 const List = (props: Props) => {
-  const [skills, setSkills] = useState<Skill[]>([]);
+  // const [skills, setSkills] = useState<Skill[]>([]);
   const { ref, inView, entry } = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
-  useEffect(() => {
-    if (inView) {
-      setSkills((prev) => {
-        return (prev = []);
-      });
-      for (let i = 0; i < props.skills.length; i++) {
-        setTimeout(
-          () =>
-            setSkills((prevState) => {
-              return (prevState = [...prevState, props.skills[i]]);
-            }),
-          100 * i
-        );
-      }
-    }
-  }, [props.skills, inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     setSkills((prev) => {
+  //       return (prev = []);
+  //     });
+  //     for (let i = 0; i < props.skills.length; i++) {
+  //       setTimeout(
+  //         () =>
+  //           setSkills((prevState) => {
+  //             return (prevState = [...prevState, props.skills[i]]);
+  //           }),
+  //         100 * i
+  //       );
+  //     }
+  //   }
+  // }, [props.skills, inView]);
 
   // useEffect(() => {
   //   console.log(inView);
@@ -35,7 +35,7 @@ const List = (props: Props) => {
 
   return (
     <div ref={ref} className={`main-skills-list`}>
-      {skills.map((skill) => {
+      {props.skills.map((skill) => {
         return (
           <div
             key={skill.id}

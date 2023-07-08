@@ -13,7 +13,7 @@ const List = (props: Props) => {
           <Item
             key={item.id}
             icon={item.icon}
-            tag={item.tag}
+            link={item.link}
             tittle={item.tittle}
             id={item.id}
             component={item.component}

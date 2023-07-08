@@ -15,7 +15,6 @@ interface Props {
 }
 
 const NotifCard = (props: Props) => {
-  console.log(props.lang);
   const dispatchNotif = useDispatch();
   const notifState = useSelector((state: any) => state.ui.notif_card_status);
 

@@ -421,7 +421,7 @@
       {
         "id": "1",
         "tittle": "صفحه نخست",
-        "tag": "#home",
+        "link": "home",
         "icon": "/images/nav/home.svg",
         "component": "home_icon",
         "headline": "Home_icon"
@@ -429,7 +429,7 @@
       {
         "id": "2",
         "tittle": "درباره من",
-        "tag": "#about",
+        "link": "about",
         "icon": "/images/nav/about.svg",
         "component": "about_icon",
         "headline": "About_icon"
@@ -437,7 +437,7 @@
       {
         "id": "2-1",
         "tittle": "مهارت ها",
-        "tag": "#skills",
+        "link": "skills",
         "icon": "/images/nav/skills.svg",
         "component": "skills_icon",
         "headline": "Skillsicon"
@@ -445,7 +445,7 @@
       {
         "id": "3",
         "tittle": "رزومه",
-        "tag": "#resume",
+        "link": "resume",
         "icon": "/images/nav/resume.svg",
         "component": "resume_icon",
         "headline": "Resume_icon"
@@ -453,7 +453,7 @@
       {
         "id": "4",
         "tittle": "نمونه کارها",
-        "tag": "#portfolio",
+        "link": "portfolio",
         "icon": "/images/nav/portfolio.svg",
         "component": "portofolio_icon",
         "headline": "Portofolio_icon"
@@ -461,7 +461,7 @@
       {
         "id": "5",
         "tittle": "تماس",
-        "tag": "#contact",
+        "link": "contact",
         "icon": "/images/nav/contact.svg",
         "component": "contact_icon",
         "headline": "Contact_icon"

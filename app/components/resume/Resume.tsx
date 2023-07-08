@@ -2,11 +2,13 @@ import SectionHeader from "@/app/util/ui/SectionHeader/SectionHeader";
 import React from "react";
 import {
   Experience,
+  InView,
   Language as Language_type,
   Resume_base,
 } from "@/app/util/Types/types";
 import List_container from "./components/experiences_educations/List_container";
 import Languages from "./components/language/Languages";
+import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
 interface Props {
   educations: Experience[];
   work_experiences: Experience[];
@@ -14,8 +16,10 @@ interface Props {
   base: Resume_base;
 }
 const Resume = (props: Props) => {
+  const { ref } = useScrollSpy(InView.resume);
+
   return (
-    <div className="main-resume">
+    <div className="main-resume" ref={ref}>
       <SectionHeader
         tag="resume"
         tittle={props.base.section_tittle}

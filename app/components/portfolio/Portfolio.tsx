@@ -3,7 +3,13 @@ import SectionHeader from "@/app/util/ui/SectionHeader/SectionHeader";
 import React, { useEffect, useState } from "react";
 import Filter from "./components/Filter";
 import List from "./components/List";
-import { Group, Portfolio, Portfolio_base } from "@/app/util/Types/types";
+import {
+  Group,
+  InView,
+  Portfolio,
+  Portfolio_base,
+} from "@/app/util/Types/types";
+import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
 interface Props {
   portfolios: Portfolio[];
   base: Portfolio_base;
@@ -11,6 +17,7 @@ interface Props {
 
 const Portfolio = (props: Props) => {
   const { portfolios } = props;
+  const { ref } = useScrollSpy(InView.portfolio);
 
   const [filters, setFilters] = useState<Group[]>();
   const [filter, setFilter] = useState<Group>(Group.all);
@@ -32,7 +39,7 @@ const Portfolio = (props: Props) => {
   }, [portfolios]);
 
   return (
-    <div className="main-portfolio">
+    <div className="main-portfolio" ref={ref}>
       <SectionHeader
         tag="portfolio"
         tittle={props.base.section_tittle}

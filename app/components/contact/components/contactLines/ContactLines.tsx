@@ -14,44 +14,44 @@ interface Props {
 }
 
 const ContactLines = (props: Props) => {
-  const [contactLinesState, setContactLinesState] = useState<
-    React.ReactElement[]
-  >([]);
+  // const [contactLinesState, setContactLinesState] = useState<
+  //   React.ReactElement[]
+  // >([]);
 
   const { ref, inView, entry } = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
 
-  useEffect(() => {
-    const contactLines_arry: React.ReactElement[] = [
-      <Item key={1} content={props.email} label={props.labels.email}>
-        <EmailIcon />
-      </Item>,
-      <Item key={2} content={props.mobile} label={props.labels.mobile}>
-        <MobileIcon />
-      </Item>,
-      <Item key={3} content={props.telegram} label={props.labels.telegram}>
-        <TelegramIcon />
-      </Item>,
-    ];
-    if (inView) {
-      setContactLinesState((prev) => {
-        return (prev = []);
-      });
-      for (let i = 0; i < contactLines_arry.length; i++) {
-        setTimeout(() => {
-          setContactLinesState((prev) => {
-            return (prev = [...prev, contactLines_arry[i]]);
-          });
-        }, 300 * i);
-      }
-    }
-  }, [inView, props]);
+  const contactLines_arry: React.ReactElement[] = [
+    <Item key={1} content={props.email} label={props.labels.email}>
+      <EmailIcon />
+    </Item>,
+    <Item key={2} content={props.mobile} label={props.labels.mobile}>
+      <MobileIcon />
+    </Item>,
+    <Item key={3} content={props.telegram} label={props.labels.telegram}>
+      <TelegramIcon />
+    </Item>,
+  ];
+  // useEffect(() => {
+  //   if (inView) {
+  //     setContactLinesState((prev) => {
+  //       return (prev = []);
+  //     });
+  //     for (let i = 0; i < contactLines_arry.length; i++) {
+  //       setTimeout(() => {
+  //         setContactLinesState((prev) => {
+  //           return (prev = [...prev, contactLines_arry[i]]);
+  //         });
+  //       }, 300 * i);
+  //     }
+  //   }
+  // }, [inView, props]);
 
   return (
     <div ref={ref} className="main-contact-contactLines">
-      {contactLinesState.map((item, index) => {
+      {contactLines_arry.map((item, index) => {
         return (
           <div
             className={`main-contact-contactLines-item ${
