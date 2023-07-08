@@ -7,8 +7,8 @@ export enum Theme {
   Light = "Light",
 }
 export enum Lang {
-  fa = "farsi",
-  en = "english",
+  fa = "fa",
+  en = "en",
 }
 
 export enum Status {
@@ -255,6 +255,7 @@ export interface CV {
 }
 
 export interface All_Data {
+  language: Lang;
   cv: CV;
   base: BASE;
 }

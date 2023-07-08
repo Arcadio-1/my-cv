@@ -47,3 +47,41 @@
     }
   }
 }
+.cv {
+  &-lighter {
+    .menu {
+      .closeIcon {
+        background-color: rgba(color(light-2), 0.8);
+        svg {
+          path {
+            fill: rgba(color(dark-4), 1);
+          }
+        }
+      }
+      .menuIcon {
+        background-color: rgba(color(light-2), 0.2);
+        svg {
+          path {
+            fill: rgba(color(dark-4), 1);
+          }
+        }
+      }
+    }
+  }
+}
+.cv {
+  &-en {
+    .menu {
+      @include responsive(md) {
+        display: flex;
+      }
+      .closeIcon {
+        margin-left: auto;
+        right: 2rem;
+      }
+      .menuIcon {
+        left: 2rem;
+      }
+    }
+  }
+}

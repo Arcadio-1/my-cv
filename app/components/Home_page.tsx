@@ -51,7 +51,12 @@ const Home_page = (props: Props) => {
         theme={theme}
       />
       <Menu />
-      <ASide personalInfo={personal_info} navLinks={base.nav_links} />
+      <ASide
+        personalInfo={personal_info}
+        navLinks={base.nav_links}
+        lang={lang}
+        theme={theme}
+      />
       <div className="mr-auto ml-auto">
         <main className="main">
           <Hero
@@ -81,6 +86,8 @@ const Home_page = (props: Props) => {
               portfolios={resume.portfolios}
             />
             <Contact
+              theme={theme}
+              lang={lang}
               base={base.contact_base}
               mobile={personal_info.mobile}
               email={personal_info.email}

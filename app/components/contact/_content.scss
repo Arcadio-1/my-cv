@@ -349,4 +349,38 @@
       }
     }
   }
+  &-en {
+    .main {
+      &-contact {
+        &-contactLines {
+          &-item {
+            .content {
+              &-value {
+                font-family: iransans;
+              }
+            }
+          }
+        }
+        &-form {
+          &-item {
+            &-icon {
+              left: auto;
+              right: 5px;
+            }
+            &-label {
+              right: auto;
+              left: 10px;
+            }
+            &-input {
+              padding-left: 1rem;
+            }
+            .labelUper {
+              right: auto;
+              left: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
   const jsonDirectory = path.join(process.cwd(), "json");
   const fileContents = await fs.readFile(
-    jsonDirectory + "/DATA_fr.json",
+    jsonDirectory + "/DATA_fa.json",
     "utf8"
   );
   // console.log(fileContents);

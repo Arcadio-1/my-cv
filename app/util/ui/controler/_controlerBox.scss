@@ -94,4 +94,13 @@
       }
     }
   }
+  &-en {
+    .controler {
+      right: 5px;
+      display: flex;
+      &-list {
+        margin-left: auto;
+      }
+    }
+  }
 }

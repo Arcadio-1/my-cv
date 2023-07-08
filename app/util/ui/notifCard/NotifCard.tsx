@@ -8,9 +8,14 @@ import InfoIcon from "./components/InfoIcon";
 import SuccessIcon from "./components/SuccessIcon";
 import { useDispatch, useSelector } from "react-redux";
 import { uiAction } from "@/redux/features/ui/uiSlice";
-import { Status } from "@/app/util/Types/types";
+import { Lang, Status, Theme } from "@/app/util/Types/types";
+interface Props {
+  lang: Lang;
+  theme: Theme;
+}
 
-const NotifCard = () => {
+const NotifCard = (props: Props) => {
+  console.log(props.lang);
   const dispatchNotif = useDispatch();
   const notifState = useSelector((state: any) => state.ui.notif_card_status);
 
@@ -28,7 +33,7 @@ const NotifCard = () => {
             message: "  ",
           })
         );
-      }, 5000);
+      }, 500000);
       return () => {
         clearTimeout(clearnotif);
       };
@@ -60,9 +65,13 @@ const NotifCard = () => {
 
   return (
     <Fragment>
-      <Modal>
+      <Modal theme={props.theme}>
         {notifState.message && (
-          <div className={`notifCard notifCard-${notifState.status}`}>
+          <div
+            className={`notifCard notifCard-${notifState.status} ${
+              props.lang === Lang.en ? "en-notifCard" : ""
+            } `}
+          >
             <div className="notifCard-header">
               <div className="notifCard-header-control" onClick={closeHandler}>
                 <CloseIcon />

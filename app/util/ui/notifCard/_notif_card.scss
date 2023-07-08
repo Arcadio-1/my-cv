@@ -101,3 +101,16 @@
     }
   }
 }
+.en {
+  &-notifCard {
+    left: auto;
+    right: 10px;
+    .notifCard-header {
+      flex-direction: row-reverse;
+    }
+    .notifCard-container {
+      padding: 1rem;
+      padding-right: 5rem;
+    }
+  }
+}

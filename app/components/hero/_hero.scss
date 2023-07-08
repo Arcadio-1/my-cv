@@ -176,4 +176,35 @@
       }
     }
   }
+  &-en {
+    .main {
+      &-hero {
+        &-background {
+          transform: scaleX(-1);
+        }
+        &-content {
+          top: 20%;
+          right: 10%;
+          &-tittle {
+            margin: 0px;
+            margin-right: auto;
+          }
+          &-expertise {
+            .label {
+              border-radius: 10px 0px 0px 10px;
+              padding-right: 0.5rem;
+              padding-left: 1rem;
+            }
+            .text {
+              border: transparent;
+              border-right: 3px solid orange;
+              margin: 0px;
+              margin-right: auto;
+              padding-left: 0.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -11,7 +11,9 @@ import {
   Form_base_error_messages,
   Form_base_notifs_card,
   Form_base_place_holders,
+  Lang,
   Status,
+  Theme,
 } from "@/app/util/Types/types";
 import NotifCard from "@/app/util/ui/notifCard/NotifCard";
 import { useInView } from "react-intersection-observer";
@@ -21,6 +23,8 @@ interface Props {
   errorMessages: Form_base_error_messages;
   buttons: Form_base_buttons;
   notifCard: Form_base_notifs_card;
+  lang: Lang;
+  theme: Theme;
 }
 
 const Form = (props: Props) => {
@@ -181,7 +185,7 @@ const Form = (props: Props) => {
         inView ? "main-contact-form-animator" : ""
       }`}
     >
-      <NotifCard />
+      <NotifCard theme={props.theme} lang={props.lang} />
 
       <form ref={ref} className="formContainer">
         <Item

@@ -165,4 +165,30 @@
       }
     }
   }
+  &-en {
+    .main {
+      &-resume {
+        &-experiences {
+          &-experience {
+            .list {
+              &-item {
+                .date {
+                  font-family: iransans;
+                }
+              }
+            }
+          }
+        }
+        &-language {
+          .list {
+            &-item {
+              .progressBar {
+                @include dflex(flex-start);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

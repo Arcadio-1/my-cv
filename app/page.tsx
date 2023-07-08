@@ -7,7 +7,7 @@ import matter from "gray-matter";
 async function getData() {
   const jsonDirectory = path.join(process.cwd(), "json");
   const fileContents = await fs.readFile(
-    jsonDirectory + "/DATA_fr.json",
+    jsonDirectory + "/DATA_fa.json",
     "utf8"
   );
 

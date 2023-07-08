@@ -57,7 +57,7 @@
       &-image {
         grid-area: aboutimage;
         float: right;
-        max-width: 30rem;
+        max-width: 25rem;
         min-width: 20rem;
         width: 100%;
         transform: translateX(50px);
@@ -199,6 +199,26 @@
         }
         &-boulshit {
           color: color(dark-2);
+        }
+      }
+    }
+  }
+  &-en {
+    .main {
+      &-about {
+        &-image {
+          float: left;
+          img {
+            padding: 0px;
+            padding-right: 1rem;
+          }
+        }
+        &-list {
+          &-item {
+            .text {
+              font-family: iransans;
+            }
+          }
         }
       }
     }

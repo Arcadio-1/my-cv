@@ -149,15 +149,11 @@
     .aside {
       background: linear-gradient(
         90deg,
-        rgba(color(g4-2), 0.3) 0%,
-        rgba(color(g4-3), 0.7) 100%
+        rgba(color(g4-6), 0.3) 0%,
+        rgba(color(g4-5), 0.3) 100%
       );
       &-opener {
-        background: linear-gradient(
-          90deg,
-          rgba(color(g4-6), 0.6) 0%,
-          rgba(color(g4-3), 0.7) 100%
-        ) !important;
+        background-color: rgba(color(light-1), 0.5) !important;
       }
       &-header {
         &-image {
@@ -223,5 +219,40 @@
         }
       }
     }
+  }
+  &-en {
+    .aside {
+      @include responsive(md) {
+        left: -400px;
+      }
+      &-opener {
+        left: 0 !important;
+      }
+      &-nav {
+        &-list {
+          &-item {
+            a {
+              span {
+                padding-top: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .en-aside-dark {
+    background: linear-gradient(
+      180deg,
+      rgba(75, 116, 160, 0.261) 0%,
+      rgba(36, 55, 71, 0.885) 100%
+    );
+  }
+  .en-aside-light {
+    background: linear-gradient(
+      180deg,
+      rgba(color(g4-6), 0.3) 0%,
+      rgba(color(g4-5), 0.3) 100%
+    );
   }
 }

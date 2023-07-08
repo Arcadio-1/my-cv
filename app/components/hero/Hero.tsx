@@ -53,31 +53,31 @@ const Hero = (props: Props) => {
           {expertise === 1 && (
             <div className="main-hero-content-expertise-item">
               {props.lang === Lang.fa && <span className="label"> من </span>}
+              {props.lang === Lang.en && <span className="label"> I`m </span>}
               <span className="text text1">
                 {props.expertise[0].tittle}
                 {props.lang !== Lang.en && " هستم "}
               </span>
-              {props.lang === Lang.en && <span className="label"> I`m </span>}
             </div>
           )}
           {expertise === 2 && (
             <div className="main-hero-content-expertise-item">
               {props.lang === Lang.fa && <span className="label"> من </span>}
+              {props.lang === Lang.en && <span className="label"> I`m </span>}
               <span className="text  text2">
                 {props.expertise[1].tittle}
                 {props.lang !== Lang.en && " هستم "}
               </span>
-              {props.lang === Lang.en && <span className="label"> I`m </span>}
             </div>
           )}
           {expertise === 3 && (
             <div className="main-hero-content-expertise-item">
               {props.lang === Lang.fa && <span className="label"> من </span>}
+              {props.lang === Lang.en && <span className="label"> I`m </span>}
               <span className="text text3">
                 {props.expertise[2].tittle}
                 {props.lang !== Lang.en && " هستم "}
               </span>
-              {props.lang === Lang.en && <span className="label"> I`m </span>}
             </div>
           )}
         </div>

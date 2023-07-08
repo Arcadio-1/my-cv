@@ -5,11 +5,19 @@ import Header from "./header/Header";
 import Nav from "./nav/Nav";
 import Footer from "./footer/Footer";
 import { useSelector } from "react-redux";
-import { Nav_link, OpenToggle, Personal_info } from "@/app/util/Types/types";
+import {
+  Lang,
+  Nav_link,
+  OpenToggle,
+  Personal_info,
+  Theme,
+} from "@/app/util/Types/types";
 
 interface Props {
   personalInfo: Personal_info;
   navLinks: Nav_link[];
+  lang: Lang;
+  theme: Theme;
 }
 
 const ASide = (props: Props) => {
@@ -18,7 +26,17 @@ const ASide = (props: Props) => {
     <aside
       className={`${
         isMenuOpen === OpenToggle.open ? "aside-opener" : ""
-      } aside`}
+      } aside ${
+        props.lang === Lang.en && props.theme === Theme.Dark
+          ? "en-aside-dark"
+          : ""
+      }
+      ${
+        props.lang === Lang.en && props.theme === Theme.Light
+          ? "en-aside-light"
+          : ""
+      }
+        `}
     >
       <div className="aside-container">
         <Header personalInfo={props.personalInfo} />
