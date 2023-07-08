@@ -34,10 +34,10 @@ const Hero = (props: Props) => {
     };
   }, [props.expertise, length]);
 
-  const { ref } = useScrollSpy(InView.home);
+  const { ref } = useScrollSpy(InView.home, 1);
 
   return (
-    <div className=" main-hero" ref={ref} id="hero">
+    <div ref={ref} className=" main-hero" id="hero">
       <div
         className="main-hero-background"
         style={{

@@ -15,10 +15,10 @@ const Item = (props: Props) => {
   const dispatchClose = useDispatch();
   const inView = useSelector<string>((state: any) => state.ui.inView);
 
-  useEffect(() => {
-    console.log(inView);
-    // console.log(props.link);
-  }, [inView]);
+  // useEffect(() => {
+  //   console.log(inView);
+  //   // console.log(props.link);
+  // }, [inView]);
 
   const closeHandler = () => {
     dispatchClose(uiAction.closeMenu());

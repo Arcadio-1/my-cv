@@ -13,9 +13,9 @@ interface Props {
   theme: Theme;
 }
 const Contact = (props: Props) => {
-  const { ref: contactRef } = useScrollSpy(InView.contact);
+  const { ref: contactRef } = useScrollSpy(InView.contact, 0.5);
   return (
-    <div className="main-contact">
+    <div className="main-contact" ref={contactRef}>
       <SectionHeader
         tag="contact"
         tittle={props.base.section_tittle}
@@ -28,7 +28,6 @@ const Contact = (props: Props) => {
           email={props.email}
           telegram={props.telegram}
         />
-        <div ref={contactRef}></div>
         <Form
           theme={props.theme}
           lang={props.lang}

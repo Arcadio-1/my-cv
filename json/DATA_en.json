@@ -431,7 +431,7 @@
       {
         "id": "2",
         "tittle": "about",
-        "link": "about",
+        "link": "aboutMe",
         "icon": "/images/nav/about.svg",
         "component": "about_icon",
         "headline": "About_icon"

@@ -15,12 +15,10 @@ interface Props {
 }
 
 const About = async (props: Props) => {
-  const { ref } = useScrollSpy(InView.about);
-
   return (
     <div className="main-about">
       <SectionHeader
-        tag="about"
+        tag="aboutMe"
         tittle={props.base.section_tittle}
         description={""}
       />

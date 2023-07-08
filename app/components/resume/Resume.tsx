@@ -16,16 +16,16 @@ interface Props {
   base: Resume_base;
 }
 const Resume = (props: Props) => {
-  const { ref } = useScrollSpy(InView.resume);
+  const { ref } = useScrollSpy(InView.resume, 0.2);
 
   return (
-    <div className="main-resume" ref={ref}>
+    <div className="main-resume">
       <SectionHeader
         tag="resume"
         tittle={props.base.section_tittle}
         description=""
       />
-      <div className="main-resume-container">
+      <div className="main-resume-container" ref={ref}>
         <div className="main-resume-experiences">
           <List_container
             experience={props.educations}

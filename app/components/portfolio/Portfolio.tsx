@@ -17,7 +17,7 @@ interface Props {
 
 const Portfolio = (props: Props) => {
   const { portfolios } = props;
-  const { ref } = useScrollSpy(InView.portfolio);
+  const { ref } = useScrollSpy(InView.portfolio, 0.5);
 
   const [filters, setFilters] = useState<Group[]>();
   const [filter, setFilter] = useState<Group>(Group.all);
@@ -39,13 +39,13 @@ const Portfolio = (props: Props) => {
   }, [portfolios]);
 
   return (
-    <div className="main-portfolio" ref={ref}>
+    <div className="main-portfolio">
       <SectionHeader
         tag="portfolio"
         tittle={props.base.section_tittle}
         description=""
       />
-      <div className="main-portfolio-container">
+      <div className="main-portfolio-container" ref={ref}>
         {filters && (
           <Filter
             label={props.base.labels.all}

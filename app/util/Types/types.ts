@@ -13,7 +13,7 @@ export enum Lang {
 export enum InView {
   null = "",
   home = "home",
-  about = "about",
+  about = "aboutMe",
   skills = "skills",
   resume = "resume",
   portfolio = "portfolio",
