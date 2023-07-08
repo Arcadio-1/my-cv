@@ -32,7 +32,7 @@ const NotifCard = (props: Props) => {
             message: "  ",
           })
         );
-      }, 500000);
+      }, 5000);
       return () => {
         clearTimeout(clearnotif);
       };

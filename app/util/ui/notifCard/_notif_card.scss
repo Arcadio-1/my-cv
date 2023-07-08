@@ -8,6 +8,9 @@
   border-radius: 5px;
   color: color(light-1);
   backdrop-filter: blur(3px);
+  @include responsive(md) {
+    top: 35px;
+  }
   &-header {
     @include dflex(space-between);
     height: 3em;
