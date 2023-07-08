@@ -45,12 +45,14 @@ const Home_page = (props: Props) => {
         lang === Lang.en ? "cv-en" : ""
       }`}
     >
-      <ControlerBox
-        lang={lang}
-        onChangeTheme={changeThemeHandler}
-        theme={theme}
-      />
-      <Menu />
+      <div className="controler-container">
+        <ControlerBox
+          lang={lang}
+          onChangeTheme={changeThemeHandler}
+          theme={theme}
+        />
+      </div>
+      <Menu lang={lang} onChangeTheme={changeThemeHandler} theme={theme} />
       <ASide
         personalInfo={personal_info}
         navLinks={base.nav_links}

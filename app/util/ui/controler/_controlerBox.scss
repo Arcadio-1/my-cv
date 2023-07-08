@@ -1,10 +1,15 @@
 @use "../../../../styles/clips.scss" as *;
 .cv {
   .controler {
-    position: fixed;
-    top: 5px;
-    left: 5px;
-    z-index: 14;
+    &-container {
+      position: fixed;
+      top: 5px;
+      left: 5px;
+      z-index: 14;
+      @include responsive(md) {
+        display: none;
+      }
+    }
     &-list {
       @include dflex();
       gap: 0.5rem;

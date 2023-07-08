@@ -4,9 +4,15 @@ import MenuIcon from "./components/MenuIcon";
 import CloseIcon from "./components/CloseIcon";
 import { useDispatch, useSelector } from "react-redux";
 import { uiAction } from "@/redux/features/ui/uiSlice";
-import { OpenToggle } from "@/app/util/Types/types";
+import { Lang, OpenToggle, Theme } from "@/app/util/Types/types";
+import ControlerBox from "../controler/ControlerBox";
+interface Props {
+  lang: Lang;
+  theme: Theme;
+  onChangeTheme: () => void;
+}
 
-const Menu = () => {
+const Menu = (props: Props) => {
   const dispatchClose = useDispatch();
   const dispatchOpen = useDispatch();
 
@@ -23,9 +29,16 @@ const Menu = () => {
   return (
     <div className="menu">
       {isMenuOpen === OpenToggle.close && (
-        <button onClick={OpenHandler}>
-          <MenuIcon />
-        </button>
+        <div className="menu-nav">
+          <button onClick={OpenHandler}>
+            <MenuIcon />
+          </button>
+          <ControlerBox
+            lang={props.lang}
+            theme={props.theme}
+            onChangeTheme={props.onChangeTheme}
+          />
+        </div>
       )}
       {isMenuOpen === OpenToggle.open && (
         <button onClick={closeHandler}>
