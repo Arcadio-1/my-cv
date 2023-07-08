@@ -10,7 +10,7 @@
       "lastName": "skandari",
       "nickName": "Rkdo",
       "marital_status": "single",
-      "dateOfBirth": "1375",
+      "dateOfBirth": "1996",
       "email": "skndri-hosyn@outlook.com",
       "mobile": "09183704735",
       "telegram": "@Rkdo_a",
@@ -84,15 +84,15 @@
           "id": "0",
           "tittle": "software technology engineering (associates)",
           "place": "Islamic Azad university",
-          "since": "1394",
-          "to": "1396"
+          "since": "2015",
+          "to": "2017"
         },
         {
           "id": "1",
           "tittle": "software technology engineering (bachelor)",
           "place": "Islamic Azad university",
-          "since": "1396",
-          "to": "1398"
+          "since": "2017",
+          "to": "2019"
         }
       ],
       "work_experiences": [
@@ -100,15 +100,15 @@
           "id": "1",
           "tittle": "Technical support and graphic design",
           "place": "Dchat(mehrdesign)",
-          "since": "1391",
-          "to": "1394"
+          "since": "2012",
+          "to": "2017"
         },
         {
           "id": "2",
           "tittle": "Sales and accounting managera",
           "place": "kristal pars Company",
-          "since": "1398",
-          "to": "1400"
+          "since": "2019",
+          "to": "2021"
         }
       ],
       "portfolios": [
