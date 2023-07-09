@@ -1,9 +1,10 @@
 "use clinet";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import Icon from "./Icons";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { uiAction } from "@/redux/features/ui/uiSlice";
+import { usePathname } from "next/navigation";
 interface Props {
   id: string;
   tittle: string;
@@ -12,14 +13,19 @@ interface Props {
   component: string;
 }
 const Item = (props: Props) => {
+  const path = usePathname();
   const dispatchClose = useDispatch();
+
+  useEffect(() => {
+    console.log(path);
+  }, [path]);
 
   const closeHandler = () => {
     dispatchClose(uiAction.closeMenu());
   };
   return (
     <li className={`aside-nav-list-item `} onClick={closeHandler}>
-      <Link href={`#${props.link}`}>
+      <Link href={`${path}#${props.link}`}>
         <Icon component={props.component} id={props.id} />
         <span>{props.tittle}</span>
       </Link>
