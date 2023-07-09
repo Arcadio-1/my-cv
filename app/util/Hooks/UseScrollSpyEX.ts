@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { uiAction } from "@/redux/features/ui/uiSlice";
 import { useEffect } from "react";
 
-const useScrollSpy = (section: InView, thres: number) => {
+const useScrollSpyEX = (section: InView, thres: number) => {
   const dispatchInView = useDispatch();
 
   const { ref, inView } = useInView({
@@ -24,4 +24,4 @@ const useScrollSpy = (section: InView, thres: number) => {
   return { ref };
 };
 
-export default useScrollSpy;
+export default useScrollSpyEX;

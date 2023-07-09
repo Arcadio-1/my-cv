@@ -6,7 +6,7 @@ import MyImage from "./components/MyImage";
 import Boulshit from "./components/Boulshit";
 import List from "./components/list/List";
 import Tittle from "./components/Tittle";
-import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
+// import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
 
 interface Props {
   personal_info: Personal_info;

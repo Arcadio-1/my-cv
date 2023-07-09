@@ -1,6 +1,6 @@
 "use client";
-import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
-import { InView } from "@/app/util/Types/types";
+// import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
+// import { InView } from "@/app/util/Types/types";
 import React from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Tittle = (props: Props) => {
-  const { ref: aboutRef } = useScrollSpy(InView.about, 0.4);
+  // const { ref: aboutRef } = useScrollSpy(InView.about, 0.4);
 
   const { ref, inView, entry } = useInView({
     threshold: 0.5,
@@ -23,7 +23,7 @@ const Tittle = (props: Props) => {
         inView ? "main-about-tittle-animator" : ""
       }`}
     >
-      <h2 ref={aboutRef}>{props.tittle}</h2>
+      <h2>{props.tittle}</h2>
     </div>
   );
 };

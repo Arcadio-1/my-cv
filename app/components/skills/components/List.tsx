@@ -3,7 +3,7 @@ import { InView, Skill } from "@/app/util/Types/types";
 import React from "react";
 import Item from "./Item";
 import { useInView } from "react-intersection-observer";
-import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
+// import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
 interface Props {
   skills: Skill[];
 }
@@ -13,7 +13,7 @@ const List = (props: Props) => {
     threshold: 0.5,
     triggerOnce: true,
   });
-  const { ref: skillRef } = useScrollSpy(InView.skills, 0.5);
+  // const { ref: skillRef } = useScrollSpy(InView.skills, 0.5);
 
   // useEffect(() => {
   //   if (inView) {
@@ -41,7 +41,6 @@ const List = (props: Props) => {
       {props.skills.map((skill) => {
         return (
           <div
-            ref={skillRef}
             key={skill.id}
             className={`${inView ? "main-skills-list-item-animator" : ""}`}
           >
