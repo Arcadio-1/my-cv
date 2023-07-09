@@ -1,5 +1,4 @@
 "use client";
-// import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
 import { Expertise, Lang, Theme } from "@/app/util/Types/types";
 import React, { useEffect, useState } from "react";
 
@@ -33,8 +32,6 @@ const Hero = (props: Props) => {
       clearInterval(interval);
     };
   }, [props.expertise, length]);
-
-  // const { ref } = useScrollSpy(InView.home, 1);
 
   return (
     <div className=" main-hero" id="hero">
@@ -90,5 +87,3 @@ const Hero = (props: Props) => {
 };
 
 export default Hero;
-
-// <div>{/* <p onClick={() => uploadHandler()}>tessssssssssss</p> */}</div>

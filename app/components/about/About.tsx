@@ -1,12 +1,11 @@
 "use client";
-import { Personal_info, About_base, InView } from "@/app/util/Types/types";
+import { Personal_info, About_base } from "@/app/util/Types/types";
 import SectionHeader from "@/app/util/ui/SectionHeader/SectionHeader";
 import React from "react";
 import MyImage from "./components/MyImage";
 import Boulshit from "./components/Boulshit";
 import List from "./components/list/List";
 import Tittle from "./components/Tittle";
-// import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
 
 interface Props {
   personal_info: Personal_info;
@@ -31,7 +30,6 @@ const About = async (props: Props) => {
         <List labels={props.base.labels} personal_info={props.personal_info} />
         {props.about && <Boulshit>{props.about}</Boulshit>}
       </div>
-      {/* <Testing /> */}
     </div>
   );
 };

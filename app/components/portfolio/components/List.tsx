@@ -3,7 +3,7 @@ import {
   Portfolio,
   Portfolio_base_buttons_titles,
 } from "@/app/util/Types/types";
-import React, { useEffect } from "react";
+import React from "react";
 import Item from "./Item";
 import { useInView } from "react-intersection-observer";
 interface Props {

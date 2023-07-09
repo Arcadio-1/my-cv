@@ -1,9 +1,8 @@
 import SectionHeader from "@/app/util/ui/SectionHeader/SectionHeader";
-import React, { forwardRef } from "react";
+import React from "react";
 import Form from "./components/form/Form";
 import ContactLines from "./components/contactLines/ContactLines";
 import { Contact_base, Lang, Theme } from "@/app/util/Types/types";
-// import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
 interface Props {
   mobile: string;
   email: string;
@@ -13,7 +12,6 @@ interface Props {
   theme: Theme;
 }
 const Contact = (props: Props) => {
-  // const { ref: contactRef } = useScrollSpy(InView.contact, 0.5);
   return (
     <div className="main-contact">
       <SectionHeader

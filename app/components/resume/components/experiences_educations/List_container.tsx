@@ -1,6 +1,6 @@
 "use client";
 import { Experience } from "@/app/util/Types/types";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useInView } from "react-intersection-observer";
 import Item_container from "./Item_container";
 interface Props {
@@ -8,27 +8,10 @@ interface Props {
   experience: Experience[];
 }
 const List_container = (props: Props) => {
-  // const [experiences, setExperience] = useState<Experience[]>([]);
   const { ref, inView, entry } = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
-  // useEffect(() => {
-  //   setExperience((prev) => {
-  //     return (prev = []);
-  //   });
-  //   if (inView) {
-  //     for (let i = 0; i < props.experience.length; i++) {
-  //       setTimeout(
-  //         () =>
-  //           setExperience((prevState) => {
-  //             return (prevState = [...prevState, props.experience[i]]);
-  //           }),
-  //         1000 * i
-  //       );
-  //     }
-  //   }
-  // }, [props.experience, inView]);
 
   return (
     <div className="main-resume-experiences-experience">

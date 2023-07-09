@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import Filter from "./components/Filter";
 import List from "./components/List";
 import { Group, Portfolio, Portfolio_base } from "@/app/util/Types/types";
-// import useScrollSpy from "@/app/util/Hooks/UseScrollSpy";
 interface Props {
   portfolios: Portfolio[];
   base: Portfolio_base;
@@ -12,7 +11,6 @@ interface Props {
 
 const Portfolio = (props: Props) => {
   const { portfolios } = props;
-  // const { ref } = useScrollSpy(InView.portfolio, 0.5);
 
   const [filters, setFilters] = useState<Group[]>();
   const [filter, setFilter] = useState<Group>(Group.all);
