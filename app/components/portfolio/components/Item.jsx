@@ -107,14 +107,24 @@ const Item = (props) => {
         </Swiper>
       </div>
       <div className="actions">
-        {portfolio.deployed_link && (
-          <div
-            className="actions-btn actions-deploy"
-            title={buttons_titles.show_demo}
-          >
-            <Link target="_blank" href={portfolio.deployed_link}>
-              <Monitor />
-            </Link>
+        {portfolio.deployed_link_1 && (
+          <div className="actions-btn actions-deploy-container">
+            <div
+              className="actions-btn actions-deploy"
+              title={buttons_titles.show_demo}
+            >
+              <Link target="_blank" href={portfolio.deployed_link_1}>
+                <Monitor />
+              </Link>
+            </div>
+            <div
+              className="actions-btn actions-deploy"
+              title={buttons_titles.show_demo}
+            >
+              <Link target="_blank" href={portfolio.deployed_link_2}>
+                <Monitor />
+              </Link>
+            </div>
           </div>
         )}
         {portfolio.repo_link && (

@@ -102,7 +102,8 @@ export interface Portfolio {
   tags: string[];
   prev_image: string;
   images: string[];
-  deployed_link?: string;
+  deployed_link_1?: string;
+  deployed_link_2?: string;
   repo_link?: string;
   download_link?: string;
 }

@@ -140,6 +140,10 @@
               }
             }
             &-deploy {
+              &-container {
+                display: flex;
+                gap: 1rem;
+              }
               svg {
                 width: 2.8rem;
                 path {

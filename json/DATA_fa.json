@@ -135,7 +135,8 @@
             "/portfolio/development/CafeTarane-nextjs/15.png",
             "/portfolio/development/CafeTarane-nextjs/16.png"
           ],
-          "deployed_link": "https://cafe-taraneh-with-nextjs.vercel.app",
+          "deployed_link_1": "https://cafe-taraneh-with-nextjs.vercel.app",
+          "deployed_link_2": "https://taraneh.netlify.app/",
           "repo_link": "https://github.com/Arcadio-1/cafe-taraneh-with-nextjs.git",
           "download_link": ""
         },
@@ -163,7 +164,8 @@
             "/portfolio/development/CafeTaraneBlog-nextjs/15.png",
             "/portfolio/development/CafeTaraneBlog-nextjs/16.png"
           ],
-          "deployed_link": "https://cafe-taraneh-with-nextjs.vercel.app/blog",
+          "deployed_link_1": "https://cafe-taraneh-with-nextjs.vercel.app/blog",
+          "deployed_link_2": "https://taraneh.netlify.app/blog",
           "repo_link": "https://github.com/Arcadio-1/cafe-taraneh-with-nextjs.git",
           "download_link": ""
         },
