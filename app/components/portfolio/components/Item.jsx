@@ -1,9 +1,8 @@
-import { Portfolio } from "@/app/util/Types/types";
 import Image from "next/image";
 import React, { Fragment } from "react";
-import Monitor from "./icons/Monitor";
-import Github from "./icons/Github";
-import Download from "./icons/Download";
+import MonitorIcon from "./icons/MonitorIcon";
+import GithubIcon from "./icons/GithubIcon";
+import DownloadIcon from "./icons/DownloadIcon";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -114,7 +113,7 @@ const Item = (props) => {
               title={buttons_titles.show_demo}
             >
               <Link target="_blank" href={portfolio.deployed_link_1}>
-                <Monitor />
+                <MonitorIcon />
               </Link>
             </div>
             <div
@@ -122,7 +121,7 @@ const Item = (props) => {
               title={buttons_titles.show_demo}
             >
               <Link target="_blank" href={portfolio.deployed_link_2}>
-                <Monitor />
+                <MonitorIcon />
               </Link>
             </div>
           </div>
@@ -133,7 +132,7 @@ const Item = (props) => {
             title={buttons_titles.show_codes}
           >
             <Link target="_blank" href={portfolio.repo_link}>
-              <Github />
+              <GithubIcon />
             </Link>
           </div>
         )}
@@ -142,9 +141,9 @@ const Item = (props) => {
             className="actions-btn actions-pdf"
             title={buttons_titles.download_pdf}
           >
-            <Link target="_blank" href={portfolio.download_link}>
-              <Download />
-            </Link>
+            <a target="_blank" href={portfolio.download_link}>
+              <DownloadIcon />
+            </a>
           </div>
         )}
       </div>

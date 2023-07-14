@@ -62,10 +62,13 @@ const Home_page = (props: Props) => {
       <div className="mr-auto ml-auto">
         <main className="main">
           <Hero
+            base={base.hero_base}
             theme={theme}
             lang={lang}
             name={personal_info.name}
             lastname={personal_info.lastName}
+            resumePdf={personal_info.resume_pdf}
+            resumePng={personal_info.resume_png}
             hero_image_dark={personal_info.hero_image_dark}
             hero_image_light={personal_info.hero_image_light}
             expertise={personal_info.expertise}

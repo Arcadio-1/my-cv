@@ -148,6 +148,14 @@ export interface About_base {
   tittle: string;
   labels: About_base_labels;
 }
+export interface Hero_base_buttons {
+  download_resume_pdf: string;
+  download_resume_png: string;
+}
+export interface Hero_base {
+  section_tittle: string;
+  buttons: Hero_base_buttons;
+}
 
 export interface Skills_base {
   section_tittle: "skills";
@@ -220,6 +228,7 @@ export interface Notif_card {
 }
 export interface BASE {
   nav_links: Nav_link[];
+  hero_base: Hero_base;
   about_base: About_base;
   skills_base: Skills_base;
   resume_base: Resume_base;
@@ -231,6 +240,8 @@ export interface Personal_info {
   nickname: string;
   hero_image_dark: Hero_image;
   hero_image_light: Hero_image;
+  resume_pdf: string;
+  resume_png: string;
   name: string;
   lastName: string;
   marital_status: Marital_status;

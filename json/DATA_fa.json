@@ -2,9 +2,11 @@
   "language": "fa",
   "cv": {
     "personal_info": {
-      "profile_iamge": "/images/profile_2.jpg",
+      "profile_iamge": "/images/profile_3.jpg",
       "hero_image_dark": "/images/hero/hero_dark.jpg",
       "hero_image_light": "/images/hero/hero_light.jpg",
+      "resume_pdf": "/resume/Fa/CV-Fa.pdf",
+      "resume_png": "/resume/Fa/CV-Fa.png",
       "name": "حسین",
       "lastName": "اسکندری",
       "nickName": "Rkdo",
@@ -135,9 +137,9 @@
             "/portfolio/development/CafeTarane-nextjs/15.png",
             "/portfolio/development/CafeTarane-nextjs/16.png"
           ],
-          "deployed_link_1": "https://cafe-taraneh-with-nextjs.vercel.app",
+          "deployed_link_1": "https://taraneh7.vercel.app",
           "deployed_link_2": "https://taraneh.netlify.app/",
-          "repo_link": "https://github.com/Arcadio-1/cafe-taraneh-with-nextjs.git",
+          "repo_link": "https://github.com/Arcadio-1/Taraneh.git",
           "download_link": ""
         },
         {
@@ -164,9 +166,9 @@
             "/portfolio/development/CafeTaraneBlog-nextjs/15.png",
             "/portfolio/development/CafeTaraneBlog-nextjs/16.png"
           ],
-          "deployed_link_1": "https://cafe-taraneh-with-nextjs.vercel.app/blog",
+          "deployed_link_1": "https://taraneh7.vercel.app/blog",
           "deployed_link_2": "https://taraneh.netlify.app/blog",
-          "repo_link": "https://github.com/Arcadio-1/cafe-taraneh-with-nextjs.git",
+          "repo_link": "https://github.com/Arcadio-1/Taraneh.git",
           "download_link": ""
         },
         {
@@ -469,6 +471,13 @@
         "headline": "Contact_icon"
       }
     ],
+    "hero_base": {
+      "section_tittle": "صفحه نخست",
+      "buttons": {
+        "download_resume_pdf": "فایل رزومه (پی دی اف)",
+        "download_resume_png": "فایل رزومه (تصویر)"
+      }
+    },
     "about_base": {
       "section_tittle": "درباره من",
       "tittle": "توسعه دهنده و طراح فرانت اند",

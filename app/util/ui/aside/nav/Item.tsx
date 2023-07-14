@@ -16,10 +16,6 @@ const Item = (props: Props) => {
   const path = usePathname();
   const dispatchClose = useDispatch();
 
-  useEffect(() => {
-    console.log(path);
-  }, [path]);
-
   const closeHandler = () => {
     dispatchClose(uiAction.closeMenu());
   };

@@ -1,5 +1,5 @@
 "use client";
-import { Expertise, Lang, Theme } from "@/app/util/Types/types";
+import { Expertise, Hero_base, Lang, Theme } from "@/app/util/Types/types";
 import React, { useEffect, useState } from "react";
 
 interface Props {
@@ -10,6 +10,9 @@ interface Props {
   hero_image_light: string;
   lang: Lang;
   theme: Theme;
+  resumePdf: string;
+  resumePng: string;
+  base: Hero_base;
 }
 const Hero = (props: Props) => {
   const [expertise, setExpertise] = useState<number>(1);
@@ -80,6 +83,23 @@ const Hero = (props: Props) => {
               </span>
             </div>
           )}
+        </div>
+
+        <div className="flex mt-5 gap-2">
+          <a
+            href={props.resumePng}
+            target="_blank"
+            className="text-lg bg-cyan-800 text-gray-50 p-2 px-5 rounded-lg"
+          >
+            {props.base.buttons.download_resume_png}
+          </a>
+          <a
+            href={props.resumePdf}
+            target="_blank"
+            className="text-lg bg-cyan-800 text-gray-50 p-2 px-5 rounded-lg"
+          >
+            {props.base.buttons.download_resume_pdf}
+          </a>
         </div>
       </div>
     </div>
