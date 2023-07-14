@@ -120,6 +120,26 @@
             }
           }
         }
+        &-links {
+          @include dflex;
+          margin-top: 1rem;
+          gap: 1rem;
+          &-item {
+            background-color: rgba(color(dark-2), 0.5);
+            border: 2px solid rgba(color(light-2), 0.2);
+            backdrop-filter: blur(3px);
+            color: rgba(color(g3-3), 1);
+            font-weight: 600;
+            padding: 0.3rem 1rem;
+            border-radius: 5px;
+            font-size: 1.3rem;
+            letter-spacing: 0.05rem;
+            &:hover {
+              transform: scale(1.02);
+              box-shadow: 1px 1px 2px rgba(color(light-2), 0.3);
+            }
+          }
+        }
         @include responsive(sm) {
           top: 10rem;
           right: 2rem;
@@ -185,6 +205,17 @@
               }
               50% {
                 border-color: color(dark-5);
+              }
+            }
+          }
+          &-links {
+            &-item {
+              background-color: rgba(color(light-2), 0.35);
+              // border: 2px solid rgba(color(dark-2), 0.5);
+              color: rgba(color(g3-4), 1);
+              font-size: 1.3rem;
+              &:hover {
+                box-shadow: 1px 1px 2px rgba(color(light-2), 0.3);
               }
             }
           }

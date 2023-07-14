@@ -85,18 +85,18 @@ const Hero = (props: Props) => {
           )}
         </div>
 
-        <div className="flex mt-5 gap-2">
+        <div className="main-hero-content-links">
           <a
             href={props.resumePng}
             target="_blank"
-            className="text-lg bg-cyan-800 text-gray-50 p-2 px-5 rounded-lg"
+            className="main-hero-content-links-item"
           >
             {props.base.buttons.download_resume_png}
           </a>
           <a
             href={props.resumePdf}
             target="_blank"
-            className="text-lg bg-cyan-800 text-gray-50 p-2 px-5 rounded-lg"
+            className="main-hero-content-links-item"
           >
             {props.base.buttons.download_resume_pdf}
           </a>
