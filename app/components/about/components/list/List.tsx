@@ -10,15 +10,15 @@ interface Props {
 const List = (props: Props) => {
   const { personal_info, labels } = props;
 
-  const { ref, inView, entry } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
+  // const { ref, inView, entry } = useInView({
+  //   threshold: 0.5,
+  //   triggerOnce: true,
+  // });
 
   return (
     <ul
-      ref={ref}
-      className={`main-about-list  ${inView ? "main-about-list-animator" : ""}`}
+      // ref={ref}
+      className={`main-about-list main-about-list-animator`}
     >
       <div className="main-about-list-col">
         <Item label={labels.mobile} data={personal_info.mobile} />
@@ -43,3 +43,5 @@ const List = (props: Props) => {
 };
 
 export default List;
+
+// className={`main-about-list  ${inView ? "main-about-list-animator" : ""}`}

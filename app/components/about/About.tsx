@@ -28,7 +28,7 @@ const About = async (props: Props) => {
           alt={props.personal_info.name}
         />
         <List labels={props.base.labels} personal_info={props.personal_info} />
-        {props.about && <Boulshit>{props.about}</Boulshit>}
+        <Boulshit>{props.about}</Boulshit>
       </div>
     </div>
   );
