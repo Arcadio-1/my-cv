@@ -1,4 +1,5 @@
 "use client";
+import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
 import Image from "next/image";
 import React from "react";
 // import { useInView } from "react-intersection-observer";
@@ -7,6 +8,8 @@ interface Props {
   alt: string;
 }
 const MyImage = (props: Props) => {
+  const { inView, ref } = useScrollMotion();
+
   // const { ref, inView, entry } = useInView({
   //   threshold: 0.5,
   //   triggerOnce: true,
@@ -14,8 +17,10 @@ const MyImage = (props: Props) => {
 
   return (
     <div
-      // ref={ref}
-      className={`main-about-image main-about-image-animator `}
+      ref={ref}
+      className={`main-about-image  ${
+        inView ? "main-about-image-animator" : ""
+      }`}
     >
       <Image
         className="object-cover"

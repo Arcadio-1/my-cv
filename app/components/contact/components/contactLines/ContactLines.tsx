@@ -1,11 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import MobileIcon from "./components/MobileIcon";
 import EmailIcon from "./components/EmailIcon";
 import TelegramIcon from "./components/TelegramIcon";
 import Item from "./components/Item";
-import { useInView } from "react-intersection-observer";
 import { Contact_base_labels } from "@/app/util/Types/types";
+import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
 interface Props {
   mobile: string;
   email: string;
@@ -14,15 +14,7 @@ interface Props {
 }
 
 const ContactLines = (props: Props) => {
-  // const [contactLinesState, setContactLinesState] = useState<
-  //   React.ReactElement[]
-  // >([]);
-
-  const { ref, inView, entry } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
-
+  const { inView, ref } = useScrollMotion();
   const contactLines_arry: React.ReactElement[] = [
     <Item key={1} content={props.email} label={props.labels.email}>
       <EmailIcon />

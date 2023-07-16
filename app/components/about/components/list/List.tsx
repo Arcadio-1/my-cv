@@ -1,24 +1,24 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Item from "./Item";
 import { About_base_labels, Personal_info } from "@/app/util/Types/types";
-import { useInView } from "react-intersection-observer";
+import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
 interface Props {
   personal_info: Personal_info;
   labels: About_base_labels;
 }
 const List = (props: Props) => {
   const { personal_info, labels } = props;
+  const { inView, ref } = useScrollMotion();
 
-  // const { ref, inView, entry } = useInView({
-  //   threshold: 0.5,
-  //   triggerOnce: true,
-  // });
+  useEffect(() => {
+    console.log(inView);
+  }, [inView]);
 
   return (
-    <ul
-      // ref={ref}
-      className={`main-about-list main-about-list-animator`}
+    <div
+      ref={ref}
+      className={`main-about-list  ${inView ? "main-about-list-animator" : ""}`}
     >
       <div className="main-about-list-col">
         <Item label={labels.mobile} data={personal_info.mobile} />
@@ -38,7 +38,7 @@ const List = (props: Props) => {
         />
         <Item label={labels.get_project} data={personal_info.get_project} />
       </div>
-    </ul>
+    </div>
   );
 };
 

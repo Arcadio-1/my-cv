@@ -60,7 +60,7 @@
         max-width: 25rem;
         min-width: 20rem;
         width: 100%;
-        transform: translateX(50px);
+        transform: translateX(400px);
         @include responsive(lg) {
           margin-top: 2rem;
         }
@@ -71,7 +71,7 @@
         }
         @keyframes aboutImageAnime {
           0% {
-            transform: translateX(50px);
+            transform: translateX(400px);
           }
           100% {
             transform: translateX(0px);
@@ -94,17 +94,17 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
-        transform: translateX(50px);
+        transform: translateX(400px);
         @include responsive(lg) {
           margin-top: 2rem;
         }
         &-animator {
-          transform: translateX(0px) !important ;
+          transform: translateX(0px);
           animation: aboutListAnime 0.5s ease-in alternate;
         }
         @keyframes aboutListAnime {
           0% {
-            transform: translateX(50px);
+            transform: translateX(400px);
           }
           100% {
             transform: translateX(0px);

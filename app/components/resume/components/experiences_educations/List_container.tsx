@@ -1,17 +1,14 @@
 "use client";
 import { Experience } from "@/app/util/Types/types";
 import React from "react";
-import { useInView } from "react-intersection-observer";
 import Item_container from "./Item_container";
+import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
 interface Props {
   header: string;
   experience: Experience[];
 }
 const List_container = (props: Props) => {
-  const { ref, inView, entry } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
+  const { inView, ref } = useScrollMotion();
 
   return (
     <div className="main-resume-experiences-experience">

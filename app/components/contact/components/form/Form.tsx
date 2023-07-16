@@ -16,7 +16,7 @@ import {
   Theme,
 } from "@/app/util/Types/types";
 import NotifCard from "@/app/util/ui/notifCard/NotifCard";
-import { useInView } from "react-intersection-observer";
+import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
 
 interface Props {
   placeHolders: Form_base_place_holders;
@@ -33,11 +33,11 @@ const Form = (props: Props) => {
   const sendMessageStatus = useSelector(
     (state: any) => state.ui.send_message_status
   );
-  const { ref, inView, entry } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
-
+  // const { ref, inView, entry } = useInView({
+  //   threshold: 0.5,
+  //   triggerOnce: true,
+  // });
+  const { inView, ref } = useScrollMotion();
   const {
     value: nameValue,
     isValid: isNameValid,
@@ -181,13 +181,14 @@ const Form = (props: Props) => {
 
   return (
     <div
+      ref={ref}
       className={`main-contact-form ${
         inView ? "main-contact-form-animator" : ""
       }`}
     >
       <NotifCard theme={props.theme} lang={props.lang} />
 
-      <form ref={ref} className="formContainer">
+      <form className="formContainer">
         <Item
           onBlur={nameBlurHandler}
           onChange={nameChangeHandler}

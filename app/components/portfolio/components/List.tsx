@@ -5,23 +5,19 @@ import {
 } from "@/app/util/Types/types";
 import React from "react";
 import Item from "./Item";
-import { useInView } from "react-intersection-observer";
+import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
 interface Props {
   portfolios: Portfolio[];
   filter: Group;
   itemsTitle: Portfolio_base_buttons_titles;
 }
 const List = (props: Props) => {
-  const { ref, inView, entry } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
-
+  const { inView, ref } = useScrollMotion();
   return (
-    <ul ref={ref} className="main-portfolio-list">
+    <div ref={ref} className="main-portfolio-list">
       {props.portfolios.map((item) => {
         return (
-          <li
+          <div
             key={item.id}
             className={`main-portfolio-list-item ${
               (props.filter === Group.all || props.filter === item.group) &&
@@ -31,10 +27,10 @@ const List = (props: Props) => {
             }`}
           >
             <Item portfolio={item} buttons_titles={props.itemsTitle} />
-          </li>
+          </div>
         );
       })}
-    </ul>
+    </div>
   );
 };
 

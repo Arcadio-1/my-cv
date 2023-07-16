@@ -1,7 +1,7 @@
 "use client";
+import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
 import { Language } from "@/app/util/Types/types";
 import React, { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
 
 interface Props {
   language: Language;
@@ -10,14 +10,9 @@ interface Props {
 const Item = (props: Props) => {
   const { language } = props;
   const [level, setLevel] = useState<number>(0);
-  const {
-    ref: languageRef,
-    inView,
-    entry,
-  } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
+
+  const { inView, ref: languageRef } = useScrollMotion();
+
   useEffect(() => {
     if (inView) {
       for (let i = 0; i < props.language.level; i++) {
