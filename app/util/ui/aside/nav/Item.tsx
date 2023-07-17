@@ -2,8 +2,8 @@
 // import Link from "next/link";
 import React, { useEffect } from "react";
 import Icon from "./Icons";
-import { useDispatch } from "react-redux";
-import { uiAction } from "@/redux/features/ui/uiSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { UiMainState, uiAction } from "@/redux/features/ui/uiSlice";
 import { usePathname } from "next/navigation";
 interface Props {
   id: string;
@@ -15,12 +15,19 @@ interface Props {
 const Item = (props: Props) => {
   const path = usePathname();
   const dispatchClose = useDispatch();
+  const isMenuOpen = useSelector((state: UiMainState) => state.ui.isMenuOpen);
 
-  // const closeHandler = () => {
-  //   dispatchClose(uiAction.closeMenu());
-  // };
+  useEffect(() => {
+    console.log(isMenuOpen);
+  }, [isMenuOpen]);
+
+  const closeHandler = () => {
+    if (isMenuOpen) {
+      dispatchClose(uiAction.closeMenu());
+    }
+  };
   return (
-    <li className={`aside-nav-list-item `}>
+    <li className={`aside-nav-list-item `} onClick={isMenuOpen && closeHandler}>
       <a href={`${path}#${props.link}`}>
         <Icon component={props.component} id={props.id} />
         <span>{props.tittle}</span>

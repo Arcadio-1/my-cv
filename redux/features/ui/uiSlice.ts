@@ -18,6 +18,10 @@ interface UiState {
   inView: InView;
 }
 
+export interface UiMainState {
+  ui: UiState;
+}
+
 const initialState = {
   isMenuOpen: OpenToggle.close,
   isShowBackdrop: OpenToggle.close,

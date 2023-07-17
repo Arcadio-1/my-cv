@@ -1,6 +1,6 @@
 export enum OpenToggle {
-  open,
-  close,
+  open = "open",
+  close = "close",
 }
 export enum Theme {
   Dark = "Dark",
