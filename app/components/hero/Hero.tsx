@@ -37,7 +37,7 @@ const Hero = (props: Props) => {
   }, [props.expertise, length]);
 
   return (
-    <div className=" main-hero" id="hero">
+    <div className=" main-hero" id="home">
       <div
         className="main-hero-background"
         style={{
