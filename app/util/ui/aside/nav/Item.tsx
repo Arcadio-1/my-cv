@@ -1,5 +1,5 @@
 "use clinet";
-import Link from "next/link";
+// import Link from "next/link";
 import React, { useEffect } from "react";
 import Icon from "./Icons";
 import { useDispatch } from "react-redux";
@@ -21,10 +21,10 @@ const Item = (props: Props) => {
   // };
   return (
     <li className={`aside-nav-list-item `}>
-      <Link href={`${path}#${props.link}`}>
+      <a href={`${path}#${props.link}`}>
         <Icon component={props.component} id={props.id} />
         <span>{props.tittle}</span>
-      </Link>
+      </a>
     </li>
   );
 };
