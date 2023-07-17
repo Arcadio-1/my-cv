@@ -15,6 +15,9 @@ interface Props {
   itemsTitle: Portfolio_base_buttons_titles;
 }
 const List = (props: Props) => {
+  const isAnimationActive = useSelector(
+    (state: UiMainState) => state.ui.activeAnimation
+  );
   const { inView, ref } = useScrollMotion(InView.portfolio);
   return (
     <div ref={ref} className="main-portfolio-list">
@@ -24,7 +27,7 @@ const List = (props: Props) => {
             key={item.id}
             className={`main-portfolio-list-item ${
               (props.filter === Group.all || props.filter === item.group) &&
-              inView
+              (!isAnimationActive || inView)
                 ? "selectedItem"
                 : "notSelected"
             }`}
