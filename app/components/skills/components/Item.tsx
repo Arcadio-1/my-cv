@@ -1,10 +1,15 @@
 import { Skill } from "@/app/util/Types/types";
+import { UiMainState } from "@/redux/features/ui/uiSlice";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 interface Props {
   skill: Skill;
 }
 const Item = (props: Props) => {
+  const isAnimationActive = useSelector(
+    (state: UiMainState) => state.ui.activeAnimation
+  );
   const { skill } = props;
   const { tittle, level, icon_img } = skill;
 
@@ -25,7 +30,9 @@ const Item = (props: Props) => {
       <div
         className="main-skills-list-item-progressBar"
         style={{
-          background: `conic-gradient(from 0deg at 50% 50%,#3875aa ${levState}%,#00000010 0% )`,
+          background: `conic-gradient(from 0deg at 50% 50%,#3875aa ${
+            isAnimationActive ? levState : level
+          }%,#00000010 0% )`,
         }}
       >
         <div className="main-skills-list-item-main">
