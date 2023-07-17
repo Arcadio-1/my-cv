@@ -6,9 +6,9 @@ const useScrollMotion = () => {
   const [inView, setInView] = useState<boolean>(false);
 
   const onScroll: EventListener = () => {
-    let height = window.innerHeight;
+    let screenHeight = window.innerHeight;
     const topPos = ref.current?.getBoundingClientRect().top;
-    if (topPos && topPos < height / 1.2) {
+    if (topPos && topPos < screenHeight / 1.2) {
       setInView(true);
       window.removeEventListener("scroll", onScroll);
     }

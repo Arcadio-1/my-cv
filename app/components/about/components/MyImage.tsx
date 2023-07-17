@@ -10,11 +10,6 @@ interface Props {
 const MyImage = (props: Props) => {
   const { inView, ref } = useScrollMotion();
 
-  // const { ref, inView, entry } = useInView({
-  //   threshold: 0.5,
-  //   triggerOnce: true,
-  // });
-
   return (
     <div
       ref={ref}

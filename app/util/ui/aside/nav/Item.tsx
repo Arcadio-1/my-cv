@@ -16,11 +16,11 @@ const Item = (props: Props) => {
   const path = usePathname();
   const dispatchClose = useDispatch();
 
-  const closeHandler = () => {
-    dispatchClose(uiAction.closeMenu());
-  };
+  // const closeHandler = () => {
+  //   dispatchClose(uiAction.closeMenu());
+  // };
   return (
-    <li className={`aside-nav-list-item `} onClick={closeHandler}>
+    <li className={`aside-nav-list-item `}>
       <Link href={`${path}#${props.link}`}>
         <Icon component={props.component} id={props.id} />
         <span>{props.tittle}</span>
