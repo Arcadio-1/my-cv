@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from "react";
+import { InView } from "../Types/types";
+import { useDispatch } from "react-redux";
+import { uiAction } from "@/redux/features/ui/uiSlice";
 
-const useScrollMotion = () => {
+const useScrollMotion = (section: InView) => {
   const ref = useRef<HTMLDivElement>(null);
+  const dispatchInView = useDispatch();
 
   const [inView, setInView] = useState<boolean>(false);
 
@@ -10,6 +14,7 @@ const useScrollMotion = () => {
     const topPos = ref.current?.getBoundingClientRect().top;
     if (topPos && topPos < screenHeight / 1.2) {
       setInView(true);
+      dispatchInView(uiAction.set_inView(section));
       window.removeEventListener("scroll", onScroll);
     }
   };

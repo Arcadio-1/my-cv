@@ -1,5 +1,5 @@
 "use client";
-import { Experience } from "@/app/util/Types/types";
+import { Experience, InView } from "@/app/util/Types/types";
 import React from "react";
 import Item_container from "./Item_container";
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
@@ -8,7 +8,7 @@ interface Props {
   experience: Experience[];
 }
 const List_container = (props: Props) => {
-  const { inView, ref } = useScrollMotion();
+  const { inView, ref } = useScrollMotion(InView.resume);
 
   return (
     <div className="main-resume-experiences-experience">

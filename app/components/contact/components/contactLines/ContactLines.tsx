@@ -4,7 +4,7 @@ import MobileIcon from "./components/MobileIcon";
 import EmailIcon from "./components/EmailIcon";
 import TelegramIcon from "./components/TelegramIcon";
 import Item from "./components/Item";
-import { Contact_base_labels } from "@/app/util/Types/types";
+import { Contact_base_labels, InView } from "@/app/util/Types/types";
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
 interface Props {
   mobile: string;
@@ -14,7 +14,7 @@ interface Props {
 }
 
 const ContactLines = (props: Props) => {
-  const { inView, ref } = useScrollMotion();
+  const { inView, ref } = useScrollMotion(InView.contact);
   const contactLines_arry: React.ReactElement[] = [
     <Item key={1} content={props.email} label={props.labels.email}>
       <EmailIcon />

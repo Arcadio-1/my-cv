@@ -1,5 +1,6 @@
 "use client";
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
+import { InView } from "@/app/util/Types/types";
 import Image from "next/image";
 import React from "react";
 // import { useInView } from "react-intersection-observer";
@@ -8,7 +9,7 @@ interface Props {
   alt: string;
 }
 const MyImage = (props: Props) => {
-  const { inView, ref } = useScrollMotion();
+  const { inView, ref } = useScrollMotion(InView.about);
 
   return (
     <div

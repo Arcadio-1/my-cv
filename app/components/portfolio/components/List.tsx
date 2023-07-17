@@ -1,5 +1,6 @@
 import {
   Group,
+  InView,
   Portfolio,
   Portfolio_base_buttons_titles,
 } from "@/app/util/Types/types";
@@ -12,7 +13,7 @@ interface Props {
   itemsTitle: Portfolio_base_buttons_titles;
 }
 const List = (props: Props) => {
-  const { inView, ref } = useScrollMotion();
+  const { inView, ref } = useScrollMotion(InView.portfolio);
   return (
     <div ref={ref} className="main-portfolio-list">
       {props.portfolios.map((item) => {

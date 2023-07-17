@@ -1,5 +1,5 @@
 "use client";
-import { Skill } from "@/app/util/Types/types";
+import { InView, Skill } from "@/app/util/Types/types";
 import React, { useState, useEffect } from "react";
 import Item from "./Item";
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
@@ -9,7 +9,7 @@ interface Props {
 const List = (props: Props) => {
   const [skills, setSkills] = useState<Skill[]>([]);
 
-  const { inView, ref } = useScrollMotion();
+  const { inView, ref } = useScrollMotion(InView.skills);
 
   useEffect(() => {
     if (inView) {
@@ -27,10 +27,6 @@ const List = (props: Props) => {
       }
     }
   }, [props.skills, inView]);
-
-  useEffect(() => {
-    console.log(inView);
-  }, [inView]);
 
   return (
     <div ref={ref} className={`main-skills-list`}>

@@ -1,5 +1,12 @@
 "use client";
-import { Expertise, Hero_base, Lang, Theme } from "@/app/util/Types/types";
+import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
+import {
+  Expertise,
+  Hero_base,
+  InView,
+  Lang,
+  Theme,
+} from "@/app/util/Types/types";
 import React, { useEffect, useState } from "react";
 
 interface Props {
@@ -16,6 +23,8 @@ interface Props {
 }
 const Hero = (props: Props) => {
   const [expertise, setExpertise] = useState<number>(1);
+  const { inView, ref } = useScrollMotion(InView.home);
+
   const length = props.expertise.length;
   useEffect(() => {
     const interval = setInterval(
@@ -37,7 +46,7 @@ const Hero = (props: Props) => {
   }, [props.expertise, length]);
 
   return (
-    <div className=" main-hero" id="home">
+    <div ref={ref} className=" main-hero" id="home">
       <div
         className="main-hero-background"
         style={{

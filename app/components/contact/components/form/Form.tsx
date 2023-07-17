@@ -11,6 +11,7 @@ import {
   Form_base_error_messages,
   Form_base_notifs_card,
   Form_base_place_holders,
+  InView,
   Lang,
   Status,
   Theme,
@@ -37,7 +38,7 @@ const Form = (props: Props) => {
   //   threshold: 0.5,
   //   triggerOnce: true,
   // });
-  const { inView, ref } = useScrollMotion();
+  const { inView, ref } = useScrollMotion(InView.contact);
   const {
     value: nameValue,
     isValid: isNameValid,

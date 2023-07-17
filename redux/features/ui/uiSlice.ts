@@ -45,7 +45,7 @@ const initialState = {
     tittle: "loading",
     message: "loading",
   },
-  inView: InView.null,
+  inView: InView.home,
 } as UiState;
 
 const uiSlice = createSlice({

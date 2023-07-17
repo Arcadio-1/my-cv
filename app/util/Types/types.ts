@@ -127,7 +127,7 @@ export type Hero_image = string;
 export interface Nav_link {
   id: string;
   tittle: string;
-  link: string;
+  link: InView;
   icon: string;
   component: string;
   headline: string;

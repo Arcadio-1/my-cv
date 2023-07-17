@@ -1,7 +1,11 @@
 "use client";
 import React, { useEffect } from "react";
 import Item from "./Item";
-import { About_base_labels, Personal_info } from "@/app/util/Types/types";
+import {
+  About_base_labels,
+  InView,
+  Personal_info,
+} from "@/app/util/Types/types";
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
 interface Props {
   personal_info: Personal_info;
@@ -9,11 +13,7 @@ interface Props {
 }
 const List = (props: Props) => {
   const { personal_info, labels } = props;
-  const { inView, ref } = useScrollMotion();
-
-  useEffect(() => {
-    console.log(inView);
-  }, [inView]);
+  const { inView, ref } = useScrollMotion(InView.about);
 
   return (
     <div

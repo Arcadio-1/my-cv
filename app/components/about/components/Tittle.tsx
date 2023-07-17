@@ -1,5 +1,6 @@
 "use client";
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
+import { InView } from "@/app/util/Types/types";
 import React, { useEffect, useRef, useState } from "react";
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
 }
 
 const Tittle = (props: Props) => {
-  const { inView, ref } = useScrollMotion();
+  const { inView, ref } = useScrollMotion(InView.about);
   // const ref = useRef<HTMLDivElement>(null);
 
   // const [show, setShow] = useState<boolean>(false);

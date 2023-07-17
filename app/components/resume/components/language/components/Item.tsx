@@ -1,6 +1,6 @@
 "use client";
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
-import { Language } from "@/app/util/Types/types";
+import { InView, Language } from "@/app/util/Types/types";
 import React, { useEffect, useState } from "react";
 
 interface Props {
@@ -11,7 +11,7 @@ const Item = (props: Props) => {
   const { language } = props;
   const [level, setLevel] = useState<number>(0);
 
-  const { inView, ref: languageRef } = useScrollMotion();
+  const { inView, ref: languageRef } = useScrollMotion(InView.resume);
 
   useEffect(() => {
     if (inView) {
