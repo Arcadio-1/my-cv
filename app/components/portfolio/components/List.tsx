@@ -7,6 +7,8 @@ import {
 import React from "react";
 import Item from "./Item";
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
+import { useSelector } from "react-redux";
+import { UiMainState } from "@/redux/features/ui/uiSlice";
 interface Props {
   portfolios: Portfolio[];
   filter: Group;

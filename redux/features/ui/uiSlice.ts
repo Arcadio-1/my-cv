@@ -16,6 +16,8 @@ interface UiState {
   isMenuOpen: OpenToggle;
   isShowBackdrop: OpenToggle;
   inView: InView;
+  windowWidth: number;
+  activeAnimation: boolean;
 }
 
 export interface UiMainState {
@@ -46,6 +48,8 @@ const initialState = {
     message: "loading",
   },
   inView: InView.home,
+  windowWidth: 0,
+  activeAnimation: false,
 } as UiState;
 
 const uiSlice = createSlice({
@@ -98,6 +102,15 @@ const uiSlice = createSlice({
     },
     set_inView(state, action) {
       state.inView = action.payload;
+    },
+    set_windowWidth(state, action) {
+      state.windowWidth = action.payload;
+    },
+    activeAnimation(state) {
+      state.activeAnimation = true;
+    },
+    deactiveAnimation(state) {
+      state.activeAnimation = false;
     },
   },
 });

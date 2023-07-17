@@ -44,7 +44,16 @@
               background-color: rgba(color(dark-2), 0.2);
               border-radius: 5px;
               margin: 1rem;
+              opacity: 0;
+              transform: translateX(-200px);
+
+              @include responsive(md) {
+                opacity: 1;
+                transform: translateX(0);
+              }
               &-animator {
+                opacity: 1;
+                transform: translateX(0);
                 animation: resumeExperiencesAnime 0.2s alternate;
               }
               @keyframes resumeExperiencesAnime {

@@ -7,18 +7,27 @@ import {
   Personal_info,
 } from "@/app/util/Types/types";
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
+import { useSelector } from "react-redux";
+import { UiMainState } from "@/redux/features/ui/uiSlice";
 interface Props {
   personal_info: Personal_info;
   labels: About_base_labels;
 }
 const List = (props: Props) => {
+  const isAnimationActive = useSelector(
+    (state: UiMainState) => state.ui.activeAnimation
+  );
+
   const { personal_info, labels } = props;
+
   const { inView, ref } = useScrollMotion(InView.about);
 
   return (
     <div
       ref={ref}
-      className={`main-about-list  ${inView ? "main-about-list-animator" : ""}`}
+      className={`main-about-list  ${
+        isAnimationActive && inView ? "main-about-list-animator" : ""
+      }`}
     >
       <div className="main-about-list-col">
         <Item label={labels.mobile} data={personal_info.mobile} />

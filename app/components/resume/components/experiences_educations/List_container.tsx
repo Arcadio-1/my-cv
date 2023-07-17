@@ -3,11 +3,16 @@ import { Experience, InView } from "@/app/util/Types/types";
 import React from "react";
 import Item_container from "./Item_container";
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
+import { useSelector } from "react-redux";
+import { UiMainState } from "@/redux/features/ui/uiSlice";
 interface Props {
   header: string;
   experience: Experience[];
 }
 const List_container = (props: Props) => {
+  const isAnimationActive = useSelector(
+    (state: UiMainState) => state.ui.activeAnimation
+  );
   const { inView, ref } = useScrollMotion(InView.resume);
 
   return (
@@ -19,7 +24,9 @@ const List_container = (props: Props) => {
         {props.experience.map((item) => {
           return (
             <div
-              className={`list-item ${inView ? "list-item-animator" : ""}`}
+              className={`list-item ${
+                isAnimationActive && inView ? "list-item-animator" : ""
+              }`}
               key={item.id}
             >
               <Item_container item={item} />

@@ -39,6 +39,9 @@
         margin-bottom: 2rem;
         padding-right: 2.5rem;
         margin-bottom: 1.5rem;
+        @include responsive(md) {
+          opacity: 1;
+        }
         &-animator {
           opacity: 1;
           animation: aboutTittleAnime 0.5s ease-in alternate;
@@ -63,6 +66,10 @@
         transform: translateX(400px);
         @include responsive(lg) {
           margin-top: 2rem;
+        }
+        @include responsive(md) {
+          transform: translateX(0px);
+          opacity: 1;
         }
         &-animator {
           transform: translateX(0px);
@@ -97,6 +104,9 @@
         transform: translateX(400px);
         @include responsive(lg) {
           margin-top: 2rem;
+        }
+        @include responsive(md) {
+          transform: translateX(0px);
         }
         &-animator {
           transform: translateX(0px);
@@ -155,6 +165,9 @@
         grid-area: aboutboulshit;
         color: color(light-2);
         opacity: 0;
+        @include responsive(md) {
+          opacity: 1;
+        }
         &-animator {
           opacity: 1;
           animation: aboutBoulshitAnime 0.5s ease-in alternate;

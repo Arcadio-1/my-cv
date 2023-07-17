@@ -33,6 +33,9 @@
           background-color: rgba(color(g3-2), 0.1);
           padding: 1rem;
           transition: all 0.15s linear;
+          @include responsive(md) {
+            opacity: 1;
+          }
           &-icon {
             flex: 1 0 auto;
             width: 100%;
@@ -101,11 +104,18 @@
         padding: 2rem 1rem;
         background-color: rgba(color(g3-2), 0.1);
         opacity: 0;
+        transform: translateX(-400px);
+        @include responsive(md) {
+          opacity: 1;
+          transform: translateX(0);
+        }
         .formContainer {
           width: 100%;
+          transform: translateX(0);
         }
         &-animator {
           opacity: 1;
+          transform: translateX(0);
           animation: contactFormItemAnime 1s ease-in alternate;
         }
         @keyframes contactFormItemAnime {

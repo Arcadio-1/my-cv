@@ -3,10 +3,15 @@ import { InView, Skill } from "@/app/util/Types/types";
 import React, { useState, useEffect } from "react";
 import Item from "./Item";
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
+import { useSelector } from "react-redux";
+import { UiMainState } from "@/redux/features/ui/uiSlice";
 interface Props {
   skills: Skill[];
 }
 const List = (props: Props) => {
+  const isAnimationActive = useSelector(
+    (state: UiMainState) => state.ui.activeAnimation
+  );
   const [skills, setSkills] = useState<Skill[]>([]);
 
   const { inView, ref } = useScrollMotion(InView.skills);
@@ -30,16 +35,24 @@ const List = (props: Props) => {
 
   return (
     <div ref={ref} className={`main-skills-list`}>
-      {skills.map((skill) => {
-        return (
-          <div
-            key={skill.id}
-            className={`${inView ? "main-skills-list-item-animator" : ""}`}
-          >
-            <Item skill={skill} />
-          </div>
-        );
-      })}
+      {isAnimationActive
+        ? skills.map((skill) => {
+            return (
+              <div
+                key={skill.id}
+                className={`${inView ? "main-skills-list-item-animator" : ""}`}
+              >
+                <Item skill={skill} />
+              </div>
+            );
+          })
+        : props.skills.map((skill) => {
+            return (
+              <div key={skill.id}>
+                <Item skill={skill} />
+              </div>
+            );
+          })}
     </div>
   );
 };

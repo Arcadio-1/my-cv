@@ -6,6 +6,8 @@ import TelegramIcon from "./components/TelegramIcon";
 import Item from "./components/Item";
 import { Contact_base_labels, InView } from "@/app/util/Types/types";
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
+import { useSelector } from "react-redux";
+import { UiMainState } from "@/redux/features/ui/uiSlice";
 interface Props {
   mobile: string;
   email: string;
@@ -14,6 +16,9 @@ interface Props {
 }
 
 const ContactLines = (props: Props) => {
+  const isAnimationActive = useSelector(
+    (state: UiMainState) => state.ui.activeAnimation
+  );
   const { inView, ref } = useScrollMotion(InView.contact);
   const contactLines_arry: React.ReactElement[] = [
     <Item key={1} content={props.email} label={props.labels.email}>
@@ -26,20 +31,6 @@ const ContactLines = (props: Props) => {
       <TelegramIcon />
     </Item>,
   ];
-  // useEffect(() => {
-  //   if (inView) {
-  //     setContactLinesState((prev) => {
-  //       return (prev = []);
-  //     });
-  //     for (let i = 0; i < contactLines_arry.length; i++) {
-  //       setTimeout(() => {
-  //         setContactLinesState((prev) => {
-  //           return (prev = [...prev, contactLines_arry[i]]);
-  //         });
-  //       }, 300 * i);
-  //     }
-  //   }
-  // }, [inView, props]);
 
   return (
     <div ref={ref} className="main-contact-contactLines">
@@ -47,7 +38,9 @@ const ContactLines = (props: Props) => {
         return (
           <div
             className={`main-contact-contactLines-item ${
-              inView ? "main-contact-contactLines-animator" : ""
+              isAnimationActive && inView
+                ? "main-contact-contactLines-animator"
+                : ""
             } `}
             key={index}
           >

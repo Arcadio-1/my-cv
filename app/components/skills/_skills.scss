@@ -16,21 +16,6 @@
         overflow: hidden;
         gap: 2rem;
         background-color: rgba(color(g3-2), 0.1);
-        &-animator {
-          opacity: 1;
-          animation: skillItemAnime 1s alternate;
-        }
-        @keyframes skillItemAnime {
-          0% {
-            transform: translateX(-200px);
-            opacity: 0.5;
-          }
-          100% {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-
         &-item {
           overflow: hidden;
           @include dflex;

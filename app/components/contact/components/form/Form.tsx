@@ -5,7 +5,7 @@ import Item from "./components/Item";
 import MailIcon from "./components/MailIcon";
 import UserIcon from "./components/UserIcon";
 import { useDispatch, useSelector } from "react-redux";
-import { uiAction } from "@/redux/features/ui/uiSlice";
+import { UiMainState, uiAction } from "@/redux/features/ui/uiSlice";
 import {
   Form_base_buttons,
   Form_base_error_messages,
@@ -29,15 +29,14 @@ interface Props {
 }
 
 const Form = (props: Props) => {
+  const isAnimationActive = useSelector(
+    (state: UiMainState) => state.ui.activeAnimation
+  );
   const dispatchSendMessageStatus = useDispatch();
   const dispatchNotifCardStatus = useDispatch();
   const sendMessageStatus = useSelector(
     (state: any) => state.ui.send_message_status
   );
-  // const { ref, inView, entry } = useInView({
-  //   threshold: 0.5,
-  //   triggerOnce: true,
-  // });
   const { inView, ref } = useScrollMotion(InView.contact);
   const {
     value: nameValue,
@@ -184,7 +183,7 @@ const Form = (props: Props) => {
     <div
       ref={ref}
       className={`main-contact-form ${
-        inView ? "main-contact-form-animator" : ""
+        isAnimationActive && inView ? "main-contact-form-animator" : ""
       }`}
     >
       <NotifCard theme={props.theme} lang={props.lang} />
