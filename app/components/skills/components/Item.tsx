@@ -36,7 +36,7 @@ const Item = (props: Props) => {
         }}
       >
         <div className="main-skills-list-item-main">
-          <Image src={icon_img} width={200} height={200} alt={tittle} />
+          <Image src={icon_img} width={100} height={100} alt={tittle} />
         </div>
       </div>
       <h2 className="main-skills-list-item-tittle">{tittle}</h2>

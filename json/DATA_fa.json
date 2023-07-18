@@ -419,6 +419,13 @@
           "level": 40,
           "icon_img": "/images/skills/img/firebase.png",
           "icon_icon": "/images/skills/icon/firebase.svg"
+        },
+        {
+          "id": "8",
+          "tittle": "TDD",
+          "level": 80,
+          "icon_img": "/images/skills/img/TDD.png",
+          "icon_icon": "/images/skills/icon/TDD.svg"
         }
       ],
       "fluent_languages": [

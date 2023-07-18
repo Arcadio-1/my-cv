@@ -19,9 +19,9 @@ const Item = (props: Props) => {
   const isMenuOpen = useSelector((state: UiMainState) => state.ui.isMenuOpen);
   const inView = useSelector((state: UiMainState) => state.ui.inView);
 
-  useEffect(() => {
-    console.log(inView);
-  }, [inView]);
+  // useEffect(() => {
+  //   console.log(inView);
+  // }, [inView]);
 
   const closeHandler = () => {
     if (isMenuOpen) {
