@@ -100,7 +100,7 @@
         {
           "id": "1",
           "tittle": "Technical support and graphic design",
-          "place": "Dchat(mehrdesign)",
+          "place": "Dchat (MehrDesign)",
           "since": "2012",
           "to": "2017"
         },
@@ -110,6 +110,13 @@
           "place": "kristal pars Company",
           "since": "2019",
           "to": "2021"
+        },
+        {
+          "id": "3",
+          "tittle": "full stack developer",
+          "place": "freelancer",
+          "since": "2021",
+          "to": "now"
         }
       ],
       "portfolios": [
