@@ -25,11 +25,11 @@ const Resume = (props: Props) => {
         <div className="main-resume-experiences">
           <List_container
             experience={props.educations}
-            header={props.base.labels.work_experiences}
+            header={props.base.labels.educations}
           />
           <List_container
             experience={props.work_experiences}
-            header={props.base.labels.educations}
+            header={props.base.labels.work_experiences}
           />
         </div>
 
