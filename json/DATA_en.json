@@ -99,8 +99,8 @@
       "work_experiences": [
         {
           "id": "1",
-          "tittle": "Technical support and graphic design",
-          "place": "Dchat (MehrDesign)",
+          "tittle": "FrontEnd Developer and Technical support",
+          "place": "MehrDesign",
           "since": "2012",
           "to": "2017"
         },
@@ -114,7 +114,7 @@
         {
           "id": "3",
           "tittle": "full stack developer",
-          "place": "freelancer",
+          "place": "freelance",
           "since": "2021",
           "to": "now"
         }
