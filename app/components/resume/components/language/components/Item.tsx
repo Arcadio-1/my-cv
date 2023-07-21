@@ -2,6 +2,7 @@
 import useScrollMotion from "@/app/util/Hooks/UseScrollMotion";
 import { InView, Language } from "@/app/util/Types/types";
 import { UiMainState } from "@/redux/features/ui/uiSlice";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
@@ -31,19 +32,22 @@ const Item = (props: Props) => {
   }, [props.language.level, inView]);
   return (
     <div ref={languageRef} key={language.id} className="list-item">
-      <div className="data">
-        <h2 className="data-tittle">{language.tittle}</h2>
-        <span className="data-persent">
-          {isAnimationActive ? level : props.language.level}%
-        </span>
-      </div>
-      <div className="progressBar">
-        <div
-          className="progressBar-percent"
-          style={{
-            width: `${isAnimationActive ? level : props.language.level}%`,
-          }}
-        ></div>
+      <Image src={language.img} alt={language.tittle} width={40} height={40} />
+      <div className="content">
+        <div className="data">
+          <h2 className="data-tittle">{language.tittle}</h2>
+          <span className="data-persent">
+            {isAnimationActive ? level : props.language.level}%
+          </span>
+        </div>
+        <div className="progressBar">
+          <div
+            className="progressBar-percent"
+            style={{
+              width: `${isAnimationActive ? level : props.language.level}%`,
+            }}
+          ></div>
+        </div>
       </div>
     </div>
   );

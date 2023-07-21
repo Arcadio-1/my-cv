@@ -429,8 +429,18 @@
         }
       ],
       "fluent_languages": [
-        { "id": "0", "tittle": "انگلیسی", "level": 80 },
-        { "id": "1", "tittle": "کوردی", "level": 100 }
+        {
+          "id": "0",
+          "tittle": "انگلیسی",
+          "level": 80,
+          "img": "/images/fluent_languages/english.png"
+        },
+        {
+          "id": "1",
+          "tittle": "کوردی",
+          "level": 100,
+          "img": "/images/fluent_languages/kurdish.png"
+        }
       ]
     }
   },

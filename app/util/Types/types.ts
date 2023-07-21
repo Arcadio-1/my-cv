@@ -121,6 +121,7 @@ export interface Language {
   id: string;
   tittle: string;
   level: number;
+  img: string;
 }
 export type Hero_image = string;
 

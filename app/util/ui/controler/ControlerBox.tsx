@@ -7,6 +7,7 @@ import Dark_icon from "./icons/Dark_icon";
 import GithubIcon from "./icons/GithubIcon";
 import En_icon from "./icons/En_icon";
 import Fa_icon from "./icons/Fa_icon";
+import Image from "next/image";
 
 interface Props {
   lang: Lang;
@@ -23,6 +24,12 @@ const ControlerBox = (props: Props) => {
           <div className="controler-list-item">
             <Link href={"/en"}>
               <En_icon />
+              <Image
+                src="/images/languages/EN_1.jpg"
+                alt="persian"
+                width={30}
+                height={15}
+              />
             </Link>
           </div>
         )}
@@ -30,6 +37,12 @@ const ControlerBox = (props: Props) => {
           <div className="controler-list-item">
             <Link href={"/"}>
               <Fa_icon />
+              <Image
+                src="/images/languages/FA.jpg"
+                alt="persian"
+                width={30}
+                height={15}
+              />
             </Link>
           </div>
         )}

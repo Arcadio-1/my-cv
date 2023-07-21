@@ -115,7 +115,6 @@
       }
       &-language {
         border-radius: 10px;
-
         margin-top: 2rem;
         background-color: rgba(color(g3-2), 0.1);
         padding: 0.5rem 1rem;
@@ -143,10 +142,19 @@
             grid-template-columns: 1fr;
           }
           &-item {
+            @include dflex;
+            gap: 1rem;
             width: 100%;
             padding: 1rem;
             border-radius: 5px;
             background-color: rgba(color(dark-2), 0.2);
+            img {
+              flex: 0 0 auto;
+            }
+            .content {
+              width: 100%;
+              flex: 1 1 auto;
+            }
             .data {
               @include dflex(space-between);
               margin-bottom: 0.3rem;

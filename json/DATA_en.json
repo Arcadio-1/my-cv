@@ -429,9 +429,24 @@
         }
       ],
       "fluent_languages": [
-        { "id": "0", "tittle": "english", "level": 80 },
-        { "id": "1", "tittle": "kurdish", "level": 100 },
-        { "id": "2", "tittle": "persian", "level": 100 }
+        {
+          "id": "0",
+          "tittle": "english",
+          "level": 80,
+          "img": "/images/fluent_languages/english.png"
+        },
+        {
+          "id": "1",
+          "tittle": "kurdish",
+          "level": 100,
+          "img": "/images/fluent_languages/kurdish.png"
+        },
+        {
+          "id": "2",
+          "tittle": "persian",
+          "level": 100,
+          "img": "/images/fluent_languages/persian.png"
+        }
       ]
     }
   },
