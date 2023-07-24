@@ -1,13 +1,13 @@
 @use "../../../styles/clips.scss" as *;
 .cv {
   .main {
-    &-about {
+    &_about {
       color: color(light-2);
       padding-bottom: 1rem;
       background-color: rgba(color(dark-2), 0.5);
       padding: 1rem;
       padding-bottom: 1rem;
-      &-container {
+      &_container {
         padding: 2rem;
         background-color: rgba(color(g3-2), 0.1);
 
@@ -29,7 +29,7 @@
             "aboutlist aboutlist";
         }
       }
-      &-tittle {
+      &_tittle {
         opacity: 0;
         position: static;
         @include dflex(flex-start, flex-start);
@@ -42,7 +42,7 @@
         @include responsive(md) {
           opacity: 1;
         }
-        &-animator {
+        &_animator {
           opacity: 1;
           animation: aboutTittleAnime 0.5s ease-in alternate;
         }
@@ -57,7 +57,7 @@
           }
         }
       }
-      &-image {
+      &_image {
         grid-area: aboutimage;
         float: right;
         max-width: 25rem;
@@ -71,7 +71,7 @@
           transform: translateX(0px);
           opacity: 1;
         }
-        &-animator {
+        &_animator {
           transform: translateX(0px);
           opacity: 1;
           animation: aboutImageAnime 0.5s ease-in alternate;
@@ -96,7 +96,7 @@
           margin: 0 auto;
         }
       }
-      &-list {
+      &_list {
         grid-area: aboutlist;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -108,7 +108,7 @@
         @include responsive(md) {
           transform: translateX(0px);
         }
-        &-animator {
+        &_animator {
           transform: translateX(0px);
           animation: aboutListAnime 0.5s ease-in alternate;
         }
@@ -130,14 +130,14 @@
         @include responsive(sm) {
           margin-top: 2rem;
         }
-        &-col {
+        &_col {
           height: auto;
           @include dflex(flex-start, flex-start);
           gap: 1rem;
           flex-direction: column;
           width: 100%;
         }
-        &-item {
+        &_item {
           background-color: rgba(color(dark-2), 0.3);
           padding: 0.1rem 0.5rem;
           width: 100%;
@@ -159,7 +159,7 @@
           }
         }
       }
-      &-boulshit {
+      &_boulshit {
         margin-top: 1rem;
         // background-color: rgba(color(dark-2), 0.3);
         grid-area: aboutboulshit;
@@ -168,7 +168,7 @@
         @include responsive(md) {
           opacity: 1;
         }
-        &-animator {
+        &_animator {
           opacity: 1;
           animation: aboutBoulshitAnime 0.5s ease-in alternate;
         }
@@ -182,7 +182,7 @@
             transform: translateX(0px);
           }
         }
-        &-content {
+        &_content {
           padding: 2rem;
           line-height: 2.5rem;
           font-size: 1.35rem;
@@ -197,37 +197,37 @@
       }
     }
   }
-  &-lighter {
+  &_lighter {
     .main {
-      &-about {
+      &_about {
         color: color(dark-2);
         background-color: rgba(color(light-2), 0.5);
-        &-container {
+        &_container {
           background-color: rgba(color(g3-2), 0.1);
         }
-        &-list {
-          &-item {
+        &_list {
+          &_item {
             background-color: rgba(color(light-2), 0.3);
           }
         }
-        &-boulshit {
+        &_boulshit {
           color: color(dark-2);
         }
       }
     }
   }
-  &-en {
+  &_en {
     .main {
-      &-about {
-        &-image {
+      &_about {
+        &_image {
           float: left;
           img {
             padding: 0px;
             padding-right: 1rem;
           }
         }
-        &-list {
-          &-item {
+        &_list {
+          &_item {
             .text {
               font-family: iransans;
             }

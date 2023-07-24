@@ -24,7 +24,6 @@ const MyImage = (props: Props) => {
       }`}
     >
       <Image
-        placeholder="blur"
         className="object-cover"
         src={props.imageUrl}
         width={500}
@@ -36,10 +35,3 @@ const MyImage = (props: Props) => {
 };
 
 export default MyImage;
-
-// <div
-//   ref={ref}
-//   className={`main-about-image  ${
-//     inView ? "main-about-image-animator" : ""
-//   }`}
-// ></div>
