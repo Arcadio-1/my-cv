@@ -112,5 +112,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <Providers>{children}</Providers>;
+  return (
+    <html lang={"fa"}>
+      <body>
+        <div id="overLay" />
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
 }
