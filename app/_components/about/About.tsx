@@ -17,7 +17,7 @@ interface Props {
 }
 
 const About = async (props: Props) => {
-  console.log(style);
+  // console.log(style);
   return (
     <div
       className={`${style.main_about} ${
