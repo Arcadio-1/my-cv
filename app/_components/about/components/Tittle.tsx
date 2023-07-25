@@ -4,7 +4,7 @@ import { InView } from "@/util/Types/types";
 import { UiMainState } from "@/redux/features/ui/uiSlice";
 import React from "react";
 import { useSelector } from "react-redux";
-
+import style from "../about.module.scss";
 interface Props {
   tittle: string;
 }
@@ -18,8 +18,8 @@ const Tittle = (props: Props) => {
   return (
     <div
       ref={ref}
-      className={`main_about_tittle ${
-        isAnimationActive && inView ? "main_about_tittle_animator" : ""
+      className={`${style.main_about_tittle} ${
+        isAnimationActive && inView ? style.main_about_tittle_animator : ""
       }  `}
     >
       <h2>{props.tittle}</h2>

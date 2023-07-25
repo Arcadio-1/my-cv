@@ -4,7 +4,7 @@ import { InView } from "@/util/Types/types";
 import { UiMainState } from "@/redux/features/ui/uiSlice";
 import React from "react";
 import { useSelector } from "react-redux";
-// import style from "../about.module.scss";
+import style from "../about.module.scss";
 
 interface Props {
   children: any;
@@ -21,12 +21,12 @@ const Boulshit = (props: Props) => {
       // className={`main_about_boulshit  ${
       //   isAnimationActive && inView ? "main_about_boulshit_animator" : ""
       // }`}
-      className={`${`main_about_boulshit`} ${
-        isAnimationActive && inView ? `main_about_boulshit_animator` : ""
+      className={`${style.main_about_boulshit} ${
+        isAnimationActive && inView ? style.main_about_boulshit_animator : ""
       }`}
     >
       <div
-        className={`main_about_boulshit_content`}
+        className={style.main_about_boulshit_content}
         dangerouslySetInnerHTML={{ __html: props.children }}
       />
     </div>

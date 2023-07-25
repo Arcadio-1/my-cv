@@ -6,6 +6,7 @@ import Image from "next/image";
 import React from "react";
 import { useSelector } from "react-redux";
 // import { useInView } from "react-intersection-observer";
+import style from "../about.module.scss";
 interface Props {
   imageUrl: string;
   alt: string;
@@ -19,8 +20,8 @@ const MyImage = (props: Props) => {
   return (
     <div
       ref={ref}
-      className={`main_about_image  ${
-        isAnimationActive && inView ? "main_about_image_animator" : ""
+      className={`${style.main_about_image}  ${
+        isAnimationActive && inView ? style.main_about_image_animator : ""
       }`}
     >
       <Image

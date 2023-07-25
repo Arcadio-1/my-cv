@@ -5,6 +5,7 @@ import { About_base_labels, InView, Personal_info } from "@/util/Types/types";
 import useScrollMotion from "@/util/Hooks/UseScrollMotion";
 import { useSelector } from "react-redux";
 import { UiMainState } from "@/redux/features/ui/uiSlice";
+import style from "../../about.module.scss";
 interface Props {
   personal_info: Personal_info;
   labels: About_base_labels;
@@ -21,11 +22,11 @@ const List = (props: Props) => {
   return (
     <div
       ref={ref}
-      className={`main_about_list  ${
-        isAnimationActive && inView ? "main_about_list_animator" : ""
+      className={`${style.main_about_list}  ${
+        isAnimationActive && inView ? style.main_about_list_animator : ""
       }`}
     >
-      <div className="main_about_list_col">
+      <div className={style.main_about_list_col}>
         <Item label={labels.mobile} data={personal_info.mobile} />
         <Item label={labels.residence} data={personal_info.residence} />
         <Item
@@ -34,7 +35,7 @@ const List = (props: Props) => {
         />
         <Item label={labels.age} data={personal_info.age} />
       </div>
-      <div className="main_about_list_col">
+      <div className={style.main_about_list_col}>
         <Item label={labels.email} data={personal_info.email} />
         <Item label={labels.degree} data={personal_info.degree} />
         <Item
