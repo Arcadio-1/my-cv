@@ -1,5 +1,5 @@
 "use client";
-import { CV } from "@/app/util/Types/types";
+import { CV } from "@/util/Types/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type GetDataState = {

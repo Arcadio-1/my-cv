@@ -5,7 +5,7 @@ import {
   OpenToggle,
   Status,
   Theme,
-} from "@/app/util/Types/types";
+} from "@/util/Types/types";
 import { createSlice } from "@reduxjs/toolkit";
 
 interface UiState {

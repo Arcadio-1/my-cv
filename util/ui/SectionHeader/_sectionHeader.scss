@@ -1,0 +1,47 @@
+@use "../../../styles/clips.scss" as *;
+.sectionHeader {
+  // border: 2px solid red;
+  &-tittle {
+    font-family: iranyekan;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    h2 {
+      font-size: 2rem;
+      color: color(light-3);
+      padding-bottom: 0.5rem;
+    }
+    &::after {
+      content: "";
+      height: 2px;
+      width: 60px;
+      display: block;
+      border-radius: 2px;
+      border-bottom: 2px solid color(g3-2);
+    }
+  }
+  &-description {
+    p {
+      font-size: 1.3rem;
+      color: color(light-3);
+    }
+  }
+}
+.cv {
+  &-lighter {
+    .sectionHeader {
+      &-tittle {
+        h2 {
+          color: color(dark-3);
+        }
+        &::after {
+          border-bottom: 2px solid color(g4-1);
+        }
+      }
+      &-description {
+        p {
+          color: color(light-3);
+        }
+      }
+    }
+  }
+}

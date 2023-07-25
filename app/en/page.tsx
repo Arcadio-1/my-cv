@@ -1,7 +1,7 @@
-import { All_Data, Lang } from "../util/Types/types";
+import { All_Data, Lang } from "../../util/Types/types";
 import { promises as fs } from "fs";
 import path, { join } from "path";
-import Home_page from "../components/Home_page";
+import Home_page from "../_components/Home_page";
 import matter from "gray-matter";
 
 async function getData() {

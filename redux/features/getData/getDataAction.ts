@@ -3,7 +3,7 @@
 import { AppDispatch } from "@/redux/store";
 import { uiAction } from "../ui/uiSlice";
 import { getDataSliceActions } from "./getDataSlice";
-import { CV, Status } from "@/app/util/Types/types";
+import { CV, Status } from "@/util/Types/types";
 
 export const get_cv_databaase = () => {
   return async (dispatch: AppDispatch) => {

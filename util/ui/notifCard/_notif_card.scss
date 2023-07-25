@@ -1,0 +1,118 @@
+@use "../../../styles/clips.scss" as *;
+.notifCard {
+  position: fixed;
+  z-index: 100;
+  top: 10px;
+  left: 10px;
+  border-radius: 5px;
+  color: color(light-1);
+  backdrop-filter: blur(3px);
+  @include responsive(md) {
+    top: 35px;
+  }
+  &-header {
+    @include dflex(space-between);
+    height: 3em;
+    padding: 0 0.5em;
+    border-bottom: 2px solid rgba(color(light-1), 0.5);
+    &-control {
+      cursor: pointer;
+      svg {
+        opacity: 0.7;
+        width: 2em;
+        height: 2em;
+        path {
+          fill: color(light-1);
+        }
+        transition: all 0.15s linear;
+        &:hover {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+      }
+    }
+    &-status {
+      svg {
+        opacity: 0.9;
+        width: 1.5em;
+        height: 1.5em;
+        path {
+          fill: color(light-1);
+        }
+      }
+    }
+  }
+  &-container {
+    padding: 1rem;
+    padding-left: 5rem;
+    p {
+      display: inline;
+      text-align: left;
+    }
+  }
+  &-message {
+    font-size: 1.2em;
+  }
+  &-success {
+    animation: openModal 0.4s ease-out forwards;
+    background-color: rgba(color(success), 0.7);
+  }
+  &-loading {
+    animation: openModal 0.4s ease-out forwards;
+    background-color: rgba(color(g3-4), 0.7);
+  }
+  &-error {
+    animation: openModal 0.4s ease-out forwards;
+    background-color: rgba(color(error), 0.7);
+  }
+  &-warning {
+    animation: openModal 0.4s ease-out forwards;
+    background-color: rgba(color(warning), 0.7);
+  }
+  &-null {
+    opacity: 0;
+    animation: closeModal 1s ease-out alternate;
+  }
+  @keyframes openModal {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(90%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes closeModal {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 0.4;
+      transform: translateY(60%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+}
+.en {
+  &-notifCard {
+    left: auto;
+    right: 10px;
+    .notifCard-header {
+      flex-direction: row-reverse;
+    }
+    .notifCard-container {
+      padding: 1rem;
+      padding-right: 5rem;
+    }
+  }
+}
