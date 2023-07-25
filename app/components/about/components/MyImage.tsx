@@ -19,12 +19,12 @@ const MyImage = (props: Props) => {
   return (
     <div
       ref={ref}
-      className={`main-about-image  ${
-        isAnimationActive && inView ? "main-about-image-animator" : ""
+      className={`main_about_image  ${
+        isAnimationActive && inView ? "main_about_image_animator" : ""
       }`}
     >
       <Image
-        className="object-cover"
+        className="object_cover"
         src={props.imageUrl}
         width={500}
         height={500}

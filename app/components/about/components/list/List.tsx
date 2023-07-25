@@ -25,11 +25,11 @@ const List = (props: Props) => {
   return (
     <div
       ref={ref}
-      className={`main-about-list  ${
-        isAnimationActive && inView ? "main-about-list-animator" : ""
+      className={`main_about_list  ${
+        isAnimationActive && inView ? "main_about_list_animator" : ""
       }`}
     >
-      <div className="main-about-list-col">
+      <div className="main_about_list_col">
         <Item label={labels.mobile} data={personal_info.mobile} />
         <Item label={labels.residence} data={personal_info.residence} />
         <Item
@@ -38,7 +38,7 @@ const List = (props: Props) => {
         />
         <Item label={labels.age} data={personal_info.age} />
       </div>
-      <div className="main-about-list-col">
+      <div className="main_about_list_col">
         <Item label={labels.email} data={personal_info.email} />
         <Item label={labels.degree} data={personal_info.degree} />
         <Item

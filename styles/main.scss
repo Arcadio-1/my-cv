@@ -1,5 +1,6 @@
-// @use "../app/components/style" as home;
-// @use "../app/util/ui/style" as utilUI;
+@use "./base";
+@use "../app/components/style" as home;
+@use "../app/util/ui/style" as utilUI;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

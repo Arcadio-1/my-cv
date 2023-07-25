@@ -16,6 +16,7 @@ import Resume from "./resume/Resume";
 import Portfolio from "./portfolio/Portfolio";
 import Contact from "./contact/Contact";
 import ControlerBox from "../util/ui/controler/ControlerBox";
+// import style from "./page.module.scss";
 interface Props {
   personal_info: Personal_info;
   resume: resumeType;
@@ -27,6 +28,7 @@ interface Props {
 const Home_page = (props: Props) => {
   const { personal_info, resume, base, about, lang } = props;
   const [theme, setTheme] = useState<Theme>(Theme.Dark);
+  // console.log(style);
 
   const changeThemeHandler = () => {
     if (theme === Theme.Dark) {
@@ -41,8 +43,8 @@ const Home_page = (props: Props) => {
 
   return (
     <div
-      className={`cv  ${theme === Theme.Light ? "cv-lighter" : ""}  ${
-        lang === Lang.en ? "cv-en" : ""
+      className={`${`cv`}  ${theme === Theme.Light ? `cv-lighter` : ""}  ${
+        lang === Lang.en ? `cv-en` : ""
       }`}
     >
       <div className="controler-container">

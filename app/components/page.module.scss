@@ -1,0 +1,51 @@
+@use "../../styles/clips.scss" as *;
+.cv {
+  display: flex;
+  background: color(dark-grid-1);
+  background: linear-gradient(
+    90deg,
+    color(dark-grid-1) 0%,
+    color(dark-grid-2) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    color(dark-grid-1) 0%,
+    color(dark-grid-2) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    color(dark-grid-1) 0%,
+    color(dark-grid-2) 100%
+  );
+  direction: rtl;
+  &_lighter {
+    background: color(light-grid-1);
+    background: linear-gradient(
+      90deg,
+      color(light-grid-1) 0%,
+      color(light-grid-2) 100%
+    );
+
+    background: -moz-linear-gradient(
+      90deg,
+      color(light-grid-1) 0%,
+      color(light-grid-2) 100%
+    );
+
+    background: -webkit-linear-gradient(
+      90deg,
+      color(light-grid-1) 0%,
+      color(light-grid-2) 100%
+    );
+  }
+  &_en {
+    direction: ltr;
+    text-transform: capitalize;
+    font-family: iransans;
+    button {
+      text-transform: capitalize;
+    }
+  }
+}

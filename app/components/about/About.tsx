@@ -6,6 +6,7 @@ import MyImage from "./components/MyImage";
 import Boulshit from "./components/Boulshit";
 import List from "./components/list/List";
 import Tittle from "./components/Tittle";
+// import style from "./about.module.scss";
 
 interface Props {
   personal_info: Personal_info;
@@ -14,14 +15,15 @@ interface Props {
 }
 
 const About = async (props: Props) => {
+  // console.log(style);
   return (
-    <div className="main-about">
+    <div className={`main_about`}>
       <SectionHeader
         tag="aboutMe"
         tittle={props.base.section_tittle}
         description={""}
       />
-      <div className="main-about-container">
+      <div className={`main_about_container`}>
         <Tittle tittle={props.base.tittle} />
         <MyImage
           imageUrl={props.personal_info.profile_iamge}
