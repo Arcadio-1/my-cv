@@ -90,10 +90,10 @@ const Home_page = (props: Props) => {
               work_experiences={resume.work_experiences}
               fluent_languages={resume.fluent_languages}
             />
-            {/* <Portfolio
+            <Portfolio
               base={base.portfolio_base}
               portfolios={resume.portfolios}
-            /> */}
+            />
             <Contact
               theme={theme}
               lang={lang}
