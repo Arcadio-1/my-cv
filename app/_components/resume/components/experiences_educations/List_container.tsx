@@ -13,7 +13,7 @@ const List_container = (props: Props) => {
   const isAnimationActive = useSelector(
     (state: UiMainState) => state.ui.activeAnimation
   );
-  const { inView, ref } = useScrollMotion(InView.resume);
+  const { inView, ref } = useScrollMotion(InView.resume, isAnimationActive);
 
   return (
     <div className="main_resume_experiences_experience">

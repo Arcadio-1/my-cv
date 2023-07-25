@@ -3,7 +3,7 @@ import { InView } from "../Types/types";
 import { useDispatch } from "react-redux";
 import { uiAction } from "@/redux/features/ui/uiSlice";
 
-const useScrollMotion = (section: InView) => {
+const useScrollMotion = (section: InView, isActive: Boolean = false) => {
   const ref = useRef<HTMLDivElement>(null);
   const dispatchInView = useDispatch();
 
@@ -20,11 +20,13 @@ const useScrollMotion = (section: InView) => {
   };
 
   useEffect(() => {
-    const win: Window = window;
-    win.addEventListener("scroll", onScroll);
+    if (isActive) {
+      const win: Window = window;
+      win.addEventListener("scroll", onScroll);
+    }
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [isActive]);
   return { ref, inView };
 };
 

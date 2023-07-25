@@ -17,7 +17,7 @@ const List = (props: Props) => {
 
   const { personal_info, labels } = props;
 
-  const { inView, ref } = useScrollMotion(InView.about);
+  const { inView, ref } = useScrollMotion(InView.about, isAnimationActive);
 
   return (
     <div

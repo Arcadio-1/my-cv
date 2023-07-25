@@ -1,5 +1,6 @@
 "use client";
-import useScrollMotion from "@/util/Hooks/UseScrollMotion";
+import { useAppSelector } from "@/redux/hook";
+// import useScrollMotion from "@/util/Hooks/UseScrollMotion";
 import { Expertise, Hero_base, InView, Lang, Theme } from "@/util/Types/types";
 import React, { useEffect, useState } from "react";
 
@@ -17,7 +18,10 @@ interface Props {
 }
 const Hero = (props: Props) => {
   const [expertise, setExpertise] = useState<number>(1);
-  const { inView, ref } = useScrollMotion(InView.home);
+  const { activeAnimation: isAnimationActive } = useAppSelector(
+    (state) => state.ui
+  );
+  // const { inView, ref } = useScrollMotion(InView.home, isAnimationActive);
 
   const length = props.expertise.length;
   useEffect(() => {
@@ -40,7 +44,7 @@ const Hero = (props: Props) => {
   }, [props.expertise, length]);
 
   return (
-    <div ref={ref} className=" main_hero" id="home">
+    <div className=" main_hero" id="home">
       <div
         className="main_hero_background"
         style={{

@@ -19,7 +19,7 @@ const ContactLines = (props: Props) => {
   const isAnimationActive = useSelector(
     (state: UiMainState) => state.ui.activeAnimation
   );
-  const { inView, ref } = useScrollMotion(InView.contact);
+  const { inView, ref } = useScrollMotion(InView.contact, isAnimationActive);
   const contactLines_arry: React.ReactElement[] = [
     <Item key={1} content={props.email} label={props.labels.email}>
       <EmailIcon />

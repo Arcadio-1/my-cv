@@ -15,7 +15,7 @@ const MyImage = (props: Props) => {
   const isAnimationActive = useSelector(
     (state: UiMainState) => state.ui.activeAnimation
   );
-  const { inView, ref } = useScrollMotion(InView.about);
+  const { inView, ref } = useScrollMotion(InView.about, isAnimationActive);
 
   return (
     <div

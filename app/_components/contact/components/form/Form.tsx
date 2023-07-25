@@ -37,7 +37,7 @@ const Form = (props: Props) => {
   const sendMessageStatus = useSelector(
     (state: any) => state.ui.send_message_status
   );
-  const { inView, ref } = useScrollMotion(InView.contact);
+  const { inView, ref } = useScrollMotion(InView.contact, isAnimationActive);
   const {
     value: nameValue,
     isValid: isNameValid,

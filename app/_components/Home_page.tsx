@@ -43,7 +43,7 @@ const Home_page = (props: Props) => {
 
   return (
     <div
-      className={` cv ${theme === Theme.Light ? `cv_lighter` : ""}  ${
+      className={`cv ${theme === Theme.Light ? `cv_lighter` : ""}  ${
         lang === Lang.en ? `cv_en` : ""
       }`}
     >

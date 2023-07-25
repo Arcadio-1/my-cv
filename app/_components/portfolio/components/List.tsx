@@ -18,7 +18,7 @@ const List = (props: Props) => {
   const isAnimationActive = useSelector(
     (state: UiMainState) => state.ui.activeAnimation
   );
-  const { inView, ref } = useScrollMotion(InView.portfolio);
+  const { inView, ref } = useScrollMotion(InView.portfolio, isAnimationActive);
   return (
     <div ref={ref} className="main_portfolio_list">
       {props.portfolios.map((item) => {

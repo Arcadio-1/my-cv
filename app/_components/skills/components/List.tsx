@@ -14,7 +14,7 @@ const List = (props: Props) => {
   );
   const [skills, setSkills] = useState<Skill[]>([]);
 
-  const { inView, ref } = useScrollMotion(InView.skills);
+  const { inView, ref } = useScrollMotion(InView.skills, isAnimationActive);
 
   useEffect(() => {
     if (inView) {

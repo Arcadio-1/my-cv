@@ -17,7 +17,10 @@ const Item = (props: Props) => {
   );
   const [level, setLevel] = useState<number>(0);
 
-  const { inView, ref: languageRef } = useScrollMotion(InView.resume);
+  const { inView, ref: languageRef } = useScrollMotion(
+    InView.resume,
+    isAnimationActive
+  );
 
   useEffect(() => {
     if (inView) {
