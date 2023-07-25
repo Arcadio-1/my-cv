@@ -20,24 +20,24 @@
       position: fixed;
       right: -400px;
     }
-    &-container {
+    &_container {
       @include dflex(flex-start, flex-start);
       flex-direction: column;
       width: 100%;
       height: 100%;
     }
-    &-opener {
+    &_opener {
       transition: all 0.5s ease-in-out;
       position: fixed;
       backdrop-filter: blur(5px) !important;
       background-color: rgba(color(dark-2), 0.5) !important;
       right: 0 !important;
     }
-    &-header {
+    &_header {
       width: 100%;
       @include dflex;
       flex-direction: column;
-      &-image {
+      &_image {
         width: 100%;
         height: 100%;
 
@@ -53,7 +53,7 @@
           object-fit: cover;
         }
       }
-      &-fullname {
+      &_fullname {
         padding: 1rem;
         @include dflex;
         flex-direction: column;
@@ -65,14 +65,14 @@
           color: rgba(color(g3-1), 1);
         }
       }
-      &-socialmedias {
-        &-list {
+      &_socialmedias {
+        &_list {
           background-color: rgba(color(g3-2), 0.2);
           border-radius: 1000px;
           padding: 2px 1rem;
           @include dflex;
           gap: 0.5rem;
-          &-item {
+          &_item {
             a {
               img {
               }
@@ -81,18 +81,18 @@
         }
       }
     }
-    &-nav {
+    &_nav {
       width: calc(100% - 1rem);
       margin-top: 2rem;
-      &-icon {
+      &_icon {
         width: 2.1rem;
         height: 2.1rem;
       }
-      &-list {
+      &_list {
         // width: 100%;
         @include dflex(flex-start, flex-start);
         flex-direction: column;
-        &-item {
+        &_item {
           transition: all 150ms linear;
           padding: 0.7rem 2rem 0.7rem 0rem;
           width: 100%;
@@ -138,38 +138,38 @@
         }
       }
     }
-    &-footer {
+    &_footer {
       margin-top: auto;
       width: 100%;
       @include dflex;
       flex-direction: column;
       background-color: rgba(color(dark-2), 0.1);
-      &-copyright {
+      &_copyright {
         color: rgba(color(g3-2), 1);
       }
-      &-designed {
+      &_designed {
         color: rgba(color(g3-2), 1);
-        &-name {
+        &_name {
           color: color(light-2);
         }
       }
     }
   }
-  &-lighter {
+  &_lighter {
     .aside {
       background: linear-gradient(
         90deg,
         rgba(color(g4-6), 0.3) 0%,
         rgba(color(g4-5), 0.3) 100%
       );
-      &-opener {
+      &_opener {
         background-color: rgba(color(light-1), 0.5) !important;
       }
-      &-header {
-        &-image {
+      &_header {
+        &_image {
           border: 2px solid color(light-2);
         }
-        &-fullname {
+        &_fullname {
           h1 {
             color: rgba(color(dark-2), 0.9);
             text-shadow: 0px 0px 4px rgba(color(light-2), 0.3);
@@ -178,15 +178,15 @@
             color: rgba(color(g3-6), 0.8);
           }
         }
-        &-socialmedias {
-          &-list {
+        &_socialmedias {
+          &_list {
             background-color: rgba(color(light-2), 0.2);
           }
         }
       }
-      &-nav {
-        &-list {
-          &-item {
+      &_nav {
+        &_list {
+          &_item {
             a {
               svg {
                 path {
@@ -226,31 +226,31 @@
           }
         }
       }
-      &-footer {
+      &_footer {
         background-color: rgba(color(light-2), 0.1);
-        &-copyright {
+        &_copyright {
           color: rgba(color(g3-6), 1);
         }
-        &-designed {
+        &_designed {
           color: rgba(color(g3-6), 1);
-          &-name {
+          &_name {
             color: rgba(color(g3-5), 1);
           }
         }
       }
     }
   }
-  &-en {
+  &_en {
     .aside {
       @include responsive(md) {
         left: -400px;
       }
-      &-opener {
+      &_opener {
         left: 0 !important;
       }
-      &-nav {
-        &-list {
-          &-item {
+      &_nav {
+        &_list {
+          &_item {
             a {
               span {
                 padding-top: 5px;

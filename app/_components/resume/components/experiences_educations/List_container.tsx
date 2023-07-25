@@ -16,7 +16,7 @@ const List_container = (props: Props) => {
   const { inView, ref } = useScrollMotion(InView.resume);
 
   return (
-    <div className="main-resume-experiences-experience">
+    <div className="main_resume_experiences_experience">
       <h2 ref={ref} className="header">
         {props.header}
       </h2>
@@ -24,8 +24,8 @@ const List_container = (props: Props) => {
         {props.experience.map((item) => {
           return (
             <div
-              className={`list-item ${
-                isAnimationActive && inView ? "list-item-animator" : ""
+              className={`list_item ${
+                isAnimationActive && inView ? "list_item_animator" : ""
               }`}
               key={item.id}
             >

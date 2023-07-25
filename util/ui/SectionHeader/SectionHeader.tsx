@@ -11,10 +11,10 @@ const SectionHeader = (props: Props) => {
   const { tittle, description, tag } = props;
   return (
     <div className="sectionHeader" id={tag}>
-      <div className="sectionHeader-tittle">
+      <div className="sectionHeader_tittle">
         <h2>{tittle}</h2>
       </div>
-      <div className="sectionHeader-description">
+      <div className="sectionHeader_description">
         <p>{description}</p>
       </div>
     </div>

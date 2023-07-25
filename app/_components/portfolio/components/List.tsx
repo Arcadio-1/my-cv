@@ -20,12 +20,12 @@ const List = (props: Props) => {
   );
   const { inView, ref } = useScrollMotion(InView.portfolio);
   return (
-    <div ref={ref} className="main-portfolio-list">
+    <div ref={ref} className="main_portfolio_list">
       {props.portfolios.map((item) => {
         return (
           <div
             key={item.id}
-            className={`main-portfolio-list-item ${
+            className={`main_portfolio_list_item ${
               (props.filter === Group.all || props.filter === item.group) &&
               (!isAnimationActive || inView)
                 ? "selectedItem"

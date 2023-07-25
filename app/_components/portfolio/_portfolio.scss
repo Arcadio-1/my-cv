@@ -1,18 +1,18 @@
 @use "../../../styles/clips.scss" as *;
 .cv {
   .main {
-    &-portfolio {
+    &_portfolio {
       margin-top: 1rem;
       color: color(light-2);
       background-color: rgba(color(dark-2), 0.5);
       padding: 1rem;
       padding-bottom: 6rem;
 
-      &-container {
+      &_container {
         padding: 2rem;
         background-color: rgba(color(g3-2), 0.1);
       }
-      &-filter {
+      &_filter {
         @include dflex;
         margin-bottom: 1rem;
         background-color: rgba(color(dark-2), 0.2);
@@ -43,7 +43,7 @@
           }
         }
       }
-      &-list {
+      &_list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
         gap: 2rem;
@@ -68,7 +68,7 @@
           // border: 3px solid orange;
           grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
         }
-        &-item {
+        &_item {
           transition: all 0.3 linear;
           position: relative;
           border: 2px solid rgba(color(dark-2), 0.2);
@@ -84,14 +84,14 @@
             }
             .swiper {
               position: static;
-              &-pagination {
+              &_pagination {
                 background-color: rgba(color(g3-1), 0.5);
                 backdrop-filter: blur(3px);
                 border-radius: 5px;
                 bottom: 5rem;
               }
-              &-button-next,
-              &-button-prev {
+              &_button-next,
+              &_button-prev {
                 background-color: rgba(color(dark-2), 0.1);
                 backdrop-filter: blur(3px);
                 border-radius: 10px;
@@ -100,10 +100,10 @@
                   font-size: 2rem;
                 }
               }
-              &-slide {
+              &_slide {
                 .link {
                   .slide {
-                    &-tittle {
+                    &_tittle {
                       font-family: iranyekan;
                       color: color(light-2);
                       padding: 1rem 1rem;
@@ -111,7 +111,7 @@
                       font-size: 1.4rem;
                       border-bottom: 2px solid rgba(color(light-2), 1);
                     }
-                    &-imageContainer {
+                    &_imageContainer {
                       img {
                         width: 100%;
                       }
@@ -125,7 +125,7 @@
             @include dflex(space-between);
             background-color: rgba(color(dark-2), 0.2);
             padding: 0.5rem 1rem;
-            &-btn {
+            &_btn {
               max-width: 2.5rem;
               width: 100%;
               .actionIcon {
@@ -139,8 +139,8 @@
                 }
               }
             }
-            &-deploy {
-              &-container {
+            &_deploy {
+              &_container {
                 display: flex;
                 gap: 1rem;
               }
@@ -164,7 +164,7 @@
                 }
               }
             }
-            &-repo {
+            &_repo {
               svg {
                 path {
                   transition: all 0.15s linear;
@@ -177,7 +177,7 @@
                 }
               }
             }
-            &-pdf {
+            &_pdf {
               svg {
                 stroke: rgba(color(light-2), 1);
                 path {
@@ -194,7 +194,7 @@
             }
           }
         }
-        &-animator {
+        &_animator {
           transform: scale(1);
           animation: shower 10s alternate;
         }
@@ -234,15 +234,15 @@
       }
     }
   }
-  &-lighter {
+  &_lighter {
     .main {
-      &-portfolio {
+      &_portfolio {
         color: color(dark-2);
         background-color: rgba(color(light-2), 0.5);
-        &-container {
+        &_container {
           background-color: rgba(color(g3-2), 0.1);
         }
-        &-filter {
+        &_filter {
           background-color: rgba(color(g3-2), 0.1);
           .nav {
             border-bottom: 2px solid rgba(color(light-2), 0.7);
@@ -268,26 +268,26 @@
             }
           }
         }
-        &-list {
-          &-item {
+        &_list {
+          &_item {
             border: 2px solid rgba(color(light-2), 0.2);
             background-color: rgba(color(light-2), 0.3);
             .content {
               .swiper {
-                &-pagination {
+                &_pagination {
                   background-color: rgba(color(light-2), 0.5);
                 }
-                &-button-next,
-                &-button-prev {
+                &_button-next,
+                &_button-prev {
                   background-color: rgba(color(light-2), 0.7);
                   &::after {
                     color: rgba(color(g3-6), 1);
                   }
                 }
-                &-slide {
+                &_slide {
                   .link {
                     .slide {
-                      &-tittle {
+                      &_tittle {
                         color: color(dark-2);
                         background-color: rgba(color(light-2), 0.2);
                         border-bottom: 2px solid rgba(color(light-2), 1);
@@ -299,7 +299,7 @@
             }
             .actions {
               background-color: rgba(color(light-2), 0.2);
-              &-deploy {
+              &_deploy {
                 svg {
                   path {
                     fill: rgba(color(g3-4), 0.6);
@@ -317,7 +317,7 @@
                   }
                 }
               }
-              &-repo {
+              &_repo {
                 svg {
                   path {
                     fill: rgba(color(g3-4), 0.6);
@@ -329,7 +329,7 @@
                   }
                 }
               }
-              &-pdf {
+              &_pdf {
                 svg {
                   stroke: rgba(color(g3-4), 0.6);
                   path {

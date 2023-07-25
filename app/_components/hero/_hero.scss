@@ -1,10 +1,10 @@
 @use "../../../styles/clips.scss" as *;
 .cv {
   .main {
-    &-hero {
+    &_hero {
       @include dflex;
       height: 100vh;
-      &-background {
+      &_background {
         z-index: 0;
         position: absolute;
         left: 0px;
@@ -18,14 +18,14 @@
         background-position: center;
         filter: drop-shadow(0px 0px 0px rgb(255, 255, 255)) brightness(60%);
       }
-      &-content {
+      &_content {
         @include dflex(flex-start);
         position: absolute;
         top: 10%;
         right: 25%;
         z-index: 5;
         flex-direction: column;
-        &-animatiner {
+        &_animatiner {
           position: absolute;
           opacity: 1;
           animation: heroerContent 0.75s ease-in alternate;
@@ -38,16 +38,16 @@
             opacity: 1;
           }
         }
-        &-tittle {
+        &_tittle {
           margin-left: auto;
           h1 {
             color: color(light-2);
             font-size: 3rem;
           }
         }
-        &-expertise {
+        &_expertise {
           margin-right: 1rem;
-          &-item {
+          &_item {
             @include dflex;
           }
           span {
@@ -120,11 +120,11 @@
             }
           }
         }
-        &-links {
+        &_links {
           @include dflex;
           margin-top: 1rem;
           gap: 1rem;
-          &-item {
+          &_item {
             background-color: rgba(color(dark-2), 0.5);
             border: 2px solid rgba(color(light-2), 0.2);
             backdrop-filter: blur(3px);
@@ -143,12 +143,12 @@
         @include responsive(sm) {
           top: 10rem;
           right: 2rem;
-          &-tittle {
+          &_tittle {
             h1 {
               font-size: 3.5rem;
             }
           }
-          &-expertise {
+          &_expertise {
             margin-right: 1rem;
             span {
               font-size: 2.5rem;
@@ -159,19 +159,19 @@
       }
     }
   }
-  &-lighter {
+  &_lighter {
     .main {
-      &-hero {
-        &-background {
+      &_hero {
+        &_background {
           filter: drop-shadow(0px 0px 0px rgb(255, 255, 255)) brightness(90%);
         }
-        &-content {
-          &-tittle {
+        &_content {
+          &_tittle {
             h1 {
               color: color(dark-3);
             }
           }
-          &-expertise {
+          &_expertise {
             span {
               backdrop-filter: blur(3px);
               background-color: rgba(color(light-2), 0.2);
@@ -208,8 +208,8 @@
               }
             }
           }
-          &-links {
-            &-item {
+          &_links {
+            &_item {
               background-color: rgba(color(light-2), 0.35);
               // border: 2px solid rgba(color(dark-2), 0.5);
               color: rgba(color(g3-4), 1);
@@ -223,20 +223,20 @@
       }
     }
   }
-  &-en {
+  &_en {
     .main {
-      &-hero {
-        &-background {
+      &_hero {
+        &_background {
           transform: scaleX(-1);
         }
-        &-content {
+        &_content {
           top: 20%;
           right: 10%;
-          &-tittle {
+          &_tittle {
             margin: 0px;
             margin-right: auto;
           }
-          &-expertise {
+          &_expertise {
             .label {
               border-radius: 10px 0px 0px 10px;
               padding-right: 0.5rem;

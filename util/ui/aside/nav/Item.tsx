@@ -30,7 +30,7 @@ const Item = (props: Props) => {
   };
   return (
     <li
-      className={`aside-nav-list-item ${
+      className={`aside_nav_list_item ${
         inView === props.link ? "active" : ""
       } `}
       onClick={isMenuOpen && closeHandler}

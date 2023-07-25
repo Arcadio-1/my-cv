@@ -25,20 +25,20 @@ const ASide = (props: Props) => {
   return (
     <aside
       className={`${
-        isMenuOpen === OpenToggle.open ? "aside-opener" : ""
+        isMenuOpen === OpenToggle.open ? "aside_opener" : ""
       } aside ${
         props.lang === Lang.en && props.theme === Theme.Dark
-          ? "en-aside-dark"
+          ? "en_aside_dark"
           : ""
       }
       ${
         props.lang === Lang.en && props.theme === Theme.Light
-          ? "en-aside-light"
+          ? "en_aside_light"
           : ""
       }
         `}
     >
-      <div className="aside-container">
+      <div className="aside_container">
         <Header personalInfo={props.personalInfo} />
         <Nav navLinks={props.navLinks} />
         <Footer />

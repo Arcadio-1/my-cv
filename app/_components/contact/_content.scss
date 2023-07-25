@@ -1,14 +1,14 @@
 @use "../../../styles/clips.scss" as *;
 .cv {
   .main {
-    &-contact {
+    &_contact {
       overflow: hidden;
       margin-top: 1rem;
       color: color(light-2);
       background-color: rgba(color(dark-2), 0.5);
       padding: 1rem;
       padding-bottom: 6rem;
-      &-container {
+      &_container {
         display: grid;
         grid-template-columns: 2fr 3fr;
         gap: 2rem;
@@ -16,7 +16,7 @@
           grid-template-columns: 1fr;
         }
       }
-      &-contactLines {
+      &_contactLines {
         position: relative;
         @include dflex(flex-start, flex-start);
         height: 100%;
@@ -25,7 +25,7 @@
         flex-direction: column;
         gap: 1rem;
         padding: 2rem 1rem;
-        &-item {
+        &_item {
           opacity: 0;
           @include dflex(flex-start);
           gap: 0.5rem;
@@ -36,7 +36,7 @@
           @include responsive(md) {
             opacity: 1;
           }
-          &-icon {
+          &_icon {
             flex: 1 0 auto;
             width: 100%;
             height: 100%;
@@ -65,10 +65,10 @@
           }
 
           .content {
-            &-label {
+            &_label {
               font-size: 1.3rem;
             }
-            &-value {
+            &_value {
               direction: ltr;
               font-family: iransansnum;
               margin-top: 0.5rem;
@@ -77,7 +77,7 @@
             }
           }
         }
-        &-animator {
+        &_animator {
           background-color: rgba(color(dark-2), 0.2);
           opacity: 1;
           animation: contactLinesItemAnime 1s alternate;
@@ -90,7 +90,7 @@
             opacity: 1;
           }
         }
-        &-imageContainer {
+        &_imageContainer {
           bottom: 0;
           right: 20%;
           position: absolute;
@@ -98,7 +98,7 @@
           opacity: 0.2;
         }
       }
-      &-form {
+      &_form {
         height: 100%;
         flex: 1 0 auto;
         padding: 2rem 1rem;
@@ -113,7 +113,7 @@
           width: 100%;
           transform: translateX(0);
         }
-        &-animator {
+        &_animator {
           opacity: 1;
           transform: translateX(0);
           animation: contactFormItemAnime 1s ease-in alternate;
@@ -128,14 +128,14 @@
             // opacity: 1;
           }
         }
-        &-item {
+        &_item {
           width: 100%;
           margin-bottom: 2em;
-          &-container {
+          &_container {
             @include dflex;
             position: relative;
           }
-          &-icon {
+          &_icon {
             position: absolute;
             top: 2px;
             left: 5px;
@@ -150,7 +150,7 @@
               opacity: 0.8;
             }
           }
-          &-label {
+          &_label {
             color: rgba(color(light-2), 1);
             transition: all 0.3s ease-in-out;
             position: absolute;
@@ -159,7 +159,7 @@
             right: 8px;
             opacity: 0.6;
           }
-          &-input {
+          &_input {
             font-size: 1.4em;
 
             line-height: 3rem;
@@ -173,7 +173,7 @@
               border: transparent;
             }
           }
-          &-textArea {
+          &_textArea {
             font-size: 1.4em;
             background-color: rgba(color(dark-2), 0.2);
             border-radius: 2px;
@@ -183,7 +183,7 @@
               outline: 2px solid rgba(color(light-2), 0.2);
             }
           }
-          &-select {
+          &_select {
             color: color(dark-4);
             background-color: rgba(color(light-1), 0.5);
             border: transparent;
@@ -204,7 +204,7 @@
             right: 0px;
             opacity: 0.8;
           }
-          &-errorMsg {
+          &_errorMsg {
             padding: 0.5rem;
             white-space: nowrap;
             overflow: visible;
@@ -212,7 +212,7 @@
           }
           .unvalidItem {
             .main-contact-form-item {
-              &-icon {
+              &_icon {
                 .userIcon {
                   fill: color(error);
                   opacity: 0.8;
@@ -226,7 +226,7 @@
           }
           .validItem {
             .main-contact-form-item {
-              &-icon {
+              &_icon {
                 .userIcon {
                   fill: #16dc16;
                   opacity: 0.7;
@@ -242,7 +242,7 @@
         .actions {
           padding: 1rem 2rem;
           @include dflex(flex-end, flex-end);
-          &-submit {
+          &_submit {
             // margin-left: auto;
             // display: block;
             font-size: 1.3rem;
@@ -254,16 +254,16 @@
       }
     }
   }
-  &-lighter {
+  &_lighter {
     .main {
-      &-contact {
+      &_contact {
         color: color(dark-2);
         background-color: rgba(color(light-2), 0.5);
-        &-contactLines {
+        &_contactLines {
           background-color: rgba(color(g3-2), 0.1);
-          &-item {
+          &_item {
             background-color: rgba(color(light-2), 0.2);
-            &-icon {
+            &_icon {
               background-color: rgba(color(g3-3), 0.3);
               svg {
                 fill: rgba(color(light-2), 0.9);
@@ -281,52 +281,52 @@
               }
             }
           }
-          &-animator {
+          &_animator {
             background-color: rgba(color(light-2), 0.2);
           }
         }
-        &-form {
+        &_form {
           background-color: rgba(color(g3-2), 0.1);
-          &-item {
+          &_item {
             color: rgba(color(dark-2), 1);
-            &-icon {
+            &_icon {
               .userIcon {
-                fill: rgba(color(light-2), 0.8);
+                fill: rgba(color(light-4), 0.8);
               }
               .mailIcon {
-                stroke: rgba(color(light-2), 0.8);
+                stroke: rgba(color(light-4), 0.8);
               }
             }
-            &-label {
+            &_label {
               color: rgba(color(dark-2), 1);
             }
-            &-input {
+            &_input {
               background-color: rgba(color(light-2), 0.3);
               &:focus {
                 background-color: rgba(color(light-2), 0.5);
                 outline: 2px solid rgba(color(g3-6), 0.1);
               }
             }
-            &-textArea {
+            &_textArea {
               background-color: rgba(color(light-2), 0.3);
               &:focus {
                 background-color: rgba(color(light-2), 0.5);
                 outline: 2px solid rgba(color(g3-6), 0.1);
               }
             }
-            &-select {
+            &_select {
               color: color(dark-4);
               background-color: rgba(color(light-1), 0.8);
             }
             .labelUper {
               color: rgba(color(dark-2), 1);
             }
-            &-errorMsg {
+            &_errorMsg {
               color: rgba(color(dark-2), 0.8);
             }
             .unvalidItem {
               .main-contact-form-item {
-                &-icon {
+                &_icon {
                   .userIcon {
                     fill: color(error);
                   }
@@ -338,7 +338,7 @@
             }
             .validItem {
               .main-contact-form-item {
-                &-icon {
+                &_icon {
                   .userIcon {
                     fill: rgba(color(success), 0.8);
                   }
@@ -350,7 +350,7 @@
             }
           }
           .actions {
-            &-submit {
+            &_submit {
               color: rgba(color(light-2), 1);
               background-color: rgba(color(g1-2), 1);
             }
@@ -359,29 +359,29 @@
       }
     }
   }
-  &-en {
+  &_en {
     .main {
-      &-contact {
-        &-contactLines {
-          &-item {
+      &_contact {
+        &_contactLines {
+          &_item {
             .content {
-              &-value {
+              &_value {
                 font-family: iransans;
               }
             }
           }
         }
-        &-form {
-          &-item {
-            &-icon {
+        &_form {
+          &_item {
+            &_icon {
               left: auto;
               right: 5px;
             }
-            &-label {
+            &_label {
               right: auto;
               left: 10px;
             }
-            &-input {
+            &_input {
               padding-left: 1rem;
             }
             .labelUper {

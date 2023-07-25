@@ -26,20 +26,20 @@ const Item = (props: Props) => {
     }
   }, [level]);
   return (
-    <div className="main-skills-list-item">
+    <div className="main_skills_list_item">
       <div
-        className="main-skills-list-item-progressBar"
+        className="main_skills_list_item_progressBar"
         style={{
           background: `conic-gradient(from 0deg at 50% 50%,#3875aa ${
             isAnimationActive ? levState : level
           }%,#00000010 0% )`,
         }}
       >
-        <div className="main-skills-list-item-main">
+        <div className="main_skills_list_item_main">
           <Image src={icon_img} width={100} height={100} alt={tittle} />
         </div>
       </div>
-      <h2 className="main-skills-list-item-tittle">{tittle}</h2>
+      <h2 className="main_skills_list_item_tittle">{tittle}</h2>
     </div>
   );
 };

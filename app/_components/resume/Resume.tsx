@@ -15,14 +15,14 @@ interface Props {
 }
 const Resume = (props: Props) => {
   return (
-    <div className="main-resume">
+    <div className="main_resume">
       <SectionHeader
         tag="resume"
         tittle={props.base.section_tittle}
         description=""
       />
-      <div className="main-resume-container">
-        <div className="main-resume-experiences">
+      <div className="main_resume_container">
+        <div className="main_resume_experiences">
           <List_container
             experience={props.educations}
             header={props.base.labels.educations}

@@ -20,7 +20,7 @@ export const Backdrop = (props: Props) => {
     <div
       onClick={closeBackdropHandler}
       className={`${isShowBackdrop === OpenToggle.open ? "backdrop" : ""} ${
-        props.theme === Theme.Light ? "backdrop-lighter" : ""
+        props.theme === Theme.Light ? "backdrop_lighter" : ""
       }`}
     ></div>
   );

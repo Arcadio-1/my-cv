@@ -8,7 +8,7 @@ interface Props {
 }
 const Languages = (props: Props) => {
   return (
-    <div className="main-resume-language">
+    <div className="main_resume_language">
       <h2 className="tittle">{props.tittle}</h2>
       <List languages={props.languages} />
     </div>

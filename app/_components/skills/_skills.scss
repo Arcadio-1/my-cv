@@ -1,7 +1,7 @@
 @use "../../../styles/clips.scss" as *;
 .cv {
   .main {
-    &-skills {
+    &_skills {
       position: relative;
       color: color(light-2);
       background-color: rgba(color(dark-2), 0.5);
@@ -9,14 +9,14 @@
       padding: 1rem;
       overflow: hidden;
 
-      &-list {
+      &_list {
         padding: 2rem;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         overflow: hidden;
         gap: 2rem;
         background-color: rgba(color(g3-2), 0.1);
-        &-item {
+        &_item {
           overflow: hidden;
           @include dflex;
           padding: 1rem;
@@ -25,7 +25,7 @@
           gap: 0.5rem;
           background-color: rgba(color(dark-2), 0.2);
           border-radius: 20px;
-          &-animator {
+          &_animator {
             animation: skillItemAnime 1s alternate;
           }
           @keyframes skillItemAnime {
@@ -38,14 +38,14 @@
               opacity: 1;
             }
           }
-          &-progressBar {
+          &_progressBar {
             @include dflex();
             border-radius: 50%;
             height: 11rem;
             width: 11rem;
             padding: 0.8rem;
           }
-          &-main {
+          &_main {
             position: relative;
             @include dflex();
             height: 100%;
@@ -57,7 +57,7 @@
               width: 100%;
             }
           }
-          &-tittle {
+          &_tittle {
             padding: 0.5rem 1rem;
             width: 100%;
             text-align: center;
@@ -70,19 +70,19 @@
       }
     }
   }
-  &-lighter {
+  &_lighter {
     .main {
-      &-skills {
+      &_skills {
         color: color(dark-2);
         background-color: rgba(color(light-2), 0.5);
-        &-list {
+        &_list {
           background-color: rgba(color(g3-2), 0.1);
-          &-item {
+          &_item {
             background-color: rgba(color(light-2), 0.3);
-            &-main {
+            &_main {
               background-color: rgba(color(g4-1), 1);
             }
-            &-tittle {
+            &_tittle {
               background-color: rgba(color(g4-4), 0.6);
             }
           }

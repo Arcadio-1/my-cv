@@ -29,7 +29,7 @@ const Menu = (props: Props) => {
   return (
     <div className="menu">
       {isMenuOpen === OpenToggle.close && (
-        <div className="menu-nav">
+        <div className="menu_nav">
           <button onClick={OpenHandler}>
             <MenuIcon />
           </button>

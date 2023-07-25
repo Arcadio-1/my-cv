@@ -19,9 +19,9 @@ const ControlerBox = (props: Props) => {
   const { lang, theme, onChangeTheme } = props;
   return (
     <div className="controler">
-      <div className="controler-list">
+      <div className="controler_list">
         {lang === Lang.fa && (
-          <div className="controler-list-item">
+          <div className="controler_list_item">
             <Link href={"/en"}>
               <En_icon />
               <Image
@@ -34,7 +34,7 @@ const ControlerBox = (props: Props) => {
           </div>
         )}
         {lang === Lang.en && (
-          <div className="controler-list-item">
+          <div className="controler_list_item">
             <Link href={"/"}>
               <Fa_icon />
               <Image
@@ -47,16 +47,16 @@ const ControlerBox = (props: Props) => {
           </div>
         )}
         {theme === Theme.Dark && (
-          <div onClick={onChangeTheme} className="controler-list-item">
+          <div onClick={onChangeTheme} className="controler_list_item">
             <Light_icon />
           </div>
         )}
         {theme === Theme.Light && (
-          <div onClick={onChangeTheme} className="controler-list-item">
+          <div onClick={onChangeTheme} className="controler_list_item">
             <Dark_icon />
           </div>
         )}
-        <div className="controler-list-item">
+        <div className="controler_list_item">
           <Link target="_blank" href={"https://github.com/Arcadio-1/my-cv.git"}>
             <GithubIcon />
           </Link>

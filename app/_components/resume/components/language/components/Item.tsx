@@ -31,18 +31,18 @@ const Item = (props: Props) => {
     }
   }, [props.language.level, inView]);
   return (
-    <div ref={languageRef} key={language.id} className="list-item">
+    <div ref={languageRef} key={language.id} className="list_item">
       <Image src={language.img} alt={language.tittle} width={40} height={40} />
       <div className="content">
         <div className="data">
-          <h2 className="data-tittle">{language.tittle}</h2>
-          <span className="data-persent">
+          <h2 className="data_tittle">{language.tittle}</h2>
+          <span className="data_persent">
             {isAnimationActive ? level : props.language.level}%
           </span>
         </div>
         <div className="progressBar">
           <div
-            className="progressBar-percent"
+            className="progressBar_percent"
             style={{
               width: `${isAnimationActive ? level : props.language.level}%`,
             }}

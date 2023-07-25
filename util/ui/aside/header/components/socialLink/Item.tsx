@@ -8,10 +8,10 @@ interface Props {
 }
 const Item = (props: Props) => {
   return (
-    <li className="aside-header-socialmedias-list-item">
+    <li className="aside_header_socialmedias_list_item">
       <Link target="_blank" href={props.url}>
         <Image
-          // className="bg-[snow] rounded-full"
+          // className="bg_[snow] rounded_full"
           src={props.icon}
           alt={props.tittle}
           width={22}

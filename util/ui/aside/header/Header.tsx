@@ -15,7 +15,7 @@ const Header = (props: Props) => {
   //   (state: any) => state.getData.my_cv_server
   // );
   return (
-    <header className="aside-header">
+    <header className="aside_header">
       <ProfileImage profile_image={personalInfo.profile_iamge} />
       <Fullname
         name={personalInfo.name}

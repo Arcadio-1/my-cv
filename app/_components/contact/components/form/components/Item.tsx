@@ -34,21 +34,21 @@ const Item = (props: Props) => {
   } = props;
   return (
     <div
-      className={`main-contact-form-item ${clsName ? clsName : ""} ${
+      className={`main_contact_form_item ${clsName ? clsName : ""} ${
         value && "mt-5"
       }`}
     >
       <div
-        className={`main-contact-form-item-container ${
+        className={`main_contact_form_item_container ${
           isValid ? "validItem" : ""
         } ${error ? "unvalidItem" : ""} `}
       >
-        <label htmlFor={htmlId} className={`main-contact-form-item-icon`}>
+        <label htmlFor={htmlId} className={`main_contact_form_item_icon`}>
           {children}
         </label>
         <label
           htmlFor={htmlId}
-          className={`main-contact-form-item-label  ${value && "labelUper"}`}
+          className={`main_contact_form_item_label  ${value && "labelUper"}`}
         >
           {label}
         </label>
@@ -58,7 +58,7 @@ const Item = (props: Props) => {
           value={value}
           onBlur={onBlur}
           onChange={onChange}
-          className={`main-contact-form-item-input ${inputCls}`}
+          className={`main_contact_form_item_input ${inputCls}`}
           id={htmlId}
           type={inputType}
         />
@@ -67,7 +67,7 @@ const Item = (props: Props) => {
       {error && (
         <label
           htmlFor={htmlId}
-          className="main-contact-form-item-errorMsg"
+          className="main_contact_form_item_errorMsg"
         >{`${errorMsg}`}</label>
       )}
     </div>

@@ -10,12 +10,12 @@
   @include responsive(md) {
     top: 35px;
   }
-  &-header {
+  &_header {
     @include dflex(space-between);
     height: 3em;
     padding: 0 0.5em;
     border-bottom: 2px solid rgba(color(light-1), 0.5);
-    &-control {
+    &_control {
       cursor: pointer;
       svg {
         opacity: 0.7;
@@ -31,7 +31,7 @@
         }
       }
     }
-    &-status {
+    &_status {
       svg {
         opacity: 0.9;
         width: 1.5em;
@@ -42,7 +42,7 @@
       }
     }
   }
-  &-container {
+  &_container {
     padding: 1rem;
     padding-left: 5rem;
     p {
@@ -50,26 +50,26 @@
       text-align: left;
     }
   }
-  &-message {
+  &_message {
     font-size: 1.2em;
   }
-  &-success {
+  &_success {
     animation: openModal 0.4s ease-out forwards;
     background-color: rgba(color(success), 0.7);
   }
-  &-loading {
+  &_loading {
     animation: openModal 0.4s ease-out forwards;
     background-color: rgba(color(g3-4), 0.7);
   }
-  &-error {
+  &_error {
     animation: openModal 0.4s ease-out forwards;
     background-color: rgba(color(error), 0.7);
   }
-  &-warning {
+  &_warning {
     animation: openModal 0.4s ease-out forwards;
     background-color: rgba(color(warning), 0.7);
   }
-  &-null {
+  &_null {
     opacity: 0;
     animation: closeModal 1s ease-out alternate;
   }
@@ -104,7 +104,7 @@
   }
 }
 .en {
-  &-notifCard {
+  &_notifCard {
     left: auto;
     right: 10px;
     .notifCard-header {

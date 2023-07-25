@@ -9,7 +9,7 @@ interface Props {
 
 const Skills = (props: Props) => {
   return (
-    <div className="main-skills" id="skills">
+    <div className="main_skills" id="skills">
       <SectionHeader tittle={props.base.section_tittle} description="" />
       <List skills={props.skills} />
     </div>

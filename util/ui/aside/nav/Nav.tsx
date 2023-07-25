@@ -7,7 +7,7 @@ interface Props {
 
 const Nav = (props: Props) => {
   return (
-    <nav className="aside-nav">
+    <nav className="aside_nav">
       <List list={props.navLinks} />
     </nav>
   );

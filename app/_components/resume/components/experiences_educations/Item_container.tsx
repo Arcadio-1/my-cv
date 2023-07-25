@@ -13,15 +13,15 @@ const Item_container = (props: Props) => {
     <Fragment>
       <p className="tittle">{item.tittle}</p>
       <div className="content">
-        <div className="content-line">
+        <div className="content_line">
           <CalenderIcon />
           <div className="date">
-            <span className="date-since">{item.since}</span>
-            <span className="date-dash">-</span>
-            <span className="date-to">{item.to}</span>
+            <span className="date_since">{item.since}</span>
+            <span className="date_dash">_</span>
+            <span className="date_to">{item.to}</span>
           </div>
         </div>
-        <div className="content-line">
+        <div className="content_line">
           <LocationIcon />
           <span className="place">{item.place}</span>
         </div>

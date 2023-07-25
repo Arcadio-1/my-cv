@@ -33,13 +33,13 @@ const ContactLines = (props: Props) => {
   ];
 
   return (
-    <div ref={ref} className="main-contact-contactLines">
+    <div ref={ref} className="main_contact_contactLines">
       {contactLines_arry.map((item, index) => {
         return (
           <div
-            className={`main-contact-contactLines-item ${
+            className={`main_contact_contactLines_item ${
               isAnimationActive && inView
-                ? "main-contact-contactLines-animator"
+                ? "main_contact_contactLines_animator"
                 : ""
             } `}
             key={index}

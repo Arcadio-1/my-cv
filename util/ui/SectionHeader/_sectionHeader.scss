@@ -1,7 +1,7 @@
 @use "../../../styles/clips.scss" as *;
 .sectionHeader {
   // border: 2px solid red;
-  &-tittle {
+  &_tittle {
     font-family: iranyekan;
     margin-bottom: 1rem;
     padding-top: 1rem;
@@ -19,7 +19,7 @@
       border-bottom: 2px solid color(g3-2);
     }
   }
-  &-description {
+  &_description {
     p {
       font-size: 1.3rem;
       color: color(light-3);
@@ -27,9 +27,9 @@
   }
 }
 .cv {
-  &-lighter {
+  &_lighter {
     .sectionHeader {
-      &-tittle {
+      &_tittle {
         h2 {
           color: color(dark-3);
         }
@@ -37,7 +37,7 @@
           border-bottom: 2px solid color(g4-1);
         }
       }
-      &-description {
+      &_description {
         p {
           color: color(light-3);
         }

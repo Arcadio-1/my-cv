@@ -67,19 +67,19 @@ const NotifCard = (props: Props) => {
       <Modal theme={props.theme}>
         {notifState.message && (
           <div
-            className={`notifCard notifCard-${notifState.status} ${
-              props.lang === Lang.en ? "en-notifCard" : ""
+            className={`notifCard notifCard_${notifState.status} ${
+              props.lang === Lang.en ? "en_notifCard" : ""
             } `}
           >
-            <div className="notifCard-header">
-              <div className="notifCard-header-control" onClick={closeHandler}>
+            <div className="notifCard_header">
+              <div className="notifCard_header_control" onClick={closeHandler}>
                 <CloseIcon />
               </div>
-              <div className="notifCard-header-status">{statusIcon()}</div>
+              <div className="notifCard_header_status">{statusIcon()}</div>
             </div>
-            <div className="notifCard-container">
+            <div className="notifCard_container">
               {notifState.message !== "null" && (
-                <p className="notifCard-message">{notifState.message}</p>
+                <p className="notifCard_message">{notifState.message}</p>
               )}
             </div>
           </div>

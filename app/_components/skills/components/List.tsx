@@ -34,13 +34,13 @@ const List = (props: Props) => {
   }, [props.skills, inView]);
 
   return (
-    <div ref={ref} className={`main-skills-list`}>
+    <div ref={ref} className={`main_skills_list`}>
       {isAnimationActive
         ? skills.map((skill) => {
             return (
               <div
                 key={skill.id}
-                className={`${inView ? "main-skills-list-item-animator" : ""}`}
+                className={`${inView ? "main_skills_list_item_animator" : ""}`}
               >
                 <Item skill={skill} />
               </div>

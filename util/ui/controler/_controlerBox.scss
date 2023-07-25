@@ -1,7 +1,7 @@
 @use "../../../styles/clips.scss" as *;
 .cv {
   .controler {
-    &-container {
+    &_container {
       position: fixed;
       top: 5px;
       left: 5px;
@@ -10,10 +10,10 @@
         display: none;
       }
     }
-    &-list {
+    &_list {
       @include dflex();
       gap: 0.5rem;
-      &-item {
+      &_item {
         @include dflex;
         background-color: rgba(color(dark-2), 0.7);
         border-radius: 5px;
@@ -68,10 +68,10 @@
       }
     }
   }
-  &-lighter {
+  &_lighter {
     .controler {
-      &-list {
-        &-item {
+      &_list {
+        &_item {
           background-color: rgba(color(light-2), 0.7);
           .lightIcon {
             path,
@@ -103,9 +103,9 @@
       }
     }
   }
-  &-en {
+  &_en {
     .controler {
-      &-container {
+      &_container {
         position: fixed;
         top: 5px;
         left: auto;
@@ -115,7 +115,7 @@
           display: none;
         }
       }
-      &-list {
+      &_list {
         margin-left: auto;
       }
     }

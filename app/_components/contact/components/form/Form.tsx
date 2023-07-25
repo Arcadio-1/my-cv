@@ -182,8 +182,8 @@ const Form = (props: Props) => {
   return (
     <div
       ref={ref}
-      className={`main-contact-form ${
-        isAnimationActive && inView ? "main-contact-form-animator" : ""
+      className={`main_contact_form ${
+        isAnimationActive && inView ? "main_contact_form_animator" : ""
       }`}
     >
       <NotifCard theme={props.theme} lang={props.lang} />
@@ -218,12 +218,12 @@ const Form = (props: Props) => {
           <MailIcon />
         </Item>
         <div
-          className={`main-contact-form-item ${
-            isMessageValid ? "focus:outline-g1_2" : ""
+          className={`main_contact_form_item ${
+            isMessageValid ? "focus:outline-g1-2" : ""
           }`}
         >
           <div
-            className={`main-contact-form-item-container ${
+            className={`main_contact_form_item_container ${
               messageError ? "unvalidItem" : ""
             } ${isMessageValid ? "validItem" : ""}`}
           >
@@ -235,25 +235,25 @@ const Form = (props: Props) => {
               rows={10}
               ref={messageRef}
               placeholder={props.placeHolders.message}
-              className={`main-contact-form-item-textArea ${
-                isMessageValid ? "focus:outline-g1_2" : ""
+              className={`main_contact_form_item_textArea ${
+                isMessageValid ? "focus:outline-g1-2" : ""
               }`}
             />
           </div>
           {messageError && (
-            <p className="main-contact-form-item-errorMsg">
+            <p className="main_contact_form_item_errorMsg">
               {props.errorMessages.message}
             </p>
           )}
         </div>
         <div className="actions">
           {sendMessageStatus.status !== Status.loading && (
-            <button onClick={submitMessageHandler} className="actions-submit">
+            <button onClick={submitMessageHandler} className="actions_submit">
               {props.buttons.send}
             </button>
           )}
           {sendMessageStatus.status === Status.loading && (
-            <p className="actions-submit opacity-70 cursor-default">
+            <p className="actions_submit opacity-70 cursor-default">
               {props.buttons.sending}
             </p>
           )}

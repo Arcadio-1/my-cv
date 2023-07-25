@@ -7,7 +7,7 @@ interface Props {
 
 const ProfileImage = (props: Props) => {
   return (
-    <div className="aside-header-image">
+    <div className="aside_header_image">
       <Image
         src={props.profile_image}
         width={140}

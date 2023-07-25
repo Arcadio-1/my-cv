@@ -3,15 +3,15 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="aside-footer">
-      <div className="aside-footer-copyright">
+    <footer className="aside_footer">
+      <div className="aside_footer_copyright">
         <span>© Copyright</span>
         <span>Arcadio</span>
       </div>
-      <div className="aside-footer-designed">
+      <div className="aside_footer_designed">
         <span className="">Designed by </span>
         <Link target="_blank" href={"https://github.com/Arcadio-1"}>
-          <span className="aside-footer-designed-name">Arcadio</span>
+          <span className="aside_footer_designed_name">Arcadio</span>
         </Link>
       </div>
     </footer>

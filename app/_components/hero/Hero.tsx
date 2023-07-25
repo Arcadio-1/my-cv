@@ -40,9 +40,9 @@ const Hero = (props: Props) => {
   }, [props.expertise, length]);
 
   return (
-    <div ref={ref} className=" main-hero" id="home">
+    <div ref={ref} className=" main_hero" id="home">
       <div
-        className="main-hero-background"
+        className="main_hero_background"
         style={{
           backgroundImage: `url(${
             props.theme === Theme.Dark
@@ -51,13 +51,13 @@ const Hero = (props: Props) => {
           })`,
         }}
       ></div>
-      <div className=" main-hero-content main-hero-content-animatiner">
-        <div className="main-hero-content-tittle">
+      <div className=" main_hero_content main_hero_content_animatiner">
+        <div className="main_hero_content_tittle">
           <h1>{`${props.name} ${props.lastname}`}</h1>
         </div>
-        <div className="main-hero-content-expertise">
+        <div className="main_hero_content_expertise">
           {expertise === 1 && (
-            <div className="main-hero-content-expertise-item">
+            <div className="main_hero_content_expertise_item">
               {props.lang === Lang.fa && <span className="label"> من </span>}
               {props.lang === Lang.en && <span className="label"> I`m </span>}
               <span className="text text1">
@@ -67,7 +67,7 @@ const Hero = (props: Props) => {
             </div>
           )}
           {expertise === 2 && (
-            <div className="main-hero-content-expertise-item">
+            <div className="main_hero_content_expertise_item">
               {props.lang === Lang.fa && <span className="label"> من </span>}
               {props.lang === Lang.en && <span className="label"> I`m </span>}
               <span className="text  text2">
@@ -77,7 +77,7 @@ const Hero = (props: Props) => {
             </div>
           )}
           {expertise === 3 && (
-            <div className="main-hero-content-expertise-item">
+            <div className="main_hero_content_expertise_item">
               {props.lang === Lang.fa && <span className="label"> من </span>}
               {props.lang === Lang.en && <span className="label"> I`m </span>}
               <span className="text text3">
@@ -88,18 +88,18 @@ const Hero = (props: Props) => {
           )}
         </div>
 
-        <div className="main-hero-content-links">
+        <div className="main_hero_content_links">
           <a
             href={props.resumePng}
             target="_blank"
-            className="main-hero-content-links-item"
+            className="main_hero_content_links_item"
           >
             {props.base.buttons.download_resume_png}
           </a>
           <a
             href={props.resumePdf}
             target="_blank"
-            className="main-hero-content-links-item"
+            className="main_hero_content_links_item"
           >
             {props.base.buttons.download_resume_pdf}
           </a>

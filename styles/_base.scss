@@ -74,7 +74,7 @@ a {
     color(dark-grid-2) 100%
   );
   direction: rtl;
-  &-lighter {
+  &_lighter {
     background: color(light-grid-1);
     background: linear-gradient(
       90deg,
@@ -94,7 +94,7 @@ a {
       color(light-grid-2) 100%
     );
   }
-  &-en {
+  &_en {
     direction: ltr;
     text-transform: capitalize;
     font-family: iransans;

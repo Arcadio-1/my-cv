@@ -38,7 +38,7 @@ const Item = (props) => {
 
   useEffect(() => {
     let lightbox = new PhotoSwipeLightbox({
-      gallery: "#my-test-gallery",
+      gallery: "#my_test_gallery",
       children: "a",
       pswpModule: () => import("photoswipe"),
     });
@@ -68,7 +68,7 @@ const Item = (props) => {
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={10}
           slidesPerView={"auto"}
-          id="my-test-gallery"
+          id="my_test_gallery"
           className=""
           navigation
           pagination={{
@@ -80,7 +80,7 @@ const Item = (props) => {
               <SwiperSlide key={index}>
                 <a
                   href={image.largeURL}
-                  key={"my-test-gallery" + "-" + index}
+                  key={"my_test_gallery" + "-" + index}
                   target="_blank"
                   rel="noreferrer"
                   className="link"
@@ -88,9 +88,9 @@ const Item = (props) => {
                   data-pswp-height={image.height}
                 >
                   <div className="slide">
-                    <p className="slide-tittle">{portfolio.tittle}</p>
+                    <p className="slide_tittle">{portfolio.tittle}</p>
 
-                    <div className="slide-imageContainer">
+                    <div className="slide_imageContainer">
                       <Image
                         src={image.largeURL}
                         width={300}
@@ -107,9 +107,9 @@ const Item = (props) => {
       </div>
       <div className="actions">
         {portfolio.deployed_link_1 && (
-          <div className="actions-btn actions-deploy-container">
+          <div className="actions_btn actions_deploy_container">
             <div
-              className="actions-btn actions-deploy"
+              className="actions_btn actions_deploy"
               title={buttons_titles.show_demo}
             >
               <Link target="_blank" href={portfolio.deployed_link_1}>
@@ -117,7 +117,7 @@ const Item = (props) => {
               </Link>
             </div>
             <div
-              className="actions-btn actions-deploy"
+              className="actions_btn actions_deploy"
               title={buttons_titles.show_demo}
             >
               <Link target="_blank" href={portfolio.deployed_link_2}>
@@ -128,7 +128,7 @@ const Item = (props) => {
         )}
         {portfolio.repo_link && (
           <div
-            className="actions-btn actions-repo"
+            className="actions_btn actions_repo"
             title={buttons_titles.show_codes}
           >
             <Link target="_blank" href={portfolio.repo_link}>
@@ -138,7 +138,7 @@ const Item = (props) => {
         )}
         {portfolio.download_link && (
           <div
-            className="actions-btn actions-pdf"
+            className="actions_btn actions_pdf"
             title={buttons_titles.download_pdf}
           >
             <a target="_blank" href={portfolio.download_link}>

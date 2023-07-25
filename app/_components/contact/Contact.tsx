@@ -13,13 +13,13 @@ interface Props {
 }
 const Contact = (props: Props) => {
   return (
-    <div className="main-contact">
+    <div className="main_contact">
       <SectionHeader
         tag="contact"
         tittle={props.base.section_tittle}
         description=""
       />
-      <div className="main-contact-container">
+      <div className="main_contact_container">
         <ContactLines
           labels={props.base.labels}
           mobile={props.mobile}

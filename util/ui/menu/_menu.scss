@@ -5,7 +5,7 @@
   @include responsive(md) {
     display: block;
   }
-  &-nav {
+  &_nav {
     position: fixed;
     top: 0px;
     width: 100%;
@@ -54,9 +54,9 @@
   }
 }
 .cv {
-  &-lighter {
+  &_lighter {
     .menu {
-      &-nav {
+      &_nav {
         background-color: rgba(color(light-2), 0.2);
       }
       .closeIcon {
@@ -79,7 +79,7 @@
   }
 }
 .cv {
-  &-en {
+  &_en {
     .menu {
       @include responsive(md) {
         display: flex;

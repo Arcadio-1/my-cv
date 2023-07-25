@@ -2,7 +2,7 @@ import React from "react";
 
 const EmailIcon = () => {
   return (
-    <div className="main-contact-contactLines-item-icon">
+    <div className="main_contact_contactLines_item_icon">
       <svg viewBox="0 0 32 32">
         <g style={{ stroke: "none" }}>
           <path d="M28,13a1,1,0,0,0-1,1v8a1,1,0,0,1-1,1H6a1,1,0,0,1-1-1V14a1,1,0,0,0-2,0v8a3,3,0,0,0,.88,2.12A3,3,0,0,0,6,25H26a3,3,0,0,0,2.12-.88A3,3,0,0,0,29,22V14A1,1,0,0,0,28,13Z" />

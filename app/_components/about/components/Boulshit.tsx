@@ -18,8 +18,8 @@ const Boulshit = (props: Props) => {
   return (
     <div
       ref={ref}
-      // className={`main-about-boulshit  ${
-      //   isAnimationActive && inView ? "main-about-boulshit-animator" : ""
+      // className={`main_about_boulshit  ${
+      //   isAnimationActive && inView ? "main_about_boulshit_animator" : ""
       // }`}
       className={`${`main_about_boulshit`} ${
         isAnimationActive && inView ? `main_about_boulshit_animator` : ""

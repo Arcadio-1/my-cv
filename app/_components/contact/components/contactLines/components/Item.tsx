@@ -10,8 +10,8 @@ const Item = (props: Props) => {
     <Fragment>
       {props.children}
       <div className="content">
-        <p className="content-label">{props.label}</p>
-        <p className="content-value">{props.content}</p>
+        <p className="content_label">{props.label}</p>
+        <p className="content_value">{props.content}</p>
       </div>
     </Fragment>
   );

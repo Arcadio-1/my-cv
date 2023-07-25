@@ -32,13 +32,13 @@ const Portfolio = (props: Props) => {
   }, [portfolios]);
 
   return (
-    <div className="main-portfolio">
+    <div className="main_portfolio">
       <SectionHeader
         tag="portfolio"
         tittle={props.base.section_tittle}
         description=""
       />
-      <div className="main-portfolio-container">
+      <div className="main_portfolio_container">
         {filters && (
           <Filter
             label={props.base.labels.all}

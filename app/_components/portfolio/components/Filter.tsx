@@ -8,7 +8,7 @@ interface Props {
 }
 const Filter = (props: Props) => {
   return (
-    <div className="main-portfolio-filter">
+    <div className="main_portfolio_filter">
       <ul className="nav">
         <li
           onClick={() => {

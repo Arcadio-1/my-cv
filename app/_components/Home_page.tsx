@@ -43,11 +43,11 @@ const Home_page = (props: Props) => {
 
   return (
     <div
-      className={`${`cv`}  ${theme === Theme.Light ? `cv-lighter` : ""}  ${
-        lang === Lang.en ? `cv-en` : ""
+      className={`${`cv`}  ${theme === Theme.Light ? `cv_lighter` : ""}  ${
+        lang === Lang.en ? `cv_en` : ""
       }`}
     >
-      <div className="controler-container">
+      <div className="controler_container">
         <ControlerBox
           lang={lang}
           onChangeTheme={changeThemeHandler}
@@ -61,7 +61,7 @@ const Home_page = (props: Props) => {
         lang={lang}
         theme={theme}
       />
-      <div className="mr-auto ml-auto">
+      <div className="mr_auto ml_auto">
         <main className="main">
           <Hero
             base={base.hero_base}
@@ -75,7 +75,7 @@ const Home_page = (props: Props) => {
             hero_image_light={personal_info.hero_image_light}
             expertise={personal_info.expertise}
           />
-          <div className="max-w-[1280px] w-full mb-10">
+          <div className="max_w_[1280px] w-full mb-10">
             <About
               about={about}
               base={base.about_base}

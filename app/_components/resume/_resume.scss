@@ -1,23 +1,23 @@
 @use "../../../styles/clips.scss" as *;
 .cv {
   .main {
-    &-resume {
+    &_resume {
       margin-top: 1rem;
       color: color(light-2);
       background-color: rgba(color(dark-2), 0.5);
       padding: 1rem;
       padding-bottom: 1rem;
-      &-container {
+      &_container {
         overflow: hidden;
       }
-      &-experiences {
+      &_experiences {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
         @include responsive(md) {
           grid-template-columns: 1fr;
         }
-        &-experience {
+        &_experience {
           border-radius: 10px;
           padding: 0.5rem 1rem;
           background-color: rgba(color(g3-2), 0.1);
@@ -37,7 +37,7 @@
           }
           .list {
             list-style: none;
-            &-item {
+            &_item {
               @include dflex(flex-start, flex-start);
               flex-direction: column;
               padding: 0.5rem 1rem;
@@ -51,7 +51,7 @@
                 opacity: 1;
                 transform: translateX(0);
               }
-              &-animator {
+              &_animator {
                 opacity: 1;
                 transform: translateX(0);
                 animation: resumeExperiencesAnime 0.2s alternate;
@@ -72,7 +72,7 @@
                 padding: 0.5rem 1rem;
                 gap: 0.5rem;
                 margin-top: 0.5rem;
-                &-line {
+                &_line {
                   @include dflex();
                   gap: 0.2rem;
                   padding-bottom: 0.2rem;
@@ -97,12 +97,12 @@
                 font-family: iransansnum;
                 @include dflex;
                 gap: 0.5rem;
-                &-since {
+                &_since {
                   letter-spacing: 0.12rem;
                 }
-                &-dash {
+                &_dash {
                 }
-                &-to {
+                &_to {
                   letter-spacing: 0.12rem;
                 }
               }
@@ -113,7 +113,7 @@
           }
         }
       }
-      &-language {
+      &_language {
         border-radius: 10px;
         margin-top: 2rem;
         background-color: rgba(color(g3-2), 0.1);
@@ -141,7 +141,7 @@
           @include responsive(sm) {
             grid-template-columns: 1fr;
           }
-          &-item {
+          &_item {
             @include dflex;
             gap: 1rem;
             width: 100%;
@@ -159,9 +159,9 @@
               @include dflex(space-between);
               margin-bottom: 0.3rem;
               font-size: 1.1rem;
-              &-tittle {
+              &_tittle {
               }
-              &-percent {
+              &_percent {
               }
             }
             .progressBar {
@@ -173,7 +173,7 @@
               border: 2px solid rgba(color(g3-3), 0.4);
               @include dflex(flex-end);
               transition: all 0.3s linear;
-              &-percent {
+              &_percent {
                 height: 100%;
                 width: 0px;
                 background-color: rgba(color(g3-3), 0.5);
@@ -184,19 +184,19 @@
       }
     }
   }
-  &-lighter {
+  &_lighter {
     .main {
-      &-resume {
+      &_resume {
         color: color(dark-2);
         background-color: rgba(color(light-2), 0.5);
-        &-experiences {
-          &-experience {
+        &_experiences {
+          &_experience {
             background-color: rgba(color(g3-2), 0.1);
             .list {
-              &-item {
+              &_item {
                 background-color: rgba(color(light-2), 0.3);
                 .content {
-                  &-line {
+                  &_line {
                     border-bottom: 2px solid rgba(color(dark-2), 0.08);
                     .calenderIcon {
                       fill: rgba(color(dark-2), 0.7);
@@ -210,13 +210,13 @@
             }
           }
         }
-        &-language {
+        &_language {
           background-color: rgba(color(g3-2), 0.1);
           .list {
-            &-item {
+            &_item {
               background-color: rgba(color(light-2), 0.3);
               .progressBar {
-                &-percent {
+                &_percent {
                   background-color: rgba(color(g3-3), 0.5);
                 }
               }
@@ -226,13 +226,13 @@
       }
     }
   }
-  &-en {
+  &_en {
     .main {
-      &-resume {
-        &-experiences {
-          &-experience {
+      &_resume {
+        &_experiences {
+          &_experience {
             .list {
-              &-item {
+              &_item {
                 .date {
                   font-family: iransans;
                 }
@@ -240,9 +240,9 @@
             }
           }
         }
-        &-language {
+        &_language {
           .list {
-            &-item {
+            &_item {
               .progressBar {
                 @include dflex(flex-start);
               }

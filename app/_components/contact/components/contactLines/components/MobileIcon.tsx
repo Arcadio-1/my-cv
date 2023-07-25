@@ -6,7 +6,7 @@ const MobileIcon = () => {
     strokeWidth: "2px",
   };
   return (
-    <div className="main-contact-contactLines-item-icon">
+    <div className="main_contact_contactLines_item_icon">
       <svg viewBox="0 0 32 32">
         <rect
           style={cls_1}
