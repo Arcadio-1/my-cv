@@ -100,31 +100,33 @@
                   font-size: 2rem;
                 }
               }
-              &_slide {
-                .link {
-                  .slide {
-                    &_tittle {
-                      font-family: iranyekan;
-                      color: color(light-2);
-                      padding: 1rem 1rem;
-                      background-color: rgba(color(dark-2), 0.2);
-                      font-size: 1.4rem;
-                      border-bottom: 2px solid rgba(color(light-2), 1);
-                    }
-                    &_imageContainer {
-                      img {
-                        width: 100%;
-                      }
+              // &_slide {
+              // display: none;
+              .link {
+                .slide {
+                  &_tittle {
+                    font-family: iranyekan;
+                    color: color(light-2);
+                    padding: 1rem 1rem;
+                    background-color: rgba(color(dark-2), 0.2);
+                    font-size: 1.2rem;
+                    border-bottom: 2px solid rgba(color(light-2), 1);
+                  }
+                  &_imageContainer {
+                    img {
+                      width: 100%;
                     }
                   }
                 }
               }
+              // }
             }
           }
           .actions {
             @include dflex(space-between);
             background-color: rgba(color(dark-2), 0.2);
             padding: 0.5rem 1rem;
+            margin-top: auto;
             &_btn {
               max-width: 2.5rem;
               width: 100%;
@@ -142,30 +144,45 @@
             &_deploy {
               &_container {
                 display: flex;
-                gap: 1rem;
+                flex-direction: column;
+                gap: 0.5rem;
               }
-              svg {
-                width: 2.8rem;
-                path {
-                  transition: all 0.15s linear;
-                  fill: rgba(color(light-2), 1);
-                }
-                circle {
-                  transition: all 0.15s linear;
-                  fill: rgba(color(light-2), 1);
-                }
+              min-width: 10rem;
+              img {
+                border-radius: 4px;
+                padding: 0.1rem 0.2rem;
+                background-color: rgba(color(g4-5), 0.5);
+                transition: all 0.15s ease-in-out;
                 &:hover {
-                  path {
-                    fill: color(g3-2);
-                  }
-                  circle {
-                    fill: color(g3-2);
-                  }
+                  transform: scale(1.05);
+                  background-color: rgba(color(g4-5), 1);
                 }
               }
+              // svg {
+              //   width: 2.8rem;
+              //   path {
+              //     transition: all 0.15s linear;
+              //     fill: rgba(color(light-2), 1);
+              //   }
+              //   circle {
+              //     transition: all 0.15s linear;
+              //     fill: rgba(color(light-2), 1);
+              //   }
+              //   &:hover {
+              //     path {
+              //       fill: color(g3-2);
+              //     }
+              //     circle {
+              //       fill: color(g3-2);
+              //     }
+              //   }
+              // }
             }
             &_repo {
+              display: flex;
               svg {
+                width: 3rem;
+                height: 3rem;
                 path {
                   transition: all 0.15s linear;
                   fill: rgba(color(light-2), 1);

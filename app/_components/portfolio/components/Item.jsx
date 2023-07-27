@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { Fragment } from "react";
-import MonitorIcon from "./icons/MonitorIcon";
+// import MonitorIcon from "./icons/MonitorIcon";
 import GithubIcon from "./icons/GithubIcon";
 import DownloadIcon from "./icons/DownloadIcon";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
@@ -112,16 +112,28 @@ const Item = (props) => {
               className="actions_btn actions_deploy"
               title={buttons_titles.show_demo}
             >
-              <Link target="_blank" href={portfolio.deployed_link_1}>
-                <MonitorIcon />
+              <Link target="_blank" href={portfolio.deployed_link_2}>
+                <Image
+                  src={"/portfolio/development/netlify.png"}
+                  height={30}
+                  width={80}
+                  alt="netlify"
+                />
+                {/* <MonitorIcon /> */}
               </Link>
             </div>
             <div
               className="actions_btn actions_deploy"
               title={buttons_titles.show_demo}
             >
-              <Link target="_blank" href={portfolio.deployed_link_2}>
-                <MonitorIcon />
+              <Link target="_blank" href={portfolio.deployed_link_1}>
+                <Image
+                  src={"/portfolio/development/vercel.png"}
+                  height={30}
+                  width={80}
+                  alt="vercel"
+                />
+                {/* <MonitorIcon /> */}
               </Link>
             </div>
           </div>
