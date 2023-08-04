@@ -33,16 +33,28 @@ const Home_page = (props: Props) => {
   useEffect(() => {
     setIsLoading(false);
     const localTheme = localStorage.getItem("theme");
-    if (
-      (window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: light)").matches) ||
-      localTheme === "light"
-    ) {
-      localStorage.setItem("theme", "light");
-      console.log("light");
-      return setTheme(Theme.Light);
-    } else {
-      localStorage.setItem("theme", "dark");
+    try {
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: light)").matches &&
+        !localTheme
+      ) {
+        localStorage.setItem("theme", "light");
+        return setTheme(Theme.Light);
+      }
+      if (!localTheme) {
+        localStorage.setItem("theme", "dark");
+        return setTheme(Theme.Dark);
+      }
+      if (localTheme === "light") {
+        return setTheme(Theme.Light);
+      }
+      if (localTheme === "dark") {
+        return setTheme(Theme.Dark);
+      }
+    } catch {
+      setIsLoading(false);
+      console.log("this should never happened :((((((((((");
     }
   }, []);
   // console.log(style);
