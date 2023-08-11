@@ -26,6 +26,7 @@ export default async function Page() {
   const request = await getData();
   const DataJson: All_Data = JSON.parse(request.cv);
   const DataMd: string = request.aboutMd;
+
   return (
     <Home_page
       lang={Lang.fa}

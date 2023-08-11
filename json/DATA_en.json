@@ -323,14 +323,14 @@
         },
         {
           "id": "3-1",
-          "tittle": "react",
+          "tittle": "react 18",
           "level": 90,
           "icon_img": "/images/skills/img/react.png",
           "icon_icon": "/images/skills/icon/react.svg"
         },
         {
           "id": "3-2",
-          "tittle": "next.js",
+          "tittle": "next.js 13",
           "level": 90,
           "icon_img": "/images/skills/img/nextjs.png",
           "icon_icon": "/images/skills/icon/"
@@ -338,19 +338,26 @@
         {
           "id": "4-1",
           "tittle": "tailwind",
-          "level": 80,
+          "level": 90,
           "icon_img": "/images/skills/img/tailwind_1.png",
           "icon_icon": "/images/skills/icon/tailwind.svg"
         },
         {
           "id": "4-2",
+          "tittle": "daisyui",
+          "level": 80,
+          "icon_img": "/images/skills/img/daisyui.png",
+          "icon_icon": "/images/skills/icon/daisyui.svg"
+        },
+        {
+          "id": "4-3",
           "tittle": "material ui",
-          "level": 70,
+          "level": 50,
           "icon_img": "/images/skills/img/materialui.png",
           "icon_icon": "/images/skills/icon/materialui.svg"
         },
         {
-          "id": "4-3",
+          "id": "4-4",
           "tittle": "bootstrap",
           "level": 50,
           "icon_img": "/images/skills/img/bootstrap.png",
@@ -380,7 +387,7 @@
         },
         {
           "id": "6-2",
-          "tittle": "redux",
+          "tittle": "redux toolkit, RTK query",
           "level": 100,
           "icon_img": "/images/skills/img/redux.png",
           "icon_icon": "/images/skills/icon/redux.svg"
@@ -421,9 +428,16 @@
           "icon_icon": "/images/skills/icon/firebase.svg"
         },
         {
+          "id": "7-4",
+          "tittle": "prisma",
+          "level": 70,
+          "icon_img": "/images/skills/img/prisma.svg",
+          "icon_icon": "/images/skills/icon/prisma.svg"
+        },
+        {
           "id": "8",
-          "tittle": "TDD",
-          "level": 80,
+          "tittle": "TDD (vitest,jest)",
+          "level": 60,
           "icon_img": "/images/skills/img/TDD.png",
           "icon_icon": "/images/skills/icon/TDD.svg"
         }
