@@ -26,6 +26,7 @@
           @include dflex;
         }
         .lightIcon {
+          cursor: pointer;
           width: 2.2em;
           height: 2.2em;
           path,
@@ -34,6 +35,7 @@
           }
         }
         .darkIcon {
+          cursor: pointer;
           width: 2em;
           height: 2em;
           path {

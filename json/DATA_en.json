@@ -3,8 +3,8 @@
   "cv": {
     "personal_info": {
       "profile_iamge": "/images/profile_5.jpg",
-      "hero_image_dark": "/images/hero/hero_dark_2.jpg",
-      "hero_image_light": "/images/hero/hero_light_2.jpg",
+      "hero_image_dark": "/images/hero/hero_dark_3.jpg",
+      "hero_image_light": "/images/hero/hero_light_3.jpg",
       "resume_pdf": "/resume/En/CV-En.pdf",
       "resume_png": "/resume/En/CV_En_1.jpg",
       "name": "hossein",
@@ -344,20 +344,27 @@
         },
         {
           "id": "4-2",
+          "tittle": "Shadcn/ui",
+          "level": 90,
+          "icon_img": "/images/skills/img/shadcn.svg",
+          "icon_icon": "/images/skills/icon/shadcn.svg"
+        },
+        {
+          "id": "4-3",
           "tittle": "daisyui",
           "level": 80,
           "icon_img": "/images/skills/img/daisyui.png",
           "icon_icon": "/images/skills/icon/daisyui.svg"
         },
         {
-          "id": "4-3",
+          "id": "4-4",
           "tittle": "material ui",
           "level": 50,
           "icon_img": "/images/skills/img/materialui.png",
           "icon_icon": "/images/skills/icon/materialui.svg"
         },
         {
-          "id": "4-4",
+          "id": "4-5",
           "tittle": "bootstrap",
           "level": 50,
           "icon_img": "/images/skills/img/bootstrap.png",

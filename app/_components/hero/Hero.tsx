@@ -3,6 +3,8 @@ import { useAppSelector } from "@/redux/hook";
 // import useScrollMotion from "@/util/Hooks/UseScrollMotion";
 import { Expertise, Hero_base, InView, Lang, Theme } from "@/util/Types/types";
 import React, { useEffect, useState } from "react";
+import Contents from "./components/Contents";
+import Image from "next/image";
 
 interface Props {
   name: string;
@@ -16,99 +18,47 @@ interface Props {
   resumePng: string;
   base: Hero_base;
 }
-const Hero = (props: Props) => {
-  const [expertise, setExpertise] = useState<number>(1);
-  const { activeAnimation: isAnimationActive } = useAppSelector(
-    (state) => state.ui
-  );
-  // const { inView, ref } = useScrollMotion(InView.home, isAnimationActive);
-
-  const length = props.expertise.length;
-  useEffect(() => {
-    const interval = setInterval(
-      () =>
-        setExpertise((prev) => {
-          if (prev === length) {
-            return (prev = 1);
-          }
-          if (prev < length) {
-            return (prev = prev + 1);
-          }
-          return (prev = 1);
-        }),
-      5000
-    );
-    return () => {
-      clearInterval(interval);
-    };
-  }, [props.expertise, length]);
-
+const Hero = ({
+  theme,
+  hero_image_dark,
+  hero_image_light,
+  base,
+  expertise,
+  lang,
+  lastname,
+  name,
+  resumePdf,
+  resumePng,
+}: Props) => {
   return (
     <div className=" main_hero" id="home">
       <div
         className="main_hero_background"
         style={{
           backgroundImage: `url(${
-            props.theme === Theme.Dark
-              ? props.hero_image_dark
-              : props.hero_image_light
+            theme === Theme.Dark ? hero_image_dark : hero_image_light
           })`,
         }}
       ></div>
-      <div className=" main_hero_content main_hero_content_animatiner">
-        <div className="main_hero_content_tittle">
-          <h1>{`${props.name} ${props.lastname}`}</h1>
-        </div>
-        <div className="main_hero_content_expertise">
-          {expertise === 1 && (
-            <div className="main_hero_content_expertise_item">
-              {props.lang === Lang.fa && <span className="label"> من </span>}
-              {props.lang === Lang.en && <span className="label"> I`m </span>}
-              <span className="text text1">
-                {props.expertise[0].tittle}
-                {props.lang !== Lang.en && " هستم "}
-              </span>
-            </div>
-          )}
-          {expertise === 2 && (
-            <div className="main_hero_content_expertise_item">
-              {props.lang === Lang.fa && <span className="label"> من </span>}
-              {props.lang === Lang.en && <span className="label"> I`m </span>}
-              <span className="text  text2">
-                {props.expertise[1].tittle}
-                {props.lang !== Lang.en && " هستم "}
-              </span>
-            </div>
-          )}
-          {expertise === 3 && (
-            <div className="main_hero_content_expertise_item">
-              {props.lang === Lang.fa && <span className="label"> من </span>}
-              {props.lang === Lang.en && <span className="label"> I`m </span>}
-              <span className="text text3">
-                {props.expertise[2].tittle}
-                {props.lang !== Lang.en && " هستم "}
-              </span>
-            </div>
-          )}
-        </div>
-
-        <div className="main_hero_content_links">
-          <a
-            href={props.resumePng}
-            target="_blank"
-            className="main_hero_content_links_item"
-          >
-            {props.base.buttons.download_resume_png}
-          </a>
-          <a
-            href={props.resumePdf}
-            target="_blank"
-            className="main_hero_content_links_item"
-          >
-            {props.base.buttons.download_resume_pdf}
-          </a>
-        </div>
-      </div>
+      <Contents
+        theme={theme}
+        base={base}
+        lang={lang}
+        lastname={lastname}
+        name={name}
+        resumePdf={resumePdf}
+        resumePng={resumePng}
+        expertise={expertise}
+      />
+      {/* <div className="z-10 bg-slate-100 p-2 animate-bounce rounded-full bg-opacity-10 backdrop-blur-sm shadow-md mr-auto">
+        <Image
+          className=" "
+          src={`/images/hero/light.png`}
+          alt="hi"
+          width={300}
+          height={300}
+        />
+      </div> */}
     </div>
   );
 };

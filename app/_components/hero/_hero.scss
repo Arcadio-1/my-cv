@@ -19,11 +19,11 @@
         filter: drop-shadow(0px 0px 0px rgb(255, 255, 255)) brightness(60%);
       }
       &_content {
-        @include dflex(flex-start);
         position: absolute;
         top: 10%;
         right: 25%;
         z-index: 5;
+        @include dflex(flex-start);
         flex-direction: column;
         &_animatiner {
           position: absolute;
@@ -140,6 +140,11 @@
             }
           }
         }
+        @include responsive(md) {
+          &_miniImage {
+            margin-top: 10rem;
+          }
+        }
         @include responsive(sm) {
           top: 10rem;
           right: 2rem;
@@ -231,12 +236,13 @@
         }
         &_content {
           top: 20%;
-          right: 10%;
+          left: 25%;
           &_tittle {
             margin: 0px;
             margin-right: auto;
           }
           &_expertise {
+            margin-right: auto;
             .label {
               border-radius: 10px 0px 0px 10px;
               padding-right: 0.5rem;
@@ -249,6 +255,9 @@
               margin-right: auto;
               padding-left: 0.1rem;
             }
+          }
+          &_links {
+            margin-right: auto;
           }
         }
       }
