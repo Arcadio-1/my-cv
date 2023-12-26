@@ -12,8 +12,8 @@ const Latest_design = ({ lang }: Props) => {
   return (
     <div
       dir="ltr"
-      className={`bg-gray-950 bg-opacity-50 backdrop-blur-sm mt-10 mx-4 rounded-[5px] flex flex-col gap-3 ${
-        lang === Lang.fa ? "ml-auto" : "ml-auto"
+      className={`bg-gray-950 bg-opacity-50 backdrop-blur-sm mt-10 mx-4 rounded-[5px] flex flex-col gap-3 w-full md:w-auto ${
+        lang === Lang.fa ? "md:ml-auto" : "md:ml-auto"
       }`}
     >
       <Header />

@@ -28,8 +28,10 @@
         width: 75%;
         padding: 3rem;
         @include responsive(md) {
+          top: 4rem;
           right: 0;
           width: 100%;
+          padding: 1.5rem;
         }
         &_animatiner {
           position: absolute;
