@@ -156,7 +156,7 @@
         }
         @include responsive(sm) {
           top: 2rem;
-          right: 2rem;
+          right: 0rem;
           &_tittle {
             h1 {
               font-size: 3.5rem;
