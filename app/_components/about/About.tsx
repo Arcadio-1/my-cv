@@ -34,10 +34,10 @@ const About = (props: Props) => {
       <div className={`${style.main_about_container}`}>
         <Tittle tittle={props.base.tittle} />
 
-        <MyImage
+        {/* <MyImage
           imageUrl={props.personal_info.profile_iamge}
           alt={props.personal_info.name}
-        />
+        /> */}
 
         <List labels={props.base.labels} personal_info={props.personal_info} />
 

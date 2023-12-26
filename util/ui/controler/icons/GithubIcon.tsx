@@ -1,8 +1,12 @@
 import React from "react";
 
-const GithubIcon = () => {
+interface Props {
+  classes?: string;
+}
+
+const GithubIcon = ({ classes }: Props) => {
   return (
-    <div className="githubIcon">
+    <div className={`githubIcon ${classes}`}>
       <svg viewBox="0 0 32 32">
         <path
           clipRule="evenodd"

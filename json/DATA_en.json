@@ -18,10 +18,9 @@
       "gender": "male",
       "military_service": "exemption",
       "residence": "iran - tehran",
-      "age": 26,
+      "age": 27,
       "degree": "bachelor of software engineering",
       "expertise": [
-        { "id": 1, "tittle": "frontend designer" },
         { "id": 2, "tittle": "frontend developer" },
         { "id": 3, "tittle": "freelancer" }
       ],
@@ -120,6 +119,32 @@
         }
       ],
       "portfolios": [
+        {
+          "id": "0",
+          "tittle": "Digikala clone (Next.js 14)",
+          "group": "توسعه وب",
+          "tags": [
+            "next.js_14,tailwind,typescript,prisma,mongoDB,deployed,zod,shadcn-ui,mui"
+          ],
+          "prev_image": "/portfolio/development/CafeTarane-v1/10.png",
+          "images": [
+            "/portfolio/development/CafeTarane-v1/1.png",
+            "/portfolio/development/CafeTarane-v1/2.png",
+            "/portfolio/development/CafeTarane-v1/3.png",
+            "/portfolio/development/CafeTarane-v1/4.png",
+            "/portfolio/development/CafeTarane-v1/5.png",
+            "/portfolio/development/CafeTarane-v1/6.png",
+            "/portfolio/development/CafeTarane-v1/7.png",
+            "/portfolio/development/CafeTarane-v1/8.png",
+            "/portfolio/development/CafeTarane-v1/9.png",
+            "/portfolio/development/CafeTarane-v1/10.png",
+            "/portfolio/development/CafeTarane-v1/11.png"
+          ],
+          "deployed_link_1": "https://taraneh-v1.vercel.app/",
+          "deployed_link_2": "https://taraneh-v1.vercel.app/",
+          "repo_link": "https://github.com/Arcadio-1/Taraneh_v1",
+          "download_link": ""
+        },
         {
           "id": "1",
           "tittle": "coffee taraneh ecommerce (Nextjs)",
@@ -330,7 +355,7 @@
         },
         {
           "id": "3-2",
-          "tittle": "next.js 13",
+          "tittle": "next.js 14",
           "level": 90,
           "icon_img": "/images/skills/img/nextjs.png",
           "icon_icon": "/images/skills/icon/"
@@ -437,9 +462,16 @@
         {
           "id": "7-4",
           "tittle": "prisma",
-          "level": 70,
+          "level": 90,
           "icon_img": "/images/skills/img/prisma.svg",
           "icon_icon": "/images/skills/icon/prisma.svg"
+        },
+        {
+          "id": "7-4",
+          "tittle": "zod",
+          "level": 90,
+          "icon_img": "/images/skills/img/zod.svg",
+          "icon_icon": "/images/skills/icon/zod.svg"
         },
         {
           "id": "8",

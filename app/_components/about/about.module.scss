@@ -20,13 +20,13 @@
         grid-template-areas:
           "abouttittle abouttittle"
           "aboutboulshit aboutboulshit"
-          "aboutimage aboutlist";
+          "aboutlist aboutlist";
       }
       @include responsive(sm) {
         grid-template-areas:
           "abouttittle abouttittle"
           "aboutboulshit aboutboulshit"
-          "aboutimage aboutimage"
+          // "aboutimage aboutimage"
           "aboutlist aboutlist";
       }
     }
@@ -38,7 +38,7 @@
       font-family: iranyekan;
       font-size: 1.6rem;
       margin-bottom: 2rem;
-      padding-right: 2.5rem;
+      // padding-right: 2.5rem;
       margin-bottom: 1.5rem;
       @include responsive(md) {
         opacity: 1;

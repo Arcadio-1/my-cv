@@ -20,13 +20,20 @@
       }
       &_content {
         position: absolute;
-        top: 10%;
-        right: 25%;
-        z-index: 5;
         @include dflex(flex-start);
         flex-direction: column;
+        top: 1rem;
+        right: 25%;
+        z-index: 5;
+        width: 75%;
+        padding: 3rem;
+        @include responsive(md) {
+          right: 0;
+          width: 100%;
+        }
         &_animatiner {
           position: absolute;
+
           opacity: 1;
           animation: heroerContent 0.75s ease-in alternate;
         }
@@ -39,8 +46,10 @@
           }
         }
         &_tittle {
+          z-index: 100;
           margin-left: auto;
           h1 {
+            z-index: 100;
             color: color(light-2);
             font-size: 3rem;
           }
@@ -146,7 +155,7 @@
           }
         }
         @include responsive(sm) {
-          top: 10rem;
+          top: 2rem;
           right: 2rem;
           &_tittle {
             h1 {
@@ -235,8 +244,10 @@
           transform: scaleX(-1);
         }
         &_content {
-          top: 20%;
           left: 25%;
+          @include responsive(md) {
+            left: 0;
+          }
           &_tittle {
             margin: 0px;
             margin-right: auto;
