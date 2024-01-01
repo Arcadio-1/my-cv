@@ -7,7 +7,6 @@
     min-width: 20rem;
     max-width: 25rem;
     backdrop-filter: blur(1px);
-    padding: 1rem;
     background: linear-gradient(
       90deg,
       rgba(75, 116, 160, 0.261) 0%,
@@ -82,7 +81,7 @@
       }
     }
     &_nav {
-      width: calc(100% - 1rem);
+      width: 100%;
       margin-top: 2rem;
       &_icon {
         width: 2.1rem;
@@ -94,7 +93,7 @@
         flex-direction: column;
         &_item {
           transition: all 150ms linear;
-          padding: 0.7rem 2rem 0.7rem 0rem;
+          padding: 0.7rem 2rem 0.7rem 2rem;
           width: 100%;
           a {
             @include dflex(flex-start);
