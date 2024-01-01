@@ -151,7 +151,6 @@ export interface About_base {
 }
 export interface Hero_base_buttons {
   download_resume_pdf: string;
-  download_resume_png: string;
 }
 export interface Hero_base {
   section_tittle: string;
@@ -242,7 +241,6 @@ export interface Personal_info {
   hero_image_dark: Hero_image;
   hero_image_light: Hero_image;
   resume_pdf: string;
-  resume_png: string;
   name: string;
   lastName: string;
   marital_status: Marital_status;

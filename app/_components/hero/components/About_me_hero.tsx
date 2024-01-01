@@ -87,13 +87,6 @@ const About_me_hero = ({
 
       <div className="main_hero_content_links">
         <a
-          href={resumePng}
-          target="_blank"
-          className="main_hero_content_links_item"
-        >
-          {base.buttons.download_resume_png}
-        </a>
-        <a
           href={resumePdf}
           target="_blank"
           className="main_hero_content_links_item"

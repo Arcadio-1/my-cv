@@ -5,8 +5,7 @@
       "profile_iamge": "/images/profile_5.jpg",
       "hero_image_dark": "/images/hero/hero_dark_3.jpg",
       "hero_image_light": "/images/hero/hero_light_3.jpg",
-      "resume_pdf": "/resume/Fa/Hossein_Skandari.pdf",
-      "resume_png": "/resume/En/CV_En_1.jpg",
+      "resume_pdf": "/resume/Fa/Hossein_Skandari_En_Cv_v0.pdf",
       "name": "hossein",
       "lastName": "skandari",
       "nickName": "Rkdo",
@@ -557,8 +556,7 @@
     "hero_base": {
       "section_tittle": "home",
       "buttons": {
-        "download_resume_pdf": "Resume File (pdf)",
-        "download_resume_png": "Resume File (image)"
+        "download_resume_pdf": "Download Resume File (pdf)"
       }
     },
     "about_base": {
