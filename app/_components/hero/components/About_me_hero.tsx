@@ -7,7 +7,6 @@ interface Props {
   expertise: Expertise[];
   lang: Lang;
   resumePdf: string;
-  resumePng: string;
   base: Hero_base;
   theme: Theme;
 }
@@ -17,7 +16,6 @@ const About_me_hero = ({
   lastname,
   name,
   resumePdf,
-  resumePng,
   expertise,
   theme,
 }: Props) => {

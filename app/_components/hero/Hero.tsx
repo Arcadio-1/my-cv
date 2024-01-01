@@ -15,7 +15,6 @@ interface Props {
   lang: Lang;
   theme: Theme;
   resumePdf: string;
-  resumePng: string;
   base: Hero_base;
 }
 const Hero = ({
@@ -28,7 +27,6 @@ const Hero = ({
   lastname,
   name,
   resumePdf,
-  resumePng,
 }: Props) => {
   return (
     <div className=" main_hero" id="home">
@@ -47,7 +45,6 @@ const Hero = ({
         lastname={lastname}
         name={name}
         resumePdf={resumePdf}
-        resumePng={resumePng}
         expertise={expertise}
       />
       {/* <div className="z-10 bg-slate-100 p-2 animate-bounce rounded-full bg-opacity-10 backdrop-blur-sm shadow-md mr-auto">

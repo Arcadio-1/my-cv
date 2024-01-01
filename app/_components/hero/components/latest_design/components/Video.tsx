@@ -20,7 +20,7 @@ const Video = () => {
             height="auto"
             width="auto"
             controls={true}
-            className="bg-dark overflow-hidden sm:!w-[40rem] sm:!h-[25rem] md:!w-[42rem] md:!h-[25rem]  xl:!w-[50rem] xl:!h-[30rem]"
+            className="bg-dark overflow-hidden !max-w-[45rem] !max-h-[28rem] sm:!w-[40rem] sm:!h-[25rem] md:!w-[42rem] md:!h-[25rem]  xl:!w-[50rem] xl:!h-[30rem] pl-2"
           />
         </div>
       </div>

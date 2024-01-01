@@ -1,55 +1,40 @@
-import CheckIcon from "@/util/ui/controler/icons/CheckIcon";
+import { Theme } from "@/util/Types/types";
 import React from "react";
-
-const Header = () => {
+interface Props {}
+const Header = ({}: Props) => {
+  const technologies = [
+    "Next.js 14",
+    "Typescript",
+    "MongoDB",
+    "Prisma ORM",
+    "Tailwind",
+    "Shadcn/ui",
+    "MUI",
+    "Zod",
+    "...",
+  ];
   return (
     <div className=" flex flex-col gap-3 pt-4 px-2">
-      <h1 className="text-white text-2xl capitalize border-b border-white pb-3">
+      <h1
+        className={`
+            dark:text-white dark:border-white text-gray-950 border-gray-600 text-2xl capitalize border-b pb-3`}
+      >
         Mini Clone of Digikala With Full Functionality
       </h1>
-      {/* <p className="text-white text-2xl capitalize ">
-        check out my latest design using :
-      </p> */}
-      <ul className="grid grid-cols-3 md:grid-cols-4 gap-5 px-4 text-white">
-        <li className="text-2xl flex items-center gap-2">
-          <CheckIcon clasess="h-6 w-6 fill-green-600 " />
-          Next.js 14
-        </li>
-        <li className="text-2xl flex items-center gap-2">
-          <CheckIcon clasess="h-6 w-6 fill-green-600 " />
-          Typescript
-        </li>
-        <li className="text-2xl flex items-center gap-2">
-          <CheckIcon clasess="h-6 w-6 fill-green-600 " />
-          MongoDB
-        </li>
-        <li className="text-2xl flex items-center gap-2">
-          <CheckIcon clasess="h-6 w-6 fill-green-600 " />
-          Prisma ORM
-        </li>
-        <li className="text-2xl flex items-center gap-2">
-          <CheckIcon clasess="h-6 w-6 fill-green-600 " />
-          Tailwind
-        </li>
-        <li className="text-2xl flex items-center gap-2">
-          <CheckIcon clasess="h-6 w-6 fill-green-600 " />
-          Shadcn/ui
-        </li>
-        <li className="text-2xl flex items-center gap-2">
-          <CheckIcon clasess="h-6 w-6 fill-green-600 " />
-          MUI
-        </li>
-        <li className="text-2xl flex items-center gap-2">
-          <CheckIcon clasess="h-6 w-6 fill-green-600 " />
-          Zod
-        </li>
-        <li className="text-2xl flex items-center gap-2">
-          <CheckIcon clasess="h-6 w-6 fill-green-600 " />
-          ...
-        </li>
+      <ul className="px-4 text-white flex gap-2 flex-wrap">
+        {technologies.map((tec, index) => {
+          return (
+            <li
+              key={index}
+              className={`text-2xl flex items-center dark:text-white text-gray-950`}
+            >
+              {index > 0 ? <span>,</span> : ""}
+              <span>{tec}</span>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
 };
-
 export default Header;

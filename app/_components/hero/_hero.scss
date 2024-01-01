@@ -20,6 +20,8 @@
       }
       &_content {
         position: absolute;
+        overflow: hidden;
+
         @include dflex(flex-start);
         flex-direction: column;
         top: 1rem;

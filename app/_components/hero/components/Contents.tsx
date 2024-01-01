@@ -16,7 +16,6 @@ interface Props {
   expertise: Expertise[];
   lang: Lang;
   resumePdf: string;
-  resumePng: string;
   base: Hero_base;
   theme: Theme;
 }
@@ -26,7 +25,6 @@ const Contents = ({
   lastname,
   name,
   resumePdf,
-  resumePng,
   expertise,
   theme,
 }: Props) => {
@@ -40,10 +38,9 @@ const Contents = ({
           lastname={lastname}
           name={name}
           resumePdf={resumePdf}
-          resumePng={resumePng}
           theme={theme}
         />
-        <Latest_design lang={lang} />
+        <Latest_design lang={lang} theme={theme} />
       </div>
       {/* <div className="main_hero_content_miniImage z-10 bg-slate-50 p-2 animate-bounce rounded-full bg-opacity-5 backdrop-blur-[2px] shadow-md mr-auto">
         {theme === Theme.Dark ? (

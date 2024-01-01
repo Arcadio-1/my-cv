@@ -30,6 +30,7 @@ const Home_page = (props: Props) => {
   const { personal_info, resume, base, about, lang } = props;
   const [theme, setTheme] = useState<Theme>(Theme.Dark);
   const [isLoading, setIsLoading] = useState<Boolean>(true);
+
   useEffect(() => {
     setIsLoading(false);
     const localTheme = localStorage.getItem("theme");
@@ -98,7 +99,7 @@ const Home_page = (props: Props) => {
         </div>
       ) : (
         <div
-          className={`cv ${theme === Theme.Light ? `cv_lighter` : ""} ${
+          className={`cv ${theme === Theme.Light ? `cv_lighter` : "dark"} ${
             lang === Lang.en ? `cv_en` : ""
           }`}
         >
@@ -125,7 +126,6 @@ const Home_page = (props: Props) => {
                 name={personal_info.name}
                 lastname={personal_info.lastName}
                 resumePdf={personal_info.resume_pdf}
-                resumePng={personal_info.resume_png}
                 hero_image_dark={personal_info.hero_image_dark}
                 hero_image_light={personal_info.hero_image_light}
                 expertise={personal_info.expertise}

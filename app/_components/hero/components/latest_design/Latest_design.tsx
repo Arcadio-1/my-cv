@@ -1,18 +1,23 @@
-import { Lang } from "@/util/Types/types";
-import React from "react";
+import { Lang, Theme } from "@/util/Types/types";
+import React, { useEffect } from "react";
 import Video from "./components/Video";
 import Lninks from "./components/Lninks";
 import Header from "./components/Header";
 
 interface Props {
   lang: Lang;
+  theme: Theme;
 }
 
-const Latest_design = ({ lang }: Props) => {
+const Latest_design = ({ lang, theme }: Props) => {
+  useEffect(() => {
+    console.log(theme);
+  }, [theme]);
+
   return (
     <div
       dir="ltr"
-      className={`bg-gray-950 bg-opacity-50 backdrop-blur-sm mt-10 mx-4 rounded-[5px] flex flex-col gap-3 w-full md:w-auto ${
+      className={`bg-red-100 dark:bg-gray-950  bg-opacity-50 dark:bg-opacity-50 dark:backdrop-blur-sm backdrop-blur-sm mt-10 mx-4 rounded-[5px] flex flex-col gap-3 w-full md:w-auto ${
         lang === Lang.fa ? "md:ml-auto" : "md:ml-auto"
       }`}
     >
