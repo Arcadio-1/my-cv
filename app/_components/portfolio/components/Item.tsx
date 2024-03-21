@@ -3,39 +3,24 @@ import React, { Fragment } from "react";
 // import MonitorIcon from "./icons/MonitorIcon";
 import GithubIcon from "./icons/GithubIcon";
 import DownloadIcon from "./icons/DownloadIcon";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
-
-// import PhotoSwipeLightbox from "photoswipe/dist/types/lightbox/lightbox";
-// import { PhotoSwipeLightbox } from "photoswipe/dist/types/core/eventable";
-
-// import PhotoSwipeLightbox from "photoswipe/lightbox";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
-
-// import { PhotoSwipeLightbox } from "photoswipe/dist/photoswipe-lightbox";
-// import PhotoSwipeLightbox from "photoswipe/dist/photoswipe-lightbox.esm.js";
-// import Lightbox from "./photoswipe-lightbox.esm.js";
-
-// import PhotoSwipeLightbox from "photoswipe/dist/types/lightbox/lightbox";
-// import { PhotoSwipeLightbox } from "photoswipe/dist/types/core/eventable";
-
-// import { PhotoSwipe } from "photoswipe";
-// import { PhotoSwipeUI_Default } from "photoswipe/dist/photoswipe-ui-default";
-
 import "photoswipe/style.css";
 import { useEffect } from "react";
 import Link from "next/link";
-// interface Props {
-//   portfolio: Portfolio;
-// }
-const Item = (props) => {
-  const { portfolio, buttons_titles } = props;
+import { Portfolio, Portfolio_base_buttons_titles } from "@/util/Types/types";
+interface Props {
+  portfolio: Portfolio;
+  buttons_titles: Portfolio_base_buttons_titles;
+}
 
+const Item = ({ buttons_titles, portfolio }: Props) => {
   useEffect(() => {
     let lightbox = new PhotoSwipeLightbox({
       gallery: "#my_test_gallery",
@@ -88,7 +73,9 @@ const Item = (props) => {
                   data-pswp-height={image.height}
                 >
                   <div className="slide">
-                    <p className="slide_tittle">{portfolio.tittle}</p>
+                    <p className="slide_tittle text-gray-900 dark:text-slate-200">
+                      {portfolio.tittle}
+                    </p>
 
                     <div className="slide_imageContainer">
                       <Image
@@ -106,7 +93,7 @@ const Item = (props) => {
         </Swiper>
       </div>
       <div className="actions">
-        {portfolio.deployed_link_1 && (
+        {portfolio.deployed_link_1 && portfolio.deployed_link_2 && (
           <div className="actions_btn actions_deploy_container">
             <div
               className="actions_btn actions_deploy"

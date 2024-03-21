@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: "Hossein Skandari | Frontend",
   description: "Hossein Skandari Personal Website",
   manifest: `/manifest_en.json`,
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "cyan" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   openGraph: {
     type: "website",
     url: "https://rkdo.ir",

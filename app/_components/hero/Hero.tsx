@@ -1,10 +1,7 @@
 "use client";
-import { useAppSelector } from "@/redux/hook";
-// import useScrollMotion from "@/util/Hooks/UseScrollMotion";
-import { Expertise, Hero_base, InView, Lang, Theme } from "@/util/Types/types";
-import React, { useEffect, useState } from "react";
+import { Expertise, Hero_base, Lang, Theme } from "@/util/Types/types";
+import React from "react";
 import Contents from "./components/Contents";
-import Image from "next/image";
 
 interface Props {
   name: string;

@@ -3,9 +3,13 @@ import SectionHeader from "@/util/ui/SectionHeader/SectionHeader";
 import React, { useEffect, useState } from "react";
 import Filter from "./components/Filter";
 import List from "./components/List";
-import { Group, Portfolio, Portfolio_base } from "@/util/Types/types";
+import {
+  Group,
+  Portfolio as TPortfolio,
+  Portfolio_base,
+} from "@/util/Types/types";
 interface Props {
-  portfolios: Portfolio[];
+  portfolios: TPortfolio[];
   base: Portfolio_base;
 }
 

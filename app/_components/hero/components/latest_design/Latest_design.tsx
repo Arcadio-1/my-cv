@@ -10,10 +10,6 @@ interface Props {
 }
 
 const Latest_design = ({ lang, theme }: Props) => {
-  useEffect(() => {
-    console.log(theme);
-  }, [theme]);
-
   return (
     <div
       dir="ltr"
@@ -22,7 +18,7 @@ const Latest_design = ({ lang, theme }: Props) => {
       }`}
     >
       <Header />
-      <div className="flex flex-col md:flex-row justify-between gap-3">
+      <div className="flex flex-col  justify-between gap-1 items-center">
         <Video />
         <Lninks />
       </div>

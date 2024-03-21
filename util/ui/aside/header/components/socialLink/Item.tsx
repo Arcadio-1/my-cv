@@ -14,8 +14,8 @@ const Item = (props: Props) => {
           // className="bg_[snow] rounded_full"
           src={props.icon}
           alt={props.tittle}
-          width={22}
-          height={22}
+          width={30}
+          height={30}
         />
       </Link>
     </li>

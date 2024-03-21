@@ -12,27 +12,25 @@ const Item = (props: Props) => {
   );
   const { skill } = props;
   const { tittle, level, icon_img } = skill;
-
-  const [levState, setLevState] = useState<number>(0);
-  useEffect(() => {
-    for (let i = 0; i < level; i++) {
-      setTimeout(
-        () =>
-          setLevState((prevState) => {
-            return (prevState = prevState + 1);
-          }),
-        50 * i
-      );
-    }
-  }, [level]);
+  console.log("ssssssssss");
+  // const [levState, setLevState] = useState<number>(0);
+  // useEffect(() => {
+  //   for (let i = 0; i < level; i++) {
+  //     setTimeout(
+  //       () =>
+  //         setLevState((prevState) => {
+  //           return (prevState = prevState + 1);
+  //         }),
+  //       50 * i
+  //     );
+  //   }
+  // }, [level]);
   return (
     <div className="main_skills_list_item">
       <div
         className="main_skills_list_item_progressBar"
         style={{
-          background: `conic-gradient(from 0deg at 50% 50%,#3875aa ${
-            isAnimationActive ? levState : level
-          }%,#00000010 0% )`,
+          background: `conic-gradient(from 0deg at 50% 50%,#3875aa ${level}%,#00000010 0% )`,
         }}
       >
         <div className="main_skills_list_item_main">

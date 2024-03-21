@@ -1,27 +1,63 @@
 import { Providers } from "@/redux/provider";
 import "../styles/main.scss";
 import React from "react";
-import { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { BASE_URL } from "@/util/constants/constants";
 
-export const metadata: Metadata = {
-  title: "حسین اسکندری | فرانت اند",
-  description: "سایت شخصی حسین اسکندری",
-  manifest: `/manifest.json`,
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
+export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "cyan" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  // Also supported by less commonly used
+  // interactiveWidget: 'resizes-visual',
+};
+// import type { Viewport} from "next";
+
+// export const viewport: Viewport = {
+//   themeColor: [
+//     { media: "(prefers-color-scheme: light)", color: "cyan" },
+//     { media: "(prefers-color-scheme: dark)", color: "black" },
+//   ],
+//   width: "device-width",
+//   initialScale: 1,
+//   maximumScale: 1,
+//   userScalable: false,
+//   // Also supported by less commonly used
+//   // interactiveWidget: 'resizes-visual',
+// };
+
+export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
+  title: "حسین اسکندری | فرانت اند",
+  description: "سایت شخصی حسین اسکندری",
+  manifest: `/manifest.json`,
+  alternates: {
+    canonical: "/",
+    languages: {
+      "fa-FA": "/fa-FA",
+      "en-US": "/en-US",
+    },
+  },
   openGraph: {
     type: "website",
     url: "https://rkdo.ir",
-    title: "حسین اسکندری | فرانت اند",
+    title: { default: "حسین اسکندری | فرانت اند", template: "%s - فرانت اند" },
     description: "وب سایت شخصی حسین اسکندری",
     siteName: "حسین اسکندری | Frontend Developer",
+    images: [
+      {
+        url: "/images/pwa_icons/android-icon-192x192.png",
+      },
+    ],
+  },
+  twitter: {
+    title: { default: "حسین اسکندری | فرانت اند", template: "%s - فرانت اند" },
+    description: "وب سایت شخصی حسین اسکندری",
+    card: "summary_large_image",
     images: [
       {
         url: "/images/pwa_icons/android-icon-192x192.png",
@@ -95,6 +131,11 @@ export const metadata: Metadata = {
       {
         url: "/images/pwa_icons/apple-icon-180x180.png",
         sizes: "180x180",
+        type: "image/png",
+      },
+      {
+        url: "/images/pwa_icons/fav_icon_512x512.png",
+        sizes: "512x512",
         type: "image/png",
       },
     ],

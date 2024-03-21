@@ -5,7 +5,7 @@
       "profile_iamge": "/images/profile_5.jpg",
       "hero_image_dark": "/images/hero/hero_dark_3.jpg",
       "hero_image_light": "/images/hero/hero_light_3.jpg",
-      "resume_pdf": "/resume/En/Hossein_Skandari_En_Cv_v1.pdf",
+      "resume_pdf": "/resume/En/Hossein_Skandari_En_Cv_v3.pdf",
       "name": "hossein",
       "lastName": "skandari",
       "nickName": "Rkdo",
@@ -33,40 +33,10 @@
           "icon": "/images/social/github.svg"
         },
         {
-          "id": "1",
-          "tittle": "twitter",
-          "url": "https://twitter.com/elonmusk",
-          "icon": "/images/social/twitter.svg"
-        },
-        {
           "id": "2",
           "tittle": "linkedin",
           "url": "https://ir.linkedin.com/in/hossein-skandari-rkdo",
           "icon": "/images/social/linkedin.svg"
-        },
-        {
-          "id": "3",
-          "tittle": "telegram",
-          "url": "https://t.me/Rkdo_a",
-          "icon": "/images/social/telegram.svg"
-        },
-        {
-          "id": "5",
-          "tittle": "skype",
-          "url": "https://join.skype.com/invite/fSZUjlwHu0M4",
-          "icon": "/images/social/skype.svg"
-        },
-        {
-          "id": "6",
-          "tittle": "phone",
-          "url": "#contact",
-          "icon": "/images/social/phone.svg"
-        },
-        {
-          "id": "7",
-          "tittle": "email",
-          "url": "#contact",
-          "icon": "/images/social/email.svg"
         }
       ],
       "job_info": {
@@ -341,7 +311,7 @@
         {
           "id": "2-2",
           "tittle": "sass",
-          "level": 100,
+          "level": 80,
           "icon_img": "/images/skills/img/scss.png",
           "icon_icon": "/images/skills/icon/scss.svg"
         },
@@ -354,7 +324,7 @@
         },
         {
           "id": "3-2",
-          "tittle": "next.js 14",
+          "tittle": "next.js 13",
           "level": 90,
           "icon_img": "/images/skills/img/nextjs.png",
           "icon_icon": "/images/skills/icon/"
@@ -389,12 +359,18 @@
         },
         {
           "id": "4-5",
+          "tittle": "Ant Design",
+          "level": 50,
+          "icon_img": "/images/skills/img/AntDesign.png",
+          "icon_icon": "/images/skills/icon/AntDesign.png"
+        },
+        {
+          "id": "4-6",
           "tittle": "bootstrap",
           "level": 50,
           "icon_img": "/images/skills/img/bootstrap.png",
           "icon_icon": "/images/skills/icon/bootstrap.svg"
         },
-
         {
           "id": "5-1",
           "tittle": "adobe xd",
@@ -417,67 +393,102 @@
           "icon_icon": "/images/skills/icon/webpack.svg"
         },
         {
-          "id": "6-2",
+          "id": "7-1",
           "tittle": "redux toolkit, RTK query",
-          "level": 100,
+          "level": 80,
           "icon_img": "/images/skills/img/redux.png",
           "icon_icon": "/images/skills/icon/redux.svg"
         },
         {
-          "id": "6-3",
+          "id": "7-2",
+          "tittle": "zustand",
+          "level": 90,
+          "icon_img": "/images/skills/img/zustand.png",
+          "icon_icon": "/images/skills/icon/zustand.png"
+        },
+        {
+          "id": "7-3",
+          "tittle": "react query",
+          "level": 90,
+          "icon_img": "/images/skills/img/reactQuery.png",
+          "icon_icon": "/images/skills/icon/reactQuery.png"
+        },
+        {
+          "id": "8-1",
           "tittle": "pwa",
           "level": 80,
           "icon_img": "/images/skills/img/pwa.png",
           "icon_icon": "/images/skills/icon/pwa.svg"
         },
         {
-          "id": "6-4",
+          "id": "9-1",
+          "tittle": "git",
+          "level": 70,
+          "icon_img": "/images/skills/img/git.png",
+          "icon_icon": "/images/skills/icon/git.png"
+        },
+        {
+          "id": "9-2",
           "tittle": "github",
-          "level": 30,
+          "level": 70,
           "icon_img": "/images/skills/img/github.png",
           "icon_icon": "/images/skills/icon/github.svg"
         },
         {
-          "id": "7-1",
+          "id": "9-3",
+          "tittle": "gitlab",
+          "level": 50,
+          "icon_img": "/images/skills/img/gitlab.svg",
+          "icon_icon": "/images/skills/icon/gitlab.svg"
+        },
+        {
+          "id": "10-1",
           "tittle": "node.js",
-          "level": 40,
+          "level": 30,
           "icon_img": "/images/skills/img/nodejs.png",
           "icon_icon": "/images/skills/icon/nodejs.svg"
         },
         {
-          "id": "7-2",
+          "id": "11-1",
           "tittle": "mongoDB",
           "level": 40,
           "icon_img": "/images/skills/img/mongodb.png",
           "icon_icon": "/images/skills/icon/mongodb.svg"
         },
         {
-          "id": "7-3",
+          "id": "11-2",
           "tittle": "firebase",
           "level": 40,
           "icon_img": "/images/skills/img/firebase.png",
           "icon_icon": "/images/skills/icon/firebase.svg"
         },
         {
-          "id": "7-4",
+          "id": "12-1",
           "tittle": "prisma",
           "level": 90,
           "icon_img": "/images/skills/img/prisma.svg",
           "icon_icon": "/images/skills/icon/prisma.svg"
         },
         {
-          "id": "7-5",
+          "id": "13-1",
           "tittle": "zod",
           "level": 90,
           "icon_img": "/images/skills/img/zod.svg",
           "icon_icon": "/images/skills/icon/zod.svg"
         },
         {
-          "id": "8",
-          "tittle": "TDD (vitest,jest)",
+          "id": "14-1",
+          "tittle": "jest",
           "level": 60,
-          "icon_img": "/images/skills/img/TDD.png",
-          "icon_icon": "/images/skills/icon/TDD.svg"
+          "icon_img": "/images/skills/img/jest.png",
+          "icon_icon": "/images/skills/icon/jest.png"
+        },
+        {
+          "id": "14-2",
+          "tittle": "React Testing Library",
+          "level": 60,
+          "icon_img": "/images/skills/img/testingLibrary.png",
+          "icon_icon": "/images/skills/icon/testingLibrary.png"
         }
       ],
       "fluent_languages": [
@@ -514,27 +525,19 @@
       },
       {
         "id": "2",
-        "tittle": "about",
-        "link": "aboutMe",
-        "icon": "/images/nav/about.svg",
-        "component": "about_icon",
-        "headline": "About_icon"
-      },
-      {
-        "id": "2-1",
-        "tittle": "skills",
-        "link": "skills",
-        "icon": "/images/nav/skills.svg",
-        "component": "skills_icon",
-        "headline": "Skillsicon"
-      },
-      {
-        "id": "3",
         "tittle": "resume",
         "link": "resume",
         "icon": "/images/nav/resume.svg",
         "component": "resume_icon",
         "headline": "Resume_icon"
+      },
+      {
+        "id": "3",
+        "tittle": "skills",
+        "link": "skills",
+        "icon": "/images/nav/skills.svg",
+        "component": "skills_icon",
+        "headline": "Skillsicon"
       },
       {
         "id": "4",

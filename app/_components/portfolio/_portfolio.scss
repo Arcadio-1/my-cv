@@ -106,10 +106,10 @@
                 .slide {
                   &_tittle {
                     font-family: iranyekan;
-                    color: color(light-2);
+                    // color: color(light-2);
                     padding: 1rem 1rem;
                     background-color: rgba(color(dark-2), 0.2);
-                    font-size: 1.2rem;
+                    font-size: 1.5rem;
                     border-bottom: 2px solid rgba(color(light-2), 1);
                   }
                   &_imageContainer {
@@ -305,6 +305,7 @@
                   .link {
                     .slide {
                       &_tittle {
+                        display: none;
                         color: color(dark-2);
                         background-color: rgba(color(light-2), 0.2);
                         border-bottom: 2px solid rgba(color(light-2), 1);

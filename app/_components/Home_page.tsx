@@ -117,8 +117,8 @@ const Home_page = (props: Props) => {
             lang={lang}
             theme={theme}
           />
-          <div className="mr-auto ml-auto">
-            <main className="main">
+          <div className="w-full">
+            <main className="main border-2 w-full flex flex-col justify-center items-center">
               <Hero
                 base={base.hero_base}
                 theme={theme}
@@ -130,21 +130,21 @@ const Home_page = (props: Props) => {
                 hero_image_light={personal_info.hero_image_light}
                 expertise={personal_info.expertise}
               />
-              <div className="max-w-[1280px] w-full mb-10">
-                <About
+              <div className="max-w-[1280px] w-full mb-10 flex flex-col items-stretch">
+                {/* <About
                   lang={lang}
                   theme={theme}
                   about={about}
                   base={base.about_base}
                   personal_info={personal_info}
-                />
-                <Skills base={base.skills_base} skills={resume.skills} />
+                /> */}
                 <Resume
                   base={base.resume_base}
                   educations={resume.educations}
                   work_experiences={resume.work_experiences}
                   fluent_languages={resume.fluent_languages}
                 />
+                <Skills base={base.skills_base} skills={resume.skills} />
                 <Portfolio
                   base={base.portfolio_base}
                   portfolios={resume.portfolios}
