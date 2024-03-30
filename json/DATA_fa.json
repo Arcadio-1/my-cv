@@ -205,17 +205,6 @@
           "download_link": ""
         },
         {
-          "id": "5",
-          "tittle": "(React) فروشگاه کافه ترانه",
-          "group": "توسعه وب",
-          "tags": ["React,sass,firebase"],
-          "prev_image": "/portfolio/development/CafeTaraneEn-React/prev.jpg",
-          "images": ["/portfolio/development/CafeTaraneEn-React/1.jpg"],
-          "deployed_link": "",
-          "repo_link": "https://github.com/Arcadio-1/mealOrderWithReact.git",
-          "download_link": ""
-        },
-        {
           "id": "6",
           "tittle": "(venilla) رستوران ایران زمین",
           "group": "توسعه وب",
@@ -262,17 +251,6 @@
           "deployed_link": "",
           "repo_link": "",
           "download_link": "/portfolio/gui_design/CafeTarane-vanilla/ui-xd.pdf"
-        },
-        {
-          "id": "9",
-          "tittle": "(Adobe xd) کافه ترانه(EN) - دیزاین",
-          "group": "طراحی",
-          "tags": ["dobeXD"],
-          "prev_image": "/portfolio/gui_design/mealOrder-React/prev.jpg",
-          "images": ["/portfolio/gui_design/mealOrder-React/1.jpg"],
-          "deployed_link": "",
-          "repo_link": "",
-          "download_link": "/portfolio/gui_design/mealOrder-React/ui-xd.pdf"
         }
       ],
       "motivation_quotes": {
