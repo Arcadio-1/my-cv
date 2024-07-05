@@ -12,7 +12,6 @@ const Item = (props: Props) => {
   );
   const { skill } = props;
   const { tittle, level, icon_img } = skill;
-  console.log("ssssssssss");
   // const [levState, setLevState] = useState<number>(0);
   // useEffect(() => {
   //   for (let i = 0; i < level; i++) {
