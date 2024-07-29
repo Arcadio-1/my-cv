@@ -118,7 +118,7 @@
         {
           "id": "0",
           "title": "Digikala clone (Next.js 14)",
-          "group": "توسعه وب",
+          "group": "develop",
           "tags": [
             "next.js_14,tailwind,typescript,prisma,mongoDB,deployed,zod,shadcn-ui,mui"
           ],
