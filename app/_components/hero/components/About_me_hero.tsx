@@ -47,7 +47,7 @@ const About_me_hero = ({
 
   return (
     <div className={`${lang === Lang.fa ? "ml-auto" : "mr-auto"}`}>
-      <div className="main_hero_content_tittle">
+      <div className="main_hero_content_title">
         <h1>{`${name} ${lastname}`}</h1>
       </div>
       <div className="main_hero_content_expertise">
@@ -56,7 +56,7 @@ const About_me_hero = ({
             {lang === Lang.fa && <span className="label"> من </span>}
             {lang === Lang.en && <span className="label"> I`m </span>}
             <span className="text text1">
-              {expertise[0].tittle}
+              {expertise[0].title}
               {lang !== Lang.en && " هستم "}
             </span>
           </div>
@@ -66,7 +66,7 @@ const About_me_hero = ({
             {lang === Lang.fa && <span className="label"> من </span>}
             {lang === Lang.en && <span className="label"> I`m </span>}
             <span className="text  text2">
-              {expertise[1].tittle}
+              {expertise[1].title}
               {lang !== Lang.en && " هستم "}
             </span>
           </div>
@@ -76,7 +76,7 @@ const About_me_hero = ({
             {lang === Lang.fa && <span className="label"> من </span>}
             {lang === Lang.en && <span className="label"> I`m </span>}
             <span className="text text3">
-              {expertise[2].tittle}
+              {expertise[2].title}
               {lang !== Lang.en && " هستم "}
             </span>
           </div>

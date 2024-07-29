@@ -16,7 +16,7 @@ const Contact = (props: Props) => {
     <div className="main_contact">
       <SectionHeader
         tag="contact"
-        tittle={props.base.section_tittle}
+        title={props.base.section_title}
         description=""
       />
       <div className="main_contact_container">

@@ -28,12 +28,12 @@ const Lninks = ({}: Props) => {
     },
   ];
   return (
-    <div className="flex gap-4 flex-wrap justify-start pb-2 px-2">
+    <div className="flex gap-4 flex-wrap justify-start">
       {links.map((link) => {
         return (
           <Link
             key={link.id}
-            className="hover:scale-105 rounded-md py-4 px-4 text-gray-700 dark:text-white flex gap-3 text-[1.5rem] justify-center items-center bg-sky-100 dark:bg-sky-800 shrink w-full md:w-auto"
+            className="hover:scale-105 rounded-md py-1 px-4 text-blue-800 dark:text-blue-200 flex gap-3 text-[1.5rem] justify-center items-center  shrink w-full md:w-auto"
             target="_blank"
             href={link.link}
           >
@@ -41,7 +41,7 @@ const Lninks = ({}: Props) => {
             {link.label}
             <ArrowIcon
               direction={Arrow.right}
-              classes="h-6 w-6 dill-gray-700 dark:fill-white"
+              classes="h-6 w-6 fill-blue-800 dark:fill-blue-200"
             />
           </Link>
         );

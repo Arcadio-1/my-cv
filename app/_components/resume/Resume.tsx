@@ -18,23 +18,23 @@ const Resume = (props: Props) => {
     <div className="main_resume">
       <SectionHeader
         tag="resume"
-        tittle={props.base.section_tittle}
+        title={props.base.section_title}
         description=""
       />
       <div className="main_resume_container">
         <div className="main_resume_experiences">
           <List_container
-            experience={props.educations}
-            header={props.base.labels.educations}
-          />
-          <List_container
             experience={props.work_experiences}
             header={props.base.labels.work_experiences}
+          />
+          <List_container
+            experience={props.educations}
+            header={props.base.labels.educations}
           />
         </div>
 
         <Languages
-          tittle={props.base.labels.language}
+          title={props.base.labels.language}
           languages={props.fluent_languages}
         />
       </div>

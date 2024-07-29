@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -8,12 +9,15 @@ interface Props {
 const ProfileImage = (props: Props) => {
   return (
     <div className="aside_header_image">
-      <Image
-        src={props.profile_image}
-        width={140}
-        height={140}
-        alt="skandari"
-      />
+      <Link href={"/"}>
+        <Image
+          src={props.profile_image}
+          width={140}
+          height={140}
+          title="hossein skandari front-end"
+          alt="hossein skandari"
+        />
+      </Link>
     </div>
   );
 };

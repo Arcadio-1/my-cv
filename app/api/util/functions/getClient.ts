@@ -11,7 +11,7 @@ export const getClient = async (databaseName: string) => {
     throw new Error(
       JSON.stringify({
         status: "504",
-        tittle: "خطا",
+        title: "خطا",
         message: "خطا در برقراری ارتباط",
       })
     );

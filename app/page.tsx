@@ -15,8 +15,6 @@ async function getData() {
   const fullPath = join(directory, `about_fr.md`);
   const mdContents = await fs.readFile(fullPath, "utf8");
   const { data, content } = matter(mdContents);
-  console.log("hi");
-  console.log(content);
   // const response = { status: 200, data: content };
 
   const response = { status: 200, cv: fileContents, aboutMd: content };

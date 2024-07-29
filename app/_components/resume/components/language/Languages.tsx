@@ -4,12 +4,12 @@ import React from "react";
 import List from "./components/List";
 interface Props {
   languages: Language[];
-  tittle: string;
+  title: string;
 }
 const Languages = (props: Props) => {
   return (
     <div className="main_resume_language">
-      <h2 className="tittle">{props.tittle}</h2>
+      <h2 className="title">{props.title}</h2>
       <List languages={props.languages} />
     </div>
   );

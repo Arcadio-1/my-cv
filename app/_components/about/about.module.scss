@@ -18,23 +18,23 @@
         display: grid;
         // border: 2px solid blue;
         grid-template-areas:
-          "abouttittle abouttittle"
+          "abouttitle abouttitle"
           "aboutboulshit aboutboulshit"
           "aboutlist aboutlist";
       }
       @include responsive(sm) {
         grid-template-areas:
-          "abouttittle abouttittle"
+          "abouttitle abouttitle"
           "aboutboulshit aboutboulshit"
           // "aboutimage aboutimage"
           "aboutlist aboutlist";
       }
     }
-    &_tittle {
+    &_title {
       opacity: 0;
       position: static;
       @include dflex(flex-start, flex-start);
-      grid-area: abouttittle;
+      grid-area: abouttitle;
       font-family: iranyekan;
       font-size: 1.6rem;
       margin-bottom: 2rem;
@@ -45,9 +45,9 @@
       }
       &_animator {
         opacity: 1;
-        animation: aboutTittleAnime 0.5s ease-in alternate;
+        animation: abouttitleAnime 0.5s ease-in alternate;
       }
-      @keyframes aboutTittleAnime {
+      @keyframes abouttitleAnime {
         0% {
           opacity: 0;
           transform: translateY(-5px);

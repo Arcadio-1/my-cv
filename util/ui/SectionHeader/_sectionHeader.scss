@@ -1,7 +1,7 @@
 @use "../../../styles/clips.scss" as *;
 .sectionHeader {
   // border: 2px solid red;
-  &_tittle {
+  &_title {
     font-family: iranyekan;
     margin-bottom: 1rem;
     padding-top: 1rem;
@@ -29,7 +29,7 @@
 .cv {
   &_lighter {
     .sectionHeader {
-      &_tittle {
+      &_title {
         h2 {
           color: color(dark-3);
         }

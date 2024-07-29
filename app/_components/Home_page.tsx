@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import {
   BASE,
   Lang,
@@ -30,9 +30,11 @@ const Home_page = (props: Props) => {
   const { personal_info, resume, base, about, lang } = props;
   const [theme, setTheme] = useState<Theme>(Theme.Dark);
   const [isLoading, setIsLoading] = useState<Boolean>(true);
+  useLayoutEffect(() => {
+    setIsLoading(false);
+  }, []);
 
   useEffect(() => {
-    setIsLoading(false);
     const localTheme = localStorage.getItem("theme");
     try {
       if (
@@ -54,7 +56,6 @@ const Home_page = (props: Props) => {
         return setTheme(Theme.Dark);
       }
     } catch {
-      setIsLoading(false);
       console.log("this should never happened :((((((((((");
     }
   }, []);

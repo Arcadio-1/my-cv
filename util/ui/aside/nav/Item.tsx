@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { InView } from "@/util/Types/types";
 interface Props {
   id: string;
-  tittle: string;
+  title: string;
   link: InView;
   icon: string;
   component: string;
@@ -18,10 +18,6 @@ const Item = (props: Props) => {
   const dispatchClose = useDispatch();
   const isMenuOpen = useSelector((state: UiMainState) => state.ui.isMenuOpen);
   const inView = useSelector((state: UiMainState) => state.ui.inView);
-
-  useEffect(() => {
-    console.log(inView);
-  }, [inView]);
 
   const closeHandler = () => {
     if (isMenuOpen) {
@@ -37,7 +33,7 @@ const Item = (props: Props) => {
     >
       <a href={`${path}#${props.link}`}>
         <Icon component={props.component} id={props.id} />
-        <span>{props.tittle}</span>
+        <span>{props.title}</span>
       </a>
     </li>
   );

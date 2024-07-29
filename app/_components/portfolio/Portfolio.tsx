@@ -39,7 +39,7 @@ const Portfolio = (props: Props) => {
     <div className="main_portfolio">
       <SectionHeader
         tag="portfolio"
-        tittle={props.base.section_tittle}
+        title={props.base.section_title}
         description=""
       />
       <div className="main_portfolio_container">

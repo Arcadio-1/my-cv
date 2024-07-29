@@ -14,7 +14,7 @@ const List = (props: Props) => {
             key={item.id}
             icon={item.icon}
             link={item.link}
-            tittle={item.tittle}
+            title={item.title}
             id={item.id}
             component={item.component}
           />

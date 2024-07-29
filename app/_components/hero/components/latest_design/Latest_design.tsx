@@ -13,12 +13,12 @@ const Latest_design = ({ lang, theme }: Props) => {
   return (
     <div
       dir="ltr"
-      className={`bg-red-100 dark:bg-gray-950  bg-opacity-50 dark:bg-opacity-50 dark:backdrop-blur-sm backdrop-blur-sm mt-10 mx-4 rounded-[5px] flex flex-col gap-3 w-full md:w-auto ${
+      className={`bg-red-100 dark:bg-gray-950  bg-opacity-50 dark:bg-opacity-50 dark:backdrop-blur-sm backdrop-blur-sm mt-10 mx-4 rounded-[5px] flex flex-col gap-3 w-full md:w-auto px-6 py-4 ${
         lang === Lang.fa ? "md:ml-auto" : "md:ml-auto"
       }`}
     >
       <Header />
-      <div className="flex flex-col  justify-between gap-1 items-center">
+      <div className="flex flex-col  justify-between gap-3 md:gap-1 items-center">
         <Video />
         <Lninks />
       </div>

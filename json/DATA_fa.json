@@ -17,32 +17,38 @@
       "gender": "مرد",
       "military_service": "معافیت",
       "residence": "تهران",
-      "age": 27,
+      "age": 28,
       "degree": "کارشناسی مهندسی تکنولوژی نرم افزار",
       "expertise": [
-        { "id": 2, "tittle": "توسعه دهنده فرانت اند" },
-        { "id": 3, "tittle": "فریلنسر" }
+        { "id": 2, "title": "توسعه دهنده فرانت اند" },
+        { "id": 3, "title": "فریلنسر" }
       ],
       "get_project": "فعال",
       "github_link": "https://github.com/Arcadio-1",
       "social_medias": [
         {
           "id": "0",
-          "tittle": "github",
-          "url": "https://github.com/Arcadio-1",
-          "icon": "/images/social/github.svg"
+          "title": "instagram",
+          "url": "https://www.instagram.com/hossein_skandari",
+          "icon": "/images/social/instagram.svg"
         },
         {
           "id": "2",
-          "tittle": "linkedin",
+          "title": "linkedin",
           "url": "https://ir.linkedin.com/in/hossein-skandari-rkdo",
           "icon": "/images/social/linkedin.svg"
+        },
+        {
+          "id": "3",
+          "title": "github",
+          "url": "https://github.com/Arcadio-1",
+          "icon": "/images/social/github.svg"
         }
       ],
       "job_info": {
         "contracts": [
-          { "id": 1, "tittle": "تمام وقت" },
-          { "id": 2, "tittle": "دورکاری" }
+          { "id": 1, "title": "تمام وقت" },
+          { "id": 2, "title": "دورکاری" }
         ]
       },
       "about_me": "/markdown/about.md"
@@ -51,46 +57,67 @@
       "educations": [
         {
           "id": "0",
-          "tittle": "مهندسی نرم افزار (کاردانی)",
+          "title": "مهندسی تکنولوژی نرم افزار (کارشناسی)",
           "place": "دانشگاه آزاد اسلامی",
-          "since": "1394",
-          "to": "1396"
+          "link": null,
+          "since": "1396",
+          "to": "1398"
         },
         {
           "id": "1",
-          "tittle": "مهندسی تکنولوژی نرم افزار (کارشناسی)",
+          "title": "مهندسی نرم افزار (کاردانی)",
           "place": "دانشگاه آزاد اسلامی",
-          "since": "1396",
-          "to": "1398"
+          "link": null,
+          "since": "1394",
+          "to": "1396"
         }
       ],
       "work_experiences": [
         {
+          "id": "0",
+          "title": "توسعه دهنده فرانت‌اند",
+          "place": "webfabrik-KiData (Germany)",
+          "link": "https://www.webfabrik.net",
+          "since": "2024",
+          "to": "حال"
+        },
+        {
+          "id": "0",
+          "title": "توسعه دهنده فرانت‌اند",
+          "place": "وب رمز",
+          "link": "https://webramz.com/",
+          "since": "1402",
+          "to": "حال"
+        },
+        {
           "id": "1",
-          "tittle": "توسعه دهنده فرانت اند و پشتیبانی فنی",
-          "place": "دی چت (مهردیزاین)",
-          "since": "1391",
-          "to": "1394"
+          "title": "طراح و نوسعه دهنده و فول‌استک",
+          "place": "فریلنسر",
+          "link": "https://www.rkdo.ir",
+          "since": "1398",
+          "to": "حال"
         },
         {
           "id": "2",
-          "tittle": "مدیریت فروش و حسابداری",
+          "title": "مدیریت فروش و حسابداری",
           "place": "شرکت کریستال پارس",
+          "link": null,
           "since": "1398",
           "to": "1400"
         },
         {
           "id": "3",
-          "tittle": "توسعه دهنده و طراح فول استک",
-          "place": "فریلنسر",
-          "since": "1400",
-          "to": "حال"
+          "title": "توسعه دهنده فرانت‌اند و پشتیبانی فنی",
+          "place": "دی چت (مهردیزاین)",
+          "link": null,
+          "since": "1391",
+          "to": "1394"
         }
       ],
       "portfolios": [
         {
           "id": "0",
-          "tittle": "Digikala clone (Next.js 14)",
+          "title": "Digikala clone (Next.js 14)",
           "group": "توسعه وب",
           "tags": [
             "next.js_14,tailwind,typescript,prisma,mongoDB,deployed,zod,shadcn-ui,mui"
@@ -116,7 +143,7 @@
         },
         {
           "id": "1",
-          "tittle": "(Nextjs) فروشگاه کافه ترانه",
+          "title": "(Nextjs) فروشگاه کافه ترانه",
           "group": "توسعه وب",
           "tags": ["nextjs,sass,typescript,redux,pwa,deployed,mongodb"],
           "prev_image": "/portfolio/development/CafeTarane-nextjs/prev.jpg",
@@ -145,7 +172,7 @@
         },
         {
           "id": "2",
-          "tittle": "(Nextjs) مجله کافه ترانه",
+          "title": "(Nextjs) مجله کافه ترانه",
           "group": "توسعه وب",
           "tags": ["nextjs,sass,typescript,redux,pwa,deployed,mongodb"],
           "prev_image": "/portfolio/development/CafeTaraneBlog-nextjs/prev.jpg",
@@ -174,7 +201,7 @@
         },
         {
           "id": "3",
-          "tittle": "(React) فروشگاه کافه ترانه",
+          "title": "(React) فروشگاه کافه ترانه",
           "group": "توسعه وب",
           "tags": ["react,sass,firebase"],
           "prev_image": "/portfolio/development/CafeTarane-React/prev.jpg",
@@ -189,7 +216,7 @@
         },
         {
           "id": "4",
-          "tittle": "(venilla) فروشگاه کافه ترانه",
+          "title": "(venilla) فروشگاه کافه ترانه",
           "group": "توسعه وب",
           "tags": ["javascript,webpack,sass,babel"],
           "prev_image": "/portfolio/development/CafeTarane-vanilla/prev.jpg",
@@ -206,7 +233,7 @@
         },
         {
           "id": "6",
-          "tittle": "(venilla) رستوران ایران زمین",
+          "title": "(venilla) رستوران ایران زمین",
           "group": "توسعه وب",
           "tags": ["javascript,webpack,css,sass"],
           "prev_image": "/portfolio/development/Restaurant/prev.jpg",
@@ -221,7 +248,7 @@
         },
         {
           "id": "7",
-          "tittle": "(Adobe xd) مجله کافه ترانه - دیزاین",
+          "title": "(Adobe xd) مجله کافه ترانه - دیزاین",
           "group": "طراحی",
           "tags": ["dobeXD"],
           "prev_image": "/portfolio/gui_design/CafeTaraneBlog-nextjs/prev.jpg",
@@ -243,7 +270,7 @@
         },
         {
           "id": "8",
-          "tittle": "(Adobe xd) فروشگاه کافه ترانه - دیزاین",
+          "title": "(Adobe xd) فروشگاه کافه ترانه - دیزاین",
           "group": "طراحی",
           "tags": ["dobeXD"],
           "prev_image": "/portfolio/gui_design/CafeTarane-vanilla/prev.jpg",
@@ -260,227 +287,242 @@
       "skills": [
         {
           "id": "1-1",
-          "tittle": "html",
+          "title": "html",
           "level": 100,
           "icon_img": "/images/skills/img/html.png",
           "icon_icon": "/images/skills/icon/html.svg"
         },
         {
           "id": "1-2",
-          "tittle": "css",
+          "title": "css",
           "level": 90,
           "icon_img": "/images/skills/img/css.png",
           "icon_icon": "/images/skills/icon/css.svg"
         },
         {
           "id": "1-3",
-          "tittle": "javascript",
+          "title": "javascript",
           "level": 90,
           "icon_img": "/images/skills/img/javascript.png",
           "icon_icon": "/images/skills/icon/javascript.svg"
         },
         {
           "id": "2-1",
-          "tittle": "typescript",
+          "title": "typescript",
           "level": 85,
           "icon_img": "/images/skills/img/typescript.svg",
           "icon_icon": "/images/skills/icon/typescript.svg"
         },
         {
           "id": "2-2",
-          "tittle": "sass",
+          "title": "sass",
           "level": 80,
           "icon_img": "/images/skills/img/scss.png",
           "icon_icon": "/images/skills/icon/scss.svg"
         },
         {
           "id": "3-1",
-          "tittle": "react 18",
+          "title": "react 18",
           "level": 90,
           "icon_img": "/images/skills/img/react.png",
           "icon_icon": "/images/skills/icon/react.svg"
         },
         {
           "id": "3-2",
-          "tittle": "next.js 13",
+          "title": "next.js 14,13,12",
           "level": 90,
           "icon_img": "/images/skills/img/nextjs.png",
           "icon_icon": "/images/skills/icon/"
         },
         {
           "id": "4-1",
-          "tittle": "tailwind",
+          "title": "tailwind",
           "level": 90,
           "icon_img": "/images/skills/img/tailwind_1.png",
           "icon_icon": "/images/skills/icon/tailwind.svg"
         },
         {
           "id": "4-2",
-          "tittle": "Shadcn/ui",
+          "title": "Shadcn/ui",
           "level": 90,
           "icon_img": "/images/skills/img/shadcn.svg",
           "icon_icon": "/images/skills/icon/shadcn.svg"
         },
         {
           "id": "4-3",
-          "tittle": "daisyui",
+          "title": "daisyui",
           "level": 80,
           "icon_img": "/images/skills/img/daisyui.png",
           "icon_icon": "/images/skills/icon/daisyui.svg"
         },
         {
           "id": "4-4",
-          "tittle": "material ui",
-          "level": 50,
+          "title": "material ui",
+          "level": 80,
           "icon_img": "/images/skills/img/materialui.png",
           "icon_icon": "/images/skills/icon/materialui.svg"
         },
         {
           "id": "4-5",
-          "tittle": "Ant Design",
-          "level": 50,
+          "title": "Ant Design",
+          "level": 100,
           "icon_img": "/images/skills/img/AntDesign.png",
           "icon_icon": "/images/skills/icon/AntDesign.png"
         },
         {
           "id": "4-6",
-          "tittle": "bootstrap",
+          "title": "bootstrap",
           "level": 50,
           "icon_img": "/images/skills/img/bootstrap.png",
           "icon_icon": "/images/skills/icon/bootstrap.svg"
         },
         {
           "id": "5-1",
-          "tittle": "adobe xd",
+          "title": "adobe xd",
           "level": 70,
           "icon_img": "/images/skills/img/adobexd.svg",
           "icon_icon": "/images/skills/icon/adobexd.svg"
         },
         {
           "id": "5-2",
-          "tittle": "figma",
-          "level": 40,
+          "title": "figma",
+          "level": 60,
           "icon_img": "/images/skills/img/figma.png",
           "icon_icon": "/images/skills/icon/figma.svg"
         },
         {
           "id": "6-1",
-          "tittle": "webpack",
+          "title": "webpack",
           "level": 80,
           "icon_img": "/images/skills/img/webpack.svg",
           "icon_icon": "/images/skills/icon/webpack.svg"
         },
         {
           "id": "7-1",
-          "tittle": "redux toolkit, RTK query",
+          "title": "redux toolkit, RTK query",
           "level": 80,
           "icon_img": "/images/skills/img/redux.png",
           "icon_icon": "/images/skills/icon/redux.svg"
         },
         {
           "id": "7-2",
-          "tittle": "zustand",
+          "title": "zustand",
           "level": 90,
           "icon_img": "/images/skills/img/zustand.png",
           "icon_icon": "/images/skills/icon/zustand.png"
         },
         {
           "id": "7-3",
-          "tittle": "react query",
-          "level": 90,
+          "title": "react query",
+          "level": 100,
           "icon_img": "/images/skills/img/reactQuery.png",
           "icon_icon": "/images/skills/icon/reactQuery.png"
         },
         {
+          "id": "7-4",
+          "title": "react table",
+          "level": 100,
+          "icon_img": "/images/skills/img/reactTable.svg",
+          "icon_icon": "/images/skills/icon/reactTable.svg"
+        },
+        {
           "id": "8-1",
-          "tittle": "pwa",
+          "title": "pwa",
           "level": 80,
           "icon_img": "/images/skills/img/pwa.png",
           "icon_icon": "/images/skills/icon/pwa.svg"
         },
         {
           "id": "9-1",
-          "tittle": "git",
+          "title": "git",
           "level": 70,
           "icon_img": "/images/skills/img/git.png",
           "icon_icon": "/images/skills/icon/git.png"
         },
         {
           "id": "9-2",
-          "tittle": "github",
+          "title": "github",
           "level": 70,
           "icon_img": "/images/skills/img/github.png",
           "icon_icon": "/images/skills/icon/github.svg"
         },
         {
           "id": "9-3",
-          "tittle": "gitlab",
+          "title": "gitlab",
           "level": 50,
           "icon_img": "/images/skills/img/gitlab.svg",
           "icon_icon": "/images/skills/icon/gitlab.svg"
         },
         {
           "id": "10-1",
-          "tittle": "node.js",
-          "level": 30,
+          "title": "node.js",
+          "level": 60,
           "icon_img": "/images/skills/img/nodejs.png",
           "icon_icon": "/images/skills/icon/nodejs.svg"
         },
         {
+          "id": "10-2",
+          "title": "express.js",
+          "level": 60,
+          "icon_img": "/images/skills/img/expressjs.png",
+          "icon_icon": "/images/skills/icon/expressjs.png"
+        },
+        {
           "id": "11-1",
-          "tittle": "mongoDB",
+          "title": "mongoDB",
           "level": 40,
           "icon_img": "/images/skills/img/mongodb.png",
           "icon_icon": "/images/skills/icon/mongodb.svg"
         },
         {
           "id": "11-2",
-          "tittle": "firebase",
+          "title": "firebase",
           "level": 40,
           "icon_img": "/images/skills/img/firebase.png",
           "icon_icon": "/images/skills/icon/firebase.svg"
         },
         {
           "id": "12-1",
-          "tittle": "prisma",
+          "title": "prisma",
           "level": 90,
           "icon_img": "/images/skills/img/prisma.svg",
           "icon_icon": "/images/skills/icon/prisma.svg"
         },
         {
           "id": "13-1",
-          "tittle": "zod",
+          "title": "zod",
           "level": 90,
           "icon_img": "/images/skills/img/zod.svg",
           "icon_icon": "/images/skills/icon/zod.svg"
         },
         {
           "id": "14-1",
-          "tittle": "jest",
+          "title": "jest",
           "level": 60,
           "icon_img": "/images/skills/img/jest.png",
           "icon_icon": "/images/skills/icon/jest.png"
         },
         {
           "id": "14-2",
-          "tittle": "React Testing Library",
+          "title": "React Testing Library",
           "level": 60,
           "icon_img": "/images/skills/img/testingLibrary.png",
           "icon_icon": "/images/skills/icon/testingLibrary.png"
+        },
+        {
+          "id": "14-3",
+          "title": "Mock Service Worker",
+          "level": 60,
+          "icon_img": "/images/skills/img/msw.svg",
+          "icon_icon": "/images/skills/icon/msw.svg"
         }
       ],
       "fluent_languages": [
         {
           "id": "0",
-          "tittle": "انگلیسی",
-          "level": 80,
+          "title": "انگلیسی (C1)",
+          "level": 90,
           "img": "/images/fluent_languages/english.png"
-        },
-        {
-          "id": "1",
-          "tittle": "کوردی",
-          "level": 100,
-          "img": "/images/fluent_languages/kurdish.png"
         }
       ]
     }
@@ -489,7 +531,7 @@
     "nav_links": [
       {
         "id": "1",
-        "tittle": "صفحه نخست",
+        "title": "صفحه نخست",
         "link": "home",
         "icon": "/images/nav/home.svg",
         "component": "home_icon",
@@ -497,7 +539,7 @@
       },
       {
         "id": "2",
-        "tittle": "رزومه",
+        "title": "رزومه",
         "link": "resume",
         "icon": "/images/nav/resume.svg",
         "component": "resume_icon",
@@ -505,7 +547,7 @@
       },
       {
         "id": "3",
-        "tittle": "مهارت ها",
+        "title": "مهارت ها",
         "link": "skills",
         "icon": "/images/nav/skills.svg",
         "component": "skills_icon",
@@ -513,7 +555,7 @@
       },
       {
         "id": "4",
-        "tittle": "نمونه کارها",
+        "title": "نمونه کارها",
         "link": "portfolio",
         "icon": "/images/nav/portfolio.svg",
         "component": "portofolio_icon",
@@ -521,7 +563,7 @@
       },
       {
         "id": "5",
-        "tittle": "تماس",
+        "title": "تماس",
         "link": "contact",
         "icon": "/images/nav/contact.svg",
         "component": "contact_icon",
@@ -529,14 +571,14 @@
       }
     ],
     "hero_base": {
-      "section_tittle": "صفحه نخست",
+      "section_title": "صفحه نخست",
       "buttons": {
         "download_resume_pdf": "دریافت فایل رزومه (پی دی اف)"
       }
     },
     "about_base": {
-      "section_tittle": "درباره من",
-      "tittle": "توسعه دهنده و طراح فرانت اند",
+      "section_title": "درباره من",
+      "title": "توسعه دهنده و طراح فرانت اند",
       "labels": {
         "mobile": "شماره تماس",
         "residence": "محل سکونت",
@@ -549,10 +591,10 @@
       }
     },
     "skills_base": {
-      "section_tittle": "مهارت ها"
+      "section_title": "مهارت ها"
     },
     "resume_base": {
-      "section_tittle": "رزومه",
+      "section_title": "رزومه",
       "labels": {
         "educations": "سوابق تحصیلی",
         "work_experiences": "سوابق شغلی",
@@ -560,7 +602,7 @@
       }
     },
     "portfolio_base": {
-      "section_tittle": "نمونه کار ها",
+      "section_title": "نمونه کار ها",
       "buttons_titles": {
         "show_demo": "نمایش دمو",
         "show_codes": "مشاهده کد",
@@ -572,7 +614,7 @@
       }
     },
     "contact_base": {
-      "section_tittle": "تماس با من",
+      "section_title": "تماس با من",
       "labels": {
         "email": "پست الکترونیک",
         "mobile": "موبایل",
@@ -596,17 +638,17 @@
         "notif_card": {
           "success": {
             "status": "success",
-            "tittle": "با موفقیت ارسال شد",
+            "title": "با موفقیت ارسال شد",
             "message": "با موفقیت ارسال شد"
           },
           "loading": {
             "status": "loading",
-            "tittle": "در حال ارسال",
+            "title": "در حال ارسال",
             "message": "در حال ارسال پیغام شما"
           },
           "error": {
             "status": "error",
-            "tittle": "خطا در ارسال",
+            "title": "خطا در ارسال",
             "message": "خطا در ارسال پیام لطفا با فیلترشکن امتحان کنید"
           }
         }

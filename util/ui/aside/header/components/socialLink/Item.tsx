@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 interface Props {
-  tittle: string;
+  title: string;
   url: string;
   icon: string;
 }
@@ -13,7 +13,7 @@ const Item = (props: Props) => {
         <Image
           // className="bg_[snow] rounded_full"
           src={props.icon}
-          alt={props.tittle}
+          alt={props.title}
           width={30}
           height={30}
         />

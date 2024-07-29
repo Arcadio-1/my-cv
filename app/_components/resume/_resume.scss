@@ -89,7 +89,7 @@
                   }
                 }
               }
-              .tittle {
+              .title {
                 font-size: 1.3rem;
               }
               .date {
@@ -106,6 +106,9 @@
                   letter-spacing: 0.12rem;
                 }
               }
+              a {
+                color: rgb(180, 216, 255);
+              }
               .place {
                 font-size: 1.2rem;
               }
@@ -119,7 +122,7 @@
         background-color: rgba(color(g3-2), 0.1);
         padding: 0.5rem 1rem;
 
-        .tittle {
+        .title {
           font-size: 1.5rem;
           padding: 0.7rem;
           &::after {
@@ -159,7 +162,7 @@
               @include dflex(space-between);
               margin-bottom: 0.3rem;
               font-size: 1.1rem;
-              &_tittle {
+              &_title {
               }
               &_percent {
               }
@@ -200,6 +203,9 @@
                     border-bottom: 2px solid rgba(color(dark-2), 0.08);
                     .calenderIcon {
                       fill: rgba(color(dark-2), 0.7);
+                    }
+                    a {
+                      color: rgb(39, 39, 209);
                     }
                     .locationIcon {
                       fill: rgba(color(dark-2), 0.7);

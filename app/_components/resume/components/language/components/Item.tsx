@@ -35,10 +35,10 @@ const Item = (props: Props) => {
   }, [props.language.level, inView]);
   return (
     <div ref={languageRef} key={language.id} className="list_item">
-      <Image src={language.img} alt={language.tittle} width={40} height={40} />
+      <Image src={language.img} alt={language.title} width={40} height={40} />
       <div className="content">
         <div className="data">
-          <h2 className="data_tittle">{language.tittle}</h2>
+          <h2 className="data_title">{language.title}</h2>
           <span className="data_persent">
             {isAnimationActive ? level : props.language.level}%
           </span>

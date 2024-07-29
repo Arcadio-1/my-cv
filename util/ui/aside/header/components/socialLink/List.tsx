@@ -11,7 +11,7 @@ const List = (props: Props) => {
         return (
           <Item
             key={item.id}
-            tittle={item.tittle}
+            title={item.title}
             url={item.url}
             icon={item.icon}
           />

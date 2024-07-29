@@ -105,14 +105,14 @@ const Form = (props: Props) => {
     dispatchSendMessageStatus(
       uiAction.set_send_message_status({
         status: Status.loading,
-        tittle: `${props.notifCard.loading.tittle}`,
+        title: `${props.notifCard.loading.title}`,
         message: `${props.notifCard.loading.message}`,
       })
     );
     dispatchNotifCardStatus(
       uiAction.set_notif_card_status({
         status: Status.loading,
-        tittle: `${props.notifCard.loading.tittle}`,
+        title: `${props.notifCard.loading.title}`,
         message: `${props.notifCard.loading.message}`,
       })
     );
@@ -133,14 +133,14 @@ const Form = (props: Props) => {
         dispatchNotifCardStatus(
           uiAction.set_notif_card_status({
             status: Status.success,
-            tittle: `${props.notifCard.success.tittle}`,
+            title: `${props.notifCard.success.title}`,
             message: `${props.notifCard.success.message}`,
           })
         );
         dispatchSendMessageStatus(
           uiAction.set_send_message_status({
             status: Status.success,
-            tittle: `${props.notifCard.success.tittle}`,
+            title: `${props.notifCard.success.title}`,
             message: `${props.notifCard.success.message}`,
           })
         );
@@ -149,14 +149,14 @@ const Form = (props: Props) => {
         dispatchSendMessageStatus(
           uiAction.set_send_message_status({
             status: Status.error,
-            tittle: `${props.notifCard.error.tittle}`,
+            title: `${props.notifCard.error.title}`,
             message: `${props.notifCard.error.message}`,
           })
         );
         dispatchNotifCardStatus(
           uiAction.set_notif_card_status({
             status: Status.error,
-            tittle: `${props.notifCard.error.tittle}`,
+            title: `${props.notifCard.error.title}`,
             message: `${props.notifCard.error.message}`,
           })
         );
@@ -165,14 +165,14 @@ const Form = (props: Props) => {
       dispatchSendMessageStatus(
         uiAction.set_send_message_status({
           status: Status.error,
-          tittle: `${props.notifCard.error.tittle}`,
+          title: `${props.notifCard.error.title}`,
           message: `${props.notifCard.error.message}`,
         })
       );
       dispatchNotifCardStatus(
         uiAction.set_notif_card_status({
           status: Status.error,
-          tittle: `${props.notifCard.error.tittle}`,
+          title: `${props.notifCard.error.title}`,
           message: `${props.notifCard.error.message}`,
         })
       );

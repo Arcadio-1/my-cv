@@ -2,6 +2,7 @@ import { Experience } from "@/util/Types/types";
 import React, { Fragment } from "react";
 import CalenderIcon from "./components/CalenderIcon";
 import LocationIcon from "./components/LocationIcon";
+import Link from "next/link";
 
 interface Props {
   item: Experience;
@@ -11,7 +12,7 @@ const Item_container = (props: Props) => {
   const { item } = props;
   return (
     <Fragment>
-      <p className="tittle">{item.tittle}</p>
+      <p className="title">{item.title}</p>
       <div className="content">
         <div className="content_line">
           <CalenderIcon />
@@ -23,7 +24,13 @@ const Item_container = (props: Props) => {
         </div>
         <div className="content_line">
           <LocationIcon />
-          <span className="place">{item.place}</span>
+          {item.link ? (
+            <Link target="_blank" className="place" href={item.link}>
+              {item.place}
+            </Link>
+          ) : (
+            <span className="place">{item.place}</span>
+          )}
         </div>
       </div>
     </Fragment>

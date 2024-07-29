@@ -11,7 +11,7 @@ const Item = (props: Props) => {
     (state: UiMainState) => state.ui.activeAnimation
   );
   const { skill } = props;
-  const { tittle, level, icon_img } = skill;
+  const { title, level, icon_img } = skill;
   // const [levState, setLevState] = useState<number>(0);
   // useEffect(() => {
   //   for (let i = 0; i < level; i++) {
@@ -33,10 +33,10 @@ const Item = (props: Props) => {
         }}
       >
         <div className="main_skills_list_item_main">
-          <Image src={icon_img} width={100} height={100} alt={tittle} />
+          <Image src={icon_img} width={100} height={100} alt={title} />
         </div>
       </div>
-      <h2 className="main_skills_list_item_tittle">{tittle}</h2>
+      <h2 className="main_skills_list_item_title">{title}</h2>
     </div>
   );
 };

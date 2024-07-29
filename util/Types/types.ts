@@ -34,7 +34,7 @@ export enum Group {
 }
 export interface Full_status {
   status: Status;
-  tittle: string;
+  title: string;
   message: string;
 }
 
@@ -64,25 +64,26 @@ export enum Get_project {
 }
 export interface Experience {
   id: string;
-  tittle: string;
+  title: string;
   place: string;
+  link: string | null;
   since: string;
   to: string;
 }
 export interface Expertise {
   id: number;
-  tittle: string;
+  title: string;
 }
 export interface Social_media {
   id: string;
-  tittle: string;
+  title: string;
   url: string;
   icon: string;
 }
 
 export interface Contract {
   id: number;
-  tittle: Contracts;
+  title: Contracts;
 }
 export interface Jobs_info {
   contracts: Contract[];
@@ -97,7 +98,7 @@ export type About_me = string;
 
 export interface Portfolio {
   id: string;
-  tittle: string;
+  title: string;
   group: Group;
   tags: string[];
   prev_image: string;
@@ -110,7 +111,7 @@ export interface Portfolio {
 export type Github_link = string;
 
 export interface Skill {
-  tittle: string;
+  title: string;
   level: number;
   id: string;
   icon_img: string;
@@ -119,7 +120,7 @@ export interface Skill {
 
 export interface Language {
   id: string;
-  tittle: string;
+  title: string;
   level: number;
   img: string;
 }
@@ -127,7 +128,7 @@ export type Hero_image = string;
 
 export interface Nav_link {
   id: string;
-  tittle: string;
+  title: string;
   link: InView;
   icon: string;
   component: string;
@@ -145,20 +146,20 @@ export interface About_base_labels {
   get_project: string;
 }
 export interface About_base {
-  section_tittle: string;
-  tittle: string;
+  section_title: string;
+  title: string;
   labels: About_base_labels;
 }
 export interface Hero_base_buttons {
   download_resume_pdf: string;
 }
 export interface Hero_base {
-  section_tittle: string;
+  section_title: string;
   buttons: Hero_base_buttons;
 }
 
 export interface Skills_base {
-  section_tittle: "skills";
+  section_title: "skills";
 }
 
 export interface Resume_base_labels {
@@ -167,7 +168,7 @@ export interface Resume_base_labels {
   language: string;
 }
 export interface Resume_base {
-  section_tittle: string;
+  section_title: string;
   labels: Resume_base_labels;
 }
 
@@ -181,7 +182,7 @@ export interface Portfolio_base_buttons_titles {
   download_pdf: string;
 }
 export interface Portfolio_base {
-  section_tittle: string;
+  section_title: string;
   buttons_titles: Portfolio_base_buttons_titles;
   labels: Portfolio_base_labels;
 }
@@ -217,13 +218,13 @@ export interface Contact_base_labels {
   telegram: string;
 }
 export interface Contact_base {
-  section_tittle: string;
+  section_title: string;
   labels: Contact_base_labels;
   form: Form_base;
 }
 export interface Notif_card {
   status: string;
-  tittle: string;
+  title: string;
   message: string;
 }
 export interface BASE {

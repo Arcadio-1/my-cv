@@ -5,8 +5,8 @@ import React from "react";
 import MyImage from "./components/MyImage";
 import Boulshit from "./components/Boulshit";
 import List from "./components/list/List";
-import Tittle from "./components/Tittle";
 import style from "./about.module.scss";
+import Title from "./components/Tittle";
 
 interface Props {
   personal_info: Personal_info;
@@ -27,12 +27,12 @@ const About = (props: Props) => {
     >
       <SectionHeader
         tag="aboutMe"
-        tittle={props.base.section_tittle}
+        title={props.base.section_title}
         description={""}
       />
 
       <div className={`${style.main_about_container}`}>
-        <Tittle tittle={props.base.tittle} />
+        <Title title={props.base.title} />
 
         {/* <MyImage
           imageUrl={props.personal_info.profile_iamge}

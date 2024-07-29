@@ -10,7 +10,7 @@ interface Props {
 const Skills = (props: Props) => {
   return (
     <div className="main_skills grow shrink-0" id="skills">
-      <SectionHeader tittle={props.base.section_tittle} description="" />
+      <SectionHeader title={props.base.section_title} description="" />
       <List skills={props.skills} />
     </div>
   );

@@ -6,10 +6,10 @@ import React from "react";
 import { useSelector } from "react-redux";
 import style from "../about.module.scss";
 interface Props {
-  tittle: string;
+  title: string;
 }
 
-const Tittle = (props: Props) => {
+const Title = (props: Props) => {
   const isAnimationActive = useSelector(
     (state: UiMainState) => state.ui.activeAnimation
   );
@@ -18,13 +18,13 @@ const Tittle = (props: Props) => {
   return (
     <div
       ref={ref}
-      className={`${style.main_about_tittle} ${
-        isAnimationActive && inView ? style.main_about_tittle_animator : ""
+      className={`${style.main_about_title} ${
+        isAnimationActive && inView ? style.main_about_title_animator : ""
       }  `}
     >
-      <h2>{props.tittle}</h2>
+      <h2>{props.title}</h2>
     </div>
   );
 };
 
-export default Tittle;
+export default Title;

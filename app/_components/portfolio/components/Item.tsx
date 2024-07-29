@@ -73,8 +73,8 @@ const Item = ({ buttons_titles, portfolio }: Props) => {
                   data-pswp-height={image.height}
                 >
                   <div className="slide">
-                    <p className="slide_tittle text-gray-900 dark:text-slate-200">
-                      {portfolio.tittle}
+                    <p className="slide_title text-gray-900 dark:text-slate-200">
+                      {portfolio.title}
                     </p>
 
                     <div className="slide_imageContainer">
@@ -82,7 +82,7 @@ const Item = ({ buttons_titles, portfolio }: Props) => {
                         src={image.largeURL}
                         width={300}
                         height={300}
-                        alt={portfolio.tittle}
+                        alt={portfolio.title}
                       />
                     </div>
                   </div>
